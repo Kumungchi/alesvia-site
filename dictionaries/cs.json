@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "Alesvia | Lidský standard",
+    "description": "Alesvia je institucionální platforma zaměřená na zachování lidské autonomie a nastavování zdravých hranic v době konverzační AI."
+  },
+  "nav": {
+    "brand": "Alesvia.",
+    "initiatives": "Iniciativy",
+    "philosophy": "Filozofie",
+    "financing": "Financování",
+    "partner": "Spolupráce"
+  },
+  "hero": {
+    "title": "Stanovujeme lidský standard v automatizovaném světě.",
+    "description": "Alesvia je institucionální platforma zaměřená na zachování lidské autonomie prostřednictvím výzkumu, vzdělávání a etických technologických iniciativ. Poskytujeme intelektuální i finanční zázemí pro lidštější digitální budoucnost.",
+    "primary_link": "Prozkoumat naši práci",
+    "secondary_link": "Přečíst naši tezi"
+  },
+  "ecosystem": {
+    "label": "Ekosystém",
+    "title": "Iniciativy zaměřené na akci, řízené principy orientovanými na člověka.",
+    "status_active": "Aktivní",
+    "status_incubating": "V přípravě",
+    "unplugged_title": "Unplugged",
+    "unplugged_desc": "Program zaměřený na stanovení zdravých hranic, úmyslného odporu a protokolů pro digitální detox proti vysoce přesvědčivé AI.",
+    "unplugged_link": "Navštívit platformu →",
+    "policy_title": "Policy Lab",
+    "policy_desc": "Výzkum a advokacie překládající náš etický rámec do praktických legislativních a korporátních směrnic.",
+    "education_title": "Vzdělávání",
+    "education_desc": "Kurikula a workshopy pro školy a instituce k výuce algoritmické gramotnosti a digitální sebeobrany.",
+    "advisory_title": "Alesvia Advisory",
+    "advisory_desc": "Propojování VC fondů, institucionálních investorů a špičkových AI startupů pro zajištění etického nasazování konverzační AI."
+  },
+  "financing": {
+    "label": "Institucionální zázemí",
+    "title": "Transparentní financování a partnerství",
+    "description": "Abychom vybudovali infrastrukturu odolnou vůči nesprávným stimulům, Alesvia je strukturována tak, aby upřednostňovala dlouhodobou lidskou hodnotu před krátkodobým zapojením. Spoléháme se na strategické granty, filantropická partnerství a institucionální podporu k financování Unplugged a budoucích iniciativ.",
+    "primary_link": "Zobrazit model financování",
+    "secondary_link": "Institucionální dotazy"
+  },
+  "footer": {
+    "rights": "Alesvia z.ú. Všechna práva vyhrazena.",
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Podmínky služby",
+    "contact": "Kontakt",
+    "lang_en": "English",
+    "lang_cs": "Česky"
+  }
+}

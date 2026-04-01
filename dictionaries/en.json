@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "Alesvia | The Human Baseline",
+    "description": "Alesvia is an institutional platform dedicated to preserving human autonomy and setting healthy boundaries in the age of conversational AI."
+  },
+  "nav": {
+    "brand": "Alesvia.",
+    "initiatives": "Initiatives",
+    "philosophy": "Philosophy",
+    "financing": "Financing",
+    "partner": "Partner With Us"
+  },
+  "hero": {
+    "title": "Setting the human baseline in an automated world.",
+    "description": "Alesvia is an institutional platform dedicated to preserving human autonomy through research, education, and ethical technology initiatives. We provide the intellectual and financial foundation for a more humane digital future.",
+    "primary_link": "Explore Our Work",
+    "secondary_link": "Read Our Thesis"
+  },
+  "ecosystem": {
+    "label": "The Ecosystem",
+    "title": "Action-driven initiatives governed by human-centric principles.",
+    "status_active": "Active",
+    "status_incubating": "Incubating",
+    "unplugged_title": "Unplugged",
+    "unplugged_desc": "A program focused on establishing healthy boundaries, intentional friction, and digital detox protocols against highly persuasive AI.",
+    "unplugged_link": "Visit Platform →",
+    "policy_title": "Policy Lab",
+    "policy_desc": "Research and advocacy translating our ethical framework into actionable legislative and corporate guidelines.",
+    "education_title": "Education",
+    "education_desc": "Curricula and workshops for schools and institutions to teach algorithmic literacy and digital self-defense.",
+    "advisory_title": "Alesvia Advisory",
+    "advisory_desc": "Bridging VC funds, institutional investors, and Tier-A AI startups to ensure the ethical deployment of conversational AI."
+  },
+  "financing": {
+    "label": "Institutional Grounding",
+    "title": "Transparent Financing & Partnerships",
+    "description": "To build infrastructure that resists misaligned incentives, Alesvia is structured to prioritize long-term human value over short-term engagement. We rely on strategic grants, philanthropic partnerships, and institutional backing to fund Unplugged and future initiatives.",
+    "primary_link": "View Funding Model",
+    "secondary_link": "Institutional Inquiries"
+  },
+  "footer": {
+    "rights": "Alesvia. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "lang_en": "English",
+    "lang_cs": "Česky"
+  }
+}
