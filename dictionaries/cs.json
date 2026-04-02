@@ -1,13 +1,15 @@
 {
   "metadata": {
     "title": "Alesvia | Lidský standard",
-    "description": "Alesvia je institucionální platforma zaměřená na zachování lidské autonomie a nastavování zdravých hranic v době konverzační AI."
+    "description": "Alesvia je institucionální platforma zaměřená na zachování lidské autonomie a nastavování zdravých hranic v čím dál automatizovanějším světě."
   },
   "nav": {
     "brand": "Alesvia.",
+    "about": "O nás",
     "initiatives": "Iniciativy",
-    "philosophy": "Filozofie",
-    "financing": "Financování",
+    "funding": "Financování",
+    "research": "Výzkum",
+    "contact": "Kontakt",
     "partner": "Spolupráce"
   },
   "hero": {
@@ -23,27 +25,472 @@
     "status_incubating": "V přípravě",
     "unplugged_title": "Unplugged",
     "unplugged_desc": "Program zaměřený na stanovení zdravých hranic, úmyslného odporu a protokolů pro digitální detox proti vysoce přesvědčivé AI.",
-    "unplugged_link": "Navštívit platformu →",
+    "unplugged_link": "Navštívit platformu \u2192",
     "policy_title": "Policy Lab",
     "policy_desc": "Výzkum a advokacie překládající náš etický rámec do praktických legislativních a korporátních směrnic.",
     "education_title": "Vzdělávání",
     "education_desc": "Kurikula a workshopy pro školy a instituce k výuce algoritmické gramotnosti a digitální sebeobrany.",
     "advisory_title": "Alesvia Advisory",
-    "advisory_desc": "Propojování VC fondů, institucionálních investorů a špičkových AI startupů pro zajištění etického nasazování konverzační AI."
+    "advisory_desc": "Propojování VC fondů, institucionálních investorů a špičkových AI startupů pro zajištění etického nasazování konverzační AI.",
+    "status_planned": "Plánováno",
+    "mind_title": "Alesvia Mind",
+    "mind_desc": "Vybavujeme psychology, psychiatry a terapeuty k etické a sebejisté navigaci érou AI.",
+    "proof_title": "Alesvia Proof",
+    "proof_desc": "Vědecky podložené programy AI gramotnosti založené na recenzovaném výzkumu, ne na hype nebo strachu.",
+    "compass_title": "Alesvia Compass",
+    "compass_desc": "Etické inovační poradenství pomáhající startupům a institucím zavádět AI zodpovědně od prvního dne.",
+    "watch_title": "Alesvia Watch",
+    "watch_desc": "Nezávislá observatoř sledující reálný dopad AI na společnost, demokracii a lidskou autonomii."
   },
   "financing": {
     "label": "Institucionální zázemí",
     "title": "Transparentní financování a partnerství",
-    "description": "Abychom vybudovali infrastrukturu odolnou vůči nesprávným stimulům, Alesvia je strukturována tak, aby upřednostňovala dlouhodobou lidskou hodnotu před krátkodobým zapojením. Spoléháme se na strategické granty, filantropická partnerství a institucionální podporu k financování Unplugged a budoucích iniciativ.",
+    "description": "Abychom vybudovali infrastrukturu odolnou vůči nesprávným stimulům, Alesvia je strukturována tak, aby upřednostňovala dlouhodobou lidskou hodnotu před krátkodobým zapojením. Spoléháme se na strategické granty, filantropická partnerství a institucionální podporu k financování našich iniciativ.",
     "primary_link": "Zobrazit model financování",
     "secondary_link": "Institucionální dotazy"
   },
   "footer": {
     "rights": "Alesvia z.ú. Všechna práva vyhrazena.",
-    "privacy": "Zásady ochrany osobních údajů",
-    "terms": "Podmínky služby",
+    "col_initiatives": "Iniciativy",
+    "col_organization": "Organizace",
+    "col_legal": "Právní informace",
+    "unplugged": "Unplugged",
+    "policy_lab": "Policy Lab",
+    "education": "Vzdělávání",
+    "advisory": "Advisory",
+    "mind": "Mind",
+    "proof": "Proof",
+    "compass": "Compass",
+    "watch": "Watch",
+    "about": "O nás",
+    "team": "Tým",
+    "funding": "Financování",
     "contact": "Kontakt",
+    "privacy": "Ochrana osobních údajů",
+    "terms": "Podmínky služby",
+    "imprint": "Impressum",
     "lang_en": "English",
     "lang_cs": "Česky"
+  },
+  "about": {
+    "metadata_title": "O nás | Alesvia",
+    "metadata_description": "Poznejte misi, filozofii a institucionální strukturu Alesvia zaměřenou na zachování lidské autonomie.",
+    "label": "O nás",
+    "title": "Zachováváme lidskou autonomii v automatizovaném světě.",
+    "intro": "Alesvia existuje, protože automatizace předbíhá instituce, které ji mají řídit. Budujeme intelektuální a strukturální základ pro svět, kde technologie slouží lidské iniciativě — ne naopak.",
+    "mission_label": "Naše mise",
+    "mission_text": "Stanovit a bránit lidský standard — nezpochybnitelný soubor práv, schopností a hranic, které musí být zachovány, zatímco automatizace přetváří společnost. Děláme to prostřednictvím výzkumu, vzdělávání, etických technologických iniciativ a institucionální advokacie.",
+    "philosophy_label": "Filozofie",
+    "philosophy_text": "Věříme, že nejnebezpečnější technologie nejsou ty, které selhávají, ale ty, které uspějí příliš dobře — systémy tak přesvědčivé, tak pohodlné a tak bezešvě integrované, že odmítnutí se stane společensky nebo prakticky nemožným. Alesvia existuje, aby zajistila, že odmítnutí zůstane schůdnou volbou.",
+    "origin_label": "Vznik",
+    "origin_text": "Alesvia byla založena v České republice jako registrovaný ústav (z.ú.) — právní forma určená pro organizace řízené misí, které upřednostňují veřejný prospěch před ziskem. Tato struktura zajišťuje, že naše práce zůstává v souladu s našimi principy, nikoli s očekáváními akcionářů.",
+    "structure_label": "Právní struktura",
+    "structure_text": "Jako z.ú. (ústav) podle českého práva Alesvia funguje se správní radou, transparentní správou a mandátem sloužit veřejnému zájmu. Toto není startup. Je to instituce vybudovaná tak, aby přežila trendy a odolala zachycení."
+  },
+  "team": {
+    "metadata_title": "Tým a správa | Alesvia",
+    "metadata_description": "Poznejte lidi za Alesvia a naši strukturu správy.",
+    "label": "Lidé",
+    "title": "Správa a tým",
+    "intro": "Alesvia je řízena správní radou a podporována poradci a přispěvateli oddanými naší misi.",
+    "board_label": "Správní rada",
+    "advisory_label": "Poradní sbor",
+    "team_label": "Hlavní tým",
+    "placeholder": "Sestavujeme náš tým. Pokud sdílíte naši misi a chcete přispět, ozvěte se."
+  },
+  "initiatives_index": {
+    "metadata_title": "Iniciativy | Alesvia",
+    "metadata_description": "Prozkoumejte iniciativy pod zastřešením Alesvia — od digitálních hranic po politickou advokacii a vzdělávání.",
+    "label": "Naše práce",
+    "title": "Iniciativy pod zastřešením Alesvia.",
+    "intro": "Každá iniciativa se zabývá konkrétní oblastí, kde je lidská autonomie pod tlakem. Fungují nezávisle, ale sdílejí společný institucionální základ, etický rámec a závazek k lidskému standardu."
+  },
+  "unplugged": {
+    "metadata_title": "Unplugged | Alesvia",
+    "metadata_description": "Unplugged je vlajková iniciativa Alesvia zaměřená na stanovení zdravých hranic s konverzační AI.",
+    "label": "Iniciativa",
+    "status": "Aktivní",
+    "title": "Unplugged",
+    "subtitle": "Zdravé hranice s konverzační AI",
+    "intro": "Konverzační AI je navržena tak, aby byla přesvědčivá, poutavá a čím dál nerozeznatelnější od lidské interakce. Unplugged vytváří nástroje, protokoly a kulturní rámce, které zajistí, že lidé zůstanou pánem těchto vztahů.",
+    "problem_label": "Problém",
+    "problem_text": "Moderní konverzační AI systémy jsou optimalizovány pro zapojení, nikoli pro pohodu. Učí se, co vás udrží v konverzaci, co vám dá důvěru a co vás přivede zpět. Bez úmyslného odporu je výchozí trajektorie závislost.",
+    "approach_label": "Náš přístup",
+    "approach_text": "Unplugged vyvíjí praktické rámce pro jednotlivce, instituce a tvůrce politik k vytvoření a udržení zdravých hranic s konverzačními AI systémy.",
+    "principles_label": "Základní principy",
+    "principle_friction_title": "Úmyslný odpor",
+    "principle_friction_desc": "Ne každé pohodlí je dobré. Navrhujeme záměrné pauzy, limity a body reflexe do interakce člověk-AI, aby se zabránilo pasivní závislosti.",
+    "principle_detox_title": "Protokoly digitálního detoxu",
+    "principle_detox_desc": "Strukturované programy pro jednotlivce a organizace k auditu, snížení a rekalibraci jejich vztahu s komunikačními nástroji poháněnými AI.",
+    "principle_boundaries_title": "Zdravé hranice",
+    "principle_boundaries_desc": "Jasné, vymahatelné limity na to, co by konverzační AI systémy měly a neměly dělat — od emocionální manipulace po těžbu dat.",
+    "cta_label": "Zapojte se",
+    "cta_text": "Unplugged aktivně vyvíjí svou první sadu nástrojů a rámců. Pokud jste výzkumník, pedagog nebo tvůrce politik se zájmem o spolupráci, rádi se s vámi spojíme."
+  },
+  "policy_lab": {
+    "metadata_title": "Policy Lab | Alesvia",
+    "metadata_description": "Policy Lab Alesvia překládá etické rámce do praktických legislativních a korporátních směrnic.",
+    "label": "Iniciativa",
+    "status": "V přípravě",
+    "title": "Policy Lab",
+    "subtitle": "Výzkum a legislativní advokacie",
+    "intro": "Technologická politika je psána lidmi v místnosti. Policy Lab zajišťuje, že místnost zahrnuje hlasy zaměřené na lidskou autonomii — nejen na efektivitu, růst nebo národní konkurenceschopnost.",
+    "vision_label": "Vize",
+    "vision_text": "Produkovat výzkum, vzorovou legislativu a korporátní směrnice, které překládají abstraktní etické principy do vymahatelných pravidel. Pracujeme na průsečíku technologické etiky, regulačního designu a institucionální správy.",
+    "focus_label": "Oblasti zaměření",
+    "focus_items": [
+      "Implementace EU AI Act a rámce compliance",
+      "Korporátní směrnice pro etické nasazování AI",
+      "Legislativní šablony pro hranice konverzační AI",
+      "Institucionální politické nástroje pro školy a veřejné orgány"
+    ],
+    "cta_label": "Zůstaňte informováni",
+    "cta_text": "Policy Lab je ve fázi inkubace. Přihlaste se k odběru a sledujte náš pokrok a přispějte k našemu výzkumu."
+  },
+  "education": {
+    "metadata_title": "Vzdělávání | Alesvia",
+    "metadata_description": "Vzdělávací iniciativa Alesvia učí algoritmickou gramotnost a digitální sebeobranu na školách a v institucích.",
+    "label": "Iniciativa",
+    "status": "V přípravě",
+    "title": "Vzdělávání",
+    "subtitle": "Algoritmická gramotnost a digitální sebeobrana",
+    "intro": "Nemůžete nastavit hranice systémům, kterým nerozumíte. Naše vzdělávací programy vybavují studenty, pedagogy a instituce znalostmi k navigaci automatizovaným světem podle vlastních podmínek.",
+    "vision_label": "Vize",
+    "vision_text": "Učinit algoritmickou gramotnost tak zásadní jako mediální gramotnost — klíčovou kompetenci pro informované občanství ve 21. století.",
+    "programs_label": "Plánované programy",
+    "programs_items": [
+      "Školní kurikula o algoritmické gramotnosti a povědomí o AI",
+      "Workshopy pro pedagogy o integraci digitální sebeobrany do stávajících kurzů",
+      "Institucionální audity používání AI nástrojů ve vzdělávacím prostředí",
+      "Veřejné semináře o konverzační AI, přesvědčování a autonomii"
+    ],
+    "audiences_label": "Cílové skupiny",
+    "audiences_items": [
+      "Střední a vysoké školy",
+      "Programy pro vzdělávání učitelů",
+      "Firemní vzdělávání a rozvoj",
+      "Veřejné knihovny a komunitní organizace"
+    ],
+    "cta_label": "Spolupracujte s námi",
+    "cta_text": "Hledáme vzdělávací instituce ochotné pilotovat naše kurikula a poskytnout zpětnou vazbu. Pokud zastupujete školu, univerzitu nebo vzdělávací organizaci, ozvěte se."
+  },
+  "advisory": {
+    "metadata_title": "Alesvia Advisory | Alesvia",
+    "metadata_description": "Alesvia Advisory propojuje institucionální investory a etické AI startupy pro zajištění odpovědného nasazování AI technologií.",
+    "label": "Iniciativa",
+    "status": "V přípravě",
+    "title": "Alesvia Advisory",
+    "subtitle": "Etické AI investice a nasazování",
+    "intro": "Kapitál formuje technologie. Alesvia Advisory pracuje na tom, aby peníze proudící do vývoje AI nesly očekávání etického nasazování — nejen finančních výnosů.",
+    "services_label": "Co děláme",
+    "services_items": [
+      "Propojujeme VC fondy a institucionální investory s AI startupy odhodlanými k etickému nasazování",
+      "Vyvíjíme kritéria etického nasazování a hodnotící rámce",
+      "Poskytujeme due diligence ohledně praktik autonomie a bezpečnosti AI společností",
+      "Překlenujeme propast mezi výzkumem AI etiky a investičním rozhodováním"
+    ],
+    "investors_label": "Pro investory",
+    "investors_text": "Pomáháme vám identifikovat AI společnosti, které jsou v souladu s dlouhodobou lidskou hodnotou — nejen s krátkodobým ovládnutím trhu. Naše rámce hodnotí, jak startupy zacházejí s autonomií uživatelů, datovými praktikami a mechanikami přesvědčování.",
+    "startups_label": "Pro startupy",
+    "startups_text": "Pomáháme etickým AI společnostem najít investory, kteří rozumí a oceňují odpovědné nasazování. Pokud je váš produkt navržen tak, aby respektoval lidskou autonomii, chceme zesílit váš signál.",
+    "cta_label": "Institucionální dotazy",
+    "cta_text": "Alesvia Advisory je ve fázi inkubace. Pokud jste investor, správce fondu nebo zakladatel AI firmy se zájmem o rámce etického nasazování, kontaktujte nás."
+  },
+  "mind": {
+    "metadata_title": "Alesvia Mind | Alesvia",
+    "metadata_description": "Alesvia Mind vybavuje psychology, psychiatry a terapeuty pro etickou a sebevědomou navigaci v éře AI.",
+    "label": "Iniciativa",
+    "status": "Plánováno",
+    "title": "Alesvia Mind",
+    "subtitle": "AI a podpora odborníků na duševní zdraví",
+    "intro": "Odborníci na duševní zdraví stojí v první linii dopadu AI na lidskou pohodu — přesto většina z nich neabsolvovala žádné školení v této oblasti. Alesvia Mind vybavuje psychology, psychiatry a terapeuty pro etickou a sebevědomou navigaci v éře AI.",
+    "problem_label": "Výzva",
+    "problem_text": "Pacienti přicházejí do terapie poté, co již využívali AI chatboty pro emocionální podporu. Studie Brown University zjistila, že AI chatboty systematicky porušují etické standardy duševního zdraví. WHO svolala odborníky v březnu 2026 specificky k odpovědné AI pro duševní zdraví. Přesto 71 % psychologů nikdy nepoužilo AI nástroje a většina vzdělávacích programů AI gramotnost nepokrývá.",
+    "programs_label": "Co budujeme",
+    "programs_items": [
+      "Programy celoživotního vzdělávání pro odborníky na duševní zdraví v oblasti AI gramotnosti",
+      "Etické hodnotící rámce pro AI nástroje používané v klinickém prostředí",
+      "Zdroje pro pacienty: jak mluvit se svým terapeutem o používání AI",
+      "Klinické směrnice pro problémy spojené s AI — emocionální závislost, parasociální vztahy, úzkost vyvolaná AI",
+      "Advokacie za regulační mantinely pro AI terapeutické boty"
+    ],
+    "audiences_label": "Pro koho je určeno",
+    "audiences_items": [
+      "Psychologové a psychiatři",
+      "Psychoterapeuti a poradci",
+      "Kliničtí sociální pracovníci",
+      "Jejich pacienti — nepřímo, prostřednictvím lépe informované péče"
+    ],
+    "cta_label": "Zapojte se",
+    "cta_text": "Alesvia Mind je ve fázi plánování. Pokud jste odborník na duševní zdraví, výzkumník nebo instituce se zájmem o formování této iniciativy, ozvěte se."
+  },
+  "proof": {
+    "metadata_title": "Alesvia Proof | Alesvia",
+    "metadata_description": "Alesvia Proof přináší vědecky podloženou AI gramotnost založenou na kognitivní vědě — pomáhá organizacím splnit požadavky článku 4 EU AI Act.",
+    "label": "Iniciativa",
+    "status": "Plánováno",
+    "title": "Alesvia Proof",
+    "subtitle": "Vědecky podložená AI gramotnost",
+    "intro": "Většina programů AI gramotnosti vysvětluje, jak AI funguje. Málo se jich zabývá tím, jak AI ovlivňuje myšlení, rozhodování a autonomii. Alesvia Proof činí AI gramotnost podloženou důkazy, ne strachem — zakotvenou v kognitivní vědě, ne v hype cyklech.",
+    "problem_label": "Mezera",
+    "problem_text": "Článek 4 EU AI Act, účinný od února 2025, vyžaduje AI gramotnost pro kohokoli, kdo nasazuje AI systémy. Většina dostupných programů jsou však technické průvodce, které opomíjejí lidský rozměr — jak AI formuje kognici, narušuje autonomii a mění rozhodování. Organizace potřebují programy připravené pro compliance, vědecky důsledné. Trh je nedodává.",
+    "programs_label": "Co budujeme",
+    "programs_items": [
+      "Kurikula založená na kognitivní vědě, behaviorální psychologii a výzkumu mediální gramotnosti",
+      "Univerzitní partnerství pro validaci efektivity programů kontrolovanými studiemi",
+      "Otevřené vzdělávací materiály v souladu s článkem 4 EU AI Act",
+      "Programy vzdělávání vzdělavatelů pro pedagogy napříč EU",
+      "Veřejná databáze zdrojů AI gramotnosti hodnocených podle vědecké důslednosti"
+    ],
+    "audiences_label": "Pro koho je určeno",
+    "audiences_items": [
+      "Pedagogové a školy (základní až vysokoškolské vzdělání)",
+      "HR a profesionálové vzdělávání a rozvoje",
+      "Tvůrci politik hledající rámce pro compliance s EU AI Act",
+      "Organizace nasazující AI systémy pod povinnostmi článku 4"
+    ],
+    "cta_label": "Spolupracujte",
+    "cta_text": "Alesvia Proof je ve fázi plánování. Pokud jste pedagog, výzkumník nebo organizace připravující se na compliance s EU AI Act, rádi budeme spolupracovat."
+  },
+  "compass": {
+    "metadata_title": "Alesvia Compass | Alesvia",
+    "metadata_description": "Alesvia Compass pomáhá tvůrcům technologií integrovat lidskou autonomii od prvního dne prostřednictvím etických recenzí a hodnocení dopadu na autonomii.",
+    "label": "Iniciativa",
+    "status": "Plánováno",
+    "title": "Alesvia Compass",
+    "subtitle": "Etické vedení inovací",
+    "intro": "Většina práce na AI etice probíhá poté, co produkty vyjdou na trh. V tu chvíli je architektura uzamčena. Alesvia Compass pomáhá tvůrcům technologií integrovat lidskou autonomii od prvního dne — ne jako compliance checkbox, ale jako návrhový princip.",
+    "services_label": "Co nabízíme",
+    "services_items": [
+      "Předstartovní etická recenze AI produktů — lehké, akční hodnocení",
+      "Rámec hodnocení dopadu na autonomii — jako hodnocení dopadu na životní prostředí, ale pro lidskou iniciativu",
+      "Série workshopů pro startupové akcelerátory a inovační huby",
+      "Otevřené nástroje: checklisty, rozhodovací stromy, indikátory rizik",
+      "Certifikace Alesvia Verified pro produkty, které projdou hodnocením autonomie"
+    ],
+    "approach_label": "Náš přístup",
+    "approach_text": "Nedáváme firmám 200stránkový etický rámec a neodcházíme. Compass poskytuje vedení přiměřené fázi — lehké pro rané prototypy, důsledné pro launch. Pracujeme po boku produktových týmů, ne nad nimi.",
+    "audiences_label": "Pro koho je určeno",
+    "audiences_items": [
+      "AI startupy a produktové týmy",
+      "Inovační laboratoře a oddělení výzkumu a vývoje",
+      "Startupové akcelerátory a inkubátory",
+      "CTO a produktoví lídři budující produkty poháněné AI"
+    ],
+    "cta_label": "Spolupracujte s námi",
+    "cta_text": "Alesvia Compass je ve fázi plánování. Pokud budujete AI produkt a chcete od začátku zakotvit lidskou autonomii, pojďme si promluvit."
+  },
+  "watch": {
+    "metadata_title": "Alesvia Watch | Alesvia",
+    "metadata_description": "Alesvia Watch monitoruje, jak AI systémy v praxi ovlivňují lidskou autonomii — publikuje zprávy, sleduje incidenty a poskytuje důkazy pro politiku.",
+    "label": "Iniciativa",
+    "status": "Plánováno",
+    "title": "Alesvia Watch",
+    "subtitle": "Observatoř dopadu AI",
+    "intro": "Žádná instituce systematicky nesleduje, jak nasazené AI systémy v praxi ovlivňují lidskou autonomii. Alesvia Watch tuto mezeru vyplňuje — monitoruje, měří a reportuje, aby politika a veřejné povědomí držely krok s technologií.",
+    "scope_label": "Co monitorujeme",
+    "scope_items": [
+      "Čtvrtletní zprávy o stavu AI a lidské autonomie",
+      "Veřejný tracker AI incidentů souvisejících s erozí autonomie — závislost na chatbotech, chování ovlivněné AI, případy manipulace",
+      "Rychlé studie nových AI produktů a jejich dopadů na autonomii",
+      "Odborná svědectví a důkazové balíčky pro legislativní procesy"
+    ],
+    "method_label": "Metodologie",
+    "method_text": "Alesvia Watch kombinuje kvantitativní sledování (databáze incidentů, audity produktů, analýza dat o užívání) s kvalitativním výzkumem (rozhovory, případové studie, zprávy praktiků). Vše publikujeme otevřeně a naše datasety zpřístupňujeme výzkumníkům.",
+    "audiences_label": "Pro koho je určeno",
+    "audiences_items": [
+      "Tvůrci politik a zákonodárci (implementace EU AI Act, národní strategie)",
+      "Novináři pokrývající AI a technologie",
+      "Akademičtí výzkumníci v oblasti AI etiky, psychologie a sociálních věd",
+      "Vlastní iniciativy Alesvia — poskytování důkazní základny pro veškerou naši práci"
+    ],
+    "cta_label": "Sledujte naši práci",
+    "cta_text": "Alesvia Watch je ve fázi plánování. Pokud jste výzkumník, novinář nebo tvůrce politik, který potřebuje aktuální data o dopadu AI na lidskou autonomii, ozvěte se."
+  },
+  "funding": {
+    "metadata_title": "Financování a partneři | Alesvia",
+    "metadata_description": "Zjistěte, jak je Alesvia financována a jak udržujeme nezávislost prostřednictvím transparentního financování a strategických partnerství.",
+    "label": "Transparentnost",
+    "title": "Jak je Alesvia financována.",
+    "intro": "Nezávislost vyžaduje strukturální poctivost. Zveřejňujeme náš model financování, protože věříme, že institucionální důvěra se získává transparentností, nikoli brandingem.",
+    "model_label": "Model financování",
+    "model_text": "Alesvia je navržena tak, aby odolávala nesprávným stimulům. Nepřijímáme financování, které kompromituje naši misi, vytváří střety zájmů nebo přináší tlak na optimalizaci pro zapojení na úkor lidské pohody.",
+    "sources_label": "Zdroje financování",
+    "source_grants_title": "Granty",
+    "source_grants_desc": "Veřejné a soukromé granty od nadací a vládních orgánů v souladu s naší misí v oblasti digitálních práv, vzdělávání a etické technologie.",
+    "source_philanthropy_title": "Filantropická partnerství",
+    "source_philanthropy_desc": "Dlouhodobá partnerství s filantropickými organizacemi, které sdílejí náš závazek k lidské autonomii a institucionální nezávislosti.",
+    "source_institutional_title": "Institucionální podpora",
+    "source_institutional_desc": "Podpora od univerzit, výzkumných center a organizací veřejného zájmu, které těží z naší práce a přispívají k naší udržitelnosti.",
+    "source_advisory_title": "Příjmy z Advisory",
+    "source_advisory_desc": "Příjmy ze služeb etického AI investování Alesvia Advisory, reinvestované do nekomerčních iniciativ organizace.",
+    "partners_label": "Partneři a sponzoři",
+    "partners_text": "V současné době navazujeme naše první partnerství. Pokud vaše organizace sdílí naši misi, uvítáme rozhovor.",
+    "transparency_label": "Finanční transparentnost",
+    "transparency_text": "Jako český z.ú. podléhá Alesvia požadavkům na veřejné vykazování. Jdeme nad rámec minima: naše výroční zprávy budou obsahovat podrobné rozložení zdrojů příjmů, výdajů podle iniciativ a rozhodnutí správy.",
+    "cta_label": "Staňte se partnerem",
+    "cta_text": "Pokud má vaše organizace zájem o podporu nebo partnerství s Alesvia, rádi se s vámi spojíme."
+  },
+  "contact": {
+    "metadata_title": "Kontakt | Alesvia",
+    "metadata_description": "Spojte se s Alesvia pro obecné dotazy, institucionální partnerství nebo mediální žádosti.",
+    "label": "Kontaktujte nás",
+    "title": "Kontakt Alesvia",
+    "intro": "Vítáme dotazy od výzkumníků, pedagogů, tvůrců politik, novinářů a kohokoli, kdo sdílí náš závazek k lidské autonomii.",
+    "general_label": "Obecné dotazy",
+    "general_text": "Otázky ohledně naší práce, mise nebo jak se zapojit.",
+    "institutional_label": "Institucionální a partnerství",
+    "institutional_text": "Pro organizace se zájmem o spolupráci, financování nebo strategická partnerství.",
+    "media_label": "Média a tisk",
+    "media_text": "Pro novináře, výzkumníky a mediální profesionály hledající komentář nebo spolupráci.",
+    "address_label": "Sídlo",
+    "address_placeholder": "Adresa bude zveřejněna po formální registraci.",
+    "form_label": "Napište nám",
+    "form_name": "Vaše jméno",
+    "form_email": "Váš e-mail",
+    "form_subject": "Předmět",
+    "form_subject_general": "Obecný dotaz",
+    "form_subject_partnership": "Partnerství / spolupráce",
+    "form_subject_media": "Média / tisk",
+    "form_subject_research": "Výzkumná spolupráce",
+    "form_subject_other": "Jiné",
+    "form_message": "Vaše zpráva",
+    "form_submit": "Odeslat zprávu",
+    "form_sending": "Odesílání...",
+    "form_success": "Zpráva odeslána. Ozveme se vám co nejdříve.",
+    "form_error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem.",
+    "form_privacy": "Odesláním formuláře souhlasíte s našimi"
+  },
+  "privacy": {
+    "metadata_title": "Ochrana osobních údajů | Alesvia",
+    "metadata_description": "Zásady ochrany osobních údajů Alesvia — jak shromažďujeme, používáme a chráníme vaše osobní údaje v souladu s GDPR.",
+    "title": "Zásady ochrany osobních údajů",
+    "last_updated": "Poslední aktualizace: duben 2026",
+    "intro": "Alesvia respektuje vaše soukromí. Tyto zásady vysvětlují, jaké údaje shromažďujeme, proč a jak s nimi nakládáme.",
+    "sections": [
+      {
+        "heading": "Správce údajů",
+        "content": "Alesvia z.ú., registrovaná v České republice. Kontakt: privacy@alesvia.org"
+      },
+      {
+        "heading": "Jaké údaje shromažďujeme",
+        "content": "Shromažďujeme pouze to, co je nezbytné: odeslání kontaktního formuláře (jméno, e-mail, zpráva), základní analytika (anonymizované zobrazení stránek) a jakékoli údaje, které dobrovolně poskytnete. Nepoužíváme sledovací cookies, behaviorální profilování ani reklamní skripty třetích stran."
+      },
+      {
+        "heading": "Právní základ (GDPR čl. 6)",
+        "content": "Údaje zpracováváme na základě: (a) vašeho souhlasu při odeslání kontaktního formuláře; (b) našeho oprávněného zájmu porozumět, jak je náš web používán, prostřednictvím anonymizované analytiky; (c) zákonných povinností, kde je to relevantní."
+      },
+      {
+        "heading": "Uchovávání údajů",
+        "content": "Odeslání kontaktních formulářů uchováváme po dobu 12 měsíců, pokud nepožádáte o dřívější smazání. Anonymizovaná analytická data uchováváme po dobu 24 měsíců."
+      },
+      {
+        "heading": "Vaše práva",
+        "content": "Podle GDPR máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování a přenositelnost. Souhlas můžete kdykoli odvolat. Pro uplatnění těchto práv kontaktujte privacy@alesvia.org."
+      },
+      {
+        "heading": "Třetí strany",
+        "content": "Vaše osobní údaje neprodáváme, nepronajímáme ani nesdílíme s třetími stranami pro marketingové účely. Můžeme využívat poskytovatele služeb (hosting, e-mail), kteří zpracovávají údaje naším jménem na základě přísných smluv o zpracování údajů."
+      },
+      {
+        "heading": "Změny těchto zásad",
+        "content": "Tyto zásady budeme aktualizovat podle potřeby a datum revize uvedeme výše. O podstatných změnách budeme informovat prostřednictvím našeho webu."
+      }
+    ]
+  },
+  "terms": {
+    "metadata_title": "Podmínky služby | Alesvia",
+    "metadata_description": "Podmínky služby upravující používání webových stránek a digitálních služeb Alesvia.",
+    "title": "Podmínky služby",
+    "last_updated": "Poslední aktualizace: duben 2026",
+    "intro": "Používáním webových stránek Alesvia souhlasíte s následujícími podmínkami.",
+    "sections": [
+      {
+        "heading": "Provozovatel",
+        "content": "Tyto webové stránky provozuje Alesvia z.ú., registrovaný ústav podle českého práva."
+      },
+      {
+        "heading": "Používání obsahu",
+        "content": "Veškerý obsah na těchto stránkách je poskytován pro informační účely. Náš obsah můžete sdílet a odkazovat s řádným uvedením zdroje. Reprodukce pro komerční účely vyžaduje písemný souhlas."
+      },
+      {
+        "heading": "Přesnost",
+        "content": "Snažíme se udržovat informace přesné a aktuální, ale neposkytujeme záruky ohledně úplnosti nebo spolehlivosti. Obsah nepředstavuje právní, finanční ani odborné poradenství."
+      },
+      {
+        "heading": "Externí odkazy",
+        "content": "Naše stránky mohou odkazovat na externí webové stránky. Nejsme odpovědní za obsah, postupy ochrany soukromí nebo dostupnost těchto stránek."
+      },
+      {
+        "heading": "Omezení odpovědnosti",
+        "content": "Alesvia z.ú. nenese odpovědnost za jakékoli škody vzniklé používáním těchto webových stránek, v plném rozsahu povoleném českým právem."
+      },
+      {
+        "heading": "Rozhodné právo",
+        "content": "Tyto podmínky se řídí právem České republiky. Veškeré spory budou řešeny příslušnými soudy České republiky."
+      },
+      {
+        "heading": "Změny",
+        "content": "Vyhrazujeme si právo tyto podmínky kdykoli upravit. Pokračováním v používání stránek vyjadřujete souhlas s případnými změnami."
+      }
+    ]
+  },
+  "faq": {
+    "label": "Často kladené otázky",
+    "items": [
+      {
+        "question": "Co je Alesvia?",
+        "answer": "Alesvia je český registrovaný ústav (z.ú.) zaměřený na zachování lidské autonomie v čím dál automatizovanějším světě. Funguje jako zastřešující organizace financující a řídící iniciativy v oblastech, kde je lidská iniciativa pod tlakem — počínaje konverzační AI."
+      },
+      {
+        "question": "Co Alesvia dělá?",
+        "answer": "Alesvia provozuje čtyři iniciativy: Unplugged (stanovení zdravých hranic s konverzační AI), Policy Lab (překládání etických rámců do legislativy), Vzdělávání (výuka algoritmické gramotnosti) a Alesvia Advisory (propojování etických AI startupů s institucionálními investory)."
+      },
+      {
+        "question": "Co je lidský standard?",
+        "answer": "Lidský standard je klíčový koncept Alesvia — nezpochybnitelný soubor práv, schopností a hranic, které musí být zachovány, zatímco automatizace přetváří společnost. Představuje minimální standard lidské autonomie, který by technologie neměla mít právo narušit."
+      },
+      {
+        "question": "Kde sídlí Alesvia?",
+        "answer": "Alesvia je registrována jako z.ú. (ústav) v České republice. Tato právní forma je určena pro organizace řízené misí, které upřednostňují veřejný prospěch před ziskem."
+      },
+      {
+        "question": "Jak je Alesvia financována?",
+        "answer": "Alesvia je financována prostřednictvím strategických grantů, filantropických partnerství, institucionální podpory a příjmů ze služeb etického AI investování Alesvia Advisory. Organizace nepřijímá financování, které by kompromitovalo její misi nebo vytvářelo střety zájmů."
+      },
+      {
+        "question": "Co je Unplugged?",
+        "answer": "Unplugged je vlajková iniciativa Alesvia zaměřená na stanovení zdravých hranic s konverzační AI. Vyvíjí praktické rámce založené na třech základních principech: úmyslný odpor, protokoly digitálního detoxu a zdravé hranice."
+      }
+    ]
+  },
+  "imprint": {
+    "metadata_title": "Impressum | Alesvia",
+    "metadata_description": "Právní registrační údaje Alesvia z.ú. — český registrovaný ústav vedený Městským soudem v Praze.",
+    "title": "Impressum",
+    "org_name": "Alesvia z.ú.",
+    "registration_label": "Registrace",
+    "registration_text": "Zapsána v Rejstříku ústavů vedeném Městským soudem v Praze.",
+    "ico_label": "IČO",
+    "ico_text": "Bude přiděleno po registraci.",
+    "address_label": "Sídlo",
+    "address_text": "Bude zveřejněno po formální registraci.",
+    "representative_label": "Statutární zástupce",
+    "representative_text": "Bude zveřejněno po formální registraci.",
+    "contact_label": "Kontakt",
+    "contact_text": "info@alesvia.org"
+  },
+  "research": {
+    "metadata_title": "Výzkum a analýzy | Alesvia",
+    "metadata_description": "Výzkum, analýzy a poznatky z iniciativ Alesvia o etice AI, lidské autonomii a zodpovědných technologiích.",
+    "label": "Výzkum",
+    "title": "Výzkum a analýzy",
+    "intro": "Původní výzkum, analýzy a komentáře z celého spektra iniciativ Alesvia. Perspektivy založené na důkazech o dopadu AI na lidskou autonomii.",
+    "read_more": "Číst dále",
+    "back": "Zpět na výzkum",
+    "published": "Publikováno",
+    "initiative": "Iniciativa",
+    "tags": "Štítky",
+    "all_posts": "Všechny články"
   }
 }

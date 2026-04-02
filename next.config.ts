@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
+import { getLocalizedRewriteRules } from "./lib/routes";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return {
+      beforeFiles: getLocalizedRewriteRules(),
+    };
+  },
 };
 
 export default nextConfig;
