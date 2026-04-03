@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(xargs wc:*)",
+      "Bash(find /c/axiom -not -path */node_modules/* -not -path */.next/* -not -path */.git/* -type f)",
+      "Bash(grep:*)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(npx next:*)",
+      "WebSearch",
+      "Bash(find C:/axiom/node_modules/next/dist/docs -name *proxy* -o -name *rewrite* -o -name *middleware*)"
+    ]
+  }
+}
