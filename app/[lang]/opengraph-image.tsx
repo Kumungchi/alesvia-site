@@ -88,8 +88,8 @@ export default async function OGImage({ params }: { params: Promise<{ lang: stri
           }}
         >
           {isCs
-            ? 'Lidský základ v automatizovaném světě.'
-            : 'Setting the human baseline in an automated world.'}
+            ? 'Lidská autonomie je základ.'
+            : 'Human autonomy is the baseline.'}
         </h1>
 
         {/* Subtitle */}
@@ -104,8 +104,8 @@ export default async function OGImage({ params }: { params: Promise<{ lang: stri
           }}
         >
           {isCs
-            ? 'Výzkum, vzdělávání a etické technologické iniciativy.'
-            : 'Research, education, and ethical technology initiatives.'}
+            ? 'Výzkum, veřejné politiky a vzdělávání pro svět, kde AI neoslabuje lidskou kontrolu.'
+            : 'Research, policy, education, and practical frameworks for a world where AI does not erode human control.'}
         </p>
 
         {/* Bottom bar */}

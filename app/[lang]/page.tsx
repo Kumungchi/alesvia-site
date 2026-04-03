@@ -28,13 +28,13 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href={getPublicPath(lang, 'initiatives')}
+              href={getPublicPath(lang, 'about')}
               className="btn-primary bg-alesvia-primary text-alesvia-bg px-8 py-4 rounded-lg font-medium text-lg text-center"
             >
               {dict.hero.primary_link}
             </Link>
             <Link
-              href={getPublicPath(lang, 'about')}
+              href={getPublicPath(lang, 'initiatives')}
               className="glass text-alesvia-text px-8 py-4 rounded-lg font-medium hover:border-alesvia-accent/50 transition-all text-lg text-center hover:-translate-y-0.5"
             >
               {dict.hero.secondary_link}

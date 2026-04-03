@@ -8,15 +8,15 @@
     "about": "About",
     "initiatives": "Initiatives",
     "funding": "Funding",
-    "research": "Research",
+    "research": "Research & Insights",
     "contact": "Contact",
     "partner": "Partner With Us"
   },
   "hero": {
-    "title": "Setting the human baseline in an automated world.",
-    "description": "Alesvia is an institutional platform dedicated to preserving human autonomy through research, education, and ethical technology initiatives. We provide the intellectual and financial foundation for a more humane digital future.",
-    "primary_link": "Explore Our Work",
-    "secondary_link": "Read Our Thesis"
+    "title": "Human autonomy is the baseline.",
+    "description": "Alesvia builds research, policy, education, and practical frameworks that help people and institutions stay in control as AI becomes part of daily life.",
+    "primary_link": "Read the Thesis",
+    "secondary_link": "See Our Work"
   },
   "ecosystem": {
     "label": "The Ecosystem",
@@ -44,10 +44,10 @@
   },
   "financing": {
     "label": "Institutional Grounding",
-    "title": "Transparent Financing & Partnerships",
+    "title": "How Alesvia Is Funded",
     "description": "To build infrastructure that resists misaligned incentives, Alesvia is structured to prioritize long-term human value over short-term engagement. We rely on strategic grants, philanthropic partnerships, and institutional backing to fund our initiatives.",
     "primary_link": "View Funding Model",
-    "secondary_link": "Institutional Inquiries"
+    "secondary_link": "Partner With Us"
   },
   "footer": {
     "rights": "Alesvia. All rights reserved.",
@@ -193,8 +193,8 @@
     "investors_text": "We help you identify AI companies that align with long-term human value — not just short-term market capture. Our frameworks evaluate how startups handle user autonomy, data practices, and persuasion mechanics.",
     "startups_label": "For Startups",
     "startups_text": "We help ethical AI companies find investors who understand and value responsible deployment. If your product is designed to respect human autonomy, we want to amplify your signal.",
-    "cta_label": "Institutional Inquiries",
-    "cta_text": "Alesvia Advisory is in its incubation phase. If you are an investor, fund manager, or AI founder interested in ethical deployment frameworks, contact us."
+    "cta_label": "Partner With Us",
+    "cta_text": "Alesvia Advisory is in its incubation phase. If you are an investor, fund manager, or AI founder interested in ethical deployment frameworks, partner with us."
   },
   "mind": {
     "metadata_title": "Alesvia Mind | Alesvia",
@@ -311,7 +311,7 @@
     "metadata_title": "Funding & Partners | Alesvia",
     "metadata_description": "Learn how Alesvia is funded and how we maintain independence through transparent financing and strategic partnerships.",
     "label": "Transparency",
-    "title": "How Alesvia is funded.",
+    "title": "How Alesvia Is Funded",
     "intro": "Independence requires structural honesty. We publish our funding model because we believe institutional trust is earned through transparency, not branding.",
     "model_label": "Funding Model",
     "model_text": "Alesvia is designed to resist misaligned incentives. We do not accept funding that compromises our mission, creates conflicts of interest, or introduces pressure to optimize for engagement over human well-being.",
@@ -328,7 +328,7 @@
     "partners_text": "We are currently establishing our first partnerships. If your organization shares our mission, we welcome the conversation.",
     "transparency_label": "Financial Transparency",
     "transparency_text": "As a Czech z.ú., Alesvia is subject to public reporting requirements. We go beyond the minimum: our annual reports will include detailed breakdowns of revenue sources, expenditures by initiative, and governance decisions.",
-    "cta_label": "Become a Partner",
+    "cta_label": "Partner With Us",
     "cta_text": "If your organization is interested in supporting or partnering with Alesvia, we'd like to hear from you."
   },
   "contact": {
@@ -482,10 +482,10 @@
   },
   "research": {
     "metadata_title": "Research & Insights | Alesvia",
-    "metadata_description": "Research, analysis, and insights from Alesvia's initiatives on AI ethics, human autonomy, and responsible technology.",
-    "label": "Research",
-    "title": "Research & Insights",
-    "intro": "Original research, analysis, and commentary from across Alesvia's initiatives. Evidence-based perspectives on AI's impact on human autonomy.",
+    "metadata_description": "Briefings, reports, and essays from Alesvia's initiatives on human autonomy, AI governance, and responsible technology.",
+    "label": "Research & Insights",
+    "title": "Briefings, Reports, and Essays",
+    "intro": "Original briefings, reports, and essays from across Alesvia's initiatives. Evidence-led perspectives on how AI shapes human autonomy, institutions, and public life.",
     "read_more": "Read more",
     "back": "Back to Research",
     "published": "Published",

@@ -8,15 +8,15 @@
     "about": "O nás",
     "initiatives": "Iniciativy",
     "funding": "Financování",
-    "research": "Výzkum",
+    "research": "Výzkum a analýzy",
     "contact": "Kontakt",
     "partner": "Spolupráce"
   },
   "hero": {
-    "title": "Stanovujeme lidský standard v automatizovaném světě.",
-    "description": "Alesvia je institucionální platforma zaměřená na zachování lidské autonomie prostřednictvím výzkumu, vzdělávání a etických technologických iniciativ. Poskytujeme intelektuální i finanční zázemí pro lidštější digitální budoucnost.",
-    "primary_link": "Prozkoumat naši práci",
-    "secondary_link": "Přečíst naši tezi"
+    "title": "Lidská autonomie je základ.",
+    "description": "Alesvia vytváří výzkum, veřejné politiky, vzdělávání a praktické rámce, které pomáhají lidem i institucím zůstat v kontrole, zatímco se AI stává součástí každodenního života.",
+    "primary_link": "Přečíst tezi",
+    "secondary_link": "Prohlédnout naši práci"
   },
   "ecosystem": {
     "label": "Ekosystém",
@@ -44,10 +44,10 @@
   },
   "financing": {
     "label": "Institucionální zázemí",
-    "title": "Transparentní financování a partnerství",
+    "title": "Jak je Alesvia financována",
     "description": "Abychom vybudovali infrastrukturu odolnou vůči nesprávným stimulům, Alesvia je strukturována tak, aby upřednostňovala dlouhodobou lidskou hodnotu před krátkodobým zapojením. Spoléháme se na strategické granty, filantropická partnerství a institucionální podporu k financování našich iniciativ.",
     "primary_link": "Zobrazit model financování",
-    "secondary_link": "Institucionální dotazy"
+    "secondary_link": "Spolupracujte s námi"
   },
   "footer": {
     "rights": "Alesvia z.ú. Všechna práva vyhrazena.",
@@ -193,8 +193,8 @@
     "investors_text": "Pomáháme vám identifikovat AI společnosti, které jsou v souladu s dlouhodobou lidskou hodnotou — nejen s krátkodobým ovládnutím trhu. Naše rámce hodnotí, jak startupy zacházejí s autonomií uživatelů, datovými praktikami a mechanikami přesvědčování.",
     "startups_label": "Pro startupy",
     "startups_text": "Pomáháme etickým AI společnostem najít investory, kteří rozumí a oceňují odpovědné nasazování. Pokud je váš produkt navržen tak, aby respektoval lidskou autonomii, chceme zesílit váš signál.",
-    "cta_label": "Institucionální dotazy",
-    "cta_text": "Alesvia Advisory je ve fázi inkubace. Pokud jste investor, správce fondu nebo zakladatel AI firmy se zájmem o rámce etického nasazování, kontaktujte nás."
+    "cta_label": "Spolupracujte s námi",
+    "cta_text": "Alesvia Advisory je ve fázi inkubace. Pokud jste investor, správce fondu nebo zakladatel AI firmy se zájmem o rámce etického nasazování, pojďme spolupracovat."
   },
   "mind": {
     "metadata_title": "Alesvia Mind | Alesvia",
@@ -311,7 +311,7 @@
     "metadata_title": "Financování a partneři | Alesvia",
     "metadata_description": "Zjistěte, jak je Alesvia financována a jak udržujeme nezávislost prostřednictvím transparentního financování a strategických partnerství.",
     "label": "Transparentnost",
-    "title": "Jak je Alesvia financována.",
+    "title": "Jak je Alesvia financována",
     "intro": "Nezávislost vyžaduje strukturální poctivost. Zveřejňujeme náš model financování, protože věříme, že institucionální důvěra se získává transparentností, nikoli brandingem.",
     "model_label": "Model financování",
     "model_text": "Alesvia je navržena tak, aby odolávala nesprávným stimulům. Nepřijímáme financování, které kompromituje naši misi, vytváří střety zájmů nebo přináší tlak na optimalizaci pro zapojení na úkor lidské pohody.",
@@ -328,7 +328,7 @@
     "partners_text": "V současné době navazujeme naše první partnerství. Pokud vaše organizace sdílí naši misi, uvítáme rozhovor.",
     "transparency_label": "Finanční transparentnost",
     "transparency_text": "Jako český z.ú. podléhá Alesvia požadavkům na veřejné vykazování. Jdeme nad rámec minima: naše výroční zprávy budou obsahovat podrobné rozložení zdrojů příjmů, výdajů podle iniciativ a rozhodnutí správy.",
-    "cta_label": "Staňte se partnerem",
+    "cta_label": "Spolupracujte s námi",
     "cta_text": "Pokud má vaše organizace zájem o podporu nebo partnerství s Alesvia, rádi se s vámi spojíme."
   },
   "contact": {
@@ -482,10 +482,10 @@
   },
   "research": {
     "metadata_title": "Výzkum a analýzy | Alesvia",
-    "metadata_description": "Výzkum, analýzy a poznatky z iniciativ Alesvia o etice AI, lidské autonomii a zodpovědných technologiích.",
-    "label": "Výzkum",
-    "title": "Výzkum a analýzy",
-    "intro": "Původní výzkum, analýzy a komentáře z celého spektra iniciativ Alesvia. Perspektivy založené na důkazech o dopadu AI na lidskou autonomii.",
+    "metadata_description": "Briefy, zprávy a eseje z iniciativ Alesvia o lidské autonomii, správě AI a zodpovědných technologiích.",
+    "label": "Výzkum a analýzy",
+    "title": "Briefy, zprávy a eseje",
+    "intro": "Původní briefy, zprávy a eseje napříč iniciativami Alesvia. Perspektivy založené na důkazech o tom, jak AI formuje lidskou autonomii, instituce a veřejný život.",
     "read_more": "Číst dále",
     "back": "Zpět na výzkum",
     "published": "Publikováno",
