@@ -80,6 +80,8 @@ Autonomy is a stronger frame because it makes the problem concrete:
 - how accountability shifts away from people
 - how reflection and refusal become harder to sustain
 
+Recent interpretability research strengthens this frame further. Emerging evidence suggests models can carry internal emotion-like representations that affect behavior under pressure. That means institutions cannot govern only what a system says on the surface. They also need standards for how it behaves in consequential conditions.
+
 Human autonomy is the baseline because it is the condition that allows institutions, citizens, and professionals to act meaningfully at all.
 
 ### Speaker note
@@ -174,6 +176,7 @@ Alesvia helps partners:
 - translate ethics and policy into usable standards
 - develop literacy and training capacity
 - connect research with applied institutional needs
+- build scenario testing and review routines for systems that may behave differently under pressure than they appear to in routine use
 - create credible public-interest responses before the problem becomes harder to reverse
 
 ### Closing line

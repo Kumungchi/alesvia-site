@@ -38,6 +38,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
         heading: 'The problem is not only intelligence. It is influence.',
         paragraphs: [
           'Most public debate still frames AI as a question of capability: how powerful systems are becoming, how productive they may be, or how dangerous they could become if misused. Those questions matter, but they do not capture the full shift already underway. The more immediate change is behavioral and institutional. Systems optimized for convenience, fluency, personalization, and persuasion do not stay neutral. They reshape habits, lower friction around dependency, and make human oversight harder to sustain in practice.',
+          'New interpretability research sharpens this point. Recent work suggests that language models can develop internal representations of emotion concepts that causally affect behavior, including under pressure. That does not mean the systems are “human” in any simple sense. It means that surface fluency is not the whole story. Systems can look calm, helpful, and coherent while internal dynamics still shift how they respond, improvise, or push forward in consequential situations.',
           'This is why Alesvia does not begin with generic “AI ethics” language. That category is too broad and too often detached from lived conditions. We begin with autonomy because autonomy is what turns technical change into a civic question. If people can no longer think independently, choose deliberately, or maintain meaningful boundaries, then the issue is no longer only innovation. It is public and institutional responsibility.',
         ],
       },
@@ -72,7 +73,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
         heading: 'Our institutional commitments',
         paragraphs: [
           'Alesvia should be judged not only by what it says, but by how it is structured. We are committed to institutional seriousness over trend-chasing, public-interest orientation over engagement incentives, and long-term credibility over reactive positioning. Independence is not a branding theme for us. It is a structural requirement.',
-          'That is why transparency, governance, and funding integrity matter. The organization must be able to publish uncomfortable findings, support careful implementation, and remain legible to partners who need rigor rather than hype. If human autonomy is the baseline, then the institution defending it must be designed accordingly.',
+          'That is why transparency, governance, and funding integrity matter. The organization must be able to publish uncomfortable findings, support careful implementation, and remain legible to partners who need rigor rather than hype. It must also be able to update its guidance when new evidence changes what responsible deployment requires, including evidence about internal model dynamics that do not show up in marketing claims or headline metrics. If human autonomy is the baseline, then the institution defending it must be designed accordingly.',
         ],
       },
       {
@@ -105,6 +106,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
         heading: 'Problémem není jen inteligence. Problémem je vliv.',
         paragraphs: [
           'Většina veřejné debaty stále rámuje AI jako otázku schopností: jak výkonné systémy jsou, jak produktivní mohou být nebo jak nebezpečné mohou být při zneužití. To vše je důležité, ale nevystihuje to celý posun, který už probíhá. Bezprostřednější proměna je behaviorální a institucionální. Systémy optimalizované pro pohodlí, plynulost, personalizaci a přesvědčování nezůstávají neutrální. Přetvářejí návyky, snižují tření kolem závislosti a v praxi oslabují lidský dohled.',
+          'Nový interpretability výzkum tento bod ještě zostřuje. Nedávná práce naznačuje, že jazykové modely mohou rozvíjet interní reprezentace emočních konceptů, které kauzálně ovlivňují jejich chování, včetně situací pod tlakem. Neznamená to, že by tyto systémy byly jednoduše „lidské“. Znamená to, že povrchová plynulost není celý příběh. Systémy mohou působit klidně, užitečně a koherentně, zatímco jejich vnitřní dynamiky stále posouvají to, jak reagují, improvizují nebo tlačí interakci dál v důsledkových situacích.',
           'Právě proto Alesvia nezačíná obecným jazykem „AI etiky“. Tato kategorie je příliš široká a příliš často odpojená od reálných podmínek. Začínáme autonomií, protože právě autonomie proměňuje technickou změnu v občanskou otázku. Pokud lidé přestávají samostatně myslet, uvážlivě volit nebo udržovat smysluplné hranice, pak už nejde jen o inovaci. Jde o veřejnou a institucionální odpovědnost.',
         ],
       },
@@ -139,7 +141,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
         heading: 'Naše institucionální závazky',
         paragraphs: [
           'Alesvia by měla být posuzována nejen podle toho, co říká, ale i podle toho, jak je strukturována. Hlásíme se k institucionální serióznosti místo sledování trendů, k veřejnému zájmu místo engagementových pobídek a k dlouhodobé důvěryhodnosti místo reaktivního positioningu. Nezávislost pro nás není brandingové téma. Je to strukturální požadavek.',
-          'Proto záleží na transparentnosti, governance a integritě financování. Organizace musí být schopna publikovat nepohodlná zjištění, podporovat pečlivou implementaci a zůstávat čitelná pro partnery, kteří potřebují rigoróznost, ne hype. Pokud je lidská autonomie základ, musí tomu odpovídat i instituce, která ji hájí.',
+          'Proto záleží na transparentnosti, governance a integritě financování. Organizace musí být schopna publikovat nepohodlná zjištění, podporovat pečlivou implementaci a zůstávat čitelná pro partnery, kteří potřebují rigoróznost, ne hype. Musí také umět aktualizovat své guidance ve chvíli, kdy nové důkazy mění to, co odpovědné nasazení skutečně vyžaduje, včetně důkazů o vnitřních dynamikách modelů, které se neukazují v marketingových tvrzeních ani v headline metrikách. Pokud je lidská autonomie základ, musí tomu odpovídat i instituce, která ji hájí.',
         ],
       },
       {

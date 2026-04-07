@@ -13,6 +13,18 @@ export const researchPostSlugMap = {
     en: 'czech-ai-ecosystem-mapping-2026',
     cs: 'mapovani-ceskeho-ai-ekosystemu-2026',
   },
+  'why-human-autonomy-must-be-the-baseline-for-ai': {
+    en: 'why-human-autonomy-must-be-the-baseline-for-ai',
+    cs: 'proc-musi-byt-lidska-autonomie-zakladem-pro-ai',
+  },
+  'institutions-need-more-than-ai-principles': {
+    en: 'institutions-need-more-than-ai-principles',
+    cs: 'instituce-potrebuji-vic-nez-ai-principy',
+  },
+  'what-to-audit-before-deploying-conversational-ai': {
+    en: 'what-to-audit-before-deploying-conversational-ai',
+    cs: 'co-auditovat-pred-nasazenim-konverzacni-ai',
+  },
 } as const satisfies Record<string, Record<AppLocale, string>>;
 
 export type CanonicalResearchSlug = keyof typeof researchPostSlugMap;
