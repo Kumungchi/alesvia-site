@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alesvia Site
 
-## Getting Started
+Public website for **Alesvia**, an institutional platform focused on preserving human autonomy in an increasingly automated world.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- localized routing for English and Czech
+- server-side contact endpoint with SMTP-based delivery
+
+## Local development
+
+Install dependencies and start the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the standard checks:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment variables
 
-## Learn More
+Copy values from [.env.example](./.env.example).
 
-To learn more about Next.js, take a look at the following resources:
+Required groups:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- site URLs
+- SMTP credentials
+- contact routing addresses
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Key variables:
 
-## Deploy on Vercel
+- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_RESEARCH_SITE_URL`
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_SECURE`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `SMTP_FROM_EMAIL`
+- `CONTACT_FORM_TO_EMAIL`
+- `CONTACT_FORM_PARTNERS_EMAIL`
+- `CONTACT_FORM_MEDIA_EMAIL`
+- `CONTACT_FORM_RESEARCH_EMAIL`
+- `CONTACT_FORM_OTHER_EMAIL`
+- `CONTACT_FORM_BCC_EMAIL`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The intended first deployment target is **Vercel Hobby**.
+
+Deployment setup notes live in [docs/deployment-setup.md](./docs/deployment-setup.md).
+
+High-level deployment flow:
+
+1. Publish the repository to GitHub as `alesvia-site`
+2. Create or link a Vercel project
+3. Configure production environment variables
+4. Verify preview and production builds
+5. Add the real domain once purchased
+
+## Brand and strategy documents
+
+- [docs/brand-strategy.md](./docs/brand-strategy.md)
+- [docs/brand-decision.md](./docs/brand-decision.md)
+- [docs/strategy.md](./docs/strategy.md)
+- [docs/partner-outreach.md](./docs/partner-outreach.md)
+- [docs/implementation-plan-week-2026-04-13.md](./docs/implementation-plan-week-2026-04-13.md)
