@@ -10,16 +10,16 @@ It is intentionally pragmatic and tied to the current repo state.
 
 ## Current state
 
-As of **April 7, 2026**, the local repo is in this state:
+As of **April 7, 2026**, the repo is in this state:
 
 - local Git repo exists and works
 - current branch is `master`
-- no Git remote is configured yet
+- GitHub remote is configured as `origin`
 - no `.vercel/project.json` file exists
-- the Vercel CLI is not installed in the current shell environment
+- the Vercel CLI is available through `npx vercel`
 - the app already builds locally with `npm run lint` and `npm run build`
 
-This means the site is deployment-ready in code terms, but not yet connected to hosting.
+This means the site is deployment-ready in code terms, but not yet linked to a Vercel project.
 
 ---
 
@@ -36,47 +36,25 @@ Use these names consistently:
 
 ## Day 1 checklist
 
-### 1. Publish the GitHub repository
+### 1. Confirm the GitHub repository
 
-Preferred path:
-
-- open GitHub Desktop
-- add the local repository from `C:\axiom`
-- use `Publish repository...`
-- set the name to `alesvia-site`
-
-Alternative CLI path:
+Current remote:
 
 ```bash
-git remote add origin <github-repo-url>
-git push -u origin master
+git remote -v
 ```
 
-If the remote uses a different default branch policy later, branch cleanup can happen after the first publish.
+Expected:
 
-### 2. Install or invoke the Vercel CLI
+- `origin` points to the `alesvia-site` GitHub repository
 
-The current environment does not have `vercel` installed globally.
-
-Use one of these:
-
-```bash
-npm install -g vercel
-```
-
-or:
+### 2. Confirm the Vercel CLI
 
 ```bash
 npx vercel --version
 ```
 
 ### 3. Log in to Vercel
-
-```bash
-vercel login
-```
-
-If using `npx`:
 
 ```bash
 npx vercel login
@@ -87,13 +65,13 @@ npx vercel login
 Recommended first pass:
 
 ```bash
-vercel link
+npx vercel link
 ```
 
 If the project already exists, use explicit linking:
 
 ```bash
-vercel link --yes --project alesvia-site
+npx vercel link --yes --project alesvia-site
 ```
 
 Successful linking should create:
@@ -104,9 +82,17 @@ Successful linking should create:
 
 Load values from [.env.example](../.env.example).
 
+The app now supports a more practical first deploy path:
+
+- `NEXT_PUBLIC_SITE_URL` is recommended once the real domain or final production URL is known
+- until then, the app can fall back to Vercel system environment variables:
+  - `VERCEL_PROJECT_PRODUCTION_URL`
+  - `VERCEL_URL`
+
+This avoids generating metadata against a domain that is not live yet.
+
 Minimum production set:
 
-- `NEXT_PUBLIC_SITE_URL`
 - `NEXT_PUBLIC_RESEARCH_SITE_URL`
 - `SMTP_HOST`
 - `SMTP_PORT`
@@ -121,10 +107,14 @@ Minimum production set:
 - `CONTACT_FORM_OTHER_EMAIL`
 - `CONTACT_FORM_BCC_EMAIL`
 
+Recommended if available:
+
+- `NEXT_PUBLIC_SITE_URL`
+
 Add them through the Vercel dashboard or CLI:
 
 ```bash
-vercel env add NEXT_PUBLIC_SITE_URL
+npx vercel env add NEXT_PUBLIC_SITE_URL
 ```
 
 Repeat for the rest of the keys.
@@ -134,19 +124,12 @@ Repeat for the rest of the keys.
 Preview deployment:
 
 ```bash
-vercel
+npx vercel
 ```
 
 Production deployment:
 
 ```bash
-vercel --prod
-```
-
-If using `npx`:
-
-```bash
-npx vercel
 npx vercel --prod
 ```
 
@@ -168,8 +151,9 @@ Once Day 1 is complete:
 
 1. buy and attach the real domain
 2. set up the organization email provider
-3. implement the thesis page as the main proof asset
-4. prepare partner outreach materials
+3. set `NEXT_PUBLIC_SITE_URL` to the final primary origin
+4. set `NEXT_PUBLIC_RESEARCH_SITE_URL` when `research.alesvia.org` is real
+5. confirm contact routing with real inboxes
 
 ---
 

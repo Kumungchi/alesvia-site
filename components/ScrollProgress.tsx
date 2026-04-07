@@ -1,24 +1,47 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function ScrollProgress() {
-  const [width, setWidth] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const bar = ref.current;
+    if (!bar || typeof window === 'undefined') return;
+
+    let frame = 0;
+
+    const updateProgress = () => {
+      frame = 0;
       const scrolled = window.scrollY;
       const total = document.documentElement.scrollHeight - window.innerHeight;
-      setWidth(total > 0 ? (scrolled / total) * 100 : 0);
+      const progress = total > 0 ? scrolled / total : 0;
+      bar.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const requestUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(updateProgress);
+    };
+
+    updateProgress();
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+
+    return () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+      window.removeEventListener('scroll', requestUpdate);
+      window.removeEventListener('resize', requestUpdate);
+    };
   }, []);
 
   return (
     <div
+      ref={ref}
       className="scroll-progress"
-      style={{ width: `${width}%` }}
+      style={{ transform: 'scaleX(0)' }}
       aria-hidden="true"
     />
   );

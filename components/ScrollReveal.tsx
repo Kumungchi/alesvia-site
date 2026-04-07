@@ -14,6 +14,14 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
     const el = ref.current;
     if (!el) return;
 
+    if (typeof window === 'undefined') return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion || typeof IntersectionObserver === 'undefined') {
+      el.classList.add('revealed');
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

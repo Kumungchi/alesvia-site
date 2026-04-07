@@ -57,11 +57,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   height: 2px;
   background: linear-gradient(90deg, var(--color-alesvia-accent), var(--color-alesvia-primary));
   z-index: 9998;
   transform-origin: left;
-  transition: width 0.1s linear;
+  will-change: transform;
 }
 
 /* ── Fade in on load ── */
@@ -376,5 +377,6 @@ details[open] summary .faq-icon {
     transition-duration: 0.01ms !important;
   }
   .scroll-reveal { opacity: 1; transform: none; }
+  .scroll-progress { display: none; }
   html { scroll-behavior: auto; }
 }

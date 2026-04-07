@@ -9,9 +9,14 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: Locale 
   const currentPath = pathname ?? '/';
 
   return (
-    <div className="flex space-x-2 pl-4 border-l border-alesvia-muted/20 items-center">
+    <div
+      role="group"
+      aria-label={currentLang === 'cs' ? 'Přepínač jazyka' : 'Language switcher'}
+      className="flex space-x-2 pl-4 border-l border-alesvia-muted/20 items-center"
+    >
       <Link 
         href={switchLocalePath(currentPath, 'en')} 
+        aria-current={currentLang === 'en' ? 'page' : undefined}
         className={`hover:text-alesvia-text transition-colors text-xs font-semibold tracking-wider ${currentLang === 'en' ? 'text-alesvia-primary' : 'text-alesvia-muted'}`}
       >
         EN
@@ -19,6 +24,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: Locale 
       <span className="text-alesvia-muted/30 text-xs">|</span>
       <Link 
         href={switchLocalePath(currentPath, 'cs')} 
+        aria-current={currentLang === 'cs' ? 'page' : undefined}
         className={`hover:text-alesvia-text transition-colors text-xs font-semibold tracking-wider ${currentLang === 'cs' ? 'text-alesvia-primary' : 'text-alesvia-muted'}`}
       >
         CS

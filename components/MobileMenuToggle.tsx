@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getPublicPath } from '../lib/routes';
 
@@ -12,14 +12,29 @@ interface MobileMenuProps {
 export default function MobileMenuToggle({ lang, links, partnerLabel }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [open]);
+
   return (
     <div className="md:hidden">
       <button
+        type="button"
         onClick={() => setOpen(!open)}
         className="text-alesvia-text p-2"
-        aria-label="Toggle menu"
+        aria-label={lang === 'cs' ? 'Přepnout navigační menu' : 'Toggle navigation menu'}
         aria-expanded={open}
         aria-controls="mobile-navigation"
+        aria-haspopup="menu"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {open ? (
@@ -31,7 +46,12 @@ export default function MobileMenuToggle({ lang, links, partnerLabel }: MobileMe
       </button>
 
       {open && (
-        <div id="mobile-navigation" className="absolute top-full left-0 right-0 bg-alesvia-bg/95 backdrop-blur-md border-b border-alesvia-muted/10 px-6 py-6 space-y-4">
+        <div
+          id="mobile-navigation"
+          role="group"
+          aria-label={lang === 'cs' ? 'Mobilní navigace' : 'Mobile navigation'}
+          className="absolute top-full left-0 right-0 bg-alesvia-bg/95 backdrop-blur-md border-b border-alesvia-muted/10 px-6 py-6 space-y-4"
+        >
           {links.map((link) => (
             <Link
               key={link.href}

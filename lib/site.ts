@@ -7,14 +7,21 @@ function normalizeOrigin(value: string | undefined, fallback: string): string {
   if (!value) return fallback;
 
   try {
-    return new URL(value).origin;
+    const normalized = value.startsWith('http://') || value.startsWith('https://') ? value : `https://${value}`;
+    return new URL(normalized).origin;
   } catch {
     return fallback;
   }
 }
 
 export function getSiteOrigin(): string {
-  return normalizeOrigin(process.env.NEXT_PUBLIC_SITE_URL, defaultSiteOrigin);
+  return normalizeOrigin(
+    process.env.NEXT_PUBLIC_SITE_URL,
+    normalizeOrigin(
+      process.env.VERCEL_PROJECT_PRODUCTION_URL,
+      normalizeOrigin(process.env.VERCEL_URL, defaultSiteOrigin)
+    )
+  );
 }
 
 export function getResearchOrigin(): string {

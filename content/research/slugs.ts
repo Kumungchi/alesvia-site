@@ -1,6 +1,10 @@
 export type AppLocale = 'en' | 'cs';
 
 export const researchPostSlugMap = {
+  'why-this-interpretability-research-matters-for-ai-governance': {
+    en: 'why-this-interpretability-research-matters-for-ai-governance',
+    cs: 'proc-je-tento-interpretability-vyzkum-dulezity-pro-ai-governance',
+  },
   'why-ai-literacy-matters-more-than-ai-regulation': {
     en: 'why-ai-literacy-matters-more-than-ai-regulation',
     cs: 'proc-je-ai-gramotnost-dulezitejsi-nez-regulace-ai',

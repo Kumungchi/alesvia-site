@@ -54,6 +54,8 @@ Key variables:
 - `CONTACT_FORM_OTHER_EMAIL`
 - `CONTACT_FORM_BCC_EMAIL`
 
+For a first Vercel Hobby deploy before the final domain is live, `NEXT_PUBLIC_SITE_URL` can be omitted if Vercel system environment variables are available. The app falls back to `VERCEL_PROJECT_PRODUCTION_URL` and then `VERCEL_URL` so preview and first production metadata do not point at a non-live domain by default.
+
 ## Deployment
 
 The intended first deployment target is **Vercel Hobby**.
@@ -64,7 +66,7 @@ High-level deployment flow:
 
 1. Publish the repository to GitHub as `alesvia-site`
 2. Create or link a Vercel project
-3. Configure production environment variables
+3. Configure environment variables and confirm Vercel system env vars are exposed
 4. Verify preview and production builds
 5. Add the real domain once purchased
 

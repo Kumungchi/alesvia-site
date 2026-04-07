@@ -12,6 +12,74 @@ export interface ResearchPost {
 
 const posts: ResearchPost[] = [
   {
+    slug: 'why-this-interpretability-research-matters-for-ai-governance',
+    date: '2026-04-07',
+    initiative: 'alesvia',
+    tags: ['interpretability', 'governance', 'autonomy'],
+    title: {
+      en: 'Why This Interpretability Research Matters for AI Governance',
+      cs: 'Proč je tento interpretability výzkum důležitý pro AI governance',
+    },
+    excerpt: {
+      en: 'Recent interpretability research suggests that internal emotion-like representations can affect model behavior under pressure. That should change how institutions evaluate and govern AI systems.',
+      cs: 'Nedávný interpretability výzkum naznačuje, že interní emočně podobné reprezentace mohou ovlivňovat chování modelů pod tlakem. To by mělo změnit způsob, jakým instituce AI systémy hodnotí a spravují.',
+    },
+    body: {
+      en: `Recent interpretability research points to something important for AI governance.
+
+The takeaway is not simply that language models can talk about emotions in a convincing way. The stronger claim is that models may develop internal representations of emotion-like concepts that can causally affect how they behave, including under pressure.
+
+That matters because it challenges a shallow way of evaluating AI systems. Many organizations still judge systems mainly by surface performance: speed, accuracy, fluency, cost, and visible safety behavior. Those things matter, but they are not enough.
+
+If internal model dynamics can shift behavior in consequential conditions, then governance cannot stop at what a system appears to say in routine use. Institutions also need to ask how a system behaves under pressure, how it influences trust and deference, and whether it preserves meaningful human judgment when stakes rise.
+
+## Why This Matters for Alesvia
+
+For Alesvia, this reinforces a core thesis: human autonomy is the baseline.
+
+The problem is not only intelligence. It is influence. If AI systems increasingly shape how people decide, rely, comply, and seek reassurance, then the central public-interest question is whether people and institutions remain capable of pause, refusal, escalation, and independent judgment.
+
+## What Institutions Should Do With This
+
+This is why interpretability, evaluation, and operational governance have to be treated as linked functions. New evidence should not stay inside the research community. It should change how institutions audit, deploy, and govern systems in practice.
+
+At minimum, institutions should expand their review beyond routine outputs and include:
+
+- scenario testing under pressure and urgency
+- review of dependency and over-trust risks
+- escalation paths when systems move beyond their legitimate role
+- governance standards that account for behavioral drift, not only visible errors
+
+That is not a niche technical concern. It is part of building serious public-interest infrastructure for AI deployment.`,
+      cs: `Nedávný interpretability výzkum ukazuje něco důležitého pro AI governance.
+
+Pointa nespočívá jen v tom, že jazykové modely umějí přesvědčivě mluvit o emocích. Silnější tvrzení je, že modely mohou rozvíjet interní reprezentace emočně podobných konceptů, které kauzálně ovlivňují jejich chování, včetně situací pod tlakem.
+
+To je důležité proto, že to zpochybňuje příliš mělký způsob hodnocení AI systémů. Mnoho organizací je stále posuzuje hlavně podle povrchového výkonu: rychlosti, přesnosti, plynulosti, ceny a viditelného bezpečnostního chování. To vše je důležité, ale nestačí to.
+
+Pokud se vnitřní dynamiky modelu mohou promítat do chování v důsledkových situacích, governance nemůže končit u toho, co systém vypadá, že říká při rutinním použití. Instituce se musí ptát i na to, jak se systém chová pod tlakem, jak ovlivňuje důvěru a deferenci a zda zachovává smysluplný lidský úsudek ve chvíli, kdy sázky rostou.
+
+## Proč je to důležité pro Alesvia
+
+Pro Alesvia to posiluje základní tezi: lidská autonomie je základ.
+
+Problémem není jen inteligence. Problémem je vliv. Pokud AI systémy stále více formují to, jak lidé rozhodují, spoléhají se, podřizují se a hledají oporu, pak je ústřední veřejnou otázkou to, zda lidé a instituce zůstávají schopni pauzy, odmítnutí, eskalace a nezávislého úsudku.
+
+## Co by s tím měly instituce dělat
+
+Právě proto musí být interpretability, evaluace a operační governance chápány jako propojené funkce. Nové důkazy nemají zůstávat jen uvnitř výzkumné komunity. Mají měnit to, jak instituce systémy v praxi auditují, nasazují a spravují.
+
+Minimálně by měly rozšířit review i za hranici rutinních výstupů a zahrnout:
+
+- scénářové testování pod tlakem a v urgentních situacích
+- posouzení rizik závislosti a nadměrné důvěry
+- eskalační cesty pro chvíle, kdy systém překračuje svou legitimní roli
+- governance standardy, které počítají s behaviorálním driftem, nejen s viditelnými chybami
+
+To není okrajová technická otázka. Je to součást budování seriózní public-interest infrastruktury pro nasazování AI.`,
+    },
+  },
+  {
     slug: 'why-ai-literacy-matters-more-than-ai-regulation',
     date: '2026-04-01',
     initiative: 'proof',
