@@ -28,7 +28,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href={getPublicPath(lang, 'about')}
+              href={getPublicPath(lang, 'thesis')}
               className="btn-primary bg-alesvia-primary text-alesvia-bg px-8 py-4 rounded-lg font-medium text-lg text-center"
             >
               {dict.hero.primary_link}

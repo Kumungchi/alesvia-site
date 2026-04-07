@@ -2,6 +2,7 @@ import { getLocalizedResearchSlug, researchPostSlugEntries, type AppLocale } fro
 
 export type RouteKey =
   | 'home'
+  | 'thesis'
   | 'about'
   | 'team'
   | 'initiatives'
@@ -31,6 +32,10 @@ export const routeDefinitions: Record<RouteKey, RouteDefinition> = {
   home: {
     internal: '',
     publicPath: { en: '', cs: '' },
+  },
+  thesis: {
+    internal: 'thesis',
+    publicPath: { en: 'thesis', cs: 'teze' },
   },
   about: {
     internal: 'about',

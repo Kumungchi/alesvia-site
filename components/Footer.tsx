@@ -15,9 +15,11 @@ interface FooterDict {
   proof: string;
   compass: string;
   watch: string;
+  thesis: string;
   about: string;
   team: string;
   funding: string;
+  research: string;
   contact: string;
   privacy: string;
   terms: string;
@@ -50,10 +52,11 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_organization}</h4>
             <ul className="space-y-2 text-sm text-alesvia-muted">
+              <li><Link href={getPublicPath(lang, 'thesis')} className="hover:text-alesvia-text transition-colors">{dict.thesis}</Link></li>
               <li><Link href={getPublicPath(lang, 'about')} className="hover:text-alesvia-text transition-colors">{dict.about}</Link></li>
               <li><Link href={getPublicPath(lang, 'team')} className="hover:text-alesvia-text transition-colors">{dict.team}</Link></li>
               <li><Link href={getPublicPath(lang, 'funding')} className="hover:text-alesvia-text transition-colors">{dict.funding}</Link></li>
-              <li><Link href={getPublicPath(lang, 'research')} className="hover:text-alesvia-text transition-colors">Research</Link></li>
+              <li><Link href={getPublicPath(lang, 'research')} className="hover:text-alesvia-text transition-colors">{dict.research}</Link></li>
               <li><Link href={getPublicPath(lang, 'contact')} className="hover:text-alesvia-text transition-colors">{dict.contact}</Link></li>
             </ul>
           </div>

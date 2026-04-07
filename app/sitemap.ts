@@ -5,6 +5,7 @@ import { getAbsoluteUrl, getResearchAbsoluteUrl } from '../lib/site';
 
 const routeKeys = [
   'home',
+  'thesis',
   'about',
   'team',
   'contact',
