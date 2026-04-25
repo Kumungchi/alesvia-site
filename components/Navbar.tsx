@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BrandLogo } from './BrandMark';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenuToggle from './MobileMenuToggle';
 import NavbarShell from './NavbarShell';
@@ -26,8 +27,13 @@ export default function Navbar({ dict, lang }: { dict: NavDict; lang: Locale }) 
 
   return (
     <NavbarShell>
-      <Link href={getPublicPath(lang, 'home')} className="font-serif text-2xl font-bold tracking-tight text-alesvia-primary">
-        {dict.brand}
+      <Link href={getPublicPath(lang, 'home')} aria-label={dict.brand}>
+        <BrandLogo
+          className="inline-flex items-center gap-3"
+          markClassName="w-8 h-8 shrink-0"
+          textClassName="font-serif text-2xl font-bold tracking-tight"
+          title={dict.brand}
+        />
       </Link>
       <div className="hidden md:flex space-x-8 text-sm font-medium text-alesvia-muted items-center">
         {links.map((link) => (

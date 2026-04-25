@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BrandLogo } from './BrandMark';
 import type { Locale } from '../dictionaries';
 import { getPublicPath } from '../lib/routes';
 
@@ -32,7 +33,12 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-2 md:col-span-1">
-            <span className="font-serif text-xl font-bold text-alesvia-primary">Alesvia.</span>
+            <BrandLogo
+              className="inline-flex items-center gap-3"
+              markClassName="w-8 h-8 shrink-0"
+              textClassName="font-serif text-xl font-bold tracking-tight"
+              title="Alesvia"
+            />
           </div>
 
           <div>

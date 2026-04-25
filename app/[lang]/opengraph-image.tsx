@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { BrandMark } from '../../components/BrandMark';
 
 export const alt = 'Alesvia — The Human Baseline';
 export const size = { width: 1200, height: 630 };
@@ -18,35 +19,33 @@ export default async function OGImage({ params }: { params: Promise<{ lang: stri
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '80px',
-          background: 'linear-gradient(135deg, #1B1F3B 0%, #2A1F4E 50%, #0F2C59 100%)',
+          background: 'linear-gradient(135deg, #F4F1EA 0%, #EEE8DD 100%)',
           position: 'relative',
         }}
       >
-        {/* Decorative orb */}
         <div
           style={{
             position: 'absolute',
-            top: '-100px',
-            right: '-100px',
-            width: '500px',
-            height: '500px',
+            top: '-120px',
+            right: '-60px',
+            width: '420px',
+            height: '420px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(199,155,59,0.18) 0%, transparent 72%)',
           }}
         />
         <div
           style={{
             position: 'absolute',
-            bottom: '-80px',
-            left: '-80px',
-            width: '400px',
-            height: '400px',
+            bottom: '-90px',
+            left: '-90px',
+            width: '380px',
+            height: '380px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(27,31,59,0.4) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(22,50,79,0.10) 0%, transparent 72%)',
           }}
         />
 
-        {/* Brand */}
         <div
           style={{
             display: 'flex',
@@ -54,34 +53,33 @@ export default async function OGImage({ params }: { params: Promise<{ lang: stri
             marginBottom: '40px',
           }}
         >
-          <div
+          <BrandMark
+            title=""
+            withBackground
+            backgroundColor="#F8F4EC"
+            inkColor="#16324F"
+            accentColor="#C79B3B"
+            style={{ width: '56px', height: '56px' }}
+          />
+          <span
             style={{
-              width: '56px',
-              height: '56px',
-              borderRadius: '12px',
-              background: 'linear-gradient(135deg, #C9A84C, #D4B85A)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginRight: '20px',
+              fontSize: '34px',
+              fontWeight: 700,
+              color: '#16324F',
+              fontFamily: 'Georgia, serif',
+              marginLeft: '20px',
             }}
           >
-            <span style={{ fontSize: '32px', fontWeight: 900, color: '#1B1F3B', fontFamily: 'serif' }}>
-              A
-            </span>
-          </div>
-          <span style={{ fontSize: '32px', fontWeight: 700, color: '#F5F0E8', fontFamily: 'serif' }}>
-            Alesvia.
+            Alesvia
           </span>
         </div>
 
-        {/* Title */}
         <h1
           style={{
             fontSize: '64px',
             fontWeight: 900,
-            color: '#F5F0E8',
-            fontFamily: 'serif',
+            color: '#16324F',
+            fontFamily: 'Georgia, serif',
             lineHeight: 1.1,
             marginBottom: '24px',
             maxWidth: '900px',
@@ -96,7 +94,7 @@ export default async function OGImage({ params }: { params: Promise<{ lang: stri
         <p
           style={{
             fontSize: '24px',
-            color: 'rgba(245,240,232,0.6)',
+            color: 'rgba(34, 30, 34, 0.72)',
             fontFamily: 'sans-serif',
             fontWeight: 400,
             maxWidth: '700px',
@@ -108,7 +106,6 @@ export default async function OGImage({ params }: { params: Promise<{ lang: stri
             : 'Research, policy, education, and practical frameworks for a world where AI does not erode human control.'}
         </p>
 
-        {/* Bottom bar */}
         <div
           style={{
             position: 'absolute',
@@ -116,7 +113,7 @@ export default async function OGImage({ params }: { params: Promise<{ lang: stri
             left: '0',
             right: '0',
             height: '4px',
-            background: 'linear-gradient(90deg, #C9A84C, #1B1F3B)',
+            background: 'linear-gradient(90deg, #C79B3B, #16324F)',
           }}
         />
       </div>
