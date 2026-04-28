@@ -47,6 +47,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
         paragraphs: [
           'The systems entering public life today are not waiting for society to catch up. Conversational AI is already being used for advice, emotional regulation, learning, companionship, and professional judgment. Educational institutions are being pushed to adapt before they have real frameworks. Policymakers are under pressure to regulate tools that are changing faster than the institutions around them. Employers are deploying AI while still treating literacy and judgment as afterthoughts.',
           'In this environment, the default future is not necessarily collapse. It is quieter than that. It is a gradual normalization of systems that reduce friction for everything except human reflection. People adapt to the tool, institutions adapt to the market, and the ability to say no becomes narrower, costlier, and less culturally legible. That is the trajectory Alesvia exists to interrupt before it starts to feel inevitable.',
+          'But there is another reality emerging alongside this risk: market differentiation. As public awareness of manipulation grows and regulatory frameworks like the EU AI Act come into force, protecting human autonomy is no longer just an ethical imperative—it is the next major commercial advantage. Enterprises that can prove their AI systems respect human agency will secure institutional trust. Those that rely on opaque persuasion will face compounding regulatory and reputational debt.',
         ],
       },
       {
@@ -115,6 +116,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
         paragraphs: [
           'Systémy, které dnes vstupují do veřejného života, nečekají, až je společnost dožene. Konverzační AI se už používá pro rady, emoční regulaci, učení, společnost i profesní úsudek. Vzdělávací instituce jsou tlačeny k adaptaci dříve, než mají skutečné rámce. Tvůrci politik regulují nástroje, které se mění rychleji než instituce okolo nich. Zaměstnavatelé nasazují AI, zatímco gramotnost a lidský úsudek stále berou jako dodatek.',
           'V takovém prostředí není výchozí budoucností nutně kolaps. Je tišší. Je to postupná normalizace systémů, které snižují tření u všeho kromě lidské reflexe. Lidé se přizpůsobují nástroji, instituce trhu a schopnost říct ne je stále užší, nákladnější a kulturně méně srozumitelná. Právě tuto trajektorii chce Alesvia přerušit dříve, než začne působit jako nevyhnutelná.',
+          'Zároveň se ale objevuje i jiná realita: tržní diferenciace. S rostoucím povědomím veřejnosti o manipulaci a vstupem regulačních rámců, jako je EU AI Act, v platnost už ochrana lidské autonomie není jen etickým imperativem — je to další velká komerční výhoda. Podniky, které dokážou, že jejich AI systémy respektují lidskou iniciativu, si zajistí institucionální důvěru. Ty, které spoléhají na neprůhledné přesvědčování, budou čelit rostoucímu regulačnímu a reputačnímu dluhu.',
         ],
       },
       {

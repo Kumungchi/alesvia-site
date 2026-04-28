@@ -58,26 +58,22 @@ If institutions do not develop stronger public-interest responses now, autonomy 
 
 ---
 
-## Why this matters for funders
+## Why this matters for funders and investors
 
-Alesvia is designed as leverage, not noise.
+Alesvia is built on a hybrid NGO/B2B business model. Our public-interest research and policy work generate massive market credibility, directly driving our revenue-generating enterprise services (Alesvia Advisory, Enterprise Assessment, and Premium Training). 
 
-Support for Alesvia can compound across multiple domains at once:
+Support for Alesvia is an investment in a self-sustaining platform with clear ROI:
 
-- public research and narrative formation
-- education and institutional literacy
-- applied governance and implementation frameworks
-- ecosystem-building in the Czech and European context
+- **Path to Profitability:** We are building B2B compliance and advisory services that meet urgent market demand driven by the EU AI Act (e.g., Article 4 requirements).
+- **Proprietary Data & Deal Flow:** Investors in Alesvia gain early access to our incident trackers, compliance frameworks, and a curated pipeline of vetted, ethically sound AI startups.
+- **Compounding Impact:** Rather than funding an isolated program, investors help establish a self-funding platform that shapes enterprise AI adoption at scale.
 
-Rather than funding a single campaign or isolated program, a partner can help establish a platform capable of shaping how multiple sectors respond to AI over time.
+This model is particularly relevant for seed-stage and impact investors focused on:
 
-This is particularly relevant for funders interested in:
-
-- digital rights
-- democratic resilience
-- education and public reasoning
-- healthy technology ecosystems
-- responsible AI governance in Europe
+- Enterprise AI compliance and governance
+- Defensible, regulatory-aligned market advantages
+- Democratic resilience and digital rights
+- Sustainable, revenue-generating public-interest models
 
 ---
 
@@ -116,15 +112,14 @@ Together, these initiatives make Alesvia more than a think tank and more than a 
 
 ## What we are looking for
 
-We are currently seeking:
+We are currently seeking seed funding and strategic partnerships to scale our enterprise offerings and accelerate our path to financial self-sustainability:
 
-- institutional collaborators
-- academic and research partners
-- philanthropic or strategic funders
-- pilot partners for literacy, policy, and implementation work
-- ecosystem allies across the Czech Republic and Europe
+- **Seed-stage & Impact Investors:** To fund the expansion of our B2B compliance frameworks and enterprise advisory services.
+- **Enterprise Design Partners:** Forward-thinking companies to pilot our autonomy impact assessments and compliance toolkits.
+- **Institutional Collaborators & Academic Partners:** To co-develop our open-source, public-interest research.
+- **Ecosystem Allies:** Across the Czech Republic and Europe.
 
-We are especially interested in partners who want to build durable public-interest capacity rather than sponsor one-off visibility projects.
+We are interested in investors and partners who recognize that the next major competitive advantage in AI is building trusted, regulatory-compliant, and autonomy-respecting systems.
 
 ---
 

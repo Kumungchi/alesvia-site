@@ -107,7 +107,7 @@ Institutional infrastructure for human autonomy.
 
 ### Secondary positioning
 
-A bridge between research, policy, education, and real-world implementation.
+A bridge between research, public-interest policy, and enterprise-ready scalable implementation.
 
 ### Category positioning
 
@@ -132,6 +132,10 @@ This is stronger because it is:
 - broader than “AI safety”
 - more concrete than “digital wellbeing”
 - more institutionally serious than “healthy tech habits”
+
+### The Commercial Wedge
+
+For our B2B clients and partners, we turn ethical constraints into a competitive advantage. Protecting human autonomy is not just a moral imperative; it is the next major regulatory differentiator (e.g., EU AI Act) and market differentiator. Alesvia helps enterprises build products that are resilient, compliant, and trusted by users who increasingly reject manipulative engagement models.
 
 ---
 
@@ -163,13 +167,13 @@ When someone engages with Alesvia, they should feel that the organization can do
 
 ### The brand should feel
 
-- institutional
+- institutional yet enterprise-ready
 - intelligent
 - calm
-- principled
+- principled but outcome-oriented
 - modern
 - rigorous
-- international
+- international and scalable
 
 ### The brand should not feel
 
@@ -195,16 +199,16 @@ If Alesvia were a person, it would be:
 
 ### Primary audiences
 
-- institutional partners
-- researchers and academics
+- enterprise risk officers and CTOs
+- seed-stage and impact investors
 - policymakers and regulatory actors
-- educators and public-interest organizations
-- journalists and opinion-shaping media
+- institutional and enterprise partners
+- researchers and academics
 
 ### Secondary audiences
 
 - ethically minded founders and product teams
-- funders and philanthropic actors
+- philanthropic actors
 - professionals navigating AI in applied contexts
 
 ### Tertiary audiences

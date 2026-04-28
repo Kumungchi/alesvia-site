@@ -10,7 +10,7 @@
     "funding": "Financování",
     "research": "Výzkum a analýzy",
     "contact": "Kontakt",
-    "partner": "Spolupráce"
+    "partner": "Spolupráce a investice"
   },
   "hero": {
     "title": "Lidská autonomie je základ.",
@@ -37,8 +37,8 @@
     "mind_desc": "Vybavujeme psychology, psychiatry a terapeuty k etické a sebejisté navigaci érou AI.",
     "proof_title": "Alesvia Proof",
     "proof_desc": "Vědecky podložené programy AI gramotnosti založené na recenzovaném výzkumu, ne na hype nebo strachu.",
-    "compass_title": "Alesvia Compass",
-    "compass_desc": "Etické inovační poradenství pomáhající startupům a institucím zavádět AI zodpovědně od prvního dne.",
+    "compass_title": "Enterprise Assessment",
+    "compass_desc": "Enterprise řešení a hodnocení dopadů na autonomii, která firmám pomáhají proměnit AI compliance v konkurenční výhodu.",
     "watch_title": "Alesvia Watch",
     "watch_desc": "Nezávislá observatoř sledující reálný dopad AI na společnost, demokracii a lidskou autonomii."
   },
@@ -60,7 +60,7 @@
     "advisory": "Advisory",
     "mind": "Mind",
     "proof": "Proof",
-    "compass": "Compass",
+    "compass": "Assessment",
     "watch": "Watch",
     "thesis": "Teze",
     "about": "O nás",
@@ -255,32 +255,32 @@
     "cta_text": "Alesvia Proof je ve fázi plánování. Pokud jste pedagog, výzkumník nebo organizace připravující se na compliance s EU AI Act, rádi budeme spolupracovat."
   },
   "compass": {
-    "metadata_title": "Alesvia Compass | Alesvia",
-    "metadata_description": "Alesvia Compass pomáhá tvůrcům technologií integrovat lidskou autonomii od prvního dne prostřednictvím etických recenzí a hodnocení dopadu na autonomii.",
+    "metadata_title": "Enterprise Assessment | Alesvia",
+    "metadata_description": "Alesvia pomáhá tvůrcům technologií integrovat lidskou autonomii od prvního dne prostřednictvím B2B řešení a hodnocení dopadu na autonomii.",
     "label": "Iniciativa",
     "status": "Plánováno",
-    "title": "Alesvia Compass",
-    "subtitle": "Etické vedení inovací",
-    "intro": "Většina práce na AI etice probíhá poté, co produkty vyjdou na trh. V tu chvíli je architektura uzamčena. Alesvia Compass pomáhá tvůrcům technologií integrovat lidskou autonomii od prvního dne — ne jako compliance checkbox, ale jako návrhový princip.",
+    "title": "Enterprise Assessment",
+    "subtitle": "B2B řešení a hodnocení dopadů",
+    "intro": "Většina práce na AI etice probíhá poté, co produkty vyjdou na trh. V tu chvíli je architektura uzamčena. Pomáháme tvůrcům technologií integrovat lidskou autonomii od prvního dne — a proměnit tak etickou a regulační compliance v konkurenční výhodu.",
     "services_label": "Co nabízíme",
     "services_items": [
       "Předstartovní etická recenze AI produktů — lehké, akční hodnocení",
-      "Rámec hodnocení dopadu na autonomii — jako hodnocení dopadu na životní prostředí, ale pro lidskou iniciativu",
-      "Série workshopů pro startupové akcelerátory a inovační huby",
+      "Rámec hodnocení dopadu na autonomii — pomoc podnikům plnit požadavky EU AI Act",
+      "Série workshopů pro enterprise risk officery, CTO a inovační huby",
       "Otevřené nástroje: checklisty, rozhodovací stromy, indikátory rizik",
-      "Certifikace Alesvia Verified pro produkty, které projdou hodnocením autonomie"
+      "Komplexní audity compliance a autonomie pro nasazené AI systémy"
     ],
     "approach_label": "Náš přístup",
     "approach_text": "Nedáváme firmám 200stránkový etický rámec a neodcházíme. Compass poskytuje vedení přiměřené fázi — lehké pro rané prototypy, důsledné pro launch. Pracujeme po boku produktových týmů, ne nad nimi.",
     "audiences_label": "Pro koho je určeno",
     "audiences_items": [
-      "AI startupy a produktové týmy",
+      "Enterprise risk officers a compliance týmy",
       "Inovační laboratoře a oddělení výzkumu a vývoje",
-      "Startupové akcelerátory a inkubátory",
+      "Startupové akcelerátory a impact investoři",
       "CTO a produktoví lídři budující produkty poháněné AI"
     ],
     "cta_label": "Spolupracujte s námi",
-    "cta_text": "Alesvia Compass je ve fázi plánování. Pokud budujete AI produkt a chcete od začátku zakotvit lidskou autonomii, pojďme si promluvit."
+    "cta_text": "Služby Enterprise Assessment jsou ve fázi plánování. Pokud budujete AI produkt a chcete si zajistit regulační a tržní výhodu, pojďme si promluvit."
   },
   "watch": {
     "metadata_title": "Alesvia Watch | Alesvia",

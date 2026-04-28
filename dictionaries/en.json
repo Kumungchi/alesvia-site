@@ -10,7 +10,7 @@
     "funding": "Funding",
     "research": "Research & Insights",
     "contact": "Contact",
-    "partner": "Partner With Us"
+    "partner": "Partner & Invest"
   },
   "hero": {
     "title": "Human autonomy is the baseline.",
@@ -37,8 +37,8 @@
     "mind_desc": "Equipping psychologists, psychiatrists, and therapists to navigate the AI age ethically and confidently.",
     "proof_title": "Alesvia Proof",
     "proof_desc": "Science-backed AI literacy programs grounded in peer-reviewed research, not hype or fear.",
-    "compass_title": "Alesvia Compass",
-    "compass_desc": "Ethical innovation guidance helping startups and institutions deploy AI responsibly from day one.",
+    "compass_title": "Enterprise Assessment",
+    "compass_desc": "Enterprise solutions and autonomy impact assessments helping companies turn AI compliance into a competitive advantage.",
     "watch_title": "Alesvia Watch",
     "watch_desc": "An independent observatory tracking AI's real-world impact on society, democracy, and human autonomy."
   },
@@ -60,7 +60,7 @@
     "advisory": "Advisory",
     "mind": "Mind",
     "proof": "Proof",
-    "compass": "Compass",
+    "compass": "Assessment",
     "watch": "Watch",
     "thesis": "The Thesis",
     "about": "About",
@@ -255,32 +255,32 @@
     "cta_text": "Alesvia Proof is in the planning phase. If you are an educator, researcher, or organization preparing for EU AI Act compliance, we'd like to work together."
   },
   "compass": {
-    "metadata_title": "Alesvia Compass | Alesvia",
-    "metadata_description": "Alesvia Compass helps technology builders integrate human autonomy from day one through ethical reviews, autonomy impact assessments, and startup workshops.",
+    "metadata_title": "Enterprise Assessment | Alesvia",
+    "metadata_description": "Alesvia helps technology builders integrate human autonomy from day one through enterprise solutions and autonomy impact assessments.",
     "label": "Initiative",
     "status": "Planned",
-    "title": "Alesvia Compass",
-    "subtitle": "Ethical Innovation Guidance",
-    "intro": "Most AI ethics work happens after products ship. By then, the architecture is locked. Alesvia Compass helps technology builders integrate human autonomy from day one — not as a compliance checkbox, but as a design principle.",
+    "title": "Enterprise Assessment",
+    "subtitle": "B2B Solutions & Impact Assessments",
+    "intro": "Most AI ethics work happens after products ship. By then, the architecture is locked. We help technology builders integrate human autonomy from day one — turning ethical and regulatory compliance into a competitive advantage.",
     "services_label": "What We Offer",
     "services_items": [
       "Pre-launch ethical review for AI products — lightweight, actionable assessments",
-      "Autonomy impact assessment framework — like an environmental impact assessment, but for human agency",
-      "Workshop series for startup accelerators and innovation hubs",
+      "Autonomy impact assessment framework — helping enterprises meet EU AI Act requirements",
+      "Workshop series for enterprise risk officers, CTOs, and innovation hubs",
       "Open-source tools: checklists, decision trees, red-flag indicators",
-      "Alesvia Verified certification for products that pass autonomy assessment"
+      "Comprehensive compliance and autonomy audits for deployed AI systems"
     ],
     "approach_label": "Our Approach",
     "approach_text": "We don't hand companies a 200-page ethics framework and walk away. Compass provides stage-appropriate guidance — lightweight for early prototypes, rigorous for launch. We work alongside product teams, not above them.",
     "audiences_label": "Who This Serves",
     "audiences_items": [
-      "AI startups and product teams",
+      "Enterprise risk officers and compliance teams",
       "Innovation labs and R&D departments",
-      "Startup accelerators and incubators",
+      "Startup accelerators and impact investors",
       "CTOs and product leaders building AI-powered products"
     ],
     "cta_label": "Work With Us",
-    "cta_text": "Alesvia Compass is in the planning phase. If you are building an AI product and want to embed human autonomy from the start, let's talk."
+    "cta_text": "Our Enterprise Assessment services are in the planning phase. If you are building an AI product and want to secure a regulatory and market advantage, let's talk."
   },
   "watch": {
     "metadata_title": "Alesvia Watch | Alesvia",
