@@ -7,6 +7,7 @@ import JsonLd from "../../components/JsonLd";
 import ScrollProgress from "../../components/ScrollProgress";
 import { getAbsoluteUrl, getSiteOrigin } from "../../lib/site";
 import { getPublicPath } from "../../lib/routes";
+import { ConvexClientProvider } from "../../components/ConvexClientProvider";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -79,51 +80,53 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body className={`${inter.variable} ${playfair.variable} font-sans bg-alesvia-bg text-alesvia-text antialiased`}>
-        <JsonLd data={{
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          name: 'Alesvia',
-          alternateName: 'Alesvia z.ú.',
-          url: siteOrigin,
-          description: dict.metadata.description,
-          foundingLocation: {
-            '@type': 'Place',
-            name: 'Czech Republic',
-          },
-          legalName: 'Alesvia z.ú.',
-          nonprofitStatus: 'RegisteredNonprofit',
-          sameAs: [],
-          knowsAbout: [
-            'Human autonomy',
-            'AI ethics',
-            'Conversational AI',
-            'Digital wellbeing',
-            'Algorithmic literacy',
-            'AI policy',
-            'Ethical AI investment',
-          ],
-        }} />
-        <JsonLd data={{
-          '@context': 'https://schema.org',
-          '@type': 'WebSite',
-          name: 'Alesvia',
-          url: siteOrigin,
-          inLanguage: [lang === 'cs' ? 'cs-CZ' : 'en-US'],
-        }} />
-        <ScrollProgress />
-        <div className="min-h-screen flex flex-col noise-overlay">
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-alesvia-primary focus:text-alesvia-bg focus:px-6 focus:py-3 focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"
-          >
-            {lang === 'cs' ? 'Přeskočit na obsah' : 'Skip to content'}
-          </a>
-          <Navbar dict={dict.nav} lang={lang} />
-          <main id="main-content" className="flex-1" role="main">
-            {children}
-          </main>
-          <Footer dict={dict.footer} lang={lang} />
-        </div>
+        <ConvexClientProvider>
+          <JsonLd data={{
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Alesvia',
+            alternateName: 'Alesvia z.ú.',
+            url: siteOrigin,
+            description: dict.metadata.description,
+            foundingLocation: {
+              '@type': 'Place',
+              name: 'Czech Republic',
+            },
+            legalName: 'Alesvia z.ú.',
+            nonprofitStatus: 'RegisteredNonprofit',
+            sameAs: [],
+            knowsAbout: [
+              'Human autonomy',
+              'AI ethics',
+              'Conversational AI',
+              'Digital wellbeing',
+              'Algorithmic literacy',
+              'AI policy',
+              'Ethical AI investment',
+            ],
+          }} />
+          <JsonLd data={{
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Alesvia',
+            url: siteOrigin,
+            inLanguage: [lang === 'cs' ? 'cs-CZ' : 'en-US'],
+          }} />
+          <ScrollProgress />
+          <div className="min-h-screen flex flex-col noise-overlay">
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-alesvia-primary focus:text-alesvia-bg focus:px-6 focus:py-3 focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"
+            >
+              {lang === 'cs' ? 'Přeskočit na obsah' : 'Skip to content'}
+            </a>
+            <Navbar dict={dict.nav} lang={lang} />
+            <main id="main-content" className="flex-1" role="main">
+              {children}
+            </main>
+            <Footer dict={dict.footer} lang={lang} />
+          </div>
+        </ConvexClientProvider>
       </body>
     </html>
   );
