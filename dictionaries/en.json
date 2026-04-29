@@ -24,8 +24,8 @@
     "status_active": "Active",
     "status_incubating": "Incubating",
     "unplugged_title": "Unplugged",
-    "unplugged_desc": "A program focused on establishing healthy boundaries, intentional friction, and digital detox protocols against highly persuasive AI.",
-    "unplugged_link": "Visit Platform \u2192",
+    "unplugged_desc": "AI increasingly mimics human closeness. Unplugged helps people understand what is missing behind this illusion — building literacy for a time when the boundaries between human and algorithm are blurring.",
+    "unplugged_link": "Visit unplugged.cz \u2192",
     "policy_title": "Policy Lab",
     "policy_desc": "Research and advocacy translating our ethical framework into actionable legislative and corporate guidelines.",
     "education_title": "Education",
@@ -81,7 +81,7 @@
     "title": "Preserving human autonomy in an automated world.",
     "intro": "Alesvia exists because automation is outpacing the institutions meant to govern it. We are building the intellectual and structural foundation for a world where technology serves human agency — not the other way around.",
     "mission_label": "Our Mission",
-    "mission_text": "To establish and defend the human baseline — the non-negotiable set of rights, capacities, and boundaries that must be preserved as automation reshapes society. We do this through research, education, ethical technology initiatives, and institutional advocacy.",
+    "mission_text": "Alesvia is a Czech non-profit organization (z.ú.) functioning as an umbrella entity. Our sole currently active project is Unplugged, whose mission is: \"AI increasingly mimics human closeness. Unplugged helps people understand what is missing behind this illusion — and builds literacy for a time when the boundaries between human and algorithm are less obvious.\"",
     "philosophy_label": "Philosophy",
     "philosophy_text": "We believe that the most dangerous technologies are not the ones that fail, but the ones that succeed too well — systems so persuasive, so convenient, and so seamlessly integrated that opting out becomes socially or practically impossible. Alesvia exists to ensure that opting out remains a viable choice.",
     "origin_label": "Origin",
@@ -442,7 +442,7 @@
     "items": [
       {
         "question": "What is Alesvia?",
-        "answer": "Alesvia is a Czech-registered institute (z.ú.) dedicated to preserving human autonomy in an increasingly automated world. It operates as an umbrella organization funding and governing initiatives that address domains where human agency is under pressure — starting with conversational AI."
+        "answer": "Alesvia is a Czech non-profit organization (z.ú.) based in Ostrava, operating as an umbrella entity for projects dedicated to preserving human autonomy in an increasingly automated world. The active project under its umbrella is Unplugged."
       },
       {
         "question": "What does Alesvia do?",

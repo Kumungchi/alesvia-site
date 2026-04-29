@@ -69,7 +69,7 @@ export default function InitiativeCard({
 
   // standard
   return (
-    <div data-status={status} className="group bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+    <div data-status={status} className="group bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10 hover:-translate-y-1 hover:shadow-xl hover:border-alesvia-accent/30 transition-all duration-500 flex flex-col h-full">
       <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-muted/20 transition-colors">
         {icon}
       </div>

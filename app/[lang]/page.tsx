@@ -60,7 +60,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <TiltCard intensity={5}>
                 <SpotlightCard className="h-full">
                   <div className="gradient-border h-full">
-                    <div className="glass shimmer inner-light rounded-xl p-8 md:p-10 h-full flex flex-col relative overflow-hidden">
+                    <div className="glass shimmer inner-light rounded-xl p-8 md:p-10 h-full flex flex-col relative overflow-hidden hover:shadow-2xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
                       <div className="w-14 h-14 bg-alesvia-primary text-alesvia-bg rounded-xl flex items-center justify-center font-bold text-2xl mb-6 shadow-lg">
                         U
                       </div>
@@ -71,9 +71,9 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                         </div>
                         <p className="text-alesvia-muted leading-relaxed mb-8 text-lg font-light">{dict.ecosystem.unplugged_desc}</p>
                       </div>
-                      <Link href={getPublicPath(lang, 'initiativeUnplugged')} className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
+                      <a href="https://unplugged.cz" target="_blank" rel="noopener noreferrer" className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
                         {dict.ecosystem.unplugged_link}
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </SpotlightCard>
@@ -83,7 +83,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <ScrollReveal delay={1}>
                 <TiltCard intensity={8}>
                   <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
                       <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
                         P
                       </div>
@@ -106,7 +106,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <ScrollReveal delay={2}>
                 <TiltCard intensity={8}>
                   <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
                       <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
                         E
                       </div>
@@ -155,7 +155,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <ScrollReveal delay={1}>
                 <TiltCard intensity={8}>
                   <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
                       <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
                         M
                       </div>
@@ -178,7 +178,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <ScrollReveal delay={2}>
                 <TiltCard intensity={8}>
                   <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
                       <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
                         Pr
                       </div>
@@ -201,7 +201,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <ScrollReveal delay={3}>
                 <TiltCard intensity={8}>
                   <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
                       <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
                         C
                       </div>
@@ -224,7 +224,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <ScrollReveal delay={4}>
                 <TiltCard intensity={8}>
                   <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
                       <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
                         W
                       </div>
