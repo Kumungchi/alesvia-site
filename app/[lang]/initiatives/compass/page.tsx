@@ -4,6 +4,8 @@ import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
 import ScrollReveal from '../../../../components/ScrollReveal';
+import CompassFlowchart from '../../../../components/CompassFlowchart';
+import CompassForm from '../../../../components/CompassForm';
 import { buildPageMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 
@@ -36,6 +38,17 @@ export default async function CompassPage({ params }: { params: Promise<{ lang: 
 
       <div className="space-y-20 pb-24">
         <ScrollReveal>
+          <section className="bg-alesvia-surface/50 border border-alesvia-accent/20 rounded-2xl p-8 mb-16 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1 h-full bg-alesvia-accent"></div>
+            <h3 className="text-xl font-serif font-bold text-alesvia-text mb-4">{d.advantage_title}</h3>
+            <div className="space-y-4 max-w-3xl">
+              <p className="text-alesvia-muted leading-relaxed">{d.advantage_text1}</p>
+              <p className="text-alesvia-text font-medium leading-relaxed">{d.advantage_text2}</p>
+            </div>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
           <section>
             <SectionLabel>{d.services_label}</SectionLabel>
             <ul className="space-y-4 mt-6 max-w-3xl">
@@ -51,8 +64,7 @@ export default async function CompassPage({ params }: { params: Promise<{ lang: 
 
         <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
-            <SectionLabel>{d.approach_label}</SectionLabel>
-            <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.approach_text}</p>
+            <CompassFlowchart dict={dict.compass_flowchart} />
           </section>
         </ScrollReveal>
 
@@ -72,12 +84,12 @@ export default async function CompassPage({ params }: { params: Promise<{ lang: 
 
         <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
-            <div className="bg-gradient-to-br from-alesvia-primary to-[#1A1323] text-alesvia-bg rounded-2xl p-10 md:p-16">
-              <SectionLabel>{d.cta_label}</SectionLabel>
-              <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-              <Link href={getPublicPath(lang, 'contact')} className="btn-primary bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-lg inline-block">
-                {d.cta_label}
-              </Link>
+            <div className="max-w-4xl">
+              <div className="mb-10">
+                <SectionLabel>{d.cta_label}</SectionLabel>
+                <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mt-4">{d.cta_text}</p>
+              </div>
+              <CompassForm dict={dict.compass_form} />
             </div>
           </section>
         </ScrollReveal>
