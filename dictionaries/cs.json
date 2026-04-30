@@ -548,5 +548,33 @@
     "step3_desc": "Doručení akčních inženýrských ticketů pro úpravu UI tření a nakládání s daty.",
     "step4_title": "4. Nezávislá certifikace",
     "step4_desc": "Vydání zprávy Alesvia o dopadu na autonomii pro transparentnost vůči stakeholderům a regulátorům."
+  },
+  "policy_form": {
+    "title": "Spolupracujte s Policy Lab",
+    "name": "Vaše jméno",
+    "email": "Váš e-mail",
+    "organization": "Organizace",
+    "affiliation": "Typ afilace",
+    "affil_gov": "Státní správa / Regulátor",
+    "affil_academic": "Akademický výzkumník",
+    "affil_thinktank": "Think-Tank / NGO",
+    "affil_corporate": "Korporátní compliance",
+    "affil_other": "Jiné",
+    "message": "Stručně popište váš výzkum nebo policy dotaz",
+    "submit": "Odeslat dotaz",
+    "sending": "Odesílání...",
+    "success": "Dotaz přijat. Brzy se vám ozveme.",
+    "error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem."
+  },
+  "policy_funnel": {
+    "title": "Konverzní trychtýř Policy Lab",
+    "step1_title": "1. Akademická syntéza",
+    "step1_desc": "Agregace dat o dopadech AI, behaviorálních studií a hlášení incidentů z naší iniciativy Watch.",
+    "step2_title": "2. Regulační mapování",
+    "step2_desc": "Porovnání behaviorálních dopadů s existujícími legislativními rámci, jako je EU AI Act.",
+    "step3_title": "3. Legislativní návrhy",
+    "step3_desc": "Vytváření konkrétních politických šablon, vzorové legislativy a pokynů pro dodržování předpisů pro MSP.",
+    "step4_title": "4. Institucionální implementace",
+    "step4_desc": "Poskytování přímého poradenství a sad nástrojů (toolkits) orgánům veřejné správy a vzdělávacím institucím."
   }
 }

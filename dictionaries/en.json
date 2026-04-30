@@ -548,5 +548,33 @@
     "step3_desc": "Delivering actionable engineering tickets to adjust UI friction and data handling.",
     "step4_title": "4. Independent Certification",
     "step4_desc": "Issuing an Alesvia Autonomy Impact Report for stakeholder and regulatory transparency."
+  },
+  "policy_form": {
+    "title": "Engage with Policy Lab",
+    "name": "Your name",
+    "email": "Your email",
+    "organization": "Organization",
+    "affiliation": "Affiliation Type",
+    "affil_gov": "Government / Regulatory",
+    "affil_academic": "Academic Researcher",
+    "affil_thinktank": "Think-Tank / NGO",
+    "affil_corporate": "Corporate Compliance",
+    "affil_other": "Other",
+    "message": "Briefly describe your research or policy inquiry",
+    "submit": "Submit Inquiry",
+    "sending": "Submitting...",
+    "success": "Inquiry received. We will be in touch shortly.",
+    "error": "Something went wrong. Please try emailing us directly."
+  },
+  "policy_funnel": {
+    "title": "The Policy Translation Funnel",
+    "step1_title": "1. Academic Synthesis",
+    "step1_desc": "Aggregating AI impact data, behavioral studies, and incident reports from our Watch initiative.",
+    "step2_title": "2. Regulatory Mapping",
+    "step2_desc": "Cross-referencing behavioral impacts with existing legislative frameworks like the EU AI Act.",
+    "step3_title": "3. Legislative Drafting",
+    "step3_desc": "Creating concrete policy templates, model legislation, and SME compliance guidelines.",
+    "step4_title": "4. Institutional Implementation",
+    "step4_desc": "Providing direct advisory and toolkits to public bodies and educational institutions."
   }
 }

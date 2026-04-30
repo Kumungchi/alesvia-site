@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
+import ScrollReveal from '../../../../components/ScrollReveal';
+import PolicyFunnel from '../../../../components/PolicyFunnel';
+import PolicyForm from '../../../../components/PolicyForm';
 import { buildPageMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 
@@ -34,32 +37,44 @@ export default async function PolicyLabPage({ params }: { params: Promise<{ lang
       </PageHeader>
 
       <div className="space-y-20 pb-24">
-        <section>
-          <SectionLabel>{d.vision_label}</SectionLabel>
-          <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.vision_text}</p>
-        </section>
+        <ScrollReveal>
+          <section>
+            <SectionLabel>{d.vision_label}</SectionLabel>
+            <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.vision_text}</p>
+          </section>
+        </ScrollReveal>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
-          <SectionLabel>{d.focus_label}</SectionLabel>
-          <ul className="space-y-4 mt-6 max-w-3xl">
-            {d.focus_items.map((item: string, i: number) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full mt-2.5 shrink-0"></span>
-                <span className="text-lg text-alesvia-text leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <ScrollReveal>
+          <section className="border-t border-alesvia-muted/10 pt-16">
+            <PolicyFunnel dict={dict.policy_funnel} />
+          </section>
+        </ScrollReveal>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
-          <div className="bg-alesvia-surface/50 rounded-2xl p-10 md:p-16 border border-alesvia-muted/10">
-            <SectionLabel>{d.cta_label}</SectionLabel>
-            <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-            <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-primary text-alesvia-bg font-semibold px-8 py-4 rounded hover:bg-alesvia-primary/90 transition-all shadow-md inline-block">
-              {d.cta_label}
-            </Link>
-          </div>
-        </section>
+        <ScrollReveal>
+          <section className="border-t border-alesvia-muted/10 pt-16">
+            <SectionLabel>{d.focus_label}</SectionLabel>
+            <ul className="space-y-4 mt-6 max-w-3xl">
+              {d.focus_items.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full mt-2.5 shrink-0"></span>
+                  <span className="text-lg text-alesvia-text leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <section className="border-t border-alesvia-muted/10 pt-16">
+            <div className="max-w-4xl">
+              <div className="mb-10">
+                <SectionLabel>{d.cta_label}</SectionLabel>
+                <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mt-4">{d.cta_text}</p>
+              </div>
+              <PolicyForm dict={dict.policy_form} />
+            </div>
+          </section>
+        </ScrollReveal>
       </div>
     </div>
   );
