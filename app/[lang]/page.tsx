@@ -59,22 +59,20 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               {/* Unplugged — Flagship (2x2) */}
               <TiltCard intensity={5}>
                 <SpotlightCard className="h-full">
-                  <div className="gradient-border h-full">
-                    <div className="glass shimmer inner-light rounded-xl p-8 md:p-10 h-full flex flex-col relative overflow-hidden hover:shadow-2xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-14 h-14 bg-alesvia-primary text-alesvia-bg rounded-xl flex items-center justify-center font-bold text-2xl mb-6 shadow-lg">
-                        U
-                      </div>
-                      <div className="flex-1 tilt-card-inner">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-2xl md:text-3xl font-bold text-alesvia-primary">{dict.ecosystem.unplugged_title}</h4>
-                          <span className="text-xs font-semibold bg-alesvia-accent/10 text-alesvia-accent px-3 py-1.5 rounded-full">{dict.ecosystem.status_active}</span>
-                        </div>
-                        <p className="text-alesvia-muted leading-relaxed mb-8 text-lg font-light">{dict.ecosystem.unplugged_desc}</p>
-                      </div>
-                      <a href="https://unplugged.cz" target="_blank" rel="noopener noreferrer" className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
-                        {dict.ecosystem.unplugged_link}
-                      </a>
+                  <div className="glass inner-light rounded-xl p-8 md:p-10 h-full flex flex-col group relative overflow-hidden hover:shadow-2xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
+                    <div className="w-14 h-14 bg-alesvia-primary/10 text-alesvia-primary rounded-xl flex items-center justify-center font-bold text-2xl mb-6 group-hover:bg-alesvia-primary/20 transition-colors duration-300">
+                      U
                     </div>
+                    <div className="flex-1 tilt-card-inner">
+                      <div className="flex justify-between items-baseline mb-3">
+                        <h4 className="font-serif text-2xl md:text-3xl font-bold text-alesvia-text">{dict.ecosystem.unplugged_title}</h4>
+                        <span className="text-xs font-semibold bg-alesvia-accent/10 text-alesvia-accent px-3 py-1.5 rounded-full">{dict.ecosystem.status_active}</span>
+                      </div>
+                      <p className="text-alesvia-muted leading-relaxed mb-8 text-lg font-light">{dict.ecosystem.unplugged_desc}</p>
+                    </div>
+                    <a href="https://unplugged.cz" target="_blank" rel="noopener noreferrer" className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
+                      {dict.ecosystem.unplugged_link}
+                    </a>
                   </div>
                 </SpotlightCard>
               </TiltCard>

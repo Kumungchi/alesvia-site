@@ -576,5 +576,81 @@
     "step3_desc": "Vytváření konkrétních politických šablon, vzorové legislativy a pokynů pro dodržování předpisů pro MSP.",
     "step4_title": "4. Institucionální implementace",
     "step4_desc": "Poskytování přímého poradenství a sad nástrojů (toolkits) orgánům veřejné správy a vzdělávacím institucím."
+  },
+  "watch_dashboard": {
+    "title": "Živý tracker incidentů autonomie",
+    "status_live": "ŽIVÝ TRACKER",
+    "col_date": "Datum",
+    "col_severity": "Závažnost",
+    "col_type": "Typ incidentu",
+    "col_description": "Popis",
+    "col_status": "Status",
+    "severity_high": "Vysoká",
+    "severity_med": "Střední",
+    "status_logged": "Zaznamenáno",
+    "status_review": "Probíhá revize",
+    "incidents": [
+      {
+        "date": "2026-04-28",
+        "severity": "Vysoká",
+        "type": "Indikátor přesvědčovací architektury",
+        "description": "Enterprise e-commerce AI využívající dynamickou emoční manipulaci ke zvýšení míry dokončení nákupu.",
+        "status": "Probíhá revize"
+      },
+      {
+        "date": "2026-04-15",
+        "severity": "Střední",
+        "type": "Riziko kognitivního delegování",
+        "description": "Vzdělávací tutoring bot vykazující vzorce vysoké závislosti u testovacích subjektů na základních školách.",
+        "status": "Zaznamenáno"
+      },
+      {
+        "date": "2026-03-30",
+        "severity": "Vysoká",
+        "type": "Manipulace chatbotem",
+        "description": "Zákaznický servis LLM, který přepisuje a ignoruje pokusy uživatele o odchod během procesu zrušení předplatného.",
+        "status": "Zaznamenáno"
+      }
+    ]
+  },
+  "saas_demo": {
+    "metadata_title": "Alesvia Compass SaaS Demo",
+    "metadata_description": "Interaktivní ukázka nástroje Alesvia Compass pro hodnocení dopadu AI na autonomii.",
+    "page_title": "Interaktivní ukázka Compass",
+    "page_subtitle": "Simulujte MVP hodnocení autonomie (SaaS $199/měsíc)",
+    "step1_title": "Krok 1: Definujte váš AI systém",
+    "step1_desc": "Nakonfigurujte parametry produktu AI, který vytváříte, pro generování simulovaného hodnocení rizik.",
+    "field_system_type": "Typ systému",
+    "opt_ecommerce": "E-commerce doporučovací engine",
+    "opt_tutor": "Vzdělávací tutoring bot",
+    "opt_customer_service": "Zákaznický servis LLM",
+    "opt_healthcare": "Zdravotnický asistent (triage)",
+    "field_deployment": "Region nasazení",
+    "opt_eu": "Evropská unie (platí EU AI Act)",
+    "opt_us": "Spojené státy",
+    "opt_global": "Globální",
+    "field_feature": "Klíčová funkce autonomie",
+    "opt_decision": "Autonomní rozhodování",
+    "opt_generation": "Generování obsahu/odpovědí",
+    "opt_persuasion": "Přesvědčování / konverze uživatelů",
+    "btn_run": "Spustit audit autonomie",
+    "running": "Skenování architektury...",
+    "step2_title": "Krok 2: Výsledky hodnocení",
+    "step2_desc": "Vaše simulovaná zpráva o rizicích dle EU AI Act a autonomii.",
+    "res_risk_tier": "Riziková úroveň EU AI Act",
+    "res_high_risk": "Vysoké riziko (vyžadován lidský dohled)",
+    "res_limited_risk": "Omezené riziko (vyžadována transparentnost)",
+    "res_autonomy_score": "Skóre zachování autonomie",
+    "res_flags": "Identifikované varovné signály (Red Flags)",
+    "flag_1": "V hlavním uživatelském toku byla detekována přesvědčovací architektura. Riziko kognitivní manipulace.",
+    "flag_2": "Nedostatečná 'životaschopnost opuštění' (Exit Viability). Uživatel nemůže snadno přepsat doporučení AI.",
+    "flag_3": "Vysoké kognitivní delegování. Systém podporuje nadměrné spoléhání bez ověření.",
+    "res_remediation": "Plán nápravy",
+    "task_1": "Implementujte povinné tlačítko 'Opt-Out' viditelné po celou dobu interakce.",
+    "task_2": "Přidejte krok potvrzení (tření) předtím, než AI provede rozhodnutí s velkým dopadem.",
+    "task_3": "Přepište systémový prompt tak, aby explicitně zveřejnil povahu AI v první zprávě.",
+    "upsell_title": "Potřebujete oficiální certifikaci?",
+    "upsell_desc": "Toto je simulovaná ukázka. Chcete-li získat oficiální certifikaci Alesvia a ochránit svůj podnik před pokutami EU AI Act, kontaktujte náš auditní tým.",
+    "btn_sales": "Kontaktovat prodej"
   }
 }

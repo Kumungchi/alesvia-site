@@ -576,5 +576,81 @@
     "step3_desc": "Creating concrete policy templates, model legislation, and SME compliance guidelines.",
     "step4_title": "4. Institutional Implementation",
     "step4_desc": "Providing direct advisory and toolkits to public bodies and educational institutions."
+  },
+  "watch_dashboard": {
+    "title": "Live Autonomy Incident Tracker",
+    "status_live": "LIVE TRACKER",
+    "col_date": "Date",
+    "col_severity": "Severity",
+    "col_type": "Incident Type",
+    "col_description": "Description",
+    "col_status": "Status",
+    "severity_high": "High",
+    "severity_med": "Medium",
+    "status_logged": "Logged",
+    "status_review": "Under Review",
+    "incidents": [
+      {
+        "date": "2026-04-28",
+        "severity": "High",
+        "type": "Persuasive Architecture Flag",
+        "description": "Enterprise e-commerce AI utilizing dynamic emotional manipulation to increase checkout rates.",
+        "status": "Under Review"
+      },
+      {
+        "date": "2026-04-15",
+        "severity": "Medium",
+        "type": "Cognitive Delegation Risk",
+        "description": "Educational tutoring bot exhibiting high dependency patterns in primary school test subjects.",
+        "status": "Logged"
+      },
+      {
+        "date": "2026-03-30",
+        "severity": "High",
+        "type": "Chatbot Manipulation",
+        "description": "Customer service LLM overriding user exit attempts during subscription cancellation flows.",
+        "status": "Logged"
+      }
+    ]
+  },
+  "saas_demo": {
+    "metadata_title": "Alesvia Compass SaaS Demo",
+    "metadata_description": "Interactive demo of the Alesvia Compass AI Autonomy Assessment tool.",
+    "page_title": "Compass Interactive Demo",
+    "page_subtitle": "Simulate a $199/mo MVP Autonomy Assessment",
+    "step1_title": "Step 1: Define Your AI System",
+    "step1_desc": "Configure the parameters of the AI product you are building to generate a simulated risk assessment.",
+    "field_system_type": "System Type",
+    "opt_ecommerce": "E-commerce Recommendation Engine",
+    "opt_tutor": "Educational Tutoring Bot",
+    "opt_customer_service": "Customer Service LLM",
+    "opt_healthcare": "Healthcare Triage Assistant",
+    "field_deployment": "Deployment Region",
+    "opt_eu": "European Union (EU AI Act applies)",
+    "opt_us": "United States",
+    "opt_global": "Global",
+    "field_feature": "Core Autonomy Feature",
+    "opt_decision": "Autonomous Decision Making",
+    "opt_generation": "Content/Response Generation",
+    "opt_persuasion": "User Persuasion / Conversion",
+    "btn_run": "Run Autonomy Audit",
+    "running": "Scanning Architecture...",
+    "step2_title": "Step 2: Assessment Results",
+    "step2_desc": "Your simulated EU AI Act and Autonomy Risk report.",
+    "res_risk_tier": "EU AI Act Risk Tier",
+    "res_high_risk": "High Risk (Human Oversight Required)",
+    "res_limited_risk": "Limited Risk (Transparency Required)",
+    "res_autonomy_score": "Autonomy Preservation Score",
+    "res_flags": "Identified Red Flags",
+    "flag_1": "Persuasive Architecture detected in core user flow. Risk of cognitive manipulation.",
+    "flag_2": "Insufficient 'Exit Viability'. User cannot easily override the AI's recommendation.",
+    "flag_3": "High Cognitive Delegation. System encourages over-reliance without verification.",
+    "res_remediation": "Remediation Checklist",
+    "task_1": "Implement mandatory 'Opt-Out' button visible at all times during interaction.",
+    "task_2": "Add friction/confirmation step before AI executes high-impact decisions.",
+    "task_3": "Rewrite system prompt to disclose AI nature explicitly in first message.",
+    "upsell_title": "Need Official Certification?",
+    "upsell_desc": "This is a simulated demo. To receive an official Alesvia Certification and protect your enterprise from EU AI Act fines, contact our audit team.",
+    "btn_sales": "Contact Sales"
   }
 }

@@ -4,6 +4,7 @@ import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
 import ScrollReveal from '../../../../components/ScrollReveal';
+import IncidentDashboard from '../../../../components/IncidentDashboard';
 import { buildPageMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 
@@ -35,6 +36,12 @@ export default async function WatchPage({ params }: { params: Promise<{ lang: Lo
       </PageHeader>
 
       <div className="space-y-20 pb-24">
+        <ScrollReveal>
+          <section className="mb-8">
+            <IncidentDashboard dict={dict.watch_dashboard} />
+          </section>
+        </ScrollReveal>
+
         <ScrollReveal>
           <section>
             <SectionLabel>{d.scope_label}</SectionLabel>
