@@ -8,6 +8,7 @@ import ScrollProgress from "../../components/ScrollProgress";
 import { getAbsoluteUrl, getSiteOrigin } from "../../lib/site";
 import { getPublicPath } from "../../lib/routes";
 import { ConvexClientProvider } from "../../components/ConvexClientProvider";
+import { Analytics } from '@vercel/analytics/react';
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -127,6 +128,7 @@ export default async function RootLayout({
             <Footer dict={dict.footer} lang={lang} />
           </div>
         </ConvexClientProvider>
+        <Analytics />
       </body>
     </html>
   );
