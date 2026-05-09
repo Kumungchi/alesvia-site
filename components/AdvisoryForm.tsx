@@ -29,7 +29,7 @@ interface AdvisoryFormDict {
 export default function AdvisoryForm({ dict, lang }: { dict: AdvisoryFormDict; lang: string }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const sendMessage = useMutation(api.messages.send);
+  const submitAdvisory = useMutation(api.advisory.submit);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -49,12 +49,13 @@ export default function AdvisoryForm({ dict, lang }: { dict: AdvisoryFormDict; l
 
     try {
       // Save to Convex
-      await sendMessage({ 
-        formType: 'advisory', 
+      await submitAdvisory({ 
         name, 
         email, 
-        subject: 'partnership', 
-        message: formattedMessage 
+        orgName, 
+        orgType, 
+        stage, 
+        message: rawMessage 
       });
       
       // Email Notification

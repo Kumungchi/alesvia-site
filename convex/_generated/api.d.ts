@@ -8,7 +8,11 @@
  * @module
  */
 
+import type * as advisory from "../advisory.js";
+import type * as compass from "../compass.js";
+import type * as incidents from "../incidents.js";
 import type * as messages from "../messages.js";
+import type * as policy from "../policy.js";
 
 import type {
   ApiFromModules,
@@ -17,7 +21,11 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  advisory: typeof advisory;
+  compass: typeof compass;
+  incidents: typeof incidents;
   messages: typeof messages;
+  policy: typeof policy;
 }>;
 
 /**

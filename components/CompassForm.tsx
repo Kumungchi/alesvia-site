@@ -27,7 +27,7 @@ interface CompassFormDict {
 export default function CompassForm({ dict }: { dict: CompassFormDict }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const sendMessage = useMutation(api.messages.send);
+  const submitCompass = useMutation(api.compass.submit);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,12 +47,13 @@ export default function CompassForm({ dict }: { dict: CompassFormDict }) {
 
     try {
       // Save to Convex
-      await sendMessage({ 
-        formType: 'compass', 
+      await submitCompass({ 
         name, 
         email, 
-        subject: 'partnership', 
-        message: formattedMessage 
+        company, 
+        role, 
+        aiStage, 
+        message: rawMessage 
       });
       
       // Email Notification
