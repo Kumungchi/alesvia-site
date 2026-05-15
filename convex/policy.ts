@@ -1,4 +1,4 @@
-import { mutation } from "./_generated/server";
+import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
 export const submit = mutation({
@@ -18,5 +18,11 @@ export const submit = mutation({
       message: args.message,
     });
     return requestId;
+  },
+});
+
+export const getAll = query({
+  handler: async (ctx) => {
+    return await ctx.db.query("policyRequests").order("desc").collect();
   },
 });

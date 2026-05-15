@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server'
 import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 import { getPublicPath } from './lib/routes'
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
 const locales = ['cs', 'en'] as const
 const defaultLocale = 'cs'
@@ -52,7 +53,13 @@ function buildResearchPath(pathname: string, locale: (typeof locales)[number]): 
   return `${researchBase}${normalizedPath}`
 }
 
-export function proxy(request: NextRequest) {
+const isProtectedRoute = createRouteMatcher(['/en/admin(.*)', '/cs/admin(.*)', '/admin(.*)']);
+
+export const proxy = clerkMiddleware(async (auth, request) => {
+  if (isProtectedRoute(request)) {
+    await auth.protect();
+  }
+
   const host = request.headers.get('host') ?? ''
   const locale = getLocale(request)
 
@@ -78,13 +85,13 @@ export function proxy(request: NextRequest) {
   // e.g. incoming request is /products
   // The new URL is now /cs/products
   return NextResponse.redirect(request.nextUrl)
-}
+});
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next, images, favicon, etc)
-    '/((?!_next|.*\\..*).*)',
-    // Optional: only run on root (/) URL
-    // '/'
+    // Skip Next.js internals and all static files, unless found in search params
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for API routes
+    '/(api|trpc)(.*)',
   ],
 }

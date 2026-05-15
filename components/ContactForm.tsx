@@ -180,12 +180,15 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
           )}
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-2">
-            <p className="text-xs text-alesvia-muted/80 leading-relaxed max-w-[280px]">
-              {dict.form_privacy}{' '}
-              <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent hover:text-alesvia-primary transition-colors font-medium link-animated">
-                {lang === 'cs' ? 'zásadami ochrany osobních údajů' : 'privacy policy'}
-              </Link>.
-            </p>
+            <div className="flex items-start gap-3 max-w-[280px]">
+              <input type="checkbox" id="contact-consent" name="consent" required className="mt-1 w-4 h-4 rounded border-alesvia-muted/20 text-alesvia-accent focus:ring-alesvia-accent bg-alesvia-bg/40 cursor-pointer" />
+              <label htmlFor="contact-consent" className="text-xs text-alesvia-muted/80 leading-relaxed cursor-pointer">
+                {dict.form_privacy}{' '}
+                <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent hover:text-alesvia-primary transition-colors font-medium link-animated">
+                  {lang === 'cs' ? 'zásadami ochrany osobních údajů' : 'privacy policy'}
+                </Link>.
+              </label>
+            </div>
             <button
               type="submit"
               disabled={status === 'sending'}

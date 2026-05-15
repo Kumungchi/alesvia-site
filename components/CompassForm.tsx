@@ -22,6 +22,7 @@ interface CompassFormDict {
   sending: string;
   success: string;
   error: string;
+  consent: string;
 }
 
 export default function CompassForm({ dict }: { dict: CompassFormDict }) {
@@ -143,6 +144,13 @@ export default function CompassForm({ dict }: { dict: CompassFormDict }) {
               {errorMessage || dict.error}
             </p>
           )}
+
+          <div className="flex items-start gap-3 mt-4">
+            <input type="checkbox" id="comp-consent" name="consent" required className="mt-1 w-4 h-4 rounded border-alesvia-muted/30 text-alesvia-accent focus:ring-alesvia-accent bg-alesvia-bg/50 cursor-pointer" />
+            <label htmlFor="comp-consent" className="text-xs text-alesvia-text/70 leading-relaxed cursor-pointer">
+              {dict.consent}
+            </label>
+          </div>
 
           <div className="pt-4 flex justify-end">
             <button
