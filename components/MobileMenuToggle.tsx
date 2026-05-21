@@ -2,9 +2,11 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getPublicPath } from '../lib/routes';
+import LanguageSwitcher from './LanguageSwitcher';
+import type { Locale } from '../dictionaries';
 
 interface MobileMenuProps {
-  lang: string;
+  lang: Locale;
   links: { href: string; label: string }[];
   partnerLabel: string;
 }
@@ -69,6 +71,13 @@ export default function MobileMenuToggle({ lang, links, partnerLabel }: MobileMe
           >
             {partnerLabel}
           </Link>
+          <div className="pt-4 mt-2 border-t border-alesvia-muted/10">
+            <LanguageSwitcher 
+              currentLang={lang} 
+              onClick={() => setOpen(false)} 
+              className="flex space-x-4 justify-center items-center" 
+            />
+          </div>
         </div>
       )}
     </div>
