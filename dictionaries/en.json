@@ -536,8 +536,7 @@
     "submit": "Submit Request",
     "sending": "Submitting...",
     "success": "Request received. We will be in touch shortly.",
-    "error": "Something went wrong. Please try emailing us directly.",
-    "consent": "I consent to the processing of my personal data for the purpose of this inquiry in accordance with the Privacy Policy."
+    "error": "Something went wrong. Please try emailing us directly."
   },
   "compass_flowchart": {
     "title": "Assessment Methodology",

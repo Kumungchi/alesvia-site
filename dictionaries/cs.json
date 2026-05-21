@@ -536,8 +536,7 @@
     "submit": "Odeslat žádost",
     "sending": "Odesílání...",
     "success": "Žádost přijata. Brzy se vám ozveme.",
-    "error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem.",
-    "consent": "Souhlasím se zpracováním mých osobních údajů pro účely této poptávky v souladu se Zásadami ochrany osobních údajů."
+    "error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem."
   },
   "compass_flowchart": {
     "title": "Metodologie hodnocení",

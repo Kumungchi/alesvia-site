@@ -24,7 +24,7 @@ interface PolicyFormDict {
 export default function PolicyForm({ dict }: { dict: PolicyFormDict }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const submitPolicy = useMutation(api.policy.submit);
+  const sendMessage = useMutation(api.messages.send);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -43,12 +43,12 @@ export default function PolicyForm({ dict }: { dict: PolicyFormDict }) {
 
     try {
       // Save to Convex
-      await submitPolicy({ 
+      await sendMessage({ 
+        formType: 'policy_lab', 
         name, 
         email, 
-        organization, 
-        affiliation, 
-        message: rawMessage 
+        subject: 'partnership', 
+        message: formattedMessage 
       });
       
       // Email Notification
