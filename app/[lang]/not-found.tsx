@@ -1,6 +1,31 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { getPublicPath } from '../../lib/routes';
+
+const copy = {
+  cs: {
+    title: 'Mimo síť.',
+    text: 'Tato stránka neexistuje — což je, ironicky, přesně ten druh hranice, který prosazujeme.',
+    subtext: 'Některé věci je lepší nenacházet.',
+    home: 'Zpět na základ',
+    unplugged: 'Prozkoumat Unplugged',
+  },
+  en: {
+    title: 'Off the grid.',
+    text: "This page doesn't exist — which, ironically, is exactly the kind of boundary we advocate for.",
+    subtext: 'Some things are better left unfound.',
+    home: 'Return to baseline',
+    unplugged: 'Explore Unplugged',
+  },
+} as const;
 
 export default function NotFound() {
+  const pathname = usePathname();
+  const lang = pathname?.split('/')[1] === 'en' ? 'en' : 'cs';
+  const t = copy[lang];
+
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-6">
       <div className="text-center max-w-lg relative">
@@ -14,27 +39,27 @@ export default function NotFound() {
         <div className="morph-blob mx-auto w-24 h-24 bg-gradient-to-br from-alesvia-accent/20 to-alesvia-primary/10 mb-8" />
 
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-gradient mb-4">
-          Off the grid.
+          {t.title}
         </h1>
         <p className="text-lg text-alesvia-muted mb-2">
-          This page doesn&apos;t exist — which, ironically, is exactly the kind of boundary we advocate for.
+          {t.text}
         </p>
         <p className="text-sm text-alesvia-muted/60 mb-10">
-          Some things are better left unfound.
+          {t.subtext}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/"
+            href={getPublicPath(lang, 'home')}
             className="bg-alesvia-primary text-alesvia-bg px-8 py-4 rounded-lg font-medium hover:bg-alesvia-primary/90 transition-all shadow-lg hover:-translate-y-0.5 text-center"
           >
-            Return to baseline
+            {t.home}
           </Link>
           <Link
-            href="/initiatives/unplugged"
+            href={getPublicPath(lang, 'initiativeUnplugged')}
             className="glass px-8 py-4 rounded-lg font-medium text-alesvia-text hover:border-alesvia-accent/50 transition-all text-center"
           >
-            Explore Unplugged
+            {t.unplugged}
           </Link>
         </div>
       </div>
