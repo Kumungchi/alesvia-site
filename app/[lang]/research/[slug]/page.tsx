@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import { getPostBySlug, getPostSlugs } from '../../../../content/research/posts';
 import ScrollReveal from '../../../../components/ScrollReveal';
+import JsonLd from '../../../../components/JsonLd';
+import { getResearchAbsoluteUrl, getSiteOrigin } from '../../../../lib/site';
 import { buildResearchPostMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 
@@ -85,6 +87,26 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
 
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 pb-24">
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: post.title[lang],
+        description: post.excerpt[lang],
+        datePublished: post.date,
+        inLanguage: lang === 'cs' ? 'cs-CZ' : 'en-US',
+        url: getResearchAbsoluteUrl(lang, slug),
+        keywords: post.tags.join(', '),
+        author: {
+          '@type': 'Organization',
+          name: 'Alesvia',
+          url: getSiteOrigin(),
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Alesvia',
+          url: getSiteOrigin(),
+        },
+      }} />
       <div className="pt-16 mb-12">
         <Link
           href={getPublicPath(lang, 'research')}

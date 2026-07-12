@@ -45,6 +45,9 @@ export async function generateMetadata({
         en: getAbsoluteUrl(getPublicPath('en', 'home')),
         cs: getAbsoluteUrl(getPublicPath('cs', 'home')),
       },
+      types: {
+        'application/rss+xml': getAbsoluteUrl('/rss.xml'),
+      },
     },
     openGraph: {
       title: dict.metadata.title,
