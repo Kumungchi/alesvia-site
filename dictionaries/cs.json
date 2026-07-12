@@ -156,7 +156,7 @@
       "Veřejné semináře o konverzační AI, přesvědčování a autonomii"
     ],
     "future_label": "Budoucí program",
-    "future_text": "Do budoucna v rámci Akademie připravujeme program hodnocení dopadů AI na autonomii uživatelů, který firmám pomůže posuzovat vlastní AI produkty a služby. Plánujeme také podporovat odpovědné rozhodování o investicích do AI v soukromém i veřejném sektoru.",
+    "future_text": "Do budoucna v rámci Akademie připravujeme softwarový nástroj (SaaS) pro hodnocení AI systémů — pro firmy i veřejnou správu — a program hodnocení dopadů AI na autonomii uživatelů, který organizacím pomůže posuzovat vlastní AI produkty a služby. Chceme také podporovat odpovědné rozhodování o investicích do AI v soukromém i veřejném sektoru.",
     "audiences_label": "Cílové skupiny",
     "audiences_items": [
       "Firmy a organizace nasazující AI systémy",
@@ -209,7 +209,7 @@
     "source_grants_title": "Granty",
     "source_grants_desc": "Akcelerátor programů, ne provozní kyslík. Veřejné a soukromé granty od nadací a vládních orgánů v souladu s naší misí urychlují konkrétní programy, ale organizace na nich nestojí.",
     "source_philanthropy_title": "Filantropická partnerství",
-    "source_philanthropy_desc": "Dlouhodobá partnerství s filantropickými organizacemi a Zakládající kruh zakládajících partnerů, kteří sdílejí náš závazek k lidské autonomii a institucionální nezávislosti.",
+    "source_philanthropy_desc": "Dlouhodobá partnerství s filantropickými organizacemi a Zakládající kruh zakládajících partnerů, kteří sdílejí náš závazek k lidské autonomii a institucionální nezávislosti. Do kruhu vítáme i technologické firmy a investiční fondy, kterým záleží na tom, aby se AI nasazovala odpovědně — za stejných pravidel nezávislosti, jaká platí pro všechny dárce.",
     "source_infrastructure_title": "Infrastrukturní podpora",
     "source_infrastructure_desc": "Technologické kredity a nástroje, které snižují naše provozní náklady — od cloudové infrastruktury po software pro výzkum a vzdělávání.",
     "rules_label": "Pravidla, která dodržujeme",
@@ -407,6 +407,7 @@
     "prog_educators": "Workshopy pro pedagogy",
     "prog_audits": "Audity používání AI nástrojů",
     "prog_seminars": "Veřejné semináře",
+    "prog_saas": "Softwarový nástroj (SaaS) pro hodnocení AI",
     "prog_unsure": "Zatím nevím",
     "message": "Stručně popište vaši situaci a co od pilotu očekáváte",
     "submit": "Odeslat zájem",

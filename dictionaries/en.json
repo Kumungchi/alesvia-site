@@ -156,7 +156,7 @@
       "Public seminars on conversational AI, persuasion, and autonomy"
     ],
     "future_label": "Future Program",
-    "future_text": "In the future, the Academy will add a program for assessing AI's impact on user autonomy, helping companies evaluate their own AI products and services. We also plan to support responsible decision-making around AI investments in the private and public sector.",
+    "future_text": "In the future, the Academy will add a software (SaaS) tool for assessing AI systems — for companies and public administration — and a program for evaluating AI's impact on user autonomy, helping organizations assess their own AI products and services. We also plan to support responsible decision-making around AI investments in the private and public sector.",
     "audiences_label": "Target Audiences",
     "audiences_items": [
       "Companies and organizations deploying AI systems",
@@ -209,7 +209,7 @@
     "source_grants_title": "Grants",
     "source_grants_desc": "A program accelerator, not operational oxygen. Public and private grants from foundations and government bodies aligned with our mission accelerate specific programs, but the organization does not depend on them.",
     "source_philanthropy_title": "Philanthropic Partnerships",
-    "source_philanthropy_desc": "Long-term partnerships with philanthropic organizations and a Founding Circle of founding partners who share our commitment to human autonomy and institutional independence.",
+    "source_philanthropy_desc": "Long-term partnerships with philanthropic organizations and a Founding Circle of founding partners who share our commitment to human autonomy and institutional independence. We also welcome technology companies and investment funds that care about AI being deployed responsibly — under the same independence rules that apply to every donor.",
     "source_infrastructure_title": "Infrastructure Support",
     "source_infrastructure_desc": "Technology credits and tools that lower our operating costs — from cloud infrastructure to software for research and education.",
     "rules_label": "Rules We Hold Ourselves To",
@@ -407,6 +407,7 @@
     "prog_educators": "Workshops for educators",
     "prog_audits": "AI tool usage audits",
     "prog_seminars": "Public seminars",
+    "prog_saas": "Software (SaaS) tool for AI assessment",
     "prog_unsure": "Not sure yet",
     "message": "Briefly describe your situation and what you expect from a pilot",
     "submit": "Submit Interest",

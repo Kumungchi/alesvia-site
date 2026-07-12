@@ -20,6 +20,7 @@ interface AcademyFormDict {
   prog_educators: string;
   prog_audits: string;
   prog_seminars: string;
+  prog_saas: string;
   prog_unsure: string;
   message: string;
   submit: string;
@@ -135,6 +136,7 @@ export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
               <option value={dict.prog_educators}>{dict.prog_educators}</option>
               <option value={dict.prog_audits}>{dict.prog_audits}</option>
               <option value={dict.prog_seminars}>{dict.prog_seminars}</option>
+              <option value={dict.prog_saas}>{dict.prog_saas}</option>
               <option value={dict.prog_unsure}>{dict.prog_unsure}</option>
             </select>
           </div>
