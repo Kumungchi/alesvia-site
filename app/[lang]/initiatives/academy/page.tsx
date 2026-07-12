@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
+import AcademyForm from '../../../../components/AcademyForm';
 import { buildPageMetadata } from '../../../../lib/metadata';
-import { getPublicPath } from '../../../../lib/routes';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -69,12 +68,12 @@ export default async function AcademyPage({ params }: { params: Promise<{ lang: 
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">
-          <div className="bg-alesvia-surface/50 rounded-2xl p-10 md:p-16 border border-alesvia-muted/10">
-            <SectionLabel>{d.cta_label}</SectionLabel>
-            <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-            <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-primary text-alesvia-bg font-semibold px-8 py-4 rounded hover:bg-alesvia-primary/90 transition-all shadow-md inline-block">
-              {d.cta_label}
-            </Link>
+          <div className="max-w-4xl">
+            <div className="mb-10">
+              <SectionLabel>{d.cta_label}</SectionLabel>
+              <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mt-4">{d.cta_text}</p>
+            </div>
+            <AcademyForm dict={dict.academy_form} />
           </div>
         </section>
       </div>

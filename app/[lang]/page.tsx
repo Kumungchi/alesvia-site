@@ -69,6 +69,14 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                         <span className="text-xs font-semibold bg-alesvia-accent/10 text-alesvia-accent px-3 py-1.5 rounded-full">{dict.ecosystem.status_active}</span>
                       </div>
                       <p className="text-alesvia-muted leading-relaxed mb-8 text-lg font-light">{dict.ecosystem.unplugged_desc}</p>
+                      <ul className="space-y-3 mb-8">
+                        {dict.ecosystem.unplugged_points.map((point: string) => (
+                          <li key={point} className="flex items-center gap-3 text-sm text-alesvia-muted">
+                            <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full shrink-0"></span>
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                     <a href="https://unplugged.cz" target="_blank" rel="noopener noreferrer" className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
                       {dict.ecosystem.unplugged_link}
