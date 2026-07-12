@@ -1,0 +1,22 @@
+# Alesvia
+
+> DRAFT — pending owner review. Final wording to be supplied by the organization.
+
+Alesvia je vznikající český institut pro psychologickou stránku umělé inteligence — vzdělává veřejnost, školí organizace podle AI Actu a připravuje terapeuty na nová klinická témata. Alesvia vzniká jako zapsaný ústav (z.ú.); registrace probíhá.
+
+Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics. Alesvia is being established as a registered institute (z.ú.); registration is in progress.
+
+## Čtyři pilíře / Four Pillars
+
+- [Unplugged](https://alesvia.org/cs/iniciativy/unplugged) (Aktivní / Active): Unplugged pomáhá lidem nastavovat zdravé hranice s konverzační AI — srozumitelně a bez moralizování. AI je nástroj, ne vztah. / Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship. See also https://unplugged.cz
+- [Akademie / Academy](https://alesvia.org/cs/iniciativy/akademie) (V přípravě / In preparation): AI gramotnost a lidsky udržitelné nasazení AI pro firmy, školy a veřejnou správu (mj. povinnost AI gramotnosti podle čl. 4 EU AI Actu). Příjmy z těchto služeb financují veřejně prospěšné programy. / AI literacy and humanly sustainable AI deployment for companies, schools, and public administration (incl. Article 4 EU AI Act obligations). Revenue funds public-benefit programs.
+- [Praktici / Practitioners](https://alesvia.org/cs/iniciativy/praktici) (V přípravě / In preparation): Vzdělávání psychologů, psychiatrů a terapeutů pro éru AI. / Training psychologists, psychiatrists, and therapists for the AI era.
+- [Policy Lab](https://alesvia.org/cs/iniciativy/policy-lab) (V přípravě / In preparation): Výzkum a advokacie překládající etické rámce do legislativních a korporátních směrnic. / Research and advocacy translating ethical frameworks into legislative and corporate guidelines.
+
+## Odkazy / Links
+
+- [Web (CS)](https://alesvia.org/cs)
+- [Website (EN)](https://alesvia.org/en)
+- [Teze / Thesis](https://alesvia.org/cs/teze)
+- [Financování / Funding](https://alesvia.org/cs/financovani)
+- [Kontakt / Contact](https://alesvia.org/cs/kontakt): info@alesvia.org

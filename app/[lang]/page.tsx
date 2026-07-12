@@ -77,8 +77,55 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                 </SpotlightCard>
               </TiltCard>
 
-              {/* Policy Lab */}
+              {/* Akademie — Premium dark (2-col span) */}
               <ScrollReveal delay={1}>
+                <TiltCard intensity={5}>
+                  <SpotlightCard className="h-full">
+                    <div className="glass-dark inner-light rounded-xl p-8 md:p-10 h-full flex flex-col relative overflow-hidden group">
+                      <div className="w-14 h-14 bg-white/10 text-alesvia-accent rounded-xl flex items-center justify-center font-bold text-2xl mb-6 border border-white/5">
+                        A
+                      </div>
+                      <div className="flex-1 tilt-card-inner">
+                        <div className="flex justify-between items-baseline mb-3">
+                          <h4 className="font-serif text-2xl font-bold text-alesvia-bg">{dict.ecosystem.academy_title}</h4>
+                          <span className="text-xs font-medium text-alesvia-bg/50 border border-alesvia-bg/20 px-3 py-1.5 rounded-full">{dict.ecosystem.status_incubating}</span>
+                        </div>
+                        <p className="text-alesvia-bg/80 leading-relaxed font-light text-lg">{dict.ecosystem.academy_desc}</p>
+                      </div>
+                      <Link href={getPublicPath(lang, 'initiativeAcademy')} className="mt-6 link-animated font-medium text-alesvia-accent hover:text-alesvia-bg transition-colors inline-flex items-center gap-2">
+                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
+                      </Link>
+                      <div className="absolute top-0 right-0 w-72 h-72 bg-alesvia-accent/8 rounded-full blur-3xl group-hover:bg-alesvia-accent/15 transition-all duration-1000 -mr-12 -mt-12" />
+                    </div>
+                  </SpotlightCard>
+                </TiltCard>
+              </ScrollReveal>
+
+              {/* Praktici */}
+              <ScrollReveal delay={2}>
+                <TiltCard intensity={8}>
+                  <SpotlightCard className="h-full">
+                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
+                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
+                        Pr
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex justify-between items-baseline mb-3">
+                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.practitioners_title}</h4>
+                          <span className="text-xs font-medium text-alesvia-muted">{dict.ecosystem.status_incubating}</span>
+                        </div>
+                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.practitioners_desc}</p>
+                      </div>
+                      <Link href={getPublicPath(lang, 'initiativePractitioners')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
+                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
+                      </Link>
+                    </div>
+                  </SpotlightCard>
+                </TiltCard>
+              </ScrollReveal>
+
+              {/* Policy Lab */}
+              <ScrollReveal delay={3}>
                 <TiltCard intensity={8}>
                   <SpotlightCard className="h-full">
                     <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
@@ -93,147 +140,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                         <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.policy_desc}</p>
                       </div>
                       <Link href={getPublicPath(lang, 'initiativePolicyLab')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* Education */}
-              <ScrollReveal delay={2}>
-                <TiltCard intensity={8}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
-                        E
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.education_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-muted">{dict.ecosystem.status_incubating}</span>
-                        </div>
-                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.education_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativeEducation')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* Advisory — Premium dark (2-col span) */}
-              <ScrollReveal delay={3}>
-                <TiltCard intensity={5}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass-dark inner-light rounded-xl p-8 md:p-10 h-full flex flex-col relative overflow-hidden group">
-                      <div className="w-14 h-14 bg-white/10 text-alesvia-accent rounded-xl flex items-center justify-center font-bold text-2xl mb-6 border border-white/5">
-                        A
-                      </div>
-                      <div className="flex-1 tilt-card-inner">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-2xl font-bold text-alesvia-bg">{dict.ecosystem.advisory_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-bg/50 border border-alesvia-bg/20 px-3 py-1.5 rounded-full">{dict.ecosystem.status_incubating}</span>
-                        </div>
-                        <p className="text-alesvia-bg/80 leading-relaxed font-light text-lg">{dict.ecosystem.advisory_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativeAdvisory')} className="mt-6 link-animated font-medium text-alesvia-accent hover:text-alesvia-bg transition-colors inline-flex items-center gap-2">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                      <div className="absolute top-0 right-0 w-72 h-72 bg-alesvia-accent/8 rounded-full blur-3xl group-hover:bg-alesvia-accent/15 transition-all duration-1000 -mr-12 -mt-12" />
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* ── New Initiatives (Planned) ── */}
-
-              {/* Mind */}
-              <ScrollReveal delay={1}>
-                <TiltCard intensity={8}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
-                        M
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.mind_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-muted/60">{dict.ecosystem.status_planned}</span>
-                        </div>
-                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.mind_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativeMind')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* Proof */}
-              <ScrollReveal delay={2}>
-                <TiltCard intensity={8}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
-                        Pr
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.proof_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-muted/60">{dict.ecosystem.status_planned}</span>
-                        </div>
-                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.proof_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativeProof')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* Compass */}
-              <ScrollReveal delay={3}>
-                <TiltCard intensity={8}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
-                        C
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.compass_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-muted/60">{dict.ecosystem.status_planned}</span>
-                        </div>
-                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.compass_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativeCompass')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* Watch */}
-              <ScrollReveal delay={4}>
-                <TiltCard intensity={8}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
-                        W
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.watch_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-muted/60">{dict.ecosystem.status_planned}</span>
-                        </div>
-                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.watch_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativeWatch')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
                         {lang === 'cs' ? 'Více →' : 'Learn more →'}
                       </Link>
                     </div>

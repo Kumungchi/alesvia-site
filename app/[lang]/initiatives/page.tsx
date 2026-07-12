@@ -39,61 +39,29 @@ export default async function InitiativesPage({ params }: { params: Promise<{ la
           variant="featured"
         />
         <InitiativeCard
+          icon="A"
+          title={eco.academy_title}
+          description={eco.academy_desc}
+          status="incubating"
+          statusLabel={eco.status_incubating}
+          href={getPublicPath(lang, 'initiativeAcademy')}
+          variant="premium"
+        />
+        <InitiativeCard
+          icon="Pr"
+          title={eco.practitioners_title}
+          description={eco.practitioners_desc}
+          status="incubating"
+          statusLabel={eco.status_incubating}
+          href={getPublicPath(lang, 'initiativePractitioners')}
+        />
+        <InitiativeCard
           icon="P"
           title={eco.policy_title}
           description={eco.policy_desc}
           status="incubating"
           statusLabel={eco.status_incubating}
           href={getPublicPath(lang, 'initiativePolicyLab')}
-        />
-        <InitiativeCard
-          icon="E"
-          title={eco.education_title}
-          description={eco.education_desc}
-          status="incubating"
-          statusLabel={eco.status_incubating}
-          href={getPublicPath(lang, 'initiativeEducation')}
-        />
-        <InitiativeCard
-          icon="A"
-          title={eco.advisory_title}
-          description={eco.advisory_desc}
-          status="incubating"
-          statusLabel={eco.status_incubating}
-          href={getPublicPath(lang, 'initiativeAdvisory')}
-          variant="premium"
-        />
-        <InitiativeCard
-          icon="M"
-          title={eco.mind_title}
-          description={eco.mind_desc}
-          status="planned"
-          statusLabel={eco.status_planned}
-          href={getPublicPath(lang, 'initiativeMind')}
-        />
-        <InitiativeCard
-          icon="Pr"
-          title={eco.proof_title}
-          description={eco.proof_desc}
-          status="planned"
-          statusLabel={eco.status_planned}
-          href={getPublicPath(lang, 'initiativeProof')}
-        />
-        <InitiativeCard
-          icon="C"
-          title={eco.compass_title}
-          description={eco.compass_desc}
-          status="planned"
-          statusLabel={eco.status_planned}
-          href={getPublicPath(lang, 'initiativeCompass')}
-        />
-        <InitiativeCard
-          icon="W"
-          title={eco.watch_title}
-          description={eco.watch_desc}
-          status="planned"
-          statusLabel={eco.status_planned}
-          href={getPublicPath(lang, 'initiativeWatch')}
         />
       </div>
     </div>

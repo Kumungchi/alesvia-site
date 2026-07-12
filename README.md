@@ -58,6 +58,10 @@ Current public goals:
 
 - [docs/brand-strategy.md](/C:/axiom/docs/brand-strategy.md)
   main brand identity and messaging document
+- [docs/brand-identity-system.md](/C:/axiom/docs/brand-identity-system.md)
+  visual identity system, logo rules, and asset inventory
+- [docs/brand-management.md](/C:/axiom/docs/brand-management.md)
+  brand governance, asset usage, and clearance checklist
 - [docs/strategy.md](/C:/axiom/docs/strategy.md)
   broader strategic framing
 - [docs/brand-decision.md](/C:/axiom/docs/brand-decision.md)
@@ -68,6 +72,8 @@ Current public goals:
   sharper institutional/funder version
 - [docs/partner-deck-ready.md](/C:/axiom/docs/partner-deck-ready.md)
   deck-ready master document
+- [docs/research-cover-system.md](/C:/axiom/docs/research-cover-system.md)
+  research cover and publication visual system
 - [docs/slides](/C:/axiom/docs/slides)
   markdown slide deck sources
 
@@ -224,7 +230,10 @@ Not finished yet:
 Start here if you need the institutional context behind the site:
 
 - [docs/brand-strategy.md](/C:/axiom/docs/brand-strategy.md)
+- [docs/brand-identity-system.md](/C:/axiom/docs/brand-identity-system.md)
+- [docs/brand-management.md](/C:/axiom/docs/brand-management.md)
 - [docs/strategy.md](/C:/axiom/docs/strategy.md)
 - [docs/brand-decision.md](/C:/axiom/docs/brand-decision.md)
 - [docs/partner-deck-ready.md](/C:/axiom/docs/partner-deck-ready.md)
+- [docs/research-cover-system.md](/C:/axiom/docs/research-cover-system.md)
 - [docs/why-this-research-matters.md](/C:/axiom/docs/why-this-research-matters.md)

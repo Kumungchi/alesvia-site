@@ -28,17 +28,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
       <div className="space-y-16 pb-24">
         <section>
           <SectionLabel>{d.board_label}</SectionLabel>
-          <p className="text-alesvia-muted italic">{d.placeholder}</p>
-        </section>
-
-        <section className="border-t border-alesvia-muted/10 pt-16">
-          <SectionLabel>{d.advisory_label}</SectionLabel>
-          <p className="text-alesvia-muted italic">{d.placeholder}</p>
-        </section>
-
-        <section className="border-t border-alesvia-muted/10 pt-16">
-          <SectionLabel>{d.team_label}</SectionLabel>
-          <p className="text-alesvia-muted italic">{d.placeholder}</p>
+          <p className="text-alesvia-muted max-w-3xl">{d.board_text}</p>
         </section>
       </div>
     </div>

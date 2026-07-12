@@ -66,7 +66,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
       {
         heading: 'The first fields of action',
         paragraphs: [
-          'Alesvia’s initial initiatives are not random projects. They are early proofs of the same thesis applied to different pressure points. Unplugged addresses healthy boundaries with conversational AI. Policy Lab turns ethical principles into legislative and institutional guidance. Education focuses on algorithmic literacy and digital self-defense. Advisory, Mind, Proof, Compass, and Watch extend the same logic into investment, mental health, AI literacy, innovation practice, and public accountability.',
+          'Alesvia’s work rests on four pillars, each speaking to a different audience. Unplugged addresses healthy boundaries with conversational AI for the public. The Academy prepares AI literacy and humanly sustainable AI deployment for companies, schools, and public administration. Practitioners equips psychologists and therapists for the AI era. Policy Lab turns ethical principles into legislative and institutional guidance.',
           'The point is not to build a loose collection of branded initiatives. The point is to build an institution capable of operating across research, policy, education, and implementation without losing a coherent center of gravity. That center is autonomy.',
         ],
       },
@@ -135,7 +135,7 @@ const thesisContent: Record<Locale, ThesisContent> = {
       {
         heading: 'První pole působnosti',
         paragraphs: [
-          'Počáteční iniciativy Alesvia nejsou náhodné projekty. Jsou to první důkazy stejné teze aplikované na různé tlakové body. Unplugged řeší zdravé hranice s konverzační AI. Policy Lab převádí etické principy do legislativního a institucionálního vedení. Education se soustředí na algoritmickou gramotnost a digitální sebeobranu. Advisory, Mind, Proof, Compass a Watch rozšiřují stejnou logiku do investic, duševního zdraví, AI gramotnosti, inovační praxe a veřejné odpovědnosti.',
+          'Práce Alesvia stojí na čtyřech pilířích, z nichž každý se obrací na jiné publikum. Unplugged řeší zdravé hranice s konverzační AI pro veřejnost. Akademie připravuje AI gramotnost a lidsky udržitelné nasazení AI pro firmy, školy a veřejnou správu. Praktici vybavují psychology a terapeuty pro éru AI. Policy Lab převádí etické principy do legislativního a institucionálního vedení.',
           'Smyslem není vystavět volnou sbírku brandovaných iniciativ. Smyslem je vybudovat instituci schopnou působit napříč výzkumem, politikou, vzděláváním a implementací, aniž by ztratila svůj střed. Tím středem je autonomie.',
         ],
       },

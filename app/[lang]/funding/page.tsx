@@ -24,10 +24,10 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
   const d = dict.funding;
 
   const sources = [
+    { title: d.source_services_title, desc: d.source_services_desc },
     { title: d.source_grants_title, desc: d.source_grants_desc },
     { title: d.source_philanthropy_title, desc: d.source_philanthropy_desc },
-    { title: d.source_institutional_title, desc: d.source_institutional_desc },
-    { title: d.source_advisory_title, desc: d.source_advisory_desc },
+    { title: d.source_infrastructure_title, desc: d.source_infrastructure_desc },
   ];
 
   return (
@@ -50,6 +50,19 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="border-t border-alesvia-muted/10 pt-16">
+          <SectionLabel>{d.rules_label}</SectionLabel>
+          <ul className="space-y-4 mt-6 max-w-3xl">
+            {d.rules_items.map((item: string, i: number) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full mt-2.5 shrink-0"></span>
+                <span className="text-lg text-alesvia-text leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-alesvia-muted text-sm italic mt-6 max-w-3xl">{d.rules_note}</p>
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">

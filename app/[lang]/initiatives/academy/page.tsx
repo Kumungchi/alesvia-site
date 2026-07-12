@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
-import AdvisoryForm from '../../../../components/AdvisoryForm';
 import { buildPageMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 
@@ -13,16 +12,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const dict = await getDictionary(locale);
   return buildPageMetadata({
     locale,
-    routeKey: 'initiativeAdvisory',
-    title: dict.advisory.metadata_title,
-    description: dict.advisory.metadata_description,
+    routeKey: 'initiativeAcademy',
+    title: dict.academy.metadata_title,
+    description: dict.academy.metadata_description,
   });
 }
 
-export default async function AdvisoryPage({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function AcademyPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const d = dict.advisory;
+  const d = dict.academy;
 
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -36,9 +35,14 @@ export default async function AdvisoryPage({ params }: { params: Promise<{ lang:
 
       <div className="space-y-20 pb-24">
         <section>
-          <SectionLabel>{d.services_label}</SectionLabel>
+          <SectionLabel>{d.vision_label}</SectionLabel>
+          <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.vision_text}</p>
+        </section>
+
+        <section className="border-t border-alesvia-muted/10 pt-16">
+          <SectionLabel>{d.programs_label}</SectionLabel>
           <ul className="space-y-4 mt-6 max-w-3xl">
-            {d.services_items.map((item: string, i: number) => (
+            {d.programs_items.map((item: string, i: number) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full mt-2.5 shrink-0"></span>
                 <span className="text-lg text-alesvia-text leading-relaxed">{item}</span>
@@ -48,25 +52,29 @@ export default async function AdvisoryPage({ params }: { params: Promise<{ lang:
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
-              <h3 className="font-serif text-xl font-bold text-alesvia-text mb-4">{d.investors_label}</h3>
-              <p className="text-alesvia-muted leading-relaxed">{d.investors_text}</p>
-            </div>
-            <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
-              <h3 className="font-serif text-xl font-bold text-alesvia-text mb-4">{d.startups_label}</h3>
-              <p className="text-alesvia-muted leading-relaxed">{d.startups_text}</p>
-            </div>
-          </div>
+          <SectionLabel>{d.future_label}</SectionLabel>
+          <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.future_text}</p>
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">
-          <div className="max-w-4xl">
-            <div className="mb-10">
-              <SectionLabel>{d.cta_label}</SectionLabel>
-              <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mt-4">{d.cta_text}</p>
-            </div>
-            <AdvisoryForm dict={dict.advisory_form} lang={lang} />
+          <SectionLabel>{d.audiences_label}</SectionLabel>
+          <ul className="space-y-4 mt-6 max-w-3xl">
+            {d.audiences_items.map((item: string, i: number) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full mt-2.5 shrink-0"></span>
+                <span className="text-lg text-alesvia-text leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="border-t border-alesvia-muted/10 pt-16">
+          <div className="bg-alesvia-surface/50 rounded-2xl p-10 md:p-16 border border-alesvia-muted/10">
+            <SectionLabel>{d.cta_label}</SectionLabel>
+            <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
+            <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-primary text-alesvia-bg font-semibold px-8 py-4 rounded hover:bg-alesvia-primary/90 transition-all shadow-md inline-block">
+              {d.cta_label}
+            </Link>
           </div>
         </section>
       </div>

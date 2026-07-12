@@ -66,6 +66,13 @@ export default async function PolicyLabPage({ params }: { params: Promise<{ lang
 
         <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
+            <SectionLabel>{d.future_label}</SectionLabel>
+            <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.future_text}</p>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <section className="border-t border-alesvia-muted/10 pt-16">
             <div className="max-w-4xl">
               <div className="mb-10">
                 <SectionLabel>{d.cta_label}</SectionLabel>

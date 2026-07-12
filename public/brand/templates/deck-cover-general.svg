@@ -1,0 +1,12 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <rect x="96" y="96" width="1728" height="888" rx="0" fill="#F8F4EC"/>
+  <path d="M1340 0H1920V1080H1480L1340 0Z" fill="#DCE7E2"/>
+  <path d="M96 984H1824V996H96V984Z" fill="#C79B3B"/>
+  <path d="M132 188V142L172 100L212 142V188H194V149L172 126L150 149V188H132Z" fill="#16324F"/>
+  <path d="M166 188V144L172 138L178 144V188H166Z" fill="#C79B3B"/>
+  <text x="240" y="174" fill="#16324F" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700">Alesvia</text>
+  <text x="132" y="504" fill="#16324F" font-family="Georgia, 'Times New Roman', serif" font-size="104" font-weight="700">Human autonomy is</text>
+  <text x="132" y="624" fill="#16324F" font-family="Georgia, 'Times New Roman', serif" font-size="104" font-weight="700">the baseline.</text>
+  <text x="132" y="716" fill="#221E22" fill-opacity="0.72" font-family="Inter, Arial, sans-serif" font-size="38">Research, policy, education, and implementation for an automated world.</text>
+</svg>

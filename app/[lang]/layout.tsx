@@ -84,26 +84,24 @@ export default async function RootLayout({
         <ConvexClientProvider>
           <JsonLd data={{
             '@context': 'https://schema.org',
-            '@type': 'Organization',
+            '@type': 'NGO',
             name: 'Alesvia',
-            alternateName: 'Alesvia z.ú.',
             url: siteOrigin,
+            logo: getAbsoluteUrl('/brand/alesvia-symbol.svg'),
             description: dict.metadata.description,
             foundingLocation: {
               '@type': 'Place',
-              name: 'Czech Republic',
+              name: 'Ostrava, CZ',
             },
-            legalName: 'Alesvia z.ú.',
-            nonprofitStatus: 'RegisteredNonprofit',
-            sameAs: [],
+            sameAs: ['https://unplugged.cz'],
             knowsAbout: [
               'Human autonomy',
               'AI ethics',
               'Conversational AI',
               'Digital wellbeing',
-              'Algorithmic literacy',
+              'AI literacy',
               'AI policy',
-              'Ethical AI investment',
+              'EU AI Act',
             ],
           }} />
           <JsonLd data={{

@@ -8,12 +8,8 @@ export type RouteKey =
   | 'initiatives'
   | 'initiativeUnplugged'
   | 'initiativePolicyLab'
-  | 'initiativeEducation'
-  | 'initiativeAdvisory'
-  | 'initiativeMind'
-  | 'initiativeProof'
-  | 'initiativeCompass'
-  | 'initiativeWatch'
+  | 'initiativeAcademy'
+  | 'initiativePractitioners'
   | 'funding'
   | 'research'
   | 'contact'
@@ -57,29 +53,13 @@ export const routeDefinitions: Record<RouteKey, RouteDefinition> = {
     internal: 'initiatives/policy-lab',
     publicPath: { en: 'initiatives/policy-lab', cs: 'iniciativy/policy-lab' },
   },
-  initiativeEducation: {
-    internal: 'initiatives/education',
-    publicPath: { en: 'initiatives/education', cs: 'iniciativy/vzdelavani' },
+  initiativeAcademy: {
+    internal: 'initiatives/academy',
+    publicPath: { en: 'initiatives/academy', cs: 'iniciativy/akademie' },
   },
-  initiativeAdvisory: {
-    internal: 'initiatives/advisory',
-    publicPath: { en: 'initiatives/advisory', cs: 'iniciativy/advisory' },
-  },
-  initiativeMind: {
-    internal: 'initiatives/mind',
-    publicPath: { en: 'initiatives/mind', cs: 'iniciativy/mind' },
-  },
-  initiativeProof: {
-    internal: 'initiatives/proof',
-    publicPath: { en: 'initiatives/proof', cs: 'iniciativy/proof' },
-  },
-  initiativeCompass: {
-    internal: 'initiatives/compass',
-    publicPath: { en: 'initiatives/compass', cs: 'iniciativy/compass' },
-  },
-  initiativeWatch: {
-    internal: 'initiatives/watch',
-    publicPath: { en: 'initiatives/watch', cs: 'iniciativy/watch' },
+  initiativePractitioners: {
+    internal: 'initiatives/practitioners',
+    publicPath: { en: 'initiatives/practitioners', cs: 'iniciativy/praktici' },
   },
   funding: {
     internal: 'funding',
@@ -185,6 +165,33 @@ export function switchLocalePath(pathname: string, targetLocale: AppLocale): str
   }
 
   return `/${targetLocale}${rest ? `/${rest}` : ''}`;
+}
+
+// Legacy initiative URLs (pre-consolidation into four pillars) → their pillar page.
+const legacyInitiativeRedirects: Array<{ oldSegment: Record<AppLocale, string>; target: RouteKey }> = [
+  { oldSegment: { en: 'initiatives/education', cs: 'iniciativy/vzdelavani' }, target: 'initiativeAcademy' },
+  { oldSegment: { en: 'initiatives/advisory', cs: 'iniciativy/advisory' }, target: 'initiativeAcademy' },
+  { oldSegment: { en: 'initiatives/compass', cs: 'iniciativy/compass' }, target: 'initiativeAcademy' },
+  { oldSegment: { en: 'initiatives/mind', cs: 'iniciativy/mind' }, target: 'initiativePractitioners' },
+  { oldSegment: { en: 'initiatives/proof', cs: 'iniciativy/proof' }, target: 'initiativePolicyLab' },
+  { oldSegment: { en: 'initiatives/watch', cs: 'iniciativy/watch' }, target: 'initiativePolicyLab' },
+];
+
+export function getLegacyRedirectRules() {
+  return locales.flatMap((locale) =>
+    legacyInitiativeRedirects.flatMap(({ oldSegment, target }) => {
+      const sources = new Set([
+        `/${locale}/${oldSegment[locale]}`,
+        // Internal (English-folder) path variant, reachable in both locales.
+        `/${locale}/${oldSegment.en}`,
+      ]);
+      return [...sources].map((source) => ({
+        source,
+        destination: getPublicPath(locale, target),
+        permanent: true,
+      }));
+    })
+  );
 }
 
 export function getLocalizedRewriteRules() {

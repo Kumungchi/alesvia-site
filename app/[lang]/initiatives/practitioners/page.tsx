@@ -4,7 +4,6 @@ import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
 import ScrollReveal from '../../../../components/ScrollReveal';
-import IncidentDashboard from '../../../../components/IncidentDashboard';
 import { buildPageMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 
@@ -14,16 +13,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const dict = await getDictionary(locale);
   return buildPageMetadata({
     locale,
-    routeKey: 'initiativeWatch',
-    title: dict.watch.metadata_title,
-    description: dict.watch.metadata_description,
+    routeKey: 'initiativePractitioners',
+    title: dict.practitioners.metadata_title,
+    description: dict.practitioners.metadata_description,
   });
 }
 
-export default async function WatchPage({ params }: { params: Promise<{ lang: Locale }> }) {
+export default async function PractitionersPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const d = dict.watch;
+  const d = dict.practitioners;
 
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -37,29 +36,23 @@ export default async function WatchPage({ params }: { params: Promise<{ lang: Lo
 
       <div className="space-y-20 pb-24">
         <ScrollReveal>
-          <section className="mb-8">
-            <IncidentDashboard dict={dict.watch_dashboard} />
+          <section>
+            <SectionLabel>{d.problem_label}</SectionLabel>
+            <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.problem_text}</p>
           </section>
         </ScrollReveal>
 
         <ScrollReveal>
-          <section>
-            <SectionLabel>{d.scope_label}</SectionLabel>
+          <section className="border-t border-alesvia-muted/10 pt-16">
+            <SectionLabel>{d.programs_label}</SectionLabel>
             <ul className="space-y-4 mt-6 max-w-3xl">
-              {d.scope_items.map((item: string, i: number) => (
+              {d.programs_items.map((item: string, i: number) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full mt-2.5 shrink-0"></span>
                   <span className="text-lg text-alesvia-text leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
-          </section>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <section className="border-t border-alesvia-muted/10 pt-16">
-            <SectionLabel>{d.method_label}</SectionLabel>
-            <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.method_text}</p>
           </section>
         </ScrollReveal>
 
@@ -79,15 +72,12 @@ export default async function WatchPage({ params }: { params: Promise<{ lang: Lo
 
         <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
-            <div className="bg-[#0F2C59] text-alesvia-bg rounded-2xl p-10 md:p-16 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-alesvia-accent/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
-              <div className="relative z-10">
-                <SectionLabel>{d.cta_label}</SectionLabel>
-                <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-                <Link href={getPublicPath(lang, 'contact')} className="btn-primary bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-lg inline-block">
-                  {d.cta_label}
-                </Link>
-              </div>
+            <div className="bg-alesvia-primary text-alesvia-bg rounded-2xl p-10 md:p-16">
+              <SectionLabel>{d.cta_label}</SectionLabel>
+              <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
+              <Link href={getPublicPath(lang, 'contact')} className="btn-primary bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-lg inline-block">
+                {d.cta_label}
+              </Link>
             </div>
           </section>
         </ScrollReveal>

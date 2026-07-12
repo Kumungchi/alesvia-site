@@ -9,13 +9,9 @@ interface FooterDict {
   col_organization: string;
   col_legal: string;
   unplugged: string;
+  academy: string;
+  practitioners: string;
   policy_lab: string;
-  education: string;
-  advisory: string;
-  mind: string;
-  proof: string;
-  compass: string;
-  watch: string;
   thesis: string;
   about: string;
   team: string;
@@ -45,13 +41,9 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
             <h4 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_initiatives}</h4>
             <ul className="space-y-2 text-sm text-alesvia-muted">
               <li><Link href={getPublicPath(lang, 'initiativeUnplugged')} className="hover:text-alesvia-text transition-colors">{dict.unplugged}</Link></li>
+              <li><Link href={getPublicPath(lang, 'initiativeAcademy')} className="hover:text-alesvia-text transition-colors">{dict.academy}</Link></li>
+              <li><Link href={getPublicPath(lang, 'initiativePractitioners')} className="hover:text-alesvia-text transition-colors">{dict.practitioners}</Link></li>
               <li><Link href={getPublicPath(lang, 'initiativePolicyLab')} className="hover:text-alesvia-text transition-colors">{dict.policy_lab}</Link></li>
-              <li><Link href={getPublicPath(lang, 'initiativeEducation')} className="hover:text-alesvia-text transition-colors">{dict.education}</Link></li>
-              <li><Link href={getPublicPath(lang, 'initiativeAdvisory')} className="hover:text-alesvia-text transition-colors">{dict.advisory}</Link></li>
-              <li><Link href={getPublicPath(lang, 'initiativeMind')} className="hover:text-alesvia-text transition-colors">{dict.mind}</Link></li>
-              <li><Link href={getPublicPath(lang, 'initiativeProof')} className="hover:text-alesvia-text transition-colors">{dict.proof}</Link></li>
-              <li><Link href={getPublicPath(lang, 'initiativeCompass')} className="hover:text-alesvia-text transition-colors">{dict.compass}</Link></li>
-              <li><Link href={getPublicPath(lang, 'initiativeWatch')} className="hover:text-alesvia-text transition-colors">{dict.watch}</Link></li>
             </ul>
           </div>
 

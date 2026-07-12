@@ -1,0 +1,12 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#16324F"/>
+  <rect x="96" y="96" width="1728" height="888" fill="#1F3B59"/>
+  <path d="M96 984H1824V996H96V984Z" fill="#C79B3B"/>
+  <path d="M1504 96H1824V984H1648L1504 96Z" fill="#2A7F78" fill-opacity="0.22"/>
+  <path d="M132 188V142L172 100L212 142V188H194V149L172 126L150 149V188H132Z" fill="#F4F1EA"/>
+  <path d="M166 188V144L172 138L178 144V188H166Z" fill="#C79B3B"/>
+  <text x="240" y="174" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700">Alesvia</text>
+  <text x="132" y="492" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700">Institutional infrastructure</text>
+  <text x="132" y="604" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700">for human autonomy</text>
+  <text x="132" y="700" fill="#F4F1EA" fill-opacity="0.72" font-family="Inter, Arial, sans-serif" font-size="38">Building public-interest capacity as AI becomes ordinary.</text>
+</svg>

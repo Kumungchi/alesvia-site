@@ -1,0 +1,16 @@
+<svg width="360" height="300" viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M140 138V92L180 50L220 92V138H202V99L180 76L158 99V138H140Z" fill="#F4F1EA"/>
+  <path d="M174 138V94L180 88L186 94V138H174Z" fill="#C79B3B"/>
+  <text
+    x="180"
+    y="222"
+    text-anchor="middle"
+    fill="#F4F1EA"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="72"
+    font-weight="700"
+    letter-spacing="-1.4"
+  >
+    Alesvia
+  </text>
+</svg>

@@ -82,7 +82,7 @@ To není okrajová technická otázka. Je to součást budování seriózní pub
   {
     slug: 'why-ai-literacy-matters-more-than-ai-regulation',
     date: '2026-04-01',
-    initiative: 'proof',
+    initiative: 'policy-lab',
     tags: ['ai-literacy', 'eu-ai-act', 'education'],
     title: {
       en: 'Why AI Literacy Matters More Than AI Regulation',
@@ -105,7 +105,7 @@ A risk assessment is only as good as the person conducting it. A conformity proc
 
 ## What AI Literacy Actually Requires
 
-At Alesvia Proof, we define AI literacy through three layers:
+At Alesvia, we define AI literacy through three layers:
 
 **1. Conceptual understanding** — How do AI systems make decisions? What are their limitations? Where do they fail predictably?
 
@@ -134,7 +134,7 @@ Hodnocení rizik je jen tak dobré, jak dobrý je člověk, který ho provádí.
 
 ## Co AI gramotnost skutečně vyžaduje
 
-V Alesvia Proof definujeme AI gramotnost prostřednictvím tří vrstev:
+V Alesvia definujeme AI gramotnost prostřednictvím tří vrstev:
 
 **1. Konceptuální porozumění** — Jak AI systémy rozhodují? Jaká mají omezení? Kde předvídatelně selhávají?
 
@@ -156,7 +156,7 @@ EU AI Act nám dal mandát. Nyní potřebujeme vybudovat infrastrukturu, abychom
   {
     slug: 'mental-health-professionals-and-ai-chatbots',
     date: '2026-03-25',
-    initiative: 'mind',
+    initiative: 'practitioners',
     tags: ['mental-health', 'chatbots', 'ethics'],
     title: {
       en: 'When Patients Ask Their Therapist About AI Chatbots',
@@ -187,7 +187,7 @@ When a patient says "I've been talking to an AI about my anxiety," a therapist n
 
 None of this is covered in standard clinical training.
 
-## What Alesvia Mind Is Building
+## What the Practitioners Pillar Is Building
 
 We're developing a practical toolkit for mental health professionals:
 
@@ -220,7 +220,7 @@ Když pacient řekne „Mluvil/a jsem s AI o své úzkosti," terapeut potřebuje
 
 Nic z toho není součástí standardního klinického vzdělávání.
 
-## Co Alesvia Mind buduje
+## Co pilíř Praktici buduje
 
 Vyvíjíme praktickou sadu nástrojů pro odborníky na duševní zdraví:
 
@@ -238,7 +238,7 @@ Cílem není udělat z terapeutů experty na AI. Jde o to dát jim dostatek poro
   {
     slug: 'czech-ai-ecosystem-mapping-2026',
     date: '2026-03-18',
-    initiative: 'watch',
+    initiative: 'policy-lab',
     tags: ['czech-republic', 'ecosystem', 'mapping'],
     title: {
       en: 'Mapping the Czech AI Ecosystem: 2026 Landscape Report',
@@ -534,7 +534,7 @@ Právě proto Alesvia chápe výzkum, politiku, vzdělávání a implementaci ja
   {
     slug: 'what-to-audit-before-deploying-conversational-ai',
     date: '2026-04-05',
-    initiative: 'compass',
+    initiative: 'academy',
     tags: ['conversational-ai', 'audit', 'deployment'],
     title: {
       en: 'What to Audit Before Deploying Conversational AI',
@@ -589,7 +589,7 @@ This is especially important in education, health-adjacent, support, and youth-f
 
 The central question is not whether a system sounds helpful. It is whether the deployment preserves human judgment and meaningful boundaries under real conditions.
 
-That is why Alesvia Compass is interested in autonomy impact assessment as a practical pre-deployment discipline. If organizations only audit for accuracy and efficiency, they will miss the very dynamics most likely to become normalized before regulation catches up.`,
+That is why Alesvia is interested in autonomy impact assessment as a practical pre-deployment discipline. If organizations only audit for accuracy and efficiency, they will miss the very dynamics most likely to become normalized before regulation catches up.`,
       cs: `Organizace nasazující konverzační AI si často kladou špatnou první otázku. Ptají se, zda je systém dostatečně užitečný, efektivní a přesný. Tyto otázky jsou důležité, ale nejsou úplné.
 
 ## Chybějící vrstva auditu
@@ -634,7 +634,7 @@ To je zvlášť důležité v oblasti vzdělávání, health-adjacent služeb, p
 
 Ústřední otázkou není, zda systém zní užitečně. Jde o to, zda nasazení zachovává lidský úsudek a smysluplné hranice v reálných podmínkách.
 
-Právě proto Alesvia Compass pracuje s myšlenkou autonomy impact assessment jako praktickou disciplínou před nasazením. Pokud organizace auditují jen přesnost a efektivitu, minou právě ty dynamiky, které se nejspíš normalizují dříve, než je dožene regulace.`,
+Právě proto Alesvia pracuje s myšlenkou autonomy impact assessment jako praktickou disciplínou před nasazením. Pokud organizace auditují jen přesnost a efektivitu, minou právě ty dynamiky, které se nejspíš normalizují dříve, než je dožene regulace.`,
     },
   },
 ];

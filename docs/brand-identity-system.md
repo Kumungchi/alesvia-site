@@ -22,6 +22,12 @@ It should be read together with:
 - [brand-decision.md](./brand-decision.md)
 - [partner-deck-ready.md](./partner-deck-ready.md)
 
+A shareable PDF brand book generated from this system lives at [brand-book/alesvia-brand-book.pdf](./brand-book/alesvia-brand-book.pdf). To regenerate after edits to `brand-book/index.html`:
+
+```
+chrome --headless=new --no-pdf-header-footer --print-to-pdf="docs/brand-book/alesvia-brand-book.pdf" "file:///.../docs/brand-book/index.html"
+```
+
 ---
 
 ## Identity summary
@@ -98,6 +104,17 @@ This is the most usable form for:
 - partner documents
 - social headers
 
+### Stacked lockup
+
+The stacked lockup is for centered, formal applications where horizontal space is limited or where the brand needs to feel more ceremonial.
+
+Use it for:
+
+- presentation interstitials
+- PDF title pages
+- social profile headers
+- compact institutional marks
+
 ---
 
 ## Color system
@@ -141,6 +158,20 @@ Why:
 - aubergine support: `#31263E`
 
 These are already close to the existing site palette and remain usable across the interface.
+
+### Secondary accents
+
+Use these sparingly in presentation and research cover systems so the identity does not collapse into a single navy/paper/gold theme:
+
+- civic teal: `#2A7F78`
+- pale civic mist: `#DCE7E2`
+- policy clay: `#A74E3A`
+
+Rules:
+
+- use teal and mist for systems, diagrams, and publication covers
+- reserve clay for warnings, tensions, or regulatory emphasis
+- do not use secondary accents inside the primary logo
 
 ---
 
@@ -200,6 +231,14 @@ The chosen direction is better because it is:
 - symbolic of passage and governance rather than product features
 - compact and strong at favicon scale
 
+### IP and clearance note
+
+The current mark is an original working design created for Alesvia and stored in this repository as SVG source files.
+
+It is composed from simple geometric forms, which means copyright protection may be thin or unavailable for parts of the mark in some jurisdictions. That does not make it unusable. It means the stronger legal question for public launch is trademark clearance: whether the name or symbol is confusingly similar to existing marks in relevant sectors and territories.
+
+Before public launch, domain rollout, or partner-facing use at scale, follow the clearance process in [brand-management.md](./brand-management.md).
+
 ---
 
 ## Usage rules
@@ -219,7 +258,8 @@ On light backgrounds:
 
 On dark backgrounds:
 
-- place the symbol on a paper tile or use a light background container
+- use the reverse symbol or reverse lockup
+- place the standard symbol on a paper tile when contrast would otherwise be weak
 - avoid dropping the symbol directly into busy atmospheric gradients without enough contrast
 
 ### Scaling rules
@@ -274,8 +314,19 @@ Current brand assets live in:
 
 - [alesvia-symbol.svg](/C:/axiom/public/brand/alesvia-symbol.svg)
 - [alesvia-symbol-tile.svg](/C:/axiom/public/brand/alesvia-symbol-tile.svg)
+- [alesvia-symbol-reverse.svg](/C:/axiom/public/brand/alesvia-symbol-reverse.svg)
 - [alesvia-wordmark.svg](/C:/axiom/public/brand/alesvia-wordmark.svg)
 - [alesvia-lockup-horizontal.svg](/C:/axiom/public/brand/alesvia-lockup-horizontal.svg)
+- [alesvia-lockup-horizontal-reverse.svg](/C:/axiom/public/brand/alesvia-lockup-horizontal-reverse.svg)
+- [alesvia-lockup-stacked.svg](/C:/axiom/public/brand/alesvia-lockup-stacked.svg)
+- [alesvia-lockup-stacked-reverse.svg](/C:/axiom/public/brand/alesvia-lockup-stacked-reverse.svg)
+- [alesvia-social-avatar.svg](/C:/axiom/public/brand/alesvia-social-avatar.svg)
+
+Template assets:
+
+- [deck-cover-general.svg](/C:/axiom/public/brand/templates/deck-cover-general.svg)
+- [deck-cover-institutional.svg](/C:/axiom/public/brand/templates/deck-cover-institutional.svg)
+- [research-cover.svg](/C:/axiom/public/brand/templates/research-cover.svg)
 
 Web implementation components:
 
@@ -290,9 +341,9 @@ Web implementation components:
 
 To take this from first institutional pass to fuller brand system, the next design batch should cover:
 
-1. favicon export set and social avatar variants
-2. deck cover and section divider templates using the new lockup
-3. research cover art system
+1. section divider templates for decks
+2. per-initiative cover variants
+3. research cover variants by format: briefing, report, essay
 4. stronger typographic rules for PDF and slide materials
 5. a second pass on the site UI so the broader interface fully matches the new mark system
 

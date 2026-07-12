@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Alesvia | The Human Baseline",
-    "description": "Alesvia is an institutional platform dedicated to preserving human autonomy and setting healthy boundaries in an increasingly automated world."
+    "description": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics."
   },
   "nav": {
     "brand": "Alesvia.",
@@ -20,48 +20,35 @@
   },
   "ecosystem": {
     "label": "The Ecosystem",
-    "title": "Action-driven initiatives governed by human-centric principles.",
+    "title": "Four pillars, one mission: human autonomy in the AI era.",
     "status_active": "Active",
-    "status_incubating": "Incubating",
+    "status_incubating": "In Preparation",
     "unplugged_title": "Unplugged",
-    "unplugged_desc": "AI increasingly mimics human closeness. Unplugged helps people understand what is missing behind this illusion — building literacy for a time when the boundaries between human and algorithm are blurring.",
-    "unplugged_link": "Visit unplugged.cz \u2192",
+    "unplugged_desc": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.",
+    "unplugged_link": "Visit unplugged.cz →",
+    "academy_title": "Academy",
+    "academy_desc": "AI literacy and humanly sustainable AI deployment for companies, schools, and public administration (including the AI literacy obligation under Article 4 of the EU AI Act). Revenue from these services funds our public-benefit programs.",
+    "practitioners_title": "Practitioners",
+    "practitioners_desc": "Training psychologists, psychiatrists, and therapists for the AI era — from AI literacy to new clinical topics such as emotional dependency on chatbots.",
     "policy_title": "Policy Lab",
-    "policy_desc": "Research and advocacy translating our ethical framework into actionable legislative and corporate guidelines.",
-    "education_title": "Education",
-    "education_desc": "Curricula and workshops for schools and institutions to teach algorithmic literacy and digital self-defense.",
-    "advisory_title": "Alesvia Advisory",
-    "advisory_desc": "Bridging VC funds, institutional investors, and Tier-A AI startups to ensure the ethical deployment of conversational AI.",
-    "status_planned": "Planned",
-    "mind_title": "Alesvia Mind",
-    "mind_desc": "Equipping psychologists, psychiatrists, and therapists to navigate the AI age ethically and confidently.",
-    "proof_title": "Alesvia Proof",
-    "proof_desc": "Science-backed AI literacy programs grounded in peer-reviewed research, not hype or fear.",
-    "compass_title": "Alesvia Compass",
-    "compass_desc": "Enterprise solutions and autonomy impact assessments helping companies turn AI compliance into a competitive advantage.",
-    "watch_title": "Alesvia Watch",
-    "watch_desc": "An independent observatory tracking AI's real-world impact on society, democracy, and human autonomy."
+    "policy_desc": "Research and advocacy translating our ethical framework into actionable legislative and corporate guidelines."
   },
   "financing": {
     "label": "Institutional Grounding",
     "title": "How Alesvia Is Funded",
-    "description": "To build infrastructure that resists misaligned incentives, Alesvia is structured to prioritize long-term human value over short-term engagement. We rely on strategic grants, philanthropic partnerships, and institutional backing to fund our initiatives.",
+    "description": "To build infrastructure that resists misaligned incentives, we are working toward a model whose primary engine is earned revenue from our own services (Academy, Practitioners), complemented by grants, philanthropic partnerships, and infrastructure support.",
     "primary_link": "View Funding Model",
     "secondary_link": "Partner With Us"
   },
   "footer": {
     "rights": "Alesvia. All rights reserved.",
-    "col_initiatives": "Initiatives",
+    "col_initiatives": "Pillars",
     "col_organization": "Organization",
     "col_legal": "Legal",
     "unplugged": "Unplugged",
+    "academy": "Academy",
+    "practitioners": "Practitioners",
     "policy_lab": "Policy Lab",
-    "education": "Education",
-    "advisory": "Advisory",
-    "mind": "Mind",
-    "proof": "Proof",
-    "compass": "Compass",
-    "watch": "Watch",
     "thesis": "The Thesis",
     "about": "About",
     "team": "Team",
@@ -81,49 +68,47 @@
     "title": "Preserving human autonomy in an automated world.",
     "intro": "Alesvia exists because automation is outpacing the institutions meant to govern it. We are building the intellectual and structural foundation for a world where technology serves human agency — not the other way around.",
     "mission_label": "Our Mission",
-    "mission_text": "Alesvia is a Czech-founded institutional platform focused on preserving human autonomy in an increasingly automated world. It connects research, policy, education, and practical implementation so that AI strengthens human agency instead of quietly eroding it.",
+    "mission_text": "Alesvia is an emerging Czech-founded institutional platform focused on preserving human autonomy in an increasingly automated world. It connects research, policy, education, and practical implementation so that AI strengthens human agency instead of quietly eroding it.",
     "philosophy_label": "Philosophy",
     "philosophy_text": "We believe that the most dangerous technologies are not the ones that fail, but the ones that succeed too well — systems so persuasive, so convenient, and so seamlessly integrated that opting out becomes socially or practically impossible. Alesvia exists to ensure that opting out remains a viable choice.",
     "origin_label": "Origin",
-    "origin_text": "Alesvia was founded in the Czech Republic as a registered institute (z.ú.) — a legal structure designed for mission-driven organizations that prioritize public benefit over profit. This structure ensures that our work remains aligned with our principles, not with shareholder expectations.",
+    "origin_text": "Alesvia is being established in the Czech Republic as a registered institute (z.ú.) — a legal structure designed for mission-driven organizations that prioritize public benefit over profit; registration is in progress. This structure will ensure that our work remains aligned with our principles, not with shareholder expectations.",
     "structure_label": "Legal Structure",
-    "structure_text": "As a z.ú. (ústav) under Czech law, Alesvia operates with a statutory board, transparent governance, and a mandate to serve the public interest. This is not a startup. It is an institution built to outlast trends and resist capture."
+    "structure_text": "A registered institute (z.ú.) under Czech law operates with a statutory board, transparent governance, and a mandate to serve the public interest. Alesvia is currently being established in this form — registration is in progress. This is not a startup. It is an institution built to outlast trends and resist capture."
   },
   "team": {
     "metadata_title": "Team & Governance | Alesvia",
     "metadata_description": "Meet the people behind Alesvia and learn about our governance structure.",
     "label": "People",
     "title": "Governance & Team",
-    "intro": "Alesvia is governed by a statutory board and supported by advisors and contributors committed to our mission.",
+    "intro": "Alesvia is being established; we will publish the team's composition during the registration process.",
     "board_label": "Board",
-    "advisory_label": "Advisory Council",
-    "team_label": "Core Team",
-    "placeholder": "We are assembling our team. If you share our mission and want to contribute, reach out."
+    "board_text": "The board will be appointed as part of the ongoing registration; we will publish its composition once the institute is entered in the register."
   },
   "initiatives_index": {
     "metadata_title": "Initiatives | Alesvia",
-    "metadata_description": "Explore the initiatives under the Alesvia umbrella — from digital boundaries to policy advocacy and education.",
+    "metadata_description": "Explore the four pillars of Alesvia — Unplugged, Academy, Practitioners, and Policy Lab.",
     "label": "Our Work",
-    "title": "Initiatives under the Alesvia umbrella.",
-    "intro": "Each initiative addresses a specific domain where human autonomy is under pressure. They operate independently but share a common institutional foundation, ethical framework, and commitment to the human baseline."
+    "title": "The four pillars of Alesvia.",
+    "intro": "Each pillar speaks to a different audience — the public, organizations, mental health professionals, and policymakers. They share a common institutional foundation, ethical framework, and commitment to the human baseline."
   },
   "unplugged": {
     "metadata_title": "Unplugged | Alesvia",
-    "metadata_description": "Unplugged is Alesvia's flagship initiative focused on establishing healthy boundaries with conversational AI.",
-    "label": "Initiative",
+    "metadata_description": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.",
+    "label": "Pillar",
     "status": "Active",
     "title": "Unplugged",
     "subtitle": "Healthy Boundaries with Conversational AI",
-    "intro": "Conversational AI is designed to be persuasive, engaging, and increasingly indistinguishable from human interaction. Unplugged builds the tools, protocols, and cultural frameworks to ensure people remain in control of these relationships.",
+    "intro": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.",
     "problem_label": "The Problem",
-    "problem_text": "Modern conversational AI systems are optimized for engagement, not well-being. They learn what keeps you talking, what makes you trust them, and what makes you come back. Without intentional friction, the default trajectory is dependency.",
+    "problem_text": "Modern conversational AI systems are optimized for engagement, not well-being. They learn what keeps you talking, what makes you trust them, and what makes you come back. Without consciously set boundaries, the default trajectory is dependency.",
     "approach_label": "Our Approach",
     "approach_text": "Unplugged develops practical frameworks for individuals, institutions, and policymakers to establish and maintain healthy boundaries with conversational AI systems.",
     "principles_label": "Core Principles",
-    "principle_friction_title": "Intentional Friction",
-    "principle_friction_desc": "Not all convenience is good. We design deliberate pauses, limits, and reflection points into human-AI interaction to prevent passive dependency.",
-    "principle_detox_title": "Digital Detox Protocols",
-    "principle_detox_desc": "Structured programs for individuals and organizations to audit, reduce, and recalibrate their relationship with AI-driven communication tools.",
+    "principle_friction_title": "Clarity Without Moralizing",
+    "principle_friction_desc": "We explain how conversational AI works and why it feels so persuasive — without lecturing and without fearmongering.",
+    "principle_detox_title": "AI Is a Tool, Not a Relationship",
+    "principle_detox_desc": "We help people use AI deliberately and toward their own goals — and recognize when a tool starts replacing human contact.",
     "principle_boundaries_title": "Healthy Boundaries",
     "principle_boundaries_desc": "Clear, enforceable limits on what conversational AI systems should and should not do — from emotional manipulation to data harvesting.",
     "cta_label": "Get Involved",
@@ -132,8 +117,8 @@
   "policy_lab": {
     "metadata_title": "Policy Lab | Alesvia",
     "metadata_description": "Alesvia's Policy Lab translates ethical frameworks into actionable legislative and corporate guidelines.",
-    "label": "Initiative",
-    "status": "Incubating",
+    "label": "Pillar",
+    "status": "In Preparation",
     "title": "Policy Lab",
     "subtitle": "Research & Legislative Advocacy",
     "intro": "Technology policy is written by the people in the room. The Policy Lab ensures that the room includes voices focused on human autonomy — not just efficiency, growth, or national competitiveness.",
@@ -146,69 +131,52 @@
       "Legislative templates for conversational AI boundaries",
       "Institutional policy toolkits for schools and public bodies"
     ],
+    "future_label": "Future Programs",
+    "future_text": "Two programs will become part of the Policy Lab in the future: a research branch developing science-backed AI literacy, and an independent observatory tracking the real-world impact of AI on human autonomy and society.",
     "cta_label": "Stay Informed",
-    "cta_text": "The Policy Lab is in its incubation phase. Sign up to follow our progress and contribute to our research."
+    "cta_text": "The Policy Lab is in preparation. Sign up to follow our progress and contribute to our research."
   },
-  "education": {
-    "metadata_title": "Education | Alesvia",
-    "metadata_description": "Alesvia's Education initiative teaches algorithmic literacy and digital self-defense to schools and institutions.",
-    "label": "Initiative",
-    "status": "Incubating",
-    "title": "Education Outreach",
-    "subtitle": "Algorithmic Literacy & Digital Self-Defense",
-    "intro": "You cannot set boundaries with systems you do not understand. Our education programs equip students, educators, and institutions with the knowledge to navigate an automated world on their own terms.",
+  "academy": {
+    "metadata_title": "Academy | Alesvia",
+    "metadata_description": "Alesvia Academy — AI literacy and humanly sustainable AI deployment for companies, schools, and public administration, aligned with Article 4 of the EU AI Act.",
+    "label": "Pillar",
+    "status": "In Preparation",
+    "title": "Academy",
+    "subtitle": "AI Literacy & Humanly Sustainable AI Deployment",
+    "intro": "The Academy is preparing AI literacy and humanly sustainable AI deployment for companies, schools, and public administration (including the AI literacy obligation under Article 4 of the EU AI Act). Revenue from these services funds our public-benefit programs.",
     "vision_label": "Vision",
-    "vision_text": "To make algorithmic literacy as fundamental as media literacy — a core competency for informed citizenship in the 21st century.",
-    "programs_label": "Planned Programs",
+    "vision_text": "To make AI literacy as fundamental as media literacy — a core competency for informed citizenship and responsible organizations in the 21st century. You cannot set boundaries with systems you do not understand.",
+    "programs_label": "Programs in Preparation",
     "programs_items": [
+      "AI literacy workshops and training for companies and public administration (including the Article 4 EU AI Act obligation)",
       "School curricula on algorithmic literacy and AI awareness",
       "Workshops for educators on integrating digital self-defense into existing courses",
-      "Institutional audits of AI tool usage in educational settings",
+      "Audits of AI tool usage in educational and institutional settings",
       "Public seminars on conversational AI, persuasion, and autonomy"
     ],
+    "future_label": "Future Program",
+    "future_text": "In the future, the Academy will add a program for assessing AI's impact on user autonomy, helping companies evaluate their own AI products and services. We also plan to support responsible decision-making around AI investments in the private and public sector.",
     "audiences_label": "Target Audiences",
     "audiences_items": [
-      "Secondary and higher education institutions",
-      "Teacher training programs",
-      "Corporate learning and development teams",
+      "Companies and organizations deploying AI systems",
+      "Secondary and higher education institutions and teacher training programs",
+      "Public administration and public institutions",
       "Public libraries and community organizations"
     ],
     "cta_label": "Partner With Us",
-    "cta_text": "We are looking for educational institutions willing to pilot our curricula and provide feedback. If you represent a school, university, or training organization, get in touch."
+    "cta_text": "The Academy is in preparation. We are looking for schools, companies, and institutions willing to pilot our programs and provide feedback. If you represent an organization interested in this topic, get in touch."
   },
-  "advisory": {
-    "metadata_title": "Alesvia Advisory | Alesvia",
-    "metadata_description": "Alesvia Advisory bridges institutional investors and ethical AI startups to ensure responsible deployment of AI technologies.",
-    "label": "Initiative",
-    "status": "Incubating",
-    "title": "Alesvia Advisory",
-    "subtitle": "Ethical AI Investment & Deployment",
-    "intro": "Capital shapes technology. Alesvia Advisory works to ensure that the money flowing into AI development carries expectations of ethical deployment — not just financial returns.",
-    "services_label": "What We Do",
-    "services_items": [
-      "Connect VC funds and institutional investors with AI startups committed to ethical deployment",
-      "Develop ethical deployment criteria and assessment frameworks",
-      "Provide due diligence on AI companies' autonomy and safety practices",
-      "Bridge the gap between AI ethics research and investment decision-making"
-    ],
-    "investors_label": "For Investors",
-    "investors_text": "We help you identify AI companies that align with long-term human value — not just short-term market capture. Our frameworks evaluate how startups handle user autonomy, data practices, and persuasion mechanics.",
-    "startups_label": "For Startups",
-    "startups_text": "We help ethical AI companies find investors who understand and value responsible deployment. If your product is designed to respect human autonomy, we want to amplify your signal.",
-    "cta_label": "Partner With Us",
-    "cta_text": "Alesvia Advisory is in its incubation phase. If you are an investor, fund manager, or AI founder interested in ethical deployment frameworks, partner with us."
-  },
-  "mind": {
-    "metadata_title": "Alesvia Mind | Alesvia",
-    "metadata_description": "Alesvia Mind equips psychologists, psychiatrists, and therapists to navigate the AI age ethically and confidently.",
-    "label": "Initiative",
-    "status": "Planned",
-    "title": "Alesvia Mind",
+  "practitioners": {
+    "metadata_title": "Practitioners | Alesvia",
+    "metadata_description": "The Practitioners pillar equips psychologists, psychiatrists, and therapists to navigate the AI era ethically and confidently.",
+    "label": "Pillar",
+    "status": "In Preparation",
+    "title": "Practitioners",
     "subtitle": "AI & Mental Health Professional Support",
-    "intro": "Mental health professionals are on the front lines of AI's impact on human wellbeing — yet most received zero training on the topic. Alesvia Mind equips psychologists, psychiatrists, and therapists to navigate the AI age ethically, confidently, and on their own terms.",
+    "intro": "Mental health professionals are on the front lines of AI's impact on human wellbeing — yet most received zero training on the topic. The Practitioners pillar equips psychologists, psychiatrists, and therapists to navigate the AI era ethically and confidently.",
     "problem_label": "The Challenge",
-    "problem_text": "Patients are arriving in therapy already using AI chatbots for emotional support. A Brown University study found AI chatbots systematically violate mental health ethics standards. The WHO convened experts in March 2026 specifically on responsible AI for mental health. Yet 71% of psychologists have never used AI tools, and most training programs don't cover AI literacy. The gap between what practitioners face and what they're prepared for is growing daily.",
-    "programs_label": "What We're Building",
+    "problem_text": "Patients are arriving in therapy already using AI chatbots for emotional support. A Brown University study found AI chatbots systematically violate mental health ethics standards. The WHO convened experts in March 2026 specifically on responsible AI for mental health. Yet 71% of psychologists have never used AI tools, and most training programs don't cover AI literacy.",
+    "programs_label": "What We're Preparing",
     "programs_items": [
       "Continuing education programs for mental health professionals on AI literacy",
       "Ethical assessment frameworks for AI tools used in clinical settings",
@@ -224,115 +192,38 @@
       "Their patients — indirectly, through better-informed care"
     ],
     "cta_label": "Get Involved",
-    "cta_text": "Alesvia Mind is in the planning phase. If you are a mental health professional, researcher, or institution interested in shaping this initiative, we want to hear from you."
-  },
-  "proof": {
-    "metadata_title": "Alesvia Proof | Alesvia",
-    "metadata_description": "Alesvia Proof delivers science-backed AI literacy grounded in cognitive science, not hype — helping organizations meet EU AI Act Article 4 requirements.",
-    "label": "Initiative",
-    "status": "Planned",
-    "title": "Alesvia Proof",
-    "subtitle": "Science-Backed AI Literacy",
-    "intro": "Most AI literacy programs explain how AI works. Few address how AI affects thinking, decision-making, and autonomy. Alesvia Proof makes AI literacy evidence-based, not fear-based — grounded in cognitive science, not hype cycles.",
-    "problem_label": "The Gap",
-    "problem_text": "EU AI Act Article 4, effective since February 2025, requires AI literacy for anyone deploying AI systems. But most available programs are technical walkthroughs that miss the human dimension — how AI shapes cognition, erodes autonomy, and alters decision-making. Organizations need compliance-ready, scientifically rigorous programs. The market is not delivering them.",
-    "programs_label": "What We're Building",
-    "programs_items": [
-      "Curricula grounded in cognitive science, behavioral psychology, and media literacy research",
-      "University partnerships to validate program effectiveness through controlled studies",
-      "Open-source teaching materials aligned with EU AI Act Article 4",
-      "Train-the-trainer programs for educators across the EU",
-      "A public database of AI literacy resources rated for scientific rigor"
-    ],
-    "audiences_label": "Who This Serves",
-    "audiences_items": [
-      "Educators and schools (primary through higher education)",
-      "HR and learning & development professionals",
-      "Policymakers seeking EU AI Act compliance frameworks",
-      "Organizations deploying AI systems under Article 4 obligations"
-    ],
-    "cta_label": "Collaborate",
-    "cta_text": "Alesvia Proof is in the planning phase. If you are an educator, researcher, or organization preparing for EU AI Act compliance, we'd like to work together."
-  },
-  "compass": {
-    "metadata_title": "Alesvia Compass | Alesvia",
-    "metadata_description": "Alesvia helps technology builders integrate human autonomy from day one through enterprise solutions and autonomy impact assessments.",
-    "label": "Initiative",
-    "status": "Planned",
-    "title": "Alesvia Compass",
-    "subtitle": "Enterprise Solutions & Impact Assessments",
-    "intro": "Most AI ethics work happens after products ship. Internal teams face the 'grading your own homework' problem, incentivized to prioritize speed over user autonomy. Alesvia Compass provides independent, 3rd-party audits that protect your brand trust and ensure EU AI Act compliance.",
-    "advantage_title": "The Independent Advantage",
-    "advantage_text1": "Internal engineering teams cannot objectively audit their own systems for subtle ethical failures. We provide the independent, 3rd-party verification necessary to prove to your board, investors, and regulators that your AI is safe.",
-    "advantage_text2": "The 'Alesvia Certified' seal carries the weight of a public-interest institution, giving you an uncopyable market moat.",
-    "services_label": "What We Offer",
-    "services_items": [
-      "Independent 3rd-Party Autonomy Audits (Avoiding the 'grading your own homework' problem)",
-      "EU AI Act Compliance Mapping for High-Risk and Limited-Risk Systems",
-      "Brand Trust & Persuasive Architecture Stress-Testing",
-      "Workshops for enterprise risk officers, CTOs, and innovation hubs",
-      "Open-source tools: checklists, decision trees, red-flag indicators"
-    ],
-    "approach_label": "Our Approach",
-    "approach_text": "We don't hand companies a 200-page ethics framework and walk away. Compass provides stage-appropriate guidance — lightweight for early prototypes, rigorous for launch. We work alongside product teams, not above them.",
-    "audiences_label": "Who This Serves",
-    "audiences_items": [
-      "Enterprise risk officers and compliance teams",
-      "Innovation labs and R&D departments",
-      "Startup accelerators and impact investors",
-      "CTOs and product leaders building AI-powered products"
-    ],
-    "cta_label": "Work With Us",
-    "cta_text": "Our Enterprise Assessment services are in the planning phase. If you are building an AI product and want to secure a regulatory and market advantage, let's talk."
-  },
-  "watch": {
-    "metadata_title": "Alesvia Watch | Alesvia",
-    "metadata_description": "Alesvia Watch monitors how AI systems affect human autonomy in practice — publishing reports, tracking incidents, and providing evidence for policy.",
-    "label": "Initiative",
-    "status": "Planned",
-    "title": "Alesvia Watch",
-    "subtitle": "AI Impact Observatory",
-    "intro": "No institution systematically tracks how deployed AI systems affect human autonomy in practice. Alesvia Watch fills that gap — monitoring, measuring, and reporting so that policy and public understanding keep pace with technology.",
-    "scope_label": "What We Monitor",
-    "scope_items": [
-      "Quarterly reports on the state of AI and human autonomy",
-      "Public tracker of AI incidents related to autonomy erosion — chatbot dependency, AI-induced behavior change, manipulation cases",
-      "Rapid-turnaround studies on emerging AI products and their autonomy implications",
-      "Expert testimony and evidence packages for legislative processes"
-    ],
-    "method_label": "Methodology",
-    "method_text": "Alesvia Watch combines quantitative tracking (incident databases, product audits, usage data analysis) with qualitative research (interviews, case studies, practitioner reports). We publish everything openly and make our datasets available to researchers.",
-    "audiences_label": "Who This Serves",
-    "audiences_items": [
-      "Policymakers and legislators (EU AI Act implementation, national strategies)",
-      "Journalists covering AI and technology",
-      "Academic researchers in AI ethics, psychology, and social science",
-      "Alesvia's own initiatives — providing the evidence base for all our work"
-    ],
-    "cta_label": "Follow Our Work",
-    "cta_text": "Alesvia Watch is in the planning phase. If you are a researcher, journalist, or policymaker who needs current data on AI's impact on human autonomy, get in touch."
+    "cta_text": "The Practitioners pillar is in preparation. If you are a mental health professional, researcher, or institution interested in shaping this program, we want to hear from you."
   },
   "funding": {
     "metadata_title": "Funding & Partners | Alesvia",
-    "metadata_description": "Learn how Alesvia is funded and how we maintain independence through transparent financing and strategic partnerships.",
+    "metadata_description": "Alesvia's funding model: earned revenue from services, grants, philanthropic partnerships, and infrastructure support — with clear independence rules.",
     "label": "Transparency",
-    "title": "How Alesvia Is Funded",
+    "title": "How Alesvia Will Be Funded",
     "intro": "Independence requires structural honesty. We publish our funding model because we believe institutional trust is earned through transparency, not branding.",
     "model_label": "Funding Model",
-    "model_text": "Alesvia is designed to resist misaligned incentives. We do not accept funding that compromises our mission, creates conflicts of interest, or introduces pressure to optimize for engagement over human well-being.",
-    "sources_label": "Funding Sources",
+    "model_text": "This is the revenue architecture Alesvia is working toward — none of it is presented as already running. The organization is being established, and we are building its funding from the ground up to resist misaligned incentives: we will not accept funding that compromises our mission, creates conflicts of interest, or introduces pressure to optimize for engagement over human well-being.",
+    "sources_label": "Revenue Architecture",
+    "source_services_title": "Earned Revenue from Services",
+    "source_services_desc": "The primary engine and a structural guarantee of independence: revenue from Academy and Practitioners services — AI literacy and training for companies, schools, public administration, and mental health professionals. Any surplus returns to the mission and funds our public-benefit programs.",
     "source_grants_title": "Grants",
-    "source_grants_desc": "Public and private grants from foundations and government bodies aligned with our mission in digital rights, education, and ethical technology.",
+    "source_grants_desc": "A program accelerator, not operational oxygen. Public and private grants from foundations and government bodies aligned with our mission accelerate specific programs, but the organization does not depend on them.",
     "source_philanthropy_title": "Philanthropic Partnerships",
-    "source_philanthropy_desc": "Long-term partnerships with philanthropic organizations that share our commitment to human autonomy and institutional independence.",
-    "source_institutional_title": "Institutional Backing",
-    "source_institutional_desc": "Support from universities, research centers, and public-interest organizations that benefit from our work and contribute to our sustainability.",
-    "source_advisory_title": "Advisory Revenue",
-    "source_advisory_desc": "Revenue from Alesvia Advisory's ethical AI investment services, reinvested into the organization's non-commercial initiatives.",
+    "source_philanthropy_desc": "Long-term partnerships with philanthropic organizations and a Founding Circle of founding partners who share our commitment to human autonomy and institutional independence.",
+    "source_infrastructure_title": "Infrastructure Support",
+    "source_infrastructure_desc": "Technology credits and tools that lower our operating costs — from cloud infrastructure to software for research and education.",
+    "rules_label": "Rules We Hold Ourselves To",
+    "rules_items": [
+      "We will not accept a donation from an entity whose core product we actively criticize.",
+      "Donations are unrestricted — donors do not decide what they are used for.",
+      "We disclose larger donors.",
+      "No single donor will exceed roughly 25% of the organization's annual income.",
+      "Donors have no influence over our outputs."
+    ],
+    "rules_note": "This policy will be formally approved by the board after registration.",
     "partners_label": "Partners & Sponsors",
     "partners_text": "We are currently establishing our first partnerships. If your organization shares our mission, we welcome the conversation.",
     "transparency_label": "Financial Transparency",
-    "transparency_text": "As a Czech z.ú., Alesvia is subject to public reporting requirements. We go beyond the minimum: our annual reports will include detailed breakdowns of revenue sources, expenditures by initiative, and governance decisions.",
+    "transparency_text": "Once registered as a z.ú., Alesvia will be subject to public reporting requirements. We will go beyond the minimum: our annual reports will include detailed breakdowns of revenue sources, expenditures by pillar, and governance decisions.",
     "cta_label": "Partner With Us",
     "cta_text": "If your organization is interested in supporting or partnering with Alesvia, we'd like to hear from you."
   },
@@ -375,7 +266,7 @@
     "sections": [
       {
         "heading": "Data Controller",
-        "content": "Alesvia z.ú., registered in the Czech Republic. Contact: privacy@alesvia.org"
+        "content": "Alesvia, an institute (z.ú.) being established in the Czech Republic; registration is in progress. Contact: privacy@alesvia.org"
       },
       {
         "heading": "What Data We Collect",
@@ -412,7 +303,7 @@
     "sections": [
       {
         "heading": "Operator",
-        "content": "This website is operated by Alesvia z.ú., a registered institute under Czech law."
+        "content": "This website is operated by Alesvia, an institute (z.ú.) being established under Czech law; registration is in progress."
       },
       {
         "heading": "Use of Content",
@@ -428,7 +319,7 @@
       },
       {
         "heading": "Limitation of Liability",
-        "content": "Alesvia z.ú. shall not be liable for any damages arising from the use of this website, to the fullest extent permitted by Czech law."
+        "content": "Alesvia shall not be liable for any damages arising from the use of this website, to the fullest extent permitted by Czech law."
       },
       {
         "heading": "Governing Law",
@@ -445,11 +336,11 @@
     "items": [
       {
         "question": "What is Alesvia?",
-        "answer": "Alesvia is a Czech non-profit organization (z.ú.) based in Ostrava, operating as an umbrella entity for projects dedicated to preserving human autonomy in an increasingly automated world. The active project under its umbrella is Unplugged."
+        "answer": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics. Alesvia is being established as a registered institute (z.ú.); registration is in progress. Its active program is Unplugged."
       },
       {
         "question": "What does Alesvia do?",
-        "answer": "Alesvia runs four initiatives: Unplugged (establishing healthy boundaries with conversational AI), Policy Lab (translating ethical frameworks into legislation), Education (teaching algorithmic literacy), and Alesvia Advisory (bridging ethical AI startups with institutional investors)."
+        "answer": "Alesvia builds its work on four pillars: Unplugged (healthy boundaries with conversational AI — active), Academy (AI literacy and humanly sustainable AI deployment for companies, schools, and public administration — in preparation), Practitioners (training psychologists and therapists for the AI era — in preparation), and Policy Lab (translating ethical frameworks into legislation and guidelines — in preparation)."
       },
       {
         "question": "What is the human baseline?",
@@ -457,25 +348,25 @@
       },
       {
         "question": "Where is Alesvia based?",
-        "answer": "Alesvia is registered as a z.ú. (ústav / institute) in the Czech Republic. This legal structure is designed for mission-driven organizations that prioritize public benefit over profit."
+        "answer": "Alesvia is being established as a registered institute (z.ú.) based in Ostrava, Czech Republic; registration is in progress. This legal structure is designed for mission-driven organizations that prioritize public benefit over profit."
       },
       {
         "question": "How is Alesvia funded?",
-        "answer": "Alesvia is funded through strategic grants, philanthropic partnerships, institutional backing, and revenue from Alesvia Advisory's ethical AI investment services. The organization does not accept funding that compromises its mission or creates conflicts of interest."
+        "answer": "Alesvia is working toward a model whose primary engine is earned revenue from Academy and Practitioners services — AI literacy and training for companies, schools, and public administration. Revenue from these services funds our public-benefit programs. The model is complemented by grants, philanthropic partnerships, and infrastructure support. The organization will not accept funding that compromises its mission or creates conflicts of interest."
       },
       {
         "question": "What is Unplugged?",
-        "answer": "Unplugged is Alesvia's flagship initiative focused on establishing healthy boundaries with conversational AI. It develops practical frameworks based on three core principles: intentional friction, digital detox protocols, and healthy boundaries."
+        "answer": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship. It is Alesvia's flagship and currently active program."
       }
     ]
   },
   "imprint": {
     "metadata_title": "Legal Imprint | Alesvia",
-    "metadata_description": "Legal registration details for Alesvia z.ú. — Czech registered institute under the Municipal Court in Prague.",
+    "metadata_description": "Legal details for Alesvia — an emerging Czech registered institute (z.ú.); registration is in progress.",
     "title": "Legal Imprint",
-    "org_name": "Alesvia z.ú.",
+    "org_name": "Alesvia",
     "registration_label": "Registration",
-    "registration_text": "Registered in the Register of Institutes maintained by the Municipal Court in Prague.",
+    "registration_text": "Alesvia is being established as a registered institute (z.ú.); registration in the Register of Institutes is in progress.",
     "ico_label": "IČO",
     "ico_text": "To be assigned upon registration.",
     "address_label": "Registered Address",
@@ -490,64 +381,13 @@
     "metadata_description": "Briefings, reports, and essays from Alesvia's initiatives on human autonomy, AI governance, and responsible technology.",
     "label": "Research & Insights",
     "title": "Briefings, Reports, and Essays",
-    "intro": "Original briefings, reports, and essays from across Alesvia's initiatives. Evidence-led perspectives on how AI shapes human autonomy, institutions, and public life.",
+    "intro": "Original briefings, reports, and essays from across Alesvia's pillars. Evidence-led perspectives on how AI shapes human autonomy, institutions, and public life.",
     "read_more": "Read more",
     "back": "Back to Research",
     "published": "Published",
     "initiative": "Initiative",
     "tags": "Tags",
     "all_posts": "All Posts"
-  },
-  "advisory_form": {
-    "title": "Advisory Inquiry",
-    "name": "Your name",
-    "email": "Your email",
-    "org_name": "Organization name",
-    "org_type": "Organization type",
-    "type_startup": "AI Startup",
-    "type_vc": "VC / Investor",
-    "type_other": "Other",
-    "stage": "Funding stage",
-    "stage_preseed": "Pre-Seed",
-    "stage_seed": "Seed",
-    "stage_series": "Series A+",
-    "stage_na": "N/A",
-    "message": "Briefly describe your AI product or ethical consideration",
-    "submit": "Submit Inquiry",
-    "sending": "Submitting...",
-    "success": "Inquiry received. We will be in touch shortly.",
-    "error": "Something went wrong. Please try emailing us directly."
-  },
-  "compass_form": {
-    "title": "Request an Assessment",
-    "name": "Your name",
-    "email": "Your email",
-    "company": "Company name",
-    "role": "Your role",
-    "role_risk": "Risk Officer / Compliance",
-    "role_cto": "CTO / Engineering",
-    "role_innovation": "Innovation / R&D",
-    "role_other": "Other",
-    "ai_stage": "AI implementation stage",
-    "stage_concept": "Concept / Ideation",
-    "stage_prototype": "Prototyping",
-    "stage_deployed": "Deployed in Production",
-    "message": "Briefly describe your AI product or compliance concern",
-    "submit": "Submit Request",
-    "sending": "Submitting...",
-    "success": "Request received. We will be in touch shortly.",
-    "error": "Something went wrong. Please try emailing us directly."
-  },
-  "compass_flowchart": {
-    "title": "Assessment Methodology",
-    "step1_title": "1. Architecture Review",
-    "step1_desc": "Mapping AI touchpoints against EU AI Act risk tiers (Minimal, Limited, High).",
-    "step2_title": "2. Agency Stress-Testing",
-    "step2_desc": "Simulating user flows to measure Cognitive Delegation, Exit Viability, and Persuasive Architecture.",
-    "step3_title": "3. Remediation Roadmap",
-    "step3_desc": "Delivering actionable engineering tickets to adjust UI friction and data handling.",
-    "step4_title": "4. Independent Certification",
-    "step4_desc": "Issuing an Alesvia Autonomy Impact Report for stakeholder and regulatory transparency."
   },
   "policy_form": {
     "title": "Engage with Policy Lab",
@@ -569,88 +409,12 @@
   "policy_funnel": {
     "title": "The Policy Translation Funnel",
     "step1_title": "1. Academic Synthesis",
-    "step1_desc": "Aggregating AI impact data, behavioral studies, and incident reports from our Watch initiative.",
+    "step1_desc": "Aggregating AI impact data, behavioral studies, and incident reports from our planned observatory.",
     "step2_title": "2. Regulatory Mapping",
     "step2_desc": "Cross-referencing behavioral impacts with existing legislative frameworks like the EU AI Act.",
     "step3_title": "3. Legislative Drafting",
     "step3_desc": "Creating concrete policy templates, model legislation, and SME compliance guidelines.",
     "step4_title": "4. Institutional Implementation",
     "step4_desc": "Providing direct advisory and toolkits to public bodies and educational institutions."
-  },
-  "watch_dashboard": {
-    "title": "Live Autonomy Incident Tracker",
-    "status_live": "LIVE TRACKER",
-    "col_date": "Date",
-    "col_severity": "Severity",
-    "col_type": "Incident Type",
-    "col_description": "Description",
-    "col_status": "Status",
-    "severity_high": "High",
-    "severity_med": "Medium",
-    "status_logged": "Logged",
-    "status_review": "Under Review",
-    "incidents": [
-      {
-        "date": "2026-04-28",
-        "severity": "High",
-        "type": "Persuasive Architecture Flag",
-        "description": "Enterprise e-commerce AI utilizing dynamic emotional manipulation to increase checkout rates.",
-        "status": "Under Review"
-      },
-      {
-        "date": "2026-04-15",
-        "severity": "Medium",
-        "type": "Cognitive Delegation Risk",
-        "description": "Educational tutoring bot exhibiting high dependency patterns in primary school test subjects.",
-        "status": "Logged"
-      },
-      {
-        "date": "2026-03-30",
-        "severity": "High",
-        "type": "Chatbot Manipulation",
-        "description": "Customer service LLM overriding user exit attempts during subscription cancellation flows.",
-        "status": "Logged"
-      }
-    ]
-  },
-  "saas_demo": {
-    "metadata_title": "Alesvia Compass SaaS Demo",
-    "metadata_description": "Interactive demo of the Alesvia Compass AI Autonomy Assessment tool.",
-    "page_title": "Compass Interactive Demo",
-    "page_subtitle": "Simulate a $199/mo MVP Autonomy Assessment",
-    "step1_title": "Step 1: Define Your AI System",
-    "step1_desc": "Configure the parameters of the AI product you are building to generate a simulated risk assessment.",
-    "field_system_type": "System Type",
-    "opt_ecommerce": "E-commerce Recommendation Engine",
-    "opt_tutor": "Educational Tutoring Bot",
-    "opt_customer_service": "Customer Service LLM",
-    "opt_healthcare": "Healthcare Triage Assistant",
-    "field_deployment": "Deployment Region",
-    "opt_eu": "European Union (EU AI Act applies)",
-    "opt_us": "United States",
-    "opt_global": "Global",
-    "field_feature": "Core Autonomy Feature",
-    "opt_decision": "Autonomous Decision Making",
-    "opt_generation": "Content/Response Generation",
-    "opt_persuasion": "User Persuasion / Conversion",
-    "btn_run": "Run Autonomy Audit",
-    "running": "Scanning Architecture...",
-    "step2_title": "Step 2: Assessment Results",
-    "step2_desc": "Your simulated EU AI Act and Autonomy Risk report.",
-    "res_risk_tier": "EU AI Act Risk Tier",
-    "res_high_risk": "High Risk (Human Oversight Required)",
-    "res_limited_risk": "Limited Risk (Transparency Required)",
-    "res_autonomy_score": "Autonomy Preservation Score",
-    "res_flags": "Identified Red Flags",
-    "flag_1": "Persuasive Architecture detected in core user flow. Risk of cognitive manipulation.",
-    "flag_2": "Insufficient 'Exit Viability'. User cannot easily override the AI's recommendation.",
-    "flag_3": "High Cognitive Delegation. System encourages over-reliance without verification.",
-    "res_remediation": "Remediation Checklist",
-    "task_1": "Implement mandatory 'Opt-Out' button visible at all times during interaction.",
-    "task_2": "Add friction/confirmation step before AI executes high-impact decisions.",
-    "task_3": "Rewrite system prompt to disclose AI nature explicitly in first message.",
-    "upsell_title": "Need Official Certification?",
-    "upsell_desc": "This is a simulated demo. To receive an official Alesvia Certification and protect your enterprise from EU AI Act fines, contact our audit team.",
-    "btn_sales": "Contact Sales"
   }
 }

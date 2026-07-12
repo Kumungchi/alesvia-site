@@ -50,6 +50,7 @@ Use three levels consistently:
 - warm accent for emphasis only
 - light neutral text for primary reading
 - muted text for secondary copy
+- secondary teal/mist accents for diagrams and covers where extra structure is needed
 
 ### Grid rule
 
@@ -98,6 +99,7 @@ Visual notes:
 - no logos grid
 - no busy graphic system
 - one restrained visual motif is enough
+- use [deck-cover-general.svg](/C:/axiom/public/brand/templates/deck-cover-general.svg) as the first cover reference
 
 ### Slide 2 — Why Alesvia Exists
 
@@ -227,6 +229,7 @@ Visual notes:
 
 - slightly more formal than the general deck cover
 - less atmosphere, more authority
+- use [deck-cover-institutional.svg](/C:/axiom/public/brand/templates/deck-cover-institutional.svg) as the first cover reference
 
 ### Slide 2 — The Institutional Problem
 

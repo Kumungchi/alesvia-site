@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alesvia — Brand Identity Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16324F;
+    --gold: #C79B3B;
+    --paper: #F4F1EA;
+    --charcoal: #221E22;
+    --muted: #857E8B;
+    --aubergine: #31263E;
+    --teal: #2A7F78;
+    --mist: #DCE7E2;
+    --clay: #A74E3A;
+    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --sans: Inter, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4; margin: 0; }
+  html, body { font-family: var(--sans); color: var(--charcoal); }
+  .page {
+    width: 210mm;
+    height: 296mm;
+    padding: 22mm 20mm 18mm;
+    page-break-after: always;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+  }
+  .page.paper { background: var(--paper); }
+  .page.ink { background: var(--ink); color: var(--paper); }
+
+  .kicker {
+    font-size: 8.5pt; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 6mm;
+  }
+  h1 { font-family: var(--serif); font-weight: 900; font-size: 34pt; line-height: 1.1; color: var(--ink); }
+  .ink h1 { color: var(--paper); }
+  h2 { font-family: var(--serif); font-weight: 700; font-size: 20pt; color: var(--ink); margin-bottom: 5mm; }
+  h3 { font-family: var(--serif); font-weight: 700; font-size: 12.5pt; color: var(--ink); margin: 5mm 0 2mm; }
+  p, li { font-size: 9.5pt; line-height: 1.65; color: var(--charcoal); }
+  .ink p { color: rgba(244,241,234,0.85); }
+  .muted { color: var(--muted); }
+  ul { list-style: none; }
+  ul li { padding-left: 5mm; position: relative; margin-bottom: 1.6mm; }
+  ul li::before { content: ""; position: absolute; left: 0; top: 2.4mm; width: 1.6mm; height: 1.6mm; background: var(--gold); border-radius: 50%; }
+  .rule { border: none; border-top: 0.6mm solid var(--gold); width: 22mm; margin: 6mm 0; }
+  .footer {
+    position: absolute; bottom: 10mm; left: 20mm; right: 20mm;
+    display: flex; justify-content: space-between;
+    font-size: 7.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    border-top: 0.2mm solid rgba(133,126,139,0.35); padding-top: 3mm;
+  }
+  .ink .footer { color: rgba(244,241,234,0.5); border-top-color: rgba(244,241,234,0.2); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+  .status-note {
+    background: var(--mist); border-left: 1mm solid var(--teal);
+    padding: 4mm 5mm; font-size: 8.5pt; line-height: 1.6; margin-top: 6mm;
+  }
+  .ink .status-note { background: rgba(244,241,234,0.08); border-left-color: var(--gold); color: rgba(244,241,234,0.85); }
+
+  /* Cover */
+  .cover-mark { margin: 26mm 0 14mm; }
+  .cover-title { font-size: 40pt; }
+  .cover-sub { font-size: 12pt; font-weight: 300; color: rgba(244,241,234,0.75); margin-top: 6mm; max-width: 120mm; line-height: 1.5; }
+  .cover-meta { position: absolute; bottom: 26mm; left: 20mm; font-size: 8.5pt; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(244,241,234,0.55); }
+
+  /* Logo showcase */
+  .logo-tile {
+    border: 0.25mm solid rgba(133,126,139,0.3); border-radius: 2mm;
+    display: flex; align-items: center; justify-content: center;
+    padding: 8mm; background: #fff;
+  }
+  .logo-tile.dark { background: var(--ink); }
+  .logo-tile.paperbg { background: var(--paper); }
+  .tile-caption { font-size: 7.5pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 2.5mm; }
+
+  /* Color swatches */
+  .swatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; margin-top: 4mm; }
+  .swatch { border-radius: 2mm; overflow: hidden; border: 0.25mm solid rgba(133,126,139,0.25); }
+  .swatch .chip { height: 22mm; }
+  .swatch .label { padding: 2.5mm 3mm; background: #fff; }
+  .swatch .label b { display: block; font-size: 8.5pt; color: var(--ink); }
+  .swatch .label span { font-size: 8pt; color: var(--muted); font-family: var(--sans); }
+
+  /* Typography specimens */
+  .spec-serif { font-family: var(--serif); font-weight: 700; font-size: 24pt; color: var(--ink); line-height: 1.2; }
+  .spec-sans { font-family: var(--sans); font-size: 10.5pt; color: var(--charcoal); line-height: 1.6; }
+  .spec-label { font-size: 7.5pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 6mm 0 2mm; }
+
+  .dont { color: var(--clay); }
+  ul.dont-list li::before { background: var(--clay); }
+
+  .pillar { border-left: 0.8mm solid var(--gold); padding: 1mm 0 1mm 5mm; margin-bottom: 5mm; }
+  .pillar b { font-family: var(--serif); font-size: 11.5pt; color: var(--ink); }
+  .pillar .tag { font-size: 7pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-left: 2mm; }
+  .pillar p { margin-top: 1mm; }
+</style>
+</head>
+<body>
+
+<!-- ── 1 · COVER ─────────────────────────────────── -->
+<section class="page ink">
+  <div class="cover-mark">
+    <svg width="120" height="120" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 108V62L64 20L104 62V108H86V69L64 46L42 69V108H24Z" fill="#F4F1EA"/>
+      <path d="M58 108V64L64 58L70 64V108H58Z" fill="#C79B3B"/>
+    </svg>
+  </div>
+  <div class="kicker">Brand Identity Book · First Institutional Pass</div>
+  <h1 class="cover-title">Alesvia</h1>
+  <p class="cover-sub">Human autonomy is the baseline. An identity system for a modern public-interest institution — symbol, wordmark, color, typography, and usage.</p>
+  <div class="cover-meta">Alesvia · vzniká jako zapsaný ústav (z.ú.), registrace probíhá · 2026</div>
+</section>
+
+<!-- ── 2 · BRAND FOUNDATION ──────────────────────── -->
+<section class="page paper">
+  <div class="kicker">01 · Brand Foundation</div>
+  <h2>Who Alesvia is</h2>
+  <p>Alesvia je vznikající český institut pro psychologickou stránku umělé inteligence — vzdělává veřejnost, školí organizace podle AI Actu a připravuje terapeuty na nová klinická témata.</p>
+  <p style="margin-top:2.5mm">Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics.</p>
+  <hr class="rule">
+  <h3>Positioning</h3>
+  <p>Alesvia must look like a <b>modern public-interest institution</b> — not a startup product and not a generic nonprofit template. The identity communicates institutional seriousness, clarity, composure, intellectual depth, and human-centered governance.</p>
+  <h3>The four pillars</h3>
+  <div style="margin-top:3mm">
+    <div class="pillar"><b>Unplugged</b><span class="tag">Aktivní / Active</span><p>Healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.</p></div>
+    <div class="pillar"><b>Akademie / Academy</b><span class="tag">V přípravě / In preparation</span><p>AI literacy and humanly sustainable AI deployment for companies, schools, and public administration (incl. Article 4 of the EU AI Act). Revenue funds public-benefit programs.</p></div>
+    <div class="pillar"><b>Praktici / Practitioners</b><span class="tag">V přípravě / In preparation</span><p>Training psychologists, psychiatrists, and therapists for the AI era.</p></div>
+    <div class="pillar"><b>Policy Lab</b><span class="tag">V přípravě / In preparation</span><p>Research and advocacy translating ethical frameworks into legislative and corporate guidelines.</p></div>
+  </div>
+  <div class="status-note"><b>Truthful language rule.</b> Alesvia is being established as a registered institute (z.ú.); registration is in progress. Public materials must never claim completed registration, a trademark, or running services before they exist — use "vzniká", "v přípravě", "registrace probíhá".</div>
+  <div class="footer"><span>Alesvia — Brand Identity Book</span><span>02</span></div>
+</section>
+
+<!-- ── 3 · LOGO ARCHITECTURE ─────────────────────── -->
+<section class="page">
+  <div class="kicker">02 · Logo Architecture</div>
+  <h2>The architectural A</h2>
+  <p>The mark is an <b>architectural A</b> that also reads as a threshold or portal. The outer form is the institution; the inner gold path is autonomy — a centerline of agency inside a larger system. It is deliberately not a shield, chat bubble, spark, brain, or circuit.</p>
+  <div class="two-col" style="margin-top:7mm">
+    <div>
+      <div class="logo-tile paperbg" style="height:44mm">
+        <svg width="100" height="100" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 108V62L64 20L104 62V108H86V69L64 46L42 69V108H24Z" fill="#16324F"/>
+          <path d="M58 108V64L64 58L70 64V108H58Z" fill="#C79B3B"/>
+        </svg>
+      </div>
+      <div class="tile-caption">Primary symbol — light backgrounds</div>
+    </div>
+    <div>
+      <div class="logo-tile dark" style="height:44mm">
+        <svg width="100" height="100" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 108V62L64 20L104 62V108H86V69L64 46L42 69V108H24Z" fill="#F4F1EA"/>
+          <path d="M58 108V64L64 58L70 64V108H58Z" fill="#C79B3B"/>
+        </svg>
+      </div>
+      <div class="tile-caption">Reverse symbol — dark backgrounds</div>
+    </div>
+  </div>
+  <div style="margin-top:6mm">
+    <div class="logo-tile" style="height:34mm">
+      <svg width="300" height="80" viewBox="0 0 560 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 122V76L64 34L104 76V122H86V83L64 60L42 83V122H24Z" fill="#16324F"/>
+        <path d="M58 122V78L64 72L70 78V122H58Z" fill="#C79B3B"/>
+        <text x="140" y="95" fill="#16324F" font-family="Playfair Display, Georgia, 'Times New Roman', serif" font-size="74" font-weight="700" letter-spacing="-1.8">Alesvia</text>
+      </svg>
+    </div>
+    <div class="tile-caption">Horizontal lockup — the preferred formal treatment</div>
+  </div>
+  <h3>Wordmark &amp; lockup rules</h3>
+  <ul>
+    <li>The wordmark is <b>Alesvia</b> in a refined serif — no tagline inside the logo, no period.</li>
+    <li>Horizontal lockup for navbars, deck covers, one-pagers, partner documents.</li>
+    <li>Stacked lockup for ceremonial, centered use: PDF title pages, interstitials, profile headers.</li>
+    <li>Symbol alone for favicons, avatars, and compact placements; wordmark alone only in wide layouts where the symbol is established nearby.</li>
+  </ul>
+  <div class="footer"><span>Alesvia — Brand Identity Book</span><span>03</span></div>
+</section>
+
+<!-- ── 4 · COLOR SYSTEM ──────────────────────────── -->
+<section class="page">
+  <div class="kicker">03 · Color System</div>
+  <h2>Primary palette</h2>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="chip" style="background:#16324F"></div><div class="label"><b>Primary Ink</b><span>#16324F — wordmark, headings, institutional surfaces</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#C79B3B"></div><div class="label"><b>Accent Gold</b><span>#C79B3B — the autonomy path, selected emphasis</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#F4F1EA"></div><div class="label"><b>Paper</b><span>#F4F1EA — light backgrounds, icon tiles</span></div></div>
+  </div>
+  <h3>Supporting neutrals</h3>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="chip" style="background:#221E22"></div><div class="label"><b>Text Charcoal</b><span>#221E22 — body copy</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#857E8B"></div><div class="label"><b>Muted Neutral</b><span>#857E8B — metadata, secondary text</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#31263E"></div><div class="label"><b>Aubergine Support</b><span>#31263E — deep supporting surfaces</span></div></div>
+  </div>
+  <h3>Secondary accents — use sparingly</h3>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="chip" style="background:#2A7F78"></div><div class="label"><b>Civic Teal</b><span>#2A7F78 — systems, diagrams, publication covers</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#DCE7E2"></div><div class="label"><b>Pale Civic Mist</b><span>#DCE7E2 — cover fields, quiet panels</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#A74E3A"></div><div class="label"><b>Policy Clay</b><span>#A74E3A — warnings, tensions, regulatory emphasis</span></div></div>
+  </div>
+  <ul style="margin-top:6mm">
+    <li>Teal and mist belong to diagrams and research covers, never inside the primary logo.</li>
+    <li>Reserve clay for warnings and regulatory emphasis only.</li>
+    <li>Never replace the gold centerline with gradients or arbitrary colors.</li>
+  </ul>
+  <div class="footer"><span>Alesvia — Brand Identity Book</span><span>04</span></div>
+</section>
+
+<!-- ── 5 · TYPOGRAPHY ────────────────────────────── -->
+<section class="page paper">
+  <div class="kicker">04 · Typography</div>
+  <h2>Institution and utility</h2>
+  <p>Typography splits into two clear roles: <b>serif</b> for identity, major statements, and thesis-led emphasis; <b>sans-serif</b> for interface copy, navigation, metadata, and body structure. The current pairing is <b>Playfair Display</b> + <b>Inter</b>.</p>
+  <div class="spec-label">Serif · Playfair Display — identity &amp; statements</div>
+  <div class="spec-serif">Human autonomy is the baseline.<br>Lidská autonomie je základ.</div>
+  <div class="spec-label">Sans-serif · Inter — interface &amp; body</div>
+  <p class="spec-sans">Alesvia builds research, policy, education, and practical frameworks that help people and institutions stay in control as AI becomes part of daily life. AaBbCcDdEeFfGg 0123456789 — áčďéěíňóřšťúůýž</p>
+  <hr class="rule">
+  <h3>Typographic character</h3>
+  <div class="two-col">
+    <div>
+      <p><b style="color:var(--teal)">The brand should feel:</b></p>
+      <ul><li>editorial</li><li>composed</li><li>confident</li></ul>
+    </div>
+    <div>
+      <p><b class="dont">It should not feel:</b></p>
+      <ul class="dont-list"><li>startup-minimal</li><li>overly ornamental</li><li>luxury-brand theatrical</li></ul>
+    </div>
+  </div>
+  <div class="status-note">In raw SVG and environments without web fonts, fall back to Georgia / Times New Roman (serif) and Inter / Arial (sans), as the repository templates do.</div>
+  <div class="footer"><span>Alesvia — Brand Identity Book</span><span>05</span></div>
+</section>
+
+<!-- ── 6 · USAGE RULES ───────────────────────────── -->
+<section class="page">
+  <div class="kicker">05 · Usage Rules</div>
+  <h2>How to use the mark</h2>
+  <div class="two-col" style="margin-top:4mm">
+    <div>
+      <h3 style="margin-top:0">Preferred uses</h3>
+      <ul>
+        <li>Horizontal lockup for formal brand appearances.</li>
+        <li>Symbol alone for favicon, app icon, avatar, small UI.</li>
+        <li>On light backgrounds: ink outer form, gold centerline.</li>
+        <li>On dark backgrounds: reverse symbol or lockup; place the standard symbol on a paper tile when contrast is weak.</li>
+        <li>At small sizes use the symbol only; at medium and large sizes prefer the full lockup.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="dont" style="margin-top:0">What to avoid</h3>
+      <ul class="dont-list">
+        <li>Do not stretch the symbol vertically or horizontally.</li>
+        <li>Do not recolor the symbol arbitrarily.</li>
+        <li>Do not replace the gold centerline with gradients or rainbow accents.</li>
+        <li>Do not drop the symbol into busy atmospheric gradients without contrast.</li>
+        <li>Do not use the mark as a decorative pattern until the identity matures.</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="rule">
+  <h3>Language &amp; legal guardrails</h3>
+  <ul>
+    <li>Never present the mark or name as a registered trademark before clearance and registration are complete.</li>
+    <li>Never state that Alesvia is a registered institute — say "vzniká jako zapsaný ústav (z.ú.); registrace probíhá."</li>
+    <li>Retired sub-brand names (Mind, Proof, Compass, Watch, Advisory, Education) must not appear as standalone initiatives; their themes live inside the four pillars.</li>
+    <li>Before public launch at scale, follow the trademark clearance process in <i>docs/brand-management.md</i>.</li>
+  </ul>
+  <div class="footer"><span>Alesvia — Brand Identity Book</span><span>06</span></div>
+</section>
+
+<!-- ── 7 · ASSETS & APPLICATIONS ─────────────────── -->
+<section class="page ink">
+  <div class="kicker">06 · Assets &amp; Applications</div>
+  <h2 style="color:var(--paper)">Where the identity lives</h2>
+  <p>All brand source files are versioned in this repository under <b style="color:var(--gold)">public/brand/</b> — the single source of truth for approved assets.</p>
+  <div class="two-col" style="margin-top:6mm">
+    <div>
+      <h3 style="color:var(--gold)">Logo assets</h3>
+      <ul>
+        <li>alesvia-symbol.svg / -reverse / -tile</li>
+        <li>alesvia-wordmark.svg</li>
+        <li>alesvia-lockup-horizontal.svg / -reverse</li>
+        <li>alesvia-lockup-stacked.svg / -reverse</li>
+        <li>alesvia-social-avatar.svg</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--gold)">Templates &amp; web</h3>
+      <ul>
+        <li>templates/deck-cover-general.svg</li>
+        <li>templates/deck-cover-institutional.svg</li>
+        <li>templates/research-cover.svg</li>
+        <li>Web: BrandMark.tsx, icon.tsx, apple-icon.tsx, opengraph-image.tsx</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="rule">
+  <h3 style="color:var(--gold)">Current applications</h3>
+  <ul>
+    <li>Favicon, app icon, Open Graph branding, navbar and footer treatments on alesvia.org.</li>
+    <li>Partner deck covers and research publication covers (see docs/partner-deck-visual-spec.md and docs/research-cover-system.md).</li>
+  </ul>
+  <h3 style="color:var(--gold)">Next identity steps</h3>
+  <ul>
+    <li>Section divider templates for decks; per-pillar cover variants.</li>
+    <li>Research cover variants by format: briefing, report, essay.</li>
+    <li>Stronger typographic rules for PDF and slide materials.</li>
+  </ul>
+  <div class="status-note">The identity is working if Alesvia feels like a serious institution, a human-centered standard setter, and a calm but opinionated public-interest actor. If it starts to feel like a startup, a consultancy, or an NGO template — correct it.</div>
+  <div class="footer"><span>Alesvia — Brand Identity Book · 2026</span><span>07</span></div>
+</section>
+
+</body>
+</html>
