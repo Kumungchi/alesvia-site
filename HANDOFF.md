@@ -1,0 +1,179 @@
+# HANDOFF — Alesvia (alesvia.org)
+
+Předávací dokument pro agenta v T3 Code (Claude Code / Codex). Stav k 25. 10. 2026. Vlastník projektu: Matias Bunnik (zakladatel a budoucí ředitel Alesvia z.ú.). Sesterské repo: Kumungchi/unplugged má vlastní HANDOFF.md se stejným sdíleným kontextem (sekce 1–3) a navíc s detaily k newsletteru a animacím.
+
+## 0. Jak s tímto dokumentem pracovat
+
+- Přečti celý dokument, pak AGENTS.md a CLAUDE.md a teprve potom začni.
+- Tohle není Next.js z tvých trénovacích dat. Repo běží na Next.js 16.2 (App Router, React 19). Před psaním kódu si přečti příslušný návod v `node_modules/next/dist/docs/` a respektuj deprecation hlášky (pravidlo z AGENTS.md).
+- Pracuj podle sekce 6 (backlog) shora dolů. Fáze 0 má přednost.
+- Cokoli v sekci 8 (otevřené otázky) nerozhoduj sám. Připrav varianty s trade-offy a zeptej se.
+- Po každém dokončeném úkolu odškrtni checkbox v tomto souboru a commitni ho spolu se změnou.
+- Jako úplně první commit přidej na začátek AGENTS.md řádek (CLAUDE.md ho importuje přes @AGENTS.md): `> Před začátkem práce si přečti HANDOFF.md — aktuální stav, pravidla a backlog.`
+
+Značení stavu: [x] hotovo · [ ] čeká · ⚠️ vyžaduje rozhodnutí Matiase · 🔁 už jednou uděláno, ale práce se ztratila (viz sekce 4).
+
+### Jak komunikovat s Matiasem
+
+- Česky. Technické termíny, kód, názvy souborů a commit messages anglicky.
+- Studuje psychologii a informatiku a chce se učit: u každé netriviální volby vysvětli proč a jaké má trade-offy, ne jen co jsi udělal.
+- Jedna jasná další akce je lepší než dlouhý seznam paralelních úkolů.
+- Píše často diktováním, zprávy mohou obsahovat foneticky zkomolená slova. Když něco nedává smysl, zeptej se.
+- Když se spleteš, řekni to rovnou a oprav to.
+
+## 1. Kontext projektu (sdílený s unplugged)
+
+Alesvia je česká nezisková organizace v přípravě (právní forma zapsaný ústav, z.ú., sídlo Ostrava) na průsečíku psychologie a AI. Řeší psychologická rizika konverzační AI: pseudo-intimitu, emoční závislost, AI-asociovanou psychózu a erozi lidské autonomie.
+
+Hlavní sdělení: „AI je nástroj. Ne vztah.“
+
+Čtyři pilíře Alesvia:
+
+| Pilíř | Co dělá | Ekonomická role | Stav |
+| --- | --- | --- | --- |
+| Unplugged | Veřejná vlajková značka: newsletter, workshopy, osvěta o AI pseudo-intimitě | Motor reputace, financovaný granty | Aktivní (web + newsletter) |
+| Akademie | AI gramotnost a implementace pro firmy a veřejnou správu | Nejrychlejší cesta k vlastním příjmům | V přípravě |
+| Praktici | Klinické vzdělávání pro terapeuty a psychology | Vysoká marže | Blokováno: chybí klinický garant v radě |
+| Policy Lab | Normativní a legislativní výzkum | Nákladové středisko záměrně | V přípravě |
+
+SaaS směr existuje jen jako zmínka na alesvia.org a je mimo rozsah současné fáze.
+
+Unplugged je veřejně viditelná značka pod Alesvia. Rozhodnuto: Unplugged si ponechává nabídku pro školy, organizace a veřejnou správu (B2B sekce zůstávají), nezužuje se jen na veřejnou osvětu.
+
+Mise jednou větou (schválená): „Lidé se učí používat AI jako nástroj, ale nikdo je neučí, co dělat, když AI začne napodobovat přítele, partnera nebo terapeuta. Unplugged tuto mezeru vyplňuje.“
+
+## 2. Co weby smějí tvrdit (stav k 25. 10. 2026)
+
+Tohle je nejdůležitější tabulka v dokumentu. Web organizace, která stojí na psychologické přesnosti, nesmí tvrdit nic, co dnes není pravda.
+
+| Fakt | Pravda dnes | Správná formulace na webu |
+| --- | --- | --- |
+| Registrace z.ú. | Návrh na zápis nebyl podán | „Alesvia z.ú. připravujeme k registraci“ / „registraci připravujeme“. Nikdy „registrace probíhá“, nikdy „Alesvia z.ú.“ jako hotová entita. |
+| Správní rada | Neobsazená (min. 3 lidé, mimo ředitele) | Nezmiňovat složení. Max. „správní radu sestavujeme“. |
+| Tým | Zakladatel Matias, žádný potvrzený tým | Žádné „kolektiv psychologů, edukátorů a technologů“. Jmenovat zakladatele s rolí (psychologie + informatika). Další lidi jen po jejich souhlasu. |
+| Workshopy | Žádný se zatím nekonal | Nabídka ano („pilotní workshop“), reference a „proškolili jsme“ ne. |
+| Partneři | Žádné podepsané partnerství | Nejmenovat instituce jako partnery. |
+| Vlastní data | Žádný vlastní výzkum | Citovat cizí studie s přesným zdrojem. Nepředstírat vlastní výzkum. |
+| IČO, sídlo | Neexistuje | Doplnit až po zápisu (fáze 2). |
+
+## 3. Nepřekročitelná pravidla obsahu
+
+- Kritizujeme design, ne lidi. Nikdy se nevysmívat uživatelům AI companionů ani osamělým lidem. Používat AI je v pořádku.
+- Žádná krizová intervence. Vždy přesměrovat na odbornou pomoc (viz krizové kontakty v úkolu A-06).
+- Každé číslo má zdroj u sebe: studie, rok, velikost a typ vzorku. Ne souhrnné „podle výzkumů X, Y, Z“.
+- Úrovně evidence: odlišovat doloženo / výzkum naznačuje / naše interpretace. Korelace se píše jako „souviselo s“, ne „způsobuje“.
+- Žádná neuro-spekulace (dopamin, oxytocin u chatbotů) bez konkrétní studie.
+- Nezávislost: žádné peníze od výrobců AI companion produktů; žádné cash granty od AI laboratoří (Anthropic, OpenAI…). Infrastrukturní kredity (Google, Microsoft, NVIDIA) jsou OK. Na webu nic, co by naznačovalo opak.
+- Tón: chytrý, lidský, přesný, současný. Ironie ano, pohrdání ne. Žádná morální panika.
+- Message house (smí se volně používat):
+  - AI může působit osobně, ale není osobou.
+  - Plynulá konverzace není totéž co vztah.
+  - Dostupnost 24/7 není totéž co péče.
+  - Empatický tón není důkazem vědomí ani porozumění.
+  - Lidská blízkost je pomalejší, náročnější a právě proto skutečná.
+- Psychologický obsah, který přepíšeš, označ v PR jako „čeká na kontrolu psychologem“. Nezveřejňovat jako finální bez lidské revize.
+
+## 4. Co se stalo a proč některé věci děláš podruhé
+
+- Červenec 2026: restrukturalizace webu na 4 pilíře, poctivé texty před registrací, formulář zájmu o Akademii, RSS a Article structured data, signalizace SaaS směru pro technologické a VC dárce. Poslední commit v master: 12. 7. 2026.
+- 26. 8. a 1. 10. 2026: audity obou webů. alesvia.org vyšel jako blízko finální verze (vlastní canonical na každé stránce, hreflang, sitemap, dynamické OG obrázky, skip link, impressum bez placeholderů). Tento vzor se přenáší na unplugged.cz.
+- 13. 10. 2026: v cloudové session vznikla větev `fix/fakta-a-technika-2026-10`: oprava „registrace probíhá“ na „připravujeme“, odstranění dekorativních efektů (gradient orby, glassmorphism, tilt/spotlight karty, scroll fade-iny), nahrazení bento gridu pilířů střídmým seznamem, přepsané zásady ochrany údajů dle čl. 13 GDPR, článek o českém AI ekosystému skrytý jako draft.
+- ⚠️ Ta větev nebyla nikdy pushnutá a je ztracená. Na GitHubu existuje jen master. Ověřeno 25. 10. 2026: problémy jsou v kódu pořád. Úkoly označené 🔁 je nutné udělat znovu.
+- Poučení → pracovní postup v sekci 5: pushuj průběžně.
+
+## 5. Pracovní postup
+
+- Výchozí větev je master (ne main). Nikdy do ní necommituj přímo. Pro každý logický celek vlastní větev (fix/…, feat/…, content/…), pushni ji hned po prvním commitu a otevři PR. Vercel vytvoří preview. Merge dělá jen Matias.
+- PR popis: co se změnilo, proč, trade-offy, které URL v preview má Matias zkontrolovat (CS i EN).
+- Commit messages anglicky, v imperativu, jedna věc na commit.
+- Build: `npm run build` (Next), `npm run lint`. Produkční build na Vercelu jde přes `npm run deploy:convex` (`convex deploy --cmd "next build"`), takže každý produkční deploy nasazuje i Convex. V tomto kole neměň `convex/schema.ts`, pokud to úkol výslovně nevyžaduje. Před prací s Convexem čti `convex/_generated/ai/guidelines.md`.
+- Lokalizace: veškeré texty v `dictionaries/cs.json` a `dictionaries/en.json`. Každá změna textu se dělá v obou jazycích. Routing přes `app/[lang]/…` a `proxy.ts`, URL slugy v `lib/routes.ts`.
+- Kontaktní formulář posílá e-maily přes SMTP (`app/api/contact/route.ts`, env `SMTP_*`, `CONTACT_FORM_*_EMAIL`). Formulář Akademie a Policy Labu přes Convex.
+- Nesahej na `.env*`, Vercel nastavení, DNS ani produkční data. Když to úkol potřebuje, napiš Matiasovi přesný postup.
+- `docs/` obsahuje starší strategické a brandové dokumenty (některé z dubna 2026, se starými názvy iniciativ). Ber je jako historii, ne jako zdroj pravdy. Zdroj pravdy je tento soubor.
+- Testovací framework není. Ověřuj buildem, lintem a ručním průchodem v preview (desktop + mobil, CS + EN).
+
+## 6. Backlog
+
+### Fáze 0 — pravdivost a právní minimum
+
+- [ ] A-01 🔁 „Registrace probíhá“ → „připravujeme registraci“ — `dictionaries/cs.json` (7 výskytů: ř. ~76, 78, 270, 307, 340, 352, 366) a `dictionaries/en.json` (~8 výskytů „in progress“, vč. registration_text ř. ~370). Návrh na zápis nebyl podán. Také team.board_text („v rámci probíhající registrace“) a team.intro. Hotovo když: grep -ri "probíhá\|in progress" v dictionaries nevrací nic o registraci.
+- [ ] A-02 Statistika u Praktiků — `dictionaries/cs.json` ř. ~179 (problem_text) + EN ekvivalent. „71 % psychologů nikdy nepoužilo AI nástroje“ je z APA 2024. Aktuální APA Practitioner Pulse Survey 2025: 56 % psychologů v USA použilo za rok AI nástroj, 44 % nikdy (zdroj) — americký vzorek, uvést. Ověřit i tvrzení o studii Brown University a o setkání WHO v březnu 2026 (najít primární zdroj, jinak přeformulovat nebo odstranit). Zdroje doplnit jako odkazy.
+- [ ] A-03 🔁 Článek „Mapování českého AI ekosystému“ — `content/research/posts.ts`, slug czech-ai-ecosystem-mapping-2026 (ř. ~239). Neověřená čísla (70+ firem, 248 mil. USD), a „Rossum, valuace 100M $+“ je chyba (šlo o investiční kolo Series A, ne valuaci). Přidat do typu ResearchPost pole `draft?: boolean`, vyřadit drafty z výpisu, sitemap, RSS i generateStaticParams, a tento článek označit jako draft. Nemazat. Fakt-check je samostatný úkol (A-11).
+- [ ] A-04 Zásady ochrany údajů dle čl. 13 GDPR — `app/[lang]/legal/privacy/page.tsx` + legal/privacy sekce v dictionaries (ř. ~270 a okolí). Doplnit zpracovatele (Vercel, Convex, Clerk, poskytovatel e-mailu/SMTP), předávání do USA, doby uchování, právo stížnosti u ÚOOÚ. ⚠️ Správce a poskytovatel e-mailu viz O-1 a O-2. Sjednotit správce se zásadami na unplugged.cz. V PR: „Doporučeno nechat ověřit právníkem (Frank Bold / ANNO MSK).“
+- [ ] A-05 Odkazy na Unplugged na www — `app/[lang]/page.tsx` ř. ~81, `app/[lang]/initiatives/unplugged/page.tsx` ř. ~72–75 (iframe), `app/[lang]/layout.tsx` ř. ~99 (sameAs v JSON-LD). Hlavní doména Unplugged je https://www.unplugged.cz (rozhodnuto). Iframe živého webu zvážit nahradit statickým screenshotem (rychlost, třetí strana, GDPR) ⚠️ s trade-offy v PR.
+- [ ] A-06 Krizové kontakty — kde web mluví o duševním zdraví (Unplugged pilíř, Praktici, FAQ), přidat odkaz na pomoc: Linka první psychické pomoci 116 123, Linka bezpečí 116 111 (do 26 let), 155 / 112. Před mergem ověřit provozní doby.
+
+### Fáze 1 — finální verze
+
+- [ ] A-07 🔁 Méně „AI-generovaný“ vzhled — `components/HeroBackground.tsx`, `TiltCard.tsx`, `SpotlightCard.tsx`, `ScrollReveal.tsx`, `ScrollProgress.tsx`; použité na homepage (`app/[lang]/page.tsx` ř. ~3–6, 19, 46, 60–86), v research a v pilířových stránkách. Matias chce, aby web nepůsobil jako šablona. Odstranit dekorativní efekty (gradient orby, glassmorphism, tilt a spotlight karty, scroll fade-iny), pilíře místo bento gridu jako střídmý seznam s jasnou hierarchií. Respektovat prefers-reduced-motion. Načíst skill frontend-design. Nevyhazovat komponenty, dokud nejsou nikde použité; pak je smazat v samostatném commitu.
+- [ ] A-08 Tým — `app/[lang]/team/page.tsx`, team v dictionaries. Dnes prázdná stránka. ⚠️ Po souhlasu Matiase (O-3) jmenovat zakladatele: role, zázemí psychologie + informatika, veřejný výstup (Psychotalks). Nikoho dalšího bez jeho souhlasu.
+- [ ] A-09 Sitemap lastModified — `app/sitemap.ts` ř. ~32 a ~49 používá `new Date()`, takže všechny stránky mají čas buildu a Google lastmod ignoruje. U článků použít date z posts.ts, u ostatních hodnotu vynechat.
+- [ ] A-10 Konzistence s Unplugged — Unplugged si ponechává nabídku pro školy, organizace a veřejnou správu (rozhodnuto). Zkontrolovat, že texty Akademie a Policy Labu („V přípravě“) nepůsobí jako konkurenční výloha k unplugged.cz: kde se nabídky překrývají, odkazovat na Unplugged jako na místo, kde se dnes poptává. ⚠️ Návrh formulací nech schválit.
+- [ ] A-11 Fakt-check článku o českém AI ekosystému — každé číslo se zdrojem, nebo článek přepsat; až pak zrušit draft.
+- [ ] A-12 Čerstvý obsah — poslední publikovaný článek je ze 7. 4. 2026. Neřeš psaním obsahu sám; připrav jen technickou možnost (např. sekci „Z newsletteru Unplugged“ s odkazy na archiv), až bude archiv na unplugged.cz (úkol U-18 v sesterském repu).
+- [ ] A-13 Lighthouse + přístupnost — mobil ≥ 90 (výkon, přístupnost, SEO), kontrast, klávesnice, focus stavy.
+
+### Co je v pořádku a nerozbíjet
+
+- Vlastní canonical na každé stránce, hreflang CS/EN, sitemap, dynamické OG obrázky (`opengraph-image.tsx`), skip link, impressum, 404.
+- Fonty přes next/font/google se stahují při buildu a servírují z vlastní domény, takže na rozdíl od unplugged.cz nejde o přenos IP na Google. Není potřeba měnit.
+- Stránka Financování už je v aktuální podobě (4 pilíře, vlastní příjmy, granty, pravidla nezávislosti). Jen při A-01 zkontroluj, že nikde netvrdí hotovou právní formu.
+- SaaS zmínka (future_text, prog_saas) a jazyk pro technologické a investiční dárce zůstávají (rozhodnuto), vždy jako budoucí záměr, ne existující produkt.
+
+### Fáze 2 — po zápisu Alesvia z.ú. (teď nedělat)
+
+- [ ] IČO, sídlo, statutár a správní rada (impressum, tým, patička, JSON-LD Organization).
+- [ ] Zásady ochrany údajů na právnickou osobu jako správce.
+- [ ] Odstranit „připravujeme registraci“ ze všech textů.
+
+## 7. Ověřené zdroje
+
+| Číslo | Použití | Zdroj | Pozor na |
+| --- | --- | --- | --- |
+| 56 % / 44 % | psychologové v USA, kteří za rok použili / nikdy nepoužili AI nástroj | APA Practitioner Pulse Survey 2025 (Becker's) | Americký vzorek. Ideálně citovat přímo APA |
+| 72 % | teenageři v USA, kteří vyzkoušeli AI companion | Common Sense Media, 7/2025 | n = 1 060, 13–17 let |
+| korelace | častější používání chatbotu souviselo s vyšší osamělostí a závislostí | MIT Media Lab + OpenAI, 3/2025 | Korelace, ne příčina |
+| 2,9 % | afektivní konverzace s Claudem; companionship a roleplay pod 0,5 % | Anthropic, 6/2025 | Ověřit v původním článku |
+
+Před použitím každý odkaz otevři a zkontroluj, že číslo sedí.
+
+## 8. Otevřené otázky pro Matiase (nerozhoduj sám)
+
+- O-1 Kdo je správcem osobních údajů do zápisu z.ú. a jaký kontaktní e-mail se uvádí (dnes privacy@alesvia.org).
+- O-2 Kdo je poskytovatel e-mailu / SMTP pro kontaktní formulář (kvůli zásadám). Mají Vercel, Convex a Clerk přijatou DPA?
+- O-3 Smí být Matias na stránce Tým jmenován s fotkou a krátkým medailonkem?
+- O-4 Iframe unplugged.cz na stránce pilíře Unplugged: ponechat, nebo nahradit screenshotem?
+- O-5 Formulace překryvu Akademie / Policy Lab s nabídkou na unplugged.cz (A-10).
+
+## 9. Definice „plně funkčního webu“
+
+- [ ] Žádné tvrzení o registraci, radě, týmu, partnerech nebo workshopech, které dnes není pravda (CS i EN)
+- [ ] Každé číslo má zdroj; neověřené články jsou draft
+- [ ] Správce údajů a zpracovatelé uvedeni, shodně s unplugged.cz
+- [ ] Kontaktní formulář, formulář Akademie a Policy Labu odeslány testovací zprávou a zpráva dorazila
+- [ ] Odkazy alesvia.org ↔ www.unplugged.cz fungují oběma směry
+- [ ] Žádné dekorativní „AI šablonové“ efekty; prefers-reduced-motion respektováno
+- [ ] Lighthouse mobil ≥ 90
+- [ ] Google Search Console nastavená, sitemap odeslaná (Matias)
+
+## 10. Kontext mimo web (jen pro orientaci)
+
+Kritická cesta zakládání: správní rada (min. 3 lidé + Matias jako ředitel; jeden člen ideálně licencovaný klinik jako garant pro Praktiky) → návrh na zápis u Krajského soudu v Ostravě → bankovní účet (Fio) → granty (Nadace Via, Nadační fond Avast/Gen; později OSF, Neuron, Visegrad Fund) → ochranné známky (ÚPV, třídy 41, 42, 45).
+
+Pravidla nezávislosti financování: žádné peníze od výrobců AI companion produktů; cash od AI laboratoří ne; infrastrukturní kredity ano; pojmenovaná partnerství posuzovat případ od případu s veřejným zveřejněním.
+
+Promo animace a newsletter žijí v repu unplugged (viz jeho HANDOFF.md, sekce 10). Spot pro Alesvia zatím nevznikl.
+
+Brand Alesvia: červená #DC2626, teplá bílá #F9F7F2, téměř černá #030712; Inter + Playfair Display.
+
+Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, SaaS…), je v pořádku to jemně pojmenovat: rozšiřování záběru je v projektu opakované riziko a blokátorem zůstává registrace, ne web.
+
+## 11. Rozhodnutí a stav implementace
+
+### Upřesnění od Matiase — 25. 10. 2026
+
+- O-1: správce ani funkční kontaktní e-mail pro ochranu údajů zatím nejsou určeni. `privacy@alesvia.org` není založený. A-04 zůstává rozpracovaným návrhem; nelze ho vydávat za dokončené právní minimum.
+- O-2: poskytovatel e-mailu / SMTP zatím není určený; přijetí DPA není potvrzené („snad“). Neprezentovat DPA ani mechanismus předávání jako ověřené.
+- O-4: schválen statický náhled s odkazem místo živého iframe. Výhoda: rychlost a žádné načítání třetí strany před kliknutím; nevýhoda: nutnost aktualizace náhledu.
+- [x] Předání uložené v repozitáři; AGENTS.md odkazuje na HANDOFF.md a CLAUDE.md již importuje AGENTS.md.
