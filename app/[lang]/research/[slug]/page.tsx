@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang, slug } = await params;
   const locale = hasLocale(lang) ? lang : 'cs';
   const post = getPostBySlug(slug);
-  if (!post) return { title: 'Not Found' };
+  if (!post) notFound();
 
   const title = `${post.title[locale]} | Alesvia`;
   const description = post.excerpt[locale];
