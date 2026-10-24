@@ -36,9 +36,7 @@ export default function NotFound() {
           </span>
         </div>
 
-        <div className="morph-blob mx-auto w-24 h-24 bg-gradient-to-br from-alesvia-accent/20 to-alesvia-primary/10 mb-8" />
-
-        <h1 className="font-serif text-4xl md:text-5xl font-bold text-gradient mb-4">
+        <h1 className="font-serif text-4xl md:text-5xl font-bold text-alesvia-primary mb-4">
           {t.title}
         </h1>
         <p className="text-lg text-alesvia-muted mb-2">
@@ -51,13 +49,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={getPublicPath(lang, 'home')}
-            className="bg-alesvia-primary text-alesvia-bg px-8 py-4 rounded-lg font-medium hover:bg-alesvia-primary/90 transition-all shadow-lg hover:-translate-y-0.5 text-center"
+            className="bg-alesvia-primary text-alesvia-bg px-8 py-4 rounded-md font-medium hover:bg-alesvia-trust transition-colors text-center"
           >
             {t.home}
           </Link>
           <Link
             href={getPublicPath(lang, 'initiativeUnplugged')}
-            className="glass px-8 py-4 rounded-lg font-medium text-alesvia-text hover:border-alesvia-accent/50 transition-all text-center"
+            className="border border-alesvia-text/20 px-8 py-4 rounded-md font-medium text-alesvia-text hover:border-alesvia-primary transition-colors text-center"
           >
             {t.unplugged}
           </Link>

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import { getPostBySlug, getPostSlugs } from '../../../../content/research/posts';
-import ScrollReveal from '../../../../components/ScrollReveal';
 import JsonLd from '../../../../components/JsonLd';
 import { getResearchAbsoluteUrl, getSiteOrigin } from '../../../../lib/site';
 import { buildResearchPostMetadata } from '../../../../lib/metadata';
@@ -115,7 +114,6 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
           &larr; {d.back}
         </Link>
 
-        <ScrollReveal>
           <div className="mt-8">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <time className="text-sm text-alesvia-muted" dateTime={post.date}>
@@ -130,7 +128,7 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-gradient leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-alesvia-primary leading-tight mb-6">
               {post.title[lang]}
             </h1>
 
@@ -138,14 +136,11 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
               {post.excerpt[lang]}
             </p>
           </div>
-        </ScrollReveal>
       </div>
 
-      <ScrollReveal>
         <article className="prose-alesvia">
           {renderMarkdown(post.body[lang])}
         </article>
-      </ScrollReveal>
 
       <div className="mt-12 pt-8 border-t border-alesvia-muted/10">
         <div className="flex flex-wrap gap-2">

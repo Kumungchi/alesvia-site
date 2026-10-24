@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
-import ScrollReveal from '../../../../components/ScrollReveal';
 import PolicyFunnel from '../../../../components/PolicyFunnel';
 import PolicyForm from '../../../../components/PolicyForm';
 import { buildPageMetadata } from '../../../../lib/metadata';
@@ -37,20 +36,15 @@ export default async function PolicyLabPage({ params }: { params: Promise<{ lang
       </PageHeader>
 
       <div className="space-y-20 pb-24">
-        <ScrollReveal>
           <section>
             <SectionLabel>{d.vision_label}</SectionLabel>
             <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.vision_text}</p>
           </section>
-        </ScrollReveal>
 
-        <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
             <PolicyFunnel dict={dict.policy_funnel} />
           </section>
-        </ScrollReveal>
 
-        <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
             <SectionLabel>{d.focus_label}</SectionLabel>
             <ul className="space-y-4 mt-6 max-w-3xl">
@@ -62,16 +56,12 @@ export default async function PolicyLabPage({ params }: { params: Promise<{ lang
               ))}
             </ul>
           </section>
-        </ScrollReveal>
 
-        <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
             <SectionLabel>{d.future_label}</SectionLabel>
             <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.future_text}</p>
           </section>
-        </ScrollReveal>
 
-        <ScrollReveal>
           <section className="border-t border-alesvia-muted/10 pt-16">
             <div className="max-w-4xl">
               <div className="mb-10">
@@ -81,7 +71,6 @@ export default async function PolicyLabPage({ params }: { params: Promise<{ lang
               <PolicyForm dict={dict.policy_form} />
             </div>
           </section>
-        </ScrollReveal>
       </div>
     </div>
   );

@@ -9,7 +9,10 @@
   --color-alesvia-accent: #ECA72C;
   --color-alesvia-surface: #F4F4F2;
   --color-alesvia-white: #FFFFFF;
+}
 
+/* inline: next/font defines --font-* on <body>, so utilities must resolve them there, not on :root */
+@theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 }

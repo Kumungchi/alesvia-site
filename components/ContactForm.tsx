@@ -92,9 +92,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
       : 'Your email client should open with a pre-filled draft.';
 
   return (
-    <div className="glass rounded-3xl p-8 md:p-12 border border-alesvia-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden">
-      {/* Decorative gradient orb */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-alesvia-accent/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="bg-alesvia-white rounded-md p-8 md:p-12 border border-alesvia-text/15">
       
       <h3 className="font-serif text-3xl font-bold text-alesvia-text mb-8 relative z-10">{dict.form_label}</h3>
 
@@ -182,14 +180,14 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-2">
             <p className="text-xs text-alesvia-muted/80 leading-relaxed max-w-[280px]">
               {dict.form_privacy}{' '}
-              <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent hover:text-alesvia-primary transition-colors font-medium link-animated">
+              <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent hover:text-alesvia-primary transition-colors font-medium underline underline-offset-4">
                 {lang === 'cs' ? 'zásadami ochrany osobních údajů' : 'privacy policy'}
               </Link>.
             </p>
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="group relative btn-primary bg-alesvia-primary text-alesvia-bg font-semibold px-8 py-4 rounded-xl disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap overflow-hidden min-w-[160px] flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-alesvia-primary text-alesvia-bg font-semibold px-8 py-4 rounded-md hover:bg-alesvia-trust disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap min-w-[160px] flex items-center justify-center transition-colors"
             >
               {status === 'sending' ? (
                 <div className="flex items-center gap-2">

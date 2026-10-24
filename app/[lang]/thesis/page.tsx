@@ -26,7 +26,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <PageHeader label={content.label} title={content.title} description={content.intro}>
-        <div className="mt-10 glass rounded-2xl p-8 md:p-10 border border-alesvia-accent/15 max-w-3xl">
+        <div className="mt-10 border-l-4 border-alesvia-accent pl-6 md:pl-8 py-2 max-w-3xl">
           <SectionLabel>{content.principleLabel}</SectionLabel>
           <p className="text-xl md:text-2xl font-light leading-relaxed text-alesvia-text">
             {content.principleText}

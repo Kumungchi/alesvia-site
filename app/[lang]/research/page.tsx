@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getDictionary, hasLocale, Locale } from '../../../dictionaries';
 import { getAllPosts } from '../../../content/research/posts';
 import PageHeader from '../../../components/PageHeader';
-import ScrollReveal from '../../../components/ScrollReveal';
 import { buildPageMetadata } from '../../../lib/metadata';
 import { getPublicResearchPath } from '../../../lib/routes';
 
@@ -29,10 +28,9 @@ export default async function ResearchPage({ params }: { params: Promise<{ lang:
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
-      <div className="space-y-8 pb-24 max-w-4xl">
-        {posts.map((post, i) => (
-          <ScrollReveal key={post.slug} delay={i < 4 ? ((i + 1) as 1 | 2 | 3 | 4) : 0}>
-            <article className="group glass rounded-xl p-8 border border-alesvia-muted/10 hover:border-alesvia-accent/20 hover:shadow-lg transition-all duration-300">
+      <div className="pb-24 max-w-4xl border-b border-alesvia-text/15">
+        {posts.map((post) => (
+          <article key={post.slug} className="py-10 border-t border-alesvia-text/15">
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <time className="text-xs text-alesvia-muted" dateTime={post.date}>
                   {new Date(post.date).toLocaleDateString(lang === 'cs' ? 'cs-CZ' : 'en-US', {
@@ -46,7 +44,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ lang:
                 </span>
               </div>
 
-              <h2 className="font-serif text-2xl font-bold text-alesvia-text mb-3 group-hover:text-alesvia-primary transition-colors">
+              <h2 className="font-serif text-2xl font-bold text-alesvia-text mb-3 hover:text-alesvia-primary">
                 <Link href={getPublicResearchPath(lang, post.slug)}>
                   {post.title[lang]}
                 </Link>
@@ -66,13 +64,12 @@ export default async function ResearchPage({ params }: { params: Promise<{ lang:
                 </div>
                 <Link
                   href={getPublicResearchPath(lang, post.slug)}
-                  className="link-animated text-sm font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors"
+                  className="text-sm font-medium text-alesvia-primary underline underline-offset-4 hover:text-alesvia-trust"
                 >
                   {d.read_more} &rarr;
                 </Link>
               </div>
             </article>
-          </ScrollReveal>
         ))}
       </div>
     </div>

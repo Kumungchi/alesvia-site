@@ -37,7 +37,7 @@ export default function Navbar({ dict, lang }: { dict: NavDict; lang: Locale }) 
       </Link>
       <div className="hidden md:flex space-x-8 text-sm font-medium text-alesvia-muted items-center">
         {links.map((link) => (
-          <Link key={link.href} href={link.href} className="link-animated hover:text-alesvia-text transition-colors">
+          <Link key={link.href} href={link.href} className="underline-offset-8 decoration-alesvia-accent decoration-2 hover:underline hover:text-alesvia-text">
             {link.label}
           </Link>
         ))}
@@ -45,7 +45,7 @@ export default function Navbar({ dict, lang }: { dict: NavDict; lang: Locale }) 
       </div>
       <Link
         href={getPublicPath(lang, 'contact')}
-        className="hidden md:block text-sm font-semibold bg-alesvia-primary text-alesvia-bg px-5 py-2.5 rounded-lg btn-primary"
+        className="hidden md:block text-sm font-semibold bg-alesvia-primary text-alesvia-bg px-5 py-2.5 rounded-md hover:bg-alesvia-trust transition-colors"
       >
         {dict.partner}
       </Link>

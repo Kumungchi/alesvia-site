@@ -4,15 +4,14 @@ import { getDictionary, hasLocale, Locale } from "../../dictionaries";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import JsonLd from "../../components/JsonLd";
-import ScrollProgress from "../../components/ScrollProgress";
 import { getAbsoluteUrl, getSiteOrigin } from "../../lib/site";
 import { getPublicPath } from "../../lib/routes";
 import { ConvexClientProvider } from "../../components/ConvexClientProvider";
 import { Analytics } from '@vercel/analytics/react';
 import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700", "900"], variable: "--font-playfair" });
+const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter" });
+const playfair = Playfair_Display({ subsets: ["latin", "latin-ext"], weight: ["400", "700", "900"], variable: "--font-playfair" });
 
 const fallbackLocale: Locale = "cs";
 
@@ -114,8 +113,7 @@ export default async function RootLayout({
             url: siteOrigin,
             inLanguage: [lang === 'cs' ? 'cs-CZ' : 'en-US'],
           }} />
-          <ScrollProgress />
-          <div className="min-h-screen flex flex-col noise-overlay">
+          <div className="min-h-screen flex flex-col">
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-alesvia-primary focus:text-alesvia-bg focus:px-6 focus:py-3 focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"

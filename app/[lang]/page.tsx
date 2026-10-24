@@ -1,9 +1,5 @@
 import { getDictionary, Locale } from '../../dictionaries';
 import SectionLabel from '../../components/SectionLabel';
-import HeroBackground from '../../components/HeroBackground';
-import TiltCard from '../../components/TiltCard';
-import SpotlightCard from '../../components/SpotlightCard';
-import ScrollReveal from '../../components/ScrollReveal';
 import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import CrisisSupport from '../../components/CrisisSupport';
@@ -12,206 +8,176 @@ import { getPublicPath } from '../../lib/routes';
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
+  const moreLabel = lang === 'cs' ? 'Více →' : 'Learn more →';
+
+  const pillars: {
+    title: string;
+    status: string;
+    active: boolean;
+    description: string;
+    points?: string[];
+    href: string;
+    linkLabel: string;
+    external?: boolean;
+  }[] = [
+    {
+      title: dict.ecosystem.unplugged_title,
+      status: dict.ecosystem.status_active,
+      active: true,
+      description: dict.ecosystem.unplugged_desc,
+      points: dict.ecosystem.unplugged_points,
+      href: 'https://www.unplugged.cz',
+      linkLabel: dict.ecosystem.unplugged_link,
+      external: true,
+    },
+    {
+      title: dict.ecosystem.academy_title,
+      status: dict.ecosystem.status_incubating,
+      active: false,
+      description: dict.ecosystem.academy_desc,
+      href: getPublicPath(lang, 'initiativeAcademy'),
+      linkLabel: moreLabel,
+    },
+    {
+      title: dict.ecosystem.practitioners_title,
+      status: dict.ecosystem.status_incubating,
+      active: false,
+      description: dict.ecosystem.practitioners_desc,
+      href: getPublicPath(lang, 'initiativePractitioners'),
+      linkLabel: moreLabel,
+    },
+    {
+      title: dict.ecosystem.policy_title,
+      status: dict.ecosystem.status_incubating,
+      active: false,
+      description: dict.ecosystem.policy_desc,
+      href: getPublicPath(lang, 'initiativePolicyLab'),
+      linkLabel: moreLabel,
+    },
+  ];
+
+  const linkClass = 'inline-block py-1 font-medium text-alesvia-primary underline underline-offset-4 hover:text-alesvia-trust';
 
   return (
     <div className="bg-alesvia-bg text-alesvia-text selection:bg-alesvia-accent/30 font-sans">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
 
-        <HeroBackground />
-
-        {/* ── Hero Section ── */}
-        <section className="py-28 md:py-40 max-w-4xl relative z-10 fade-in">
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gradient leading-[1.05] mb-8">
+        {/* ── Hero ── */}
+        <section className="pt-24 pb-20 md:pt-36 md:pb-28 max-w-4xl">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight text-alesvia-primary leading-[1.05] mb-8">
             {dict.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl text-alesvia-muted font-light leading-relaxed mb-12 max-w-2xl">
+          <p className="text-xl md:text-2xl text-alesvia-muted leading-relaxed mb-12 max-w-2xl">
             {dict.hero.description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
             <Link
               href={getPublicPath(lang, 'thesis')}
-              className="btn-primary bg-alesvia-primary text-alesvia-bg px-8 py-4 rounded-lg font-medium text-lg text-center"
+              className="bg-alesvia-primary text-alesvia-bg px-7 py-3.5 rounded-md font-medium text-lg text-center hover:bg-alesvia-trust transition-colors"
             >
               {dict.hero.primary_link}
             </Link>
             <Link
               href={getPublicPath(lang, 'initiatives')}
-              className="glass text-alesvia-text px-8 py-4 rounded-lg font-medium hover:border-alesvia-accent/50 transition-all text-lg text-center hover:-translate-y-0.5"
+              className="py-2 font-medium text-lg text-alesvia-text underline decoration-alesvia-accent decoration-2 underline-offset-8 hover:text-alesvia-primary"
             >
               {dict.hero.secondary_link}
             </Link>
           </div>
         </section>
 
-        {/* ── Initiatives — Bento Grid ── */}
-        <ScrollReveal>
-          <section id="initiatives" className="py-20 border-t border-alesvia-muted/10 relative z-10">
-            <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
-              <div className="max-w-2xl">
-                <SectionLabel>{dict.ecosystem.label}</SectionLabel>
-                <h3 className="font-serif text-3xl md:text-4xl font-bold text-alesvia-text">
-                  {dict.ecosystem.title}
-                </h3>
+        {/* ── Pillars ── */}
+        <section id="initiatives" className="py-20 border-t border-alesvia-text/15">
+          <div className="max-w-2xl mb-12">
+            <SectionLabel>{dict.ecosystem.label}</SectionLabel>
+            <h3 className="font-serif text-3xl md:text-4xl font-bold text-alesvia-text leading-tight">
+              {dict.ecosystem.title}
+            </h3>
+          </div>
+
+          <ol className="border-b border-alesvia-text/15">
+            {pillars.map((pillar, i) => (
+              <li key={pillar.title} className="grid gap-4 md:grid-cols-12 md:gap-8 py-10 border-t border-alesvia-text/15">
+                <span aria-hidden="true" className="md:col-span-1 font-serif text-lg text-alesvia-muted tabular-nums">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div className="md:col-span-3">
+                  <h4 className={`font-serif font-bold text-alesvia-text ${pillar.active ? 'text-3xl' : 'text-2xl'}`}>
+                    {pillar.title}
+                  </h4>
+                  <p className={`mt-2 text-xs font-semibold uppercase tracking-widest ${pillar.active ? 'text-alesvia-primary' : 'text-alesvia-muted'}`}>
+                    {pillar.active && <span aria-hidden="true" className="inline-block w-1.5 h-1.5 mr-2 align-middle rounded-full bg-alesvia-accent" />}
+                    {pillar.status}
+                  </p>
+                </div>
+                <div className="md:col-span-6">
+                  <p className={`leading-relaxed ${pillar.active ? 'text-lg text-alesvia-text' : 'text-alesvia-muted'}`}>
+                    {pillar.description}
+                  </p>
+                  {pillar.points && (
+                    <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-alesvia-muted">
+                      {pillar.points.map((point) => (
+                        <li key={point}>— {point}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <div className="md:col-span-2 md:text-right">
+                  {pillar.external ? (
+                    <a href={pillar.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                      {pillar.linkLabel}
+                    </a>
+                  ) : (
+                    <Link href={pillar.href} className={linkClass}>
+                      {pillar.linkLabel}
+                    </Link>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* ── Financing ── */}
+        <section id="funding" className="py-20">
+          <div className="bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16 md:py-16">
+            <div className="max-w-3xl">
+              <SectionLabel>{dict.financing.label}</SectionLabel>
+              <h3 className="font-serif text-3xl md:text-5xl font-bold mb-6">
+                {dict.financing.title}
+              </h3>
+              <p className="text-alesvia-white/85 text-lg md:text-xl leading-relaxed mb-10">
+                {dict.financing.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href={getPublicPath(lang, 'funding')} className="bg-alesvia-accent text-alesvia-text font-semibold px-7 py-3.5 rounded-md text-center hover:bg-alesvia-white transition-colors">
+                  {dict.financing.primary_link}
+                </Link>
+                <Link href={getPublicPath(lang, 'contact')} className="border border-alesvia-white/30 text-alesvia-white font-medium px-7 py-3.5 rounded-md hover:bg-alesvia-white/10 transition-colors text-center">
+                  {dict.financing.secondary_link}
+                </Link>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="bento-grid">
-
-              {/* Unplugged — Flagship (2x2) */}
-              <TiltCard intensity={5}>
-                <SpotlightCard className="h-full">
-                  <div className="glass inner-light rounded-xl p-8 md:p-10 h-full flex flex-col group relative overflow-hidden hover:shadow-2xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                    <div className="w-14 h-14 bg-alesvia-primary/10 text-alesvia-primary rounded-xl flex items-center justify-center font-bold text-2xl mb-6 group-hover:bg-alesvia-primary/20 transition-colors duration-300">
-                      U
-                    </div>
-                    <div className="flex-1 tilt-card-inner">
-                      <div className="flex justify-between items-baseline mb-3">
-                        <h4 className="font-serif text-2xl md:text-3xl font-bold text-alesvia-text">{dict.ecosystem.unplugged_title}</h4>
-                        <span className="text-xs font-semibold bg-alesvia-accent/10 text-alesvia-accent px-3 py-1.5 rounded-full">{dict.ecosystem.status_active}</span>
-                      </div>
-                      <p className="text-alesvia-muted leading-relaxed mb-8 text-lg font-light">{dict.ecosystem.unplugged_desc}</p>
-                      <ul className="space-y-3 mb-8">
-                        {dict.ecosystem.unplugged_points.map((point: string) => (
-                          <li key={point} className="flex items-center gap-3 text-sm text-alesvia-muted">
-                            <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full shrink-0"></span>
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <a href="https://www.unplugged.cz" target="_blank" rel="noopener noreferrer" className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
-                      {dict.ecosystem.unplugged_link}
-                    </a>
-                  </div>
-                </SpotlightCard>
-              </TiltCard>
-
-              {/* Akademie — Premium dark (2-col span) */}
-              <ScrollReveal delay={1}>
-                <TiltCard intensity={5}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass-dark inner-light rounded-xl p-8 md:p-10 h-full flex flex-col relative overflow-hidden group">
-                      <div className="w-14 h-14 bg-white/10 text-alesvia-accent rounded-xl flex items-center justify-center font-bold text-2xl mb-6 border border-white/5">
-                        A
-                      </div>
-                      <div className="flex-1 tilt-card-inner">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-2xl font-bold text-alesvia-bg">{dict.ecosystem.academy_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-bg/50 border border-alesvia-bg/20 px-3 py-1.5 rounded-full">{dict.ecosystem.status_incubating}</span>
-                        </div>
-                        <p className="text-alesvia-bg/80 leading-relaxed font-light text-lg">{dict.ecosystem.academy_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativeAcademy')} className="mt-6 link-animated font-medium text-alesvia-accent hover:text-alesvia-bg transition-colors inline-flex items-center gap-2">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                      <div className="absolute top-0 right-0 w-72 h-72 bg-alesvia-accent/8 rounded-full blur-3xl group-hover:bg-alesvia-accent/15 transition-all duration-1000 -mr-12 -mt-12" />
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* Praktici */}
-              <ScrollReveal delay={2}>
-                <TiltCard intensity={8}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
-                        Pr
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.practitioners_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-muted">{dict.ecosystem.status_incubating}</span>
-                        </div>
-                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.practitioners_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativePractitioners')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-              {/* Policy Lab */}
-              <ScrollReveal delay={3}>
-                <TiltCard intensity={8}>
-                  <SpotlightCard className="h-full">
-                    <div className="glass inner-light rounded-xl p-8 h-full flex flex-col group relative overflow-hidden hover:shadow-xl hover:-translate-y-1 border border-transparent hover:border-alesvia-accent/20 transition-all duration-500">
-                      <div className="w-12 h-12 bg-alesvia-muted/10 text-alesvia-muted rounded-xl flex items-center justify-center font-bold text-xl mb-6 group-hover:bg-alesvia-primary/10 group-hover:text-alesvia-primary transition-colors duration-300">
-                        P
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-baseline mb-3">
-                          <h4 className="font-serif text-xl font-bold text-alesvia-text">{dict.ecosystem.policy_title}</h4>
-                          <span className="text-xs font-medium text-alesvia-muted">{dict.ecosystem.status_incubating}</span>
-                        </div>
-                        <p className="text-alesvia-muted text-sm leading-relaxed">{dict.ecosystem.policy_desc}</p>
-                      </div>
-                      <Link href={getPublicPath(lang, 'initiativePolicyLab')} className="mt-6 link-animated font-medium text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors">
-                        {lang === 'cs' ? 'Více →' : 'Learn more →'}
-                      </Link>
-                    </div>
-                  </SpotlightCard>
-                </TiltCard>
-              </ScrollReveal>
-
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* ── Financing Block ── */}
-        <ScrollReveal>
-          <section id="funding" className="py-24">
-            <TiltCard intensity={3}>
-              <SpotlightCard>
-                <div className="group bg-[#0F2C59] text-alesvia-bg rounded-2xl p-10 md:p-16 relative overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-alesvia-trust/20 transition-all duration-500 border border-white/5 shimmer inner-light">
-                  <div className="absolute top-0 right-0 w-96 h-96 bg-alesvia-accent/8 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none group-hover:bg-alesvia-accent/15 transition-all duration-1000" />
-                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-alesvia-primary/20 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none" />
-                  <div className="relative z-10 max-w-3xl tilt-card-inner">
-                    <SectionLabel>{dict.financing.label}</SectionLabel>
-                    <h3 className="font-serif text-3xl md:text-5xl font-bold mb-6">
-                      {dict.financing.title}
-                    </h3>
-                    <p className="text-alesvia-white/80 text-lg md:text-xl leading-relaxed mb-10 font-light">
-                      {dict.financing.description}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link href={getPublicPath(lang, 'funding')} className="btn-primary bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-lg text-center">
-                        {dict.financing.primary_link}
-                      </Link>
-                      <Link href={getPublicPath(lang, 'contact')} className="bg-transparent border border-alesvia-white/20 text-alesvia-white font-medium px-8 py-4 rounded-lg hover:bg-alesvia-white/10 transition-colors text-center">
-                        {dict.financing.secondary_link}
-                      </Link>
-                    </div>
-                  </div>
+        {/* ── FAQ (GEO-optimized) ── */}
+        <section id="faq" className="py-20 border-t border-alesvia-text/15">
+          <SectionLabel>{dict.faq.label}</SectionLabel>
+          <div className="mt-6 max-w-3xl border-b border-alesvia-text/15">
+            {dict.faq.items.map((item: { question: string; answer: string }) => (
+              <details key={item.question} className="border-t border-alesvia-text/15">
+                <summary className="cursor-pointer py-6 font-serif text-lg font-bold text-alesvia-text flex justify-between items-center gap-4 hover:text-alesvia-primary">
+                  {item.question}
+                  <span aria-hidden="true" className="faq-icon text-alesvia-accent text-2xl shrink-0 font-sans font-light">+</span>
+                </summary>
+                <div className="pb-6 text-alesvia-muted leading-relaxed">
+                  {item.answer}
                 </div>
-              </SpotlightCard>
-            </TiltCard>
-          </section>
-        </ScrollReveal>
-
-        {/* ── FAQ Section (GEO-optimized) ── */}
-        <ScrollReveal>
-          <section id="faq" className="py-20 border-t border-alesvia-muted/10">
-            <SectionLabel>{dict.faq.label}</SectionLabel>
-            <div className="space-y-4 mt-8 max-w-3xl">
-              {dict.faq.items.map((item: { question: string; answer: string }, i: number) => (
-                <ScrollReveal key={i} delay={i < 4 ? (i + 1) as 1 | 2 | 3 | 4 : 0}>
-                  <details className="group glass rounded-xl overflow-hidden">
-                    <summary className="cursor-pointer p-6 font-serif text-lg font-bold text-alesvia-text flex justify-between items-center hover:bg-alesvia-surface/50 transition-colors">
-                      {item.question}
-                      <span className="faq-icon text-alesvia-accent text-xl ml-4 shrink-0 font-sans font-light">+</span>
-                    </summary>
-                    <div className="px-6 pb-6 text-alesvia-muted leading-relaxed border-t border-alesvia-muted/10 pt-4">
-                      {item.answer}
-                    </div>
-                  </details>
-                </ScrollReveal>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
+              </details>
+            ))}
+          </div>
+        </section>
 
         <CrisisSupport dict={dict.crisis_support} />
 
