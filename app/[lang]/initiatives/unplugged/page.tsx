@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
@@ -63,21 +64,21 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">
-          <SectionLabel>{lang === 'cs' ? 'Aktivní Projekt: Unplugged.cz' : 'Active Project: Unplugged.cz'}</SectionLabel>
-          <div className="mt-8 rounded-2xl overflow-hidden border border-alesvia-muted/20 shadow-2xl relative" style={{ height: '700px' }}>
-            <div className="absolute top-0 left-0 w-full h-10 bg-alesvia-surface border-b border-alesvia-muted/20 flex items-center px-4 gap-2 z-10">
-              <div className="w-3 h-3 rounded-full bg-red-400"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-              <div className="w-3 h-3 rounded-full bg-green-400"></div>
-              <div className="flex-1 text-center text-xs text-alesvia-muted font-medium font-mono mr-12">unplugged.cz</div>
-            </div>
-            <iframe 
-              src="https://unplugged.cz" 
-              className="w-full h-full pt-10 border-0" 
-              title="Unplugged.cz platform"
-              loading="lazy"
-            />
-          </div>
+          <SectionLabel>{d.preview_label}</SectionLabel>
+          <figure className="mt-8 max-w-4xl">
+            <a href="https://www.unplugged.cz" className="block overflow-hidden rounded-lg border border-alesvia-muted/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-alesvia-accent">
+              <Image
+                src="/previews/unplugged-home.png"
+                width={1280}
+                height={680}
+                sizes="(max-width: 768px) calc(100vw - 48px), (max-width: 992px) calc(100vw - 96px), 896px"
+                alt={d.preview_alt}
+                className="h-auto w-full"
+              />
+            </a>
+            <figcaption className="mt-3 text-sm text-alesvia-muted">{d.preview_caption}</figcaption>
+          </figure>
+          <a href="https://www.unplugged.cz" className="mt-6 inline-block underline underline-offset-4 hover:text-alesvia-accent">{d.preview_link}</a>
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">

@@ -96,7 +96,7 @@ export default async function RootLayout({
               '@type': 'Place',
               name: 'Ostrava, CZ',
             },
-            sameAs: ['https://unplugged.cz'],
+            sameAs: ['https://www.unplugged.cz'],
             knowsAbout: [
               'Human autonomy',
               'AI ethics',

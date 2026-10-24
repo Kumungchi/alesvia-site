@@ -78,7 +78,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
                         ))}
                       </ul>
                     </div>
-                    <a href="https://unplugged.cz" target="_blank" rel="noopener noreferrer" className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
+                    <a href="https://www.unplugged.cz" target="_blank" rel="noopener noreferrer" className="link-animated font-medium text-alesvia-accent hover:text-alesvia-primary transition-colors inline-flex items-center gap-2">
                       {dict.ecosystem.unplugged_link}
                     </a>
                   </div>
