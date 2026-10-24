@@ -125,7 +125,7 @@ Tohle je nejdůležitější tabulka v dokumentu. Web organizace, která stojí 
 
 - [ ] IČO, sídlo, statutár a správní rada (impressum, tým, patička, JSON-LD Organization).
 - [ ] Zásady ochrany údajů na právnickou osobu jako správce.
-- [ ] Odstranit „připravujeme registraci“ ze všech textů.
+- [ ] Odstranit „připravujeme registraci“ ze všech textů — včetně bloku „Key facts“ v `lib/llms.ts` (registrace, IČO, workshopy, tým).
 
 ## 7. Ověřené zdroje
 
@@ -193,3 +193,5 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - A-07: homepage v editoriálním layoutu: pilíře jako číslovaný seznam (číslo, název + stav, popis, odkaz) oddělený linkami místo bento gridu; financování jako plný blok bez orbů a shimmer; FAQ jako prosté rozbalovací řádky. Ze všech stránek odstraněny gradient orby, tilt/spotlight karty, glassmorphism, gradientní text, scroll reveal, scroll progress a šum. Komponenty HeroBackground, TiltCard, SpotlightCard, ScrollReveal a ScrollProgress smazány v samostatném commitu včetně jejich CSS. Zbylé animace (FAQ ikona, zmenšení navigace, krátké prolnutí stavových zpráv formulářů) vypíná prefers-reduced-motion. Navíc nalezena a opravena chyba: vlastní fonty (Inter, Playfair Display) se nikdy nepoužily, web běžel v systémovém písmu. Příčina: Tailwind `@theme` odkazoval na proměnné z next/font, které existují jen na <body>; opraveno přes `@theme inline` (vzor z dokumentace Next.js 16). Doplněna sada `latin-ext`, aby česká diakritika nepřepadávala do jiného písma. Ověřeno CS desktop (1280 px) i mobil (390 px), bez horizontálního přetečení. Volba fontů samotná zůstává otevřená, viz PR.
 
 - A-08: se souhlasem Matiase (O-3, 25. 10. 2026) stránka Tým představuje zakladatele: Bc. Matias Bunnik, vede přípravu organizace (ne „ředitel“ — ústav není zapsaný), Bc. v psychologii, studuje navazující magisterskou psychologii a informatiku. Bez fotky (připraveno na doplnění) a bez Psychotalks (Matias zatím nechce). JSON-LD NGO má `founder` (Person) s odkazem na stránku Tým. Po zápisu z.ú. změnit roli na „zakladatel a ředitel“ (fáze 2).
+
+- LLM/AI SEO (mimo backlog, na žádost Matiase 25. 10. 2026): `llms.txt` a nový `llms-full.txt` se generují z dictionaries, routes, tezí a publikovaných článků (`lib/llms.ts`, statické route handlery). Původní ruční `public/llms.txt` tvrdil „registrace probíhá“ a „školí organizace“ — odstraněn. Stejné přehánění („školí organizace podle AI Actu“) opraveno v `metadata.description` a první odpovědi FAQ (CS/EN), které jdou i do JSON-LD. robots.ts už povoluje všechny crawlery včetně AI; zda blokovat trénovací crawlery (GPTBot, Google-Extended…) je otevřená otázka pro Matiase.
