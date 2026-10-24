@@ -73,18 +73,18 @@
     "philosophy_label": "Filozofie",
     "philosophy_text": "Věříme, že nejnebezpečnější technologie nejsou ty, které selhávají, ale ty, které uspějí příliš dobře — systémy tak přesvědčivé, tak pohodlné a tak bezešvě integrované, že odmítnutí se stane společensky nebo prakticky nemožným. Alesvia existuje, aby zajistila, že odmítnutí zůstane schůdnou volbou.",
     "origin_label": "Vznik",
-    "origin_text": "Alesvia vzniká v České republice jako zapsaný ústav (z.ú.) — právní forma určená pro organizace řízené misí, které upřednostňují veřejný prospěch před ziskem; registrace probíhá. Tato struktura zajistí, že naše práce zůstane v souladu s našimi principy, nikoli s očekáváními akcionářů.",
+    "origin_text": "Alesvia vzniká v České republice jako zapsaný ústav (z.ú.) — právní forma určená pro organizace řízené misí, které upřednostňují veřejný prospěch před ziskem; registraci připravujeme. Tato struktura zajistí, že naše práce zůstane v souladu s našimi principy, nikoli s očekáváními akcionářů.",
     "structure_label": "Právní struktura",
-    "structure_text": "Zapsaný ústav (z.ú.) podle českého práva funguje se správní radou, transparentní správou a mandátem sloužit veřejnému zájmu. Alesvia tuto formu právě zakládá — registrace probíhá. Toto není startup. Je to instituce budovaná tak, aby přežila trendy a odolala zachycení."
+    "structure_text": "Zapsaný ústav (z.ú.) podle českého práva funguje se správní radou, transparentní správou a mandátem sloužit veřejnému zájmu. Alesvia se na tuto právní formu připravuje — registraci připravujeme. Toto není startup. Je to instituce budovaná tak, aby přežila trendy a odolala zachycení."
   },
   "team": {
     "metadata_title": "Tým a správa | Alesvia",
     "metadata_description": "Poznejte lidi za Alesvia a naši strukturu správy.",
     "label": "Lidé",
     "title": "Správa a tým",
-    "intro": "Alesvia vzniká; konkrétní složení týmu zveřejníme v průběhu registrace.",
+    "intro": "Alesvia je projekt v přípravě. Zatím nemá potvrzený tým.",
     "board_label": "Správní rada",
-    "board_text": "Správní radu jmenujeme v rámci probíhající registrace; složení zveřejníme po zápisu do rejstříku."
+    "board_text": "Správní radu sestavujeme; zatím není obsazená."
   },
   "initiatives_index": {
     "metadata_title": "Iniciativy | Alesvia",
@@ -267,7 +267,7 @@
     "sections": [
       {
         "heading": "Správce údajů",
-        "content": "Alesvia, vznikající zapsaný ústav (z.ú.) v České republice; registrace probíhá. Kontakt: privacy@alesvia.org"
+        "content": "Alesvia, vznikající zapsaný ústav (z.ú.) v České republice; registraci připravujeme. Kontakt: privacy@alesvia.org"
       },
       {
         "heading": "Jaké údaje shromažďujeme",
@@ -304,7 +304,7 @@
     "sections": [
       {
         "heading": "Provozovatel",
-        "content": "Tyto webové stránky provozuje Alesvia, vznikající zapsaný ústav (z.ú.) podle českého práva; registrace probíhá."
+        "content": "Tyto webové stránky provozuje Alesvia, vznikající zapsaný ústav (z.ú.) podle českého práva; registraci připravujeme."
       },
       {
         "heading": "Používání obsahu",
@@ -337,7 +337,7 @@
     "items": [
       {
         "question": "Co je Alesvia?",
-        "answer": "Alesvia je vznikající český institut pro psychologickou stránku umělé inteligence — vzdělává veřejnost, školí organizace podle AI Actu a připravuje terapeuty na nová klinická témata. Alesvia vzniká jako zapsaný ústav (z.ú.); registrace probíhá. Aktivním programem je Unplugged."
+        "answer": "Alesvia je vznikající český institut pro psychologickou stránku umělé inteligence — vzdělává veřejnost, školí organizace podle AI Actu a připravuje terapeuty na nová klinická témata. Alesvia vzniká jako zapsaný ústav (z.ú.); registraci připravujeme. Aktivním programem je Unplugged."
       },
       {
         "question": "Co Alesvia dělá?",
@@ -349,7 +349,7 @@
       },
       {
         "question": "Kde sídlí Alesvia?",
-        "answer": "Alesvia vzniká jako zapsaný ústav (z.ú.) se sídlem v Ostravě; registrace probíhá. Tato právní forma je určena pro organizace řízené misí, které upřednostňují veřejný prospěch před ziskem."
+        "answer": "Alesvia vzniká jako zapsaný ústav (z.ú.) s plánovaným sídlem v Ostravě; registraci připravujeme. Tato právní forma je určena pro organizace řízené misí, které upřednostňují veřejný prospěch před ziskem."
       },
       {
         "question": "Jak je Alesvia financována?",
@@ -363,11 +363,11 @@
   },
   "imprint": {
     "metadata_title": "Impressum | Alesvia",
-    "metadata_description": "Právní údaje Alesvia — vznikající český zapsaný ústav (z.ú.); registrace probíhá.",
+    "metadata_description": "Právní údaje Alesvia — vznikající český zapsaný ústav (z.ú.); registraci připravujeme.",
     "title": "Impressum",
     "org_name": "Alesvia",
     "registration_label": "Registrace",
-    "registration_text": "Alesvia vzniká jako zapsaný ústav (z.ú.); registrace v rejstříku ústavů probíhá.",
+    "registration_text": "Alesvia vzniká jako zapsaný ústav (z.ú.); zápis do rejstříku ústavů připravujeme; návrh dosud nebyl podán.",
     "ico_label": "IČO",
     "ico_text": "Bude přiděleno po registraci.",
     "address_label": "Sídlo",

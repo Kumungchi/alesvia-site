@@ -73,18 +73,18 @@
     "philosophy_label": "Philosophy",
     "philosophy_text": "We believe that the most dangerous technologies are not the ones that fail, but the ones that succeed too well — systems so persuasive, so convenient, and so seamlessly integrated that opting out becomes socially or practically impossible. Alesvia exists to ensure that opting out remains a viable choice.",
     "origin_label": "Origin",
-    "origin_text": "Alesvia is being established in the Czech Republic as a registered institute (z.ú.) — a legal structure designed for mission-driven organizations that prioritize public benefit over profit; registration is in progress. This structure will ensure that our work remains aligned with our principles, not with shareholder expectations.",
+    "origin_text": "Alesvia is being established in the Czech Republic as a registered institute (z.ú.) — a legal structure designed for mission-driven organizations that prioritize public benefit over profit; we are preparing for registration. This structure will ensure that our work remains aligned with our principles, not with shareholder expectations.",
     "structure_label": "Legal Structure",
-    "structure_text": "A registered institute (z.ú.) under Czech law operates with a statutory board, transparent governance, and a mandate to serve the public interest. Alesvia is currently being established in this form — registration is in progress. This is not a startup. It is an institution built to outlast trends and resist capture."
+    "structure_text": "A registered institute (z.ú.) under Czech law operates with a statutory board, transparent governance, and a mandate to serve the public interest. Alesvia is currently being established in this form — we are preparing for registration. This is not a startup. It is an institution built to outlast trends and resist capture."
   },
   "team": {
     "metadata_title": "Team & Governance | Alesvia",
     "metadata_description": "Meet the people behind Alesvia and learn about our governance structure.",
     "label": "People",
     "title": "Governance & Team",
-    "intro": "Alesvia is being established; we will publish the team's composition during the registration process.",
+    "intro": "Alesvia is a project in preparation. There is no confirmed team yet.",
     "board_label": "Board",
-    "board_text": "The board will be appointed as part of the ongoing registration; we will publish its composition once the institute is entered in the register."
+    "board_text": "We are assembling the board; no members have been appointed yet."
   },
   "initiatives_index": {
     "metadata_title": "Initiatives | Alesvia",
@@ -267,7 +267,7 @@
     "sections": [
       {
         "heading": "Data Controller",
-        "content": "Alesvia, an institute (z.ú.) being established in the Czech Republic; registration is in progress. Contact: privacy@alesvia.org"
+        "content": "Alesvia, an institute (z.ú.) being established in the Czech Republic; we are preparing for registration. Contact: privacy@alesvia.org"
       },
       {
         "heading": "What Data We Collect",
@@ -304,7 +304,7 @@
     "sections": [
       {
         "heading": "Operator",
-        "content": "This website is operated by Alesvia, an institute (z.ú.) being established under Czech law; registration is in progress."
+        "content": "This website is operated by Alesvia, an institute (z.ú.) being established under Czech law; we are preparing for registration."
       },
       {
         "heading": "Use of Content",
@@ -337,7 +337,7 @@
     "items": [
       {
         "question": "What is Alesvia?",
-        "answer": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics. Alesvia is being established as a registered institute (z.ú.); registration is in progress. Its active program is Unplugged."
+        "answer": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics. Alesvia is being established as a registered institute (z.ú.); we are preparing for registration. Its active program is Unplugged."
       },
       {
         "question": "What does Alesvia do?",
@@ -349,7 +349,7 @@
       },
       {
         "question": "Where is Alesvia based?",
-        "answer": "Alesvia is being established as a registered institute (z.ú.) based in Ostrava, Czech Republic; registration is in progress. This legal structure is designed for mission-driven organizations that prioritize public benefit over profit."
+        "answer": "Alesvia is being established as a registered institute (z.ú.) with a planned seat in Ostrava, Czech Republic; we are preparing for registration. This legal structure is designed for mission-driven organizations that prioritize public benefit over profit."
       },
       {
         "question": "How is Alesvia funded?",
@@ -363,11 +363,11 @@
   },
   "imprint": {
     "metadata_title": "Legal Imprint | Alesvia",
-    "metadata_description": "Legal details for Alesvia — an emerging Czech registered institute (z.ú.); registration is in progress.",
+    "metadata_description": "Legal details for Alesvia — an emerging Czech registered institute (z.ú.); we are preparing for registration.",
     "title": "Legal Imprint",
     "org_name": "Alesvia",
     "registration_label": "Registration",
-    "registration_text": "Alesvia is being established as a registered institute (z.ú.); registration in the Register of Institutes is in progress.",
+    "registration_text": "Alesvia is being established as a registered institute (z.ú.); we are preparing the application to the Register of Institutes; it has not yet been filed.",
     "ico_label": "IČO",
     "ico_text": "To be assigned upon registration.",
     "address_label": "Registered Address",
