@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
+import CrisisSupport from '../../../../components/CrisisSupport';
 import { buildPageMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 
@@ -91,6 +92,7 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
           </div>
         </section>
       </div>
+      <CrisisSupport dict={dict.crisis_support} />
     </div>
   );
 }

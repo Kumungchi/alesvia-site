@@ -106,7 +106,7 @@
     "preview_link": "Visit www.unplugged.cz →",
     "intro": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.",
     "problem_label": "The Problem",
-    "problem_text": "Modern conversational AI systems are optimized for engagement, not well-being. They learn what keeps you talking, what makes you trust them, and what makes you come back. Without consciously set boundaries, the default trajectory is dependency.",
+    "problem_text": "AI can feel personal, but it is not a person. Fluent conversation is not the same as a relationship, and an empathetic tone is not evidence of consciousness or understanding. Using AI is okay. Unplugged helps people recognize when AI imitates a friend, partner, or therapist.",
     "approach_label": "Our Approach",
     "approach_text": "Unplugged develops practical frameworks for individuals, institutions, and policymakers to establish and maintain healthy boundaries with conversational AI systems.",
     "principles_label": "Core Principles",
@@ -275,6 +275,30 @@
     "form_success": "Message sent. We'll get back to you shortly.",
     "form_error": "Something went wrong. Please try emailing us directly.",
     "form_privacy": "By submitting this form, you agree to our"
+  },
+  "crisis_support": {
+    "title": "When it feels like too much, talk to a person.",
+    "intro": "If you are in the Czech Republic, you can contact the services below. Alesvia does not provide crisis support; its forms are not intended for this purpose.",
+    "lines": [
+      {
+        "name": "Linka první psychické pomoci",
+        "phone": "116 123",
+        "phone_href": "tel:116123",
+        "description": "For adults and their loved ones. Free, 24/7, with an on-call service at night. Callers need to speak Czech or Slovak.",
+        "source_label": "Service details: Linka první psychické pomoci",
+        "source_url": "https://www.linkapsychickepomoci.cz/"
+      },
+      {
+        "name": "Linka bezpečí",
+        "phone": "116 111",
+        "phone_href": "tel:116111",
+        "description": "For children and students under 26. Free telephone support, 24/7. See the service website for language availability.",
+        "source_label": "Service details: Linka bezpečí",
+        "source_url": "https://www.linkabezpeci.cz/pomoc"
+      }
+    ],
+    "emergency": "If someone's life is in immediate danger in the Czech Republic, call",
+    "verified": "Telephone hours and eligibility checked on October 25, 2026."
   },
   "privacy": {
     "metadata_title": "Privacy Policy | Alesvia",

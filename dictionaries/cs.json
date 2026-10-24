@@ -106,7 +106,7 @@
     "preview_link": "Přejít na www.unplugged.cz →",
     "intro": "Unplugged pomáhá lidem nastavovat zdravé hranice s konverzační AI — srozumitelně a bez moralizování. AI je nástroj, ne vztah.",
     "problem_label": "Problém",
-    "problem_text": "Moderní konverzační AI systémy jsou optimalizovány pro zapojení, nikoli pro pohodu. Učí se, co vás udrží v konverzaci, co vám dá důvěru a co vás přivede zpět. Bez vědomě nastavených hranic je výchozí trajektorie závislost.",
+    "problem_text": "AI může působit osobně, ale není osobou. Plynulá konverzace není totéž co vztah a empatický tón není důkazem vědomí ani porozumění. Používat AI je v pořádku. Unplugged pomáhá rozpoznávat, kdy AI napodobuje přítele, partnera nebo terapeuta.",
     "approach_label": "Náš přístup",
     "approach_text": "Unplugged vyvíjí praktické rámce pro jednotlivce, instituce a tvůrce politik k vytvoření a udržení zdravých hranic s konverzačními AI systémy.",
     "principles_label": "Základní principy",
@@ -275,6 +275,30 @@
     "form_success": "Zpráva odeslána. Ozveme se vám co nejdříve.",
     "form_error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem.",
     "form_privacy": "Odesláním formuláře souhlasíte s našimi"
+  },
+  "crisis_support": {
+    "title": "Když je toho moc, mluv s člověkem.",
+    "intro": "V České republice se můžeš obrátit na následující linky. Alesvia neposkytuje krizovou pomoc; její formuláře k tomu nejsou určené.",
+    "lines": [
+      {
+        "name": "Linka první psychické pomoci",
+        "phone": "116 123",
+        "phone_href": "tel:116123",
+        "description": "Pro dospělé a jejich blízké. Zdarma, nonstop; v noci v režimu pohotovosti. Hovor je možný v češtině nebo slovenštině.",
+        "source_label": "Informace na webu Linky první psychické pomoci",
+        "source_url": "https://www.linkapsychickepomoci.cz/"
+      },
+      {
+        "name": "Linka bezpečí",
+        "phone": "116 111",
+        "phone_href": "tel:116111",
+        "description": "Pro děti a studenty do 26 let. Telefon zdarma a nonstop.",
+        "source_label": "Informace na webu Linky bezpečí",
+        "source_url": "https://www.linkabezpeci.cz/pomoc"
+      }
+    ],
+    "emergency": "Při bezprostředním ohrožení života volej",
+    "verified": "Telefonní provozní doby a cílové skupiny ověřeny 25. 10. 2026."
   },
   "privacy": {
     "metadata_title": "Ochrana osobních údajů | Alesvia",

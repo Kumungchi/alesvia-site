@@ -6,6 +6,7 @@ import SpotlightCard from '../../components/SpotlightCard';
 import ScrollReveal from '../../components/ScrollReveal';
 import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
+import CrisisSupport from '../../components/CrisisSupport';
 import { getPublicPath } from '../../lib/routes';
 
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
@@ -211,6 +212,8 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
             </div>
           </section>
         </ScrollReveal>
+
+        <CrisisSupport dict={dict.crisis_support} />
 
         {/* JSON-LD: FAQPage schema for GEO */}
         <JsonLd data={{

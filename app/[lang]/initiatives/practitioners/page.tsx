@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
 import PageHeader from '../../../../components/PageHeader';
 import SectionLabel from '../../../../components/SectionLabel';
+import CrisisSupport from '../../../../components/CrisisSupport';
 import ScrollReveal from '../../../../components/ScrollReveal';
 import { buildPageMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
@@ -93,6 +94,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
           </section>
         </ScrollReveal>
       </div>
+      <CrisisSupport dict={dict.crisis_support} />
     </div>
   );
 }
