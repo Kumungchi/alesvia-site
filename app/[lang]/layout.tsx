@@ -95,6 +95,11 @@ export default async function RootLayout({
               '@type': 'Place',
               name: 'Ostrava, CZ',
             },
+            founder: {
+              '@type': 'Person',
+              name: 'Matias Bunnik',
+              url: getAbsoluteUrl(getPublicPath(lang, 'team')),
+            },
             sameAs: ['https://www.unplugged.cz'],
             knowsAbout: [
               'Human autonomy',

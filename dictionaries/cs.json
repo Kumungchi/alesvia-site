@@ -82,9 +82,16 @@
     "metadata_description": "Poznejte lidi za Alesvia a naši strukturu správy.",
     "label": "Lidé",
     "title": "Správa a tým",
-    "intro": "Alesvia je projekt v přípravě. Zatím nemá potvrzený tým.",
+    "intro": "Alesvia je projekt v přípravě. Dnes za ní stojí zakladatel; další lidi představíme, až potvrdí spolupráci.",
     "board_label": "Správní rada",
-    "board_text": "Správní radu sestavujeme; zatím není obsazená."
+    "board_text": "Správní radu sestavujeme; zatím není obsazená.",
+    "founder_label": "Zakladatel",
+    "founder_name": "Bc. Matias Bunnik",
+    "founder_role": "Vede přípravu organizace",
+    "founder_bio": [
+      "Matias založil Alesvia, aby lidská autonomie zůstala měřítkem toho, jak AI vstupuje do každodenního života. Určuje vizi a směr organizace, připravuje její vznik a zastupuje ji navenek.",
+      "Vystudoval bakalářský obor psychologie, nyní studuje navazující magisterskou psychologii a také informatiku. Propojuje porozumění tomu, jak lidé prožívají vztahy a důvěru, s tím, jak konverzační AI technicky funguje."
+    ]
   },
   "initiatives_index": {
     "metadata_title": "Iniciativy | Alesvia",

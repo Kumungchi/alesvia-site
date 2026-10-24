@@ -82,9 +82,16 @@
     "metadata_description": "Meet the people behind Alesvia and learn about our governance structure.",
     "label": "People",
     "title": "Governance & Team",
-    "intro": "Alesvia is a project in preparation. There is no confirmed team yet.",
+    "intro": "Alesvia is a project in preparation. Today it is led by its founder; we will introduce other people once they confirm their involvement.",
     "board_label": "Board",
-    "board_text": "We are assembling the board; no members have been appointed yet."
+    "board_text": "We are assembling the board; no members have been appointed yet.",
+    "founder_label": "Founder",
+    "founder_name": "Matias Bunnik",
+    "founder_role": "Leads the organization’s preparation",
+    "founder_bio": [
+      "Matias founded Alesvia so that human autonomy remains the measure of how AI enters everyday life. The role covers setting the organization’s vision and direction, preparing its founding, and representing it publicly.",
+      "Matias holds a bachelor’s degree in psychology and is currently studying for a master’s degree in psychology as well as computer science, connecting an understanding of how people experience relationships and trust with how conversational AI works technically."
+    ]
   },
   "initiatives_index": {
     "metadata_title": "Initiatives | Alesvia",
