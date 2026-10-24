@@ -169,14 +169,28 @@
   },
   "practitioners": {
     "metadata_title": "Practitioners | Alesvia",
-    "metadata_description": "The Practitioners pillar equips psychologists, psychiatrists, and therapists to navigate the AI era ethically and confidently.",
+    "metadata_description": "We are preparing training for psychologists, psychiatrists, and therapists on responsible AI use and its limitations.",
     "label": "Pillar",
     "status": "In Preparation",
     "title": "Practitioners",
     "subtitle": "AI & Mental Health Professional Support",
-    "intro": "Mental health professionals are on the front lines of AI's impact on human wellbeing — yet most received zero training on the topic. The Practitioners pillar equips psychologists, psychiatrists, and therapists to navigate the AI era ethically and confidently.",
+    "intro": "We are preparing training for psychologists, psychiatrists, and therapists on responsible AI use and its limitations. Launching the Practitioners pillar depends on securing a clinical lead.",
     "problem_label": "The Challenge",
-    "problem_text": "Patients are arriving in therapy already using AI chatbots for emotional support. A Brown University study found AI chatbots systematically violate mental health ethics standards. The WHO convened experts in March 2026 specifically on responsible AI for mental health. Yet 71% of psychologists have never used AI tools, and most training programs don't cover AI literacy.",
+    "problem_text": "In the 2025 APA Practitioner Pulse Survey, 56% of responding US psychologists reported using AI at work in the past year; 44% reported never using it at work. The online survey was completed by 1,742 licensed psychologists with doctoral degrees who were actively treating patients. These are self-reported findings from a US sample, not data on Czech therapists or evidence that AI is effective in therapy.",
+    "problem_source_label": "Source: APA and APA Services, Practitioner Pulse Survey (2025), n = 1,742, practicing US psychologists",
+    "problem_source_url": "https://www.apa.org/pubs/reports/practitioner/2025",
+    "evidence_items": [
+      {
+        "text": "A qualitative study led by Brown University researchers identified ethical risks in the chatbot conversations they evaluated, including inappropriate crisis responses. The analysis covered 137 conversations (110 self-counseling and 27 simulated), seven trained peer counselors, and three licensed clinical psychologists. It was not a clinical efficacy trial or an estimate of how often these risks occur across all users.",
+        "source_label": "Source: Iftikhar et al., AIES (2025), qualitative analysis of 137 conversations",
+        "source_url": "https://ojs.aaai.org/index.php/AIES/article/view/36632"
+      },
+      {
+        "text": "The Delft Digital Ethics Centre at TU Delft held an online workshop on responsible AI for mental health with WHO support on January 29, 2026. WHO reported on it on March 20, 2026. This was an expert discussion with AI governance recommendations, not clinical evidence.",
+        "source_label": "Source: WHO, March 20, 2026 report on the TU Delft workshop",
+        "source_url": "https://www.who.int/news/item/20-03-2026-towards-responsible-ai-for-mental-health-and-well-being--experts-chart-a-way-forward"
+      }
+    ],
     "programs_label": "What We're Preparing",
     "programs_items": [
       "Continuing education programs for mental health professionals on AI literacy",

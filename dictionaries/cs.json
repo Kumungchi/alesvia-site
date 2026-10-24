@@ -169,14 +169,28 @@
   },
   "practitioners": {
     "metadata_title": "Praktici | Alesvia",
-    "metadata_description": "Pilíř Praktici vybavuje psychology, psychiatry a terapeuty pro etickou a sebevědomou navigaci v éře AI.",
+    "metadata_description": "Připravujeme vzdělávání pro psychology, psychiatry a terapeuty o odpovědném používání AI a jeho limitech.",
     "label": "Pilíř",
     "status": "V přípravě",
     "title": "Praktici",
     "subtitle": "AI a podpora odborníků na duševní zdraví",
-    "intro": "Odborníci na duševní zdraví stojí v první linii dopadu AI na lidskou pohodu — přesto většina z nich neabsolvovala žádné školení v této oblasti. Pilíř Praktici vybavuje psychology, psychiatry a terapeuty pro etickou a sebevědomou navigaci v éře AI.",
+    "intro": "Připravujeme vzdělávání pro psychology, psychiatry a terapeuty o odpovědném používání AI a jeho limitech. Spuštění pilíře Praktici závisí na zajištění klinického garanta.",
     "problem_label": "Výzva",
-    "problem_text": "Pacienti přicházejí do terapie poté, co již využívali AI chatboty pro emocionální podporu. Studie Brown University zjistila, že AI chatboty systematicky porušují etické standardy duševního zdraví. WHO svolala odborníky v březnu 2026 specificky k odpovědné AI pro duševní zdraví. Přesto 71 % psychologů nikdy nepoužilo AI nástroje a většina vzdělávacích programů AI gramotnost nepokrývá.",
+    "problem_text": "V průzkumu APA Practitioner Pulse Survey 2025 uvedlo 56 % dotázaných psychologů v USA, že za poslední rok použili AI při práci; 44 % uvedlo, že ji při práci nepoužili nikdy. Online průzkum dokončilo 1 742 licencovaných psychologů s doktorátem, kteří aktivně pracovali s pacienty. Jde o americký vzorek a vlastní výpovědi respondentů, nikoli o údaje o českých terapeutech nebo důkaz účinnosti AI v terapii.",
+    "problem_source_label": "Zdroj: APA a APA Services, Practitioner Pulse Survey (2025), n = 1 742, praktikující psychologové v USA",
+    "problem_source_url": "https://www.apa.org/pubs/reports/practitioner/2025",
+    "evidence_items": [
+      {
+        "text": "Kvalitativní studie týmu z Brown University identifikovala v hodnocených rozhovorech s chatboty etická rizika, včetně nevhodných reakcí v krizových situacích. Analýza zahrnovala 137 rozhovorů (110 sebezkušenostních a 27 simulovaných), sedm vyškolených peer poradců a tři licencované klinické psychology. Nešlo o klinickou studii účinnosti ani o odhad četnosti těchto rizik mezi všemi uživateli.",
+        "source_label": "Zdroj: Iftikhar a kol., AIES (2025), kvalitativní analýza 137 rozhovorů",
+        "source_url": "https://ojs.aaai.org/index.php/AIES/article/view/36632"
+      },
+      {
+        "text": "Online workshop o odpovědné AI pro duševní zdraví uspořádalo centrum DDEC při TU Delft s podporou WHO dne 29. ledna 2026. WHO o něm informovala 20. března 2026. Jde o odbornou diskusi a doporučení pro správu AI, nikoli o klinický důkaz.",
+        "source_label": "Zdroj: WHO, zpráva z 20. března 2026 o workshopu TU Delft",
+        "source_url": "https://www.who.int/news/item/20-03-2026-towards-responsible-ai-for-mental-health-and-well-being--experts-chart-a-way-forward"
+      }
+    ],
     "programs_label": "Co připravujeme",
     "programs_items": [
       "Programy celoživotního vzdělávání pro odborníky na duševní zdraví v oblasti AI gramotnosti",

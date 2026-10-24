@@ -39,6 +39,17 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
           <section>
             <SectionLabel>{d.problem_label}</SectionLabel>
             <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.problem_text}</p>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed">
+              <a href={d.problem_source_url} className="underline underline-offset-4 hover:text-alesvia-accent">{d.problem_source_label}</a>
+            </p>
+            {d.evidence_items.map((item) => (
+              <div key={item.source_url} className="mt-8 max-w-3xl">
+                <p className="text-lg text-alesvia-text leading-relaxed">{item.text}</p>
+                <p className="mt-3 text-sm leading-relaxed">
+                  <a href={item.source_url} className="underline underline-offset-4 hover:text-alesvia-accent">{item.source_label}</a>
+                </p>
+              </div>
+            ))}
           </section>
         </ScrollReveal>
 
