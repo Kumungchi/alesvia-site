@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getPostSlugs } from '../content/research/posts';
+import { getAllPosts } from '../content/research/posts';
 import { getPublicPath, locales } from '../lib/routes';
 import { getAbsoluteUrl, getResearchAbsoluteUrl } from '../lib/site';
 
@@ -29,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const publicPath = getPublicPath(lang, routeKey);
       entries.push({
         url: getAbsoluteUrl(publicPath),
-        lastModified: new Date(),
         changeFrequency: routeKey === 'home' ? 'weekly' : 'monthly',
         priority: routeKey === 'home' ? 1.0 : routeKey === 'initiativeUnplugged' ? 0.9 : 0.7,
         alternates: {
@@ -42,17 +41,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  for (const slug of getPostSlugs()) {
+  for (const post of getAllPosts()) {
     for (const lang of locales) {
       entries.push({
-        url: getResearchAbsoluteUrl(lang, slug),
-        lastModified: new Date(),
+        url: getResearchAbsoluteUrl(lang, post.slug),
+        lastModified: new Date(post.date),
         changeFrequency: 'monthly',
         priority: 0.75,
         alternates: {
           languages: {
-            en: getResearchAbsoluteUrl('en', slug),
-            cs: getResearchAbsoluteUrl('cs', slug),
+            en: getResearchAbsoluteUrl('en', post.slug),
+            cs: getResearchAbsoluteUrl('cs', post.slug),
           },
         },
       });
