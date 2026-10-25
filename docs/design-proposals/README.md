@@ -34,4 +34,6 @@ Verified in T3 Chromium on 25 October 2026 (desktop 1280 px, iPhone 12 Pro 390 p
 - No horizontal overflow at 390 px; Newsreader and Inter load from embedded files; no console errors or remote requests besides the local preview image.
 - Fixed during review: hover lift and shadow on buttons and the Unplugged preview (contradicted the A-07b audit), Czech URLs (`/cs/kontakt`, `/cs/vyzkum`, `/cs/financovani`), and the header CTA losing its horizontal padding.
 
-Open: the working tagline "Technologie. Společnost. Vlastní směr." is a rule-of-three pattern listed in the AI-tells audit; other copy apart from the motto is provisional. Inter remains the UI face by choice.
+Removed at Matias's request: the rule-of-three tagline "Technologie. Společnost. Vlastní směr." Other copy apart from the motto is provisional; Inter remains the UI face by choice.
+
+Motto typeface comparison (requested 25 October 2026: softer letterforms than Newsreader): a switch above the prototype toggles the motto between Newsreader (current), Fraunces with the SOFT axis at 100 and WONK 0, and Literata. Both candidates are OFL, embedded from `fonts/` (latin + latin-ext only, licenses alongside) and verified loaded in the browser. Only the motto changes; applying a choice to other headings is a separate decision.
