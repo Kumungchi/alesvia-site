@@ -1,112 +1,109 @@
-import { getDictionary, Locale } from '../../dictionaries';
-import SectionLabel from '../../components/SectionLabel';
-import JsonLd from '../../components/JsonLd';
+import { Newsreader } from 'next/font/google';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getDictionary, Locale } from '../../dictionaries';
+import JsonLd from '../../components/JsonLd';
 import CrisisSupport from '../../components/CrisisSupport';
-import PillarList from '../../components/PillarList';
-import { getPublicPath } from '../../lib/routes';
+import { getPublicPath, getPublicResearchPath } from '../../lib/routes';
+import { getAllPosts } from '../../content/research/posts';
+import styles from '../../components/home/home.module.css';
+
+const newsreader = Newsreader({ subsets: ['latin', 'latin-ext'], weight: ['400', '500', '600'], display: 'swap', variable: '--font-newsreader' });
 
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
+  const eco = dict.ecosystem;
+  const planned = [
+    { title: eco.academy_title, description: dict.academy.subtitle, route: 'initiativeAcademy' },
+    { title: eco.practitioners_title, description: eco.practitioners_desc, route: 'initiativePractitioners' },
+    { title: eco.policy_title, description: eco.policy_desc, route: 'initiativePolicyLab' },
+  ] as const;
+
   return (
-    <div className="bg-alesvia-bg text-alesvia-text selection:bg-alesvia-accent/30 font-sans">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-
-        {/* ── Hero ── */}
-        <section className="pt-24 pb-20 md:pt-36 md:pb-28 max-w-4xl">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight text-alesvia-primary leading-[1.05] mb-8">
-            {dict.hero.title}
-          </h1>
-          <p className="text-xl md:text-2xl text-alesvia-muted leading-relaxed mb-12 max-w-2xl">
-            {dict.hero.description}
-          </p>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <Link
-              href={getPublicPath(lang, 'thesis')}
-              className="bg-alesvia-primary text-alesvia-bg px-7 py-3.5 rounded-md font-medium text-lg text-center hover:bg-alesvia-trust transition-colors"
-            >
-              {dict.hero.primary_link}
-            </Link>
-            <Link
-              href={getPublicPath(lang, 'initiatives')}
-              className="py-2 font-medium text-lg text-alesvia-text underline decoration-alesvia-accent decoration-2 underline-offset-8 hover:text-alesvia-primary"
-            >
-              {dict.hero.secondary_link}
-            </Link>
+    <div className={`${newsreader.variable} ${styles.home}`} data-editorial-home>
+      <section className={styles.hero} aria-labelledby="home-title">
+        <h1 id="home-title">{dict.hero.title}</h1>
+        <div className={styles.heroCopy}>
+          <p>{dict.metadata.description}</p>
+          <div className={styles.actions}>
+            <Link className={styles.primary} href={getPublicPath(lang, 'thesis')}>{dict.hero.primary_link}</Link>
+            <a className={styles.textLink} href="#initiatives">{dict.hero.secondary_link}</a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ── Pillars ── */}
-        <section id="initiatives" className="py-20 border-t border-alesvia-text/15">
-          <div className="max-w-2xl mb-12">
-            <SectionLabel>{dict.ecosystem.label}</SectionLabel>
-            <h3 className="font-serif text-3xl md:text-4xl font-bold text-alesvia-text leading-tight">
-              {dict.ecosystem.title}
-            </h3>
+      <section id="initiatives" className={styles.initiatives} aria-labelledby="initiatives-title">
+        <h2 id="initiatives-title" className={styles.sectionTitle}>{eco.title}</h2>
+        <div className={styles.feature}>
+          <div className={styles.featureCopy}>
+            <h3>{eco.unplugged_title}</h3>
+            <p className={styles.status}>{eco.status_active}</p>
+            <p className={styles.featureDescription}>{eco.unplugged_desc}</p>
+            <a className={styles.textLink} href="https://www.unplugged.cz">{eco.unplugged_link}</a>
           </div>
-
-          <PillarList lang={lang} dict={dict} unpluggedExternal />
-        </section>
-
-        {/* ── Financing ── */}
-        <section id="funding" className="py-20">
-          <div className="on-dark bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16 md:py-16">
-            <div className="max-w-3xl">
-              <SectionLabel>{dict.financing.label}</SectionLabel>
-              <h3 className="font-serif text-3xl md:text-5xl font-bold mb-6">
-                {dict.financing.title}
-              </h3>
-              <p className="text-alesvia-white/85 text-lg md:text-xl leading-relaxed mb-10">
-                {dict.financing.description}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href={getPublicPath(lang, 'funding')} className="bg-alesvia-accent text-alesvia-text font-semibold px-7 py-3.5 rounded-md text-center hover:bg-alesvia-white transition-colors">
-                  {dict.financing.primary_link}
-                </Link>
-                <Link href={getPublicPath(lang, 'contact')} className="border border-alesvia-white/30 text-alesvia-white font-medium px-7 py-3.5 rounded-md hover:bg-alesvia-white/10 transition-colors text-center">
-                  {dict.financing.secondary_link}
-                </Link>
+          <a href="https://www.unplugged.cz" className={styles.preview}>
+            <Image src="/previews/unplugged-home.png" width={1280} height={680}
+              sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1100px) 55vw, 640px"
+              alt={dict.unplugged.preview_alt} />
+          </a>
+        </div>
+        <ul className={styles.planned}>
+          {planned.map(pillar => (
+            <li key={pillar.route}>
+              <div>
+                <h3><Link href={getPublicPath(lang, pillar.route)}>{pillar.title}</Link></h3>
+                <p className={styles.status}>{eco.status_incubating}</p>
               </div>
-            </div>
+              <p>{pillar.description}</p>
+              <Link className={styles.pillarLink} href={getPublicPath(lang, pillar.route)} aria-label={`${pillar.title}: ${dict.research.read_more}`}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={styles.writing} aria-labelledby="writing-title">
+        <div className={styles.sectionHeading}>
+          <h2 id="writing-title" className={styles.sectionTitle}>{dict.research.label}</h2>
+          <Link className={styles.textLink} href={getPublicPath(lang, 'research')}>{dict.research.all_posts}</Link>
+        </div>
+        <div className={styles.essays}>
+          {getAllPosts().slice(0, 2).map(post => (
+            <article key={post.slug}>
+              <h3><Link href={getPublicResearchPath(lang, post.slug)}>{post.title[lang]}</Link></h3>
+              <p>{post.excerpt[lang]}</p>
+              <time dateTime={post.date}>{new Date(post.date).toLocaleDateString(lang === 'cs' ? 'cs-CZ' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="funding" className={styles.funding} aria-labelledby="funding-title">
+        <h2 id="funding-title" className={styles.sectionTitle}>{dict.financing.title}</h2>
+        <div>
+          <p>{dict.financing.description}</p>
+          <div className={styles.actions}>
+            <Link className={styles.primary} href={getPublicPath(lang, 'funding')}>{dict.financing.primary_link}</Link>
+            <Link className={styles.textLink} href={getPublicPath(lang, 'contact')}>{dict.financing.secondary_link}</Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ── FAQ (GEO-optimized) ── */}
-        <section id="faq" className="py-20 border-t border-alesvia-text/15">
-          <SectionLabel>{dict.faq.label}</SectionLabel>
-          <div className="mt-6 max-w-3xl border-b border-alesvia-text/15">
-            {dict.faq.items.map((item: { question: string; answer: string }) => (
-              <details key={item.question} className="border-t border-alesvia-text/15">
-                <summary className="cursor-pointer py-6 font-serif text-lg font-bold text-alesvia-text flex justify-between items-center gap-4 hover:text-alesvia-primary">
-                  {item.question}
-                  <span aria-hidden="true" className="faq-icon text-alesvia-accent-ink text-2xl shrink-0 font-sans font-light">+</span>
-                </summary>
-                <div className="pb-6 text-alesvia-muted leading-relaxed">
-                  {item.answer}
-                </div>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        <CrisisSupport dict={dict.crisis_support} />
-
-        {/* JSON-LD: FAQPage schema for GEO */}
-        <JsonLd data={{
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: dict.faq.items.map((item: { question: string; answer: string }) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer,
-            },
-          })),
-        }} />
-
-      </div>
+      <section id="faq" className={styles.faq} aria-labelledby="faq-title">
+        <h2 id="faq-title" className={styles.sectionTitle}>{dict.faq.label}</h2>
+        <div>
+          {dict.faq.items.map(item => (
+            <details key={item.question}>
+              <summary>{item.question}<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7l6 6 6-6" /></svg></summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+      <div className={styles.support}><CrisisSupport dict={dict.crisis_support} /></div>
+      <JsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: dict.faq.items.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }} />
     </div>
   );
 }
