@@ -14,6 +14,8 @@
   },
   "hero": {
     "title": "Lidská autonomie je základ.",
+    "title_lead": "Lidská autonomie",
+    "title_accent": "je základ.",
     "description": "Alesvia vytváří výzkum, veřejné politiky, vzdělávání a praktické rámce, které pomáhají lidem i institucím zůstat v kontrole, zatímco se AI stává součástí každodenního života.",
     "primary_link": "Přečíst tezi",
     "secondary_link": "Prohlédnout naši práci"

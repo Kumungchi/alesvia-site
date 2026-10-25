@@ -14,6 +14,8 @@
   },
   "hero": {
     "title": "Human autonomy is the baseline.",
+    "title_lead": "Human autonomy",
+    "title_accent": "is the baseline.",
     "description": "Alesvia builds research, policy, education, and practical frameworks that help people and institutions stay in control as AI becomes part of daily life.",
     "primary_link": "Read the Thesis",
     "secondary_link": "See Our Work"

@@ -20,7 +20,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
   return (
     <div className={styles.home} data-editorial-home>
       <section className={styles.hero} aria-labelledby="home-title">
-        <h1 id="home-title">{dict.hero.title}</h1>
+        <h1 id="home-title">{dict.hero.title_lead} <span className={styles.titleAccent}>{dict.hero.title_accent}</span></h1>
         <div className={styles.heroCopy}>
           <p>{dict.metadata.description}</p>
           <div className={styles.actions}>
