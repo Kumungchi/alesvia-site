@@ -28,7 +28,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <PageHeader label={d.label} title={d.title}>
         <div className="flex items-center gap-4 mt-4">
-          <span className="text-xs font-medium text-alesvia-accent border border-alesvia-accent/30 px-3 py-1.5 rounded-full">{d.status}</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-alesvia-primary">{d.status}</span>
           <p className="text-lg text-alesvia-muted font-light">{d.subtitle}</p>
         </div>
         <p className="text-xl text-alesvia-muted font-light leading-relaxed max-w-2xl mt-6">{d.intro}</p>
@@ -76,7 +76,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
           </section>
 
           <section className="border-t border-alesvia-muted/10 pt-16">
-            <div className="bg-alesvia-primary text-alesvia-bg rounded-2xl p-10 md:p-16">
+            <div className="bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
               <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-md inline-block hover:bg-alesvia-primary hover:text-alesvia-bg transition-colors">

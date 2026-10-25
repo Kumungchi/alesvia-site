@@ -83,7 +83,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
   }
 
   const inputGroupClass = "relative group";
-  const inputClass = "peer w-full bg-alesvia-bg/40 backdrop-blur-sm border-2 border-alesvia-muted/20 rounded-xl px-4 pt-6 pb-2 text-alesvia-text placeholder-transparent focus:outline-none focus:border-alesvia-accent/60 focus:bg-alesvia-bg/80 focus:ring-4 focus:ring-alesvia-accent/10 transition-all duration-300";
+  const inputClass = "peer w-full bg-alesvia-white border border-alesvia-text/20 rounded-md px-4 pt-6 pb-2 text-alesvia-text placeholder-transparent focus:outline-none focus:border-alesvia-accent/60 focus:bg-alesvia-bg/80 focus:ring-4 focus:ring-alesvia-accent/10 transition-all duration-300";
   const labelClass = "absolute left-4 top-2 text-xs font-semibold text-alesvia-muted/80 transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-xs peer-focus:font-semibold peer-focus:text-alesvia-accent pointer-events-none";
 
   const fallbackMessage =
@@ -98,7 +98,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
 
       {status === 'success' || status === 'fallback' ? (
         <div className="text-center py-16 fade-in" aria-live="polite">
-          <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6 transform hover:scale-110 transition-transform duration-500">
+          <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg className="w-10 h-10 text-green-600 animate-[pulse_2s_ease-in-out_infinite]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
             </svg>

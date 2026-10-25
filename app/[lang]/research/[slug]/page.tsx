@@ -123,7 +123,7 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
                   day: 'numeric',
                 })}
               </time>
-              <span className="text-xs font-medium text-alesvia-accent bg-alesvia-accent/10 px-2.5 py-1 rounded-full capitalize">
+              <span className="text-xs font-semibold uppercase tracking-widest text-alesvia-primary">
                 {post.initiative}
               </span>
             </div>
@@ -145,7 +145,7 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
       <div className="mt-12 pt-8 border-t border-alesvia-muted/10">
         <div className="flex flex-wrap gap-2">
           {post.tags.map((tag) => (
-            <span key={tag} className="text-xs text-alesvia-muted/60 border border-alesvia-muted/10 px-3 py-1 rounded-full">
+            <span key={tag} className="text-xs text-alesvia-muted">
               {tag}
             </span>
           ))}

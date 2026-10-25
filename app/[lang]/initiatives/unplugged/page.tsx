@@ -49,15 +49,15 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
         <section className="border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.principles_label}</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
+            <div className="border-t border-alesvia-text/15 pt-6">
               <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_friction_title}</h4>
               <p className="text-alesvia-muted text-sm leading-relaxed">{d.principle_friction_desc}</p>
             </div>
-            <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
+            <div className="border-t border-alesvia-text/15 pt-6">
               <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_detox_title}</h4>
               <p className="text-alesvia-muted text-sm leading-relaxed">{d.principle_detox_desc}</p>
             </div>
-            <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
+            <div className="border-t border-alesvia-text/15 pt-6">
               <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_boundaries_title}</h4>
               <p className="text-alesvia-muted text-sm leading-relaxed">{d.principle_boundaries_desc}</p>
             </div>
@@ -83,10 +83,10 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">
-          <div className="bg-alesvia-primary text-alesvia-bg rounded-2xl p-10 md:p-16">
+          <div className="bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <SectionLabel>{d.cta_label}</SectionLabel>
             <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-            <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded hover:bg-alesvia-accent/90 transition-transform hover:scale-105 shadow-md inline-block">
+            <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded hover:bg-alesvia-accent/90 transition-colors shadow-md inline-block">
               {d.cta_label}
             </Link>
           </div>

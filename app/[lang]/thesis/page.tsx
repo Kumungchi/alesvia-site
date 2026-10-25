@@ -61,8 +61,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
         ))}
 
         <section className="pt-8">
-          <div className="bg-[#0F2C59] text-alesvia-bg rounded-2xl p-10 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-72 h-72 bg-alesvia-accent/10 rounded-full blur-3xl -mr-12 -mt-12 pointer-events-none" />
+          <div className="bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <div className="relative z-10 max-w-3xl">
               <SectionLabel>{content.closingLabel}</SectionLabel>
               <p className="text-alesvia-bg/85 text-lg md:text-xl leading-relaxed mb-8">

@@ -26,7 +26,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24">
-        <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
+        <div className="border-t border-alesvia-text/15 pt-6">
           <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.general_label}</h3>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.general_text}</p>
           <a href="mailto:info@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
@@ -34,7 +34,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           </a>
         </div>
 
-        <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
+        <div className="border-t border-alesvia-text/15 pt-6">
           <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.institutional_label}</h3>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.institutional_text}</p>
           <a href="mailto:partners@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
@@ -42,7 +42,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           </a>
         </div>
 
-        <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
+        <div className="border-t border-alesvia-text/15 pt-6">
           <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.media_label}</h3>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.media_text}</p>
           <a href="mailto:press@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">

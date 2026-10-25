@@ -26,8 +26,8 @@ export default function PolicyFunnel({ dict }: { dict: FunnelDict }) {
       
       <div className="relative max-w-4xl mx-auto pl-4 md:pl-0">
         {/* Connecting Line (Vertical) */}
-        <div className="absolute top-8 bottom-8 left-[31px] md:left-1/2 md:-ml-[1px] w-[2px] bg-gradient-to-b from-alesvia-accent/20 via-alesvia-accent/40 to-alesvia-primary/20 z-0 hidden md:block"></div>
-        <div className="absolute top-8 bottom-8 left-[31px] w-[2px] bg-gradient-to-b from-alesvia-accent/20 via-alesvia-accent/40 to-alesvia-primary/20 z-0 md:hidden"></div>
+        <div className="absolute top-8 bottom-8 left-[31px] md:left-1/2 md:-ml-[1px] w-[2px] bg-alesvia-text/15 z-0 hidden md:block"></div>
+        <div className="absolute top-8 bottom-8 left-[31px] w-[2px] bg-alesvia-text/15 z-0 md:hidden"></div>
 
         <div className="space-y-12 relative z-10">
           {steps.map((step, index) => {
@@ -44,8 +44,7 @@ export default function PolicyFunnel({ dict }: { dict: FunnelDict }) {
                 </div>
 
                 {/* Icon / Node */}
-                <div className="w-16 h-16 shrink-0 rounded-full bg-alesvia-surface border-2 border-alesvia-accent/30 flex items-center justify-center shadow-lg group-hover:border-alesvia-accent group-hover:shadow-alesvia-accent/20 transition-all duration-300 relative mx-0 md:mx-auto z-10">
-                  <div className="absolute inset-0 rounded-full bg-alesvia-accent/5 scale-100 group-hover:scale-125 transition-transform duration-500 z-0"></div>
+                <div className="w-16 h-16 shrink-0 rounded-full bg-alesvia-surface border-2 border-alesvia-accent/30 flex items-center justify-center group-hover:border-alesvia-accent group-hover:shadow-alesvia-accent/20 transition-all duration-300 relative mx-0 md:mx-auto z-10">
                   <svg className="w-6 h-6 text-alesvia-accent relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={step.icon}></path>
                   </svg>

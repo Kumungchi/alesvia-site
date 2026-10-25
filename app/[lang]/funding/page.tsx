@@ -44,7 +44,7 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
           <SectionLabel>{d.sources_label}</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             {sources.map((source) => (
-              <div key={source.title} className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
+              <div key={source.title} className="border-t border-alesvia-text/15 pt-6">
                 <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{source.title}</h4>
                 <p className="text-alesvia-muted text-sm leading-relaxed">{source.desc}</p>
               </div>
@@ -76,12 +76,11 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
         </section>
 
         <section>
-          <div className="bg-[#0F2C59] text-alesvia-bg rounded-2xl p-10 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-alesvia-accent/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+          <div className="bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <div className="relative z-10">
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-              <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded hover:bg-alesvia-accent/90 transition-transform hover:scale-105 shadow-md inline-block">
+              <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded hover:bg-alesvia-accent/90 transition-colors shadow-md inline-block">
                 {d.cta_label}
               </Link>
             </div>

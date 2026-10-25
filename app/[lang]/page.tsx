@@ -3,61 +3,12 @@ import SectionLabel from '../../components/SectionLabel';
 import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import CrisisSupport from '../../components/CrisisSupport';
+import PillarList from '../../components/PillarList';
 import { getPublicPath } from '../../lib/routes';
 
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const moreLabel = lang === 'cs' ? 'Více →' : 'Learn more →';
-
-  const pillars: {
-    title: string;
-    status: string;
-    active: boolean;
-    description: string;
-    points?: string[];
-    href: string;
-    linkLabel: string;
-    external?: boolean;
-  }[] = [
-    {
-      title: dict.ecosystem.unplugged_title,
-      status: dict.ecosystem.status_active,
-      active: true,
-      description: dict.ecosystem.unplugged_desc,
-      points: dict.ecosystem.unplugged_points,
-      href: 'https://www.unplugged.cz',
-      linkLabel: dict.ecosystem.unplugged_link,
-      external: true,
-    },
-    {
-      title: dict.ecosystem.academy_title,
-      status: dict.ecosystem.status_incubating,
-      active: false,
-      description: dict.ecosystem.academy_desc,
-      href: getPublicPath(lang, 'initiativeAcademy'),
-      linkLabel: moreLabel,
-    },
-    {
-      title: dict.ecosystem.practitioners_title,
-      status: dict.ecosystem.status_incubating,
-      active: false,
-      description: dict.ecosystem.practitioners_desc,
-      href: getPublicPath(lang, 'initiativePractitioners'),
-      linkLabel: moreLabel,
-    },
-    {
-      title: dict.ecosystem.policy_title,
-      status: dict.ecosystem.status_incubating,
-      active: false,
-      description: dict.ecosystem.policy_desc,
-      href: getPublicPath(lang, 'initiativePolicyLab'),
-      linkLabel: moreLabel,
-    },
-  ];
-
-  const linkClass = 'inline-block py-1 font-medium text-alesvia-primary underline underline-offset-4 hover:text-alesvia-trust';
-
   return (
     <div className="bg-alesvia-bg text-alesvia-text selection:bg-alesvia-accent/30 font-sans">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
@@ -95,47 +46,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
             </h3>
           </div>
 
-          <ol className="border-b border-alesvia-text/15">
-            {pillars.map((pillar, i) => (
-              <li key={pillar.title} className="grid gap-4 md:grid-cols-12 md:gap-8 py-10 border-t border-alesvia-text/15">
-                <span aria-hidden="true" className="md:col-span-1 font-serif text-lg text-alesvia-muted tabular-nums">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className="md:col-span-3">
-                  <h4 className={`font-serif font-bold text-alesvia-text ${pillar.active ? 'text-3xl' : 'text-2xl'}`}>
-                    {pillar.title}
-                  </h4>
-                  <p className={`mt-2 text-xs font-semibold uppercase tracking-widest ${pillar.active ? 'text-alesvia-primary' : 'text-alesvia-muted'}`}>
-                    {pillar.active && <span aria-hidden="true" className="inline-block w-1.5 h-1.5 mr-2 align-middle rounded-full bg-alesvia-accent" />}
-                    {pillar.status}
-                  </p>
-                </div>
-                <div className="md:col-span-6">
-                  <p className={`leading-relaxed ${pillar.active ? 'text-lg text-alesvia-text' : 'text-alesvia-muted'}`}>
-                    {pillar.description}
-                  </p>
-                  {pillar.points && (
-                    <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-alesvia-muted">
-                      {pillar.points.map((point) => (
-                        <li key={point}>— {point}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-                <div className="md:col-span-2 md:text-right">
-                  {pillar.external ? (
-                    <a href={pillar.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                      {pillar.linkLabel}
-                    </a>
-                  ) : (
-                    <Link href={pillar.href} className={linkClass}>
-                      {pillar.linkLabel}
-                    </Link>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ol>
+          <PillarList lang={lang} dict={dict} unpluggedExternal />
         </section>
 
         {/* ── Financing ── */}

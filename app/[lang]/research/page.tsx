@@ -39,7 +39,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ lang:
                     day: 'numeric',
                   })}
                 </time>
-                <span className="text-xs font-medium text-alesvia-accent bg-alesvia-accent/10 px-2.5 py-0.5 rounded-full capitalize">
+                <span className="text-xs font-semibold uppercase tracking-widest text-alesvia-primary">
                   {post.initiative}
                 </span>
               </div>
