@@ -481,6 +481,20 @@
     "success": "Inquiry received. We will be in touch shortly.",
     "error": "Something went wrong. Please try emailing us directly."
   },
+  "article_pilot": {
+    "preview_label": "Article typography preview",
+    "typeface_label": "Article typeface",
+    "current_typeface": "Playfair + Inter",
+    "newsreader_typeface": "Newsreader",
+    "print": "Print / save PDF",
+    "source_link": "Original article",
+    "article_kind": "Essay",
+    "note_reference": "Note 1: related Alesvia thesis",
+    "note_title": "1. Further reading",
+    "note_text": "This essay develops Alesvia's thesis on human autonomy. It does not report original research.",
+    "thesis_link": "Read the thesis",
+    "note_back": "Back to the text"
+  },
   "policy_funnel": {
     "title": "The Policy Translation Funnel",
     "step1_title": "1. Academic Synthesis",

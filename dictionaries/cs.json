@@ -481,6 +481,20 @@
     "success": "Dotaz přijat. Brzy se vám ozveme.",
     "error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem."
   },
+  "article_pilot": {
+    "preview_label": "Ukázka sazby článku",
+    "typeface_label": "Písmo článku",
+    "current_typeface": "Playfair + Inter",
+    "newsreader_typeface": "Newsreader",
+    "print": "Vytisknout / uložit PDF",
+    "source_link": "Původní článek",
+    "article_kind": "Esej",
+    "note_reference": "Poznámka 1: související teze Alesvia",
+    "note_title": "1. K tématu",
+    "note_text": "Tento esej rozvíjí tezi Alesvia o lidské autonomii. Nejde o zprávu o vlastním výzkumu.",
+    "thesis_link": "Přečíst tezi",
+    "note_back": "Zpět do textu"
+  },
   "policy_funnel": {
     "title": "Konverzní trychtýř Policy Lab",
     "step1_title": "1. Akademická syntéza",
