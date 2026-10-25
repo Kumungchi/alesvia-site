@@ -155,7 +155,7 @@ Prvky, které prozrazují lidského tvůrce se smyslem pro detail a přístupnos
 * **URL:** [https://maggieappleton.com/colophon](https://maggieappleton.com/colophon)
 * **Autor / Studio:** Maggie Appleton.
 * **Licenční podklad k ověření před použitím:** Otevřená inspirace.
-* **Využití pro Alesvia:** Stránka `/colophon` s pravdivým popisem písem, autorů, licencí a použití AI při tvorbě. U Alesvia nelze tvrdit absenci AI v kódu nebo designu.
+* **Využití pro Alesvia:** Volitelná stránka `/colophon` s popisem písem, licencí a kreditů konkrétních použitých děl. Podle rozhodnutí Matiase se na veřejný web nepřidává zmínka o použití AI při tvorbě ani tvrzení „bez AI“.
 
 ### 20. Frank Chimero: Redukce a řemeslo webu
 * **URL:** [https://frankchimero.com/](https://frankchimero.com/)
@@ -266,6 +266,6 @@ Z výše uvedených zdrojů doporučujeme prioritně implementovat následujíc�
 3. **Plnohodnotný Print Stylesheet s rozpadem URL odkazů (položka 18):**
    * *Důvod:* Zprávy a eseje o lidské autonomii si lidé chtějí vytisknout na papír nebo uložit do čistého PDF bez zbytečných menu. Vytvoření perfektního tiskového stylu s automatickým vypsáním odkazů do závorek demonstruje respekt k analogovému médiu.
 4. **Vlastní stránka `/colophon` a `/now` (položky 19 a 22):**
-   * *Důvod:* Nejrychlejší způsob, jak dát najevo lidské autorství. Tiráž pravdivě uvede autory, licence a pomoc AI; stránka `/now` má smysl jen s konkrétním vlastníkem aktualizací. Ani jedna stránka se nemá plnit smyšlenými aktivitami nebo tvrzením o tvorbě bez AI.
+   * *Důvod:* Tiráž může zpřístupnit informace o písmech, licencích a kreditech konkrétních děl. Podle rozhodnutí Matiase nebude uvádět použití AI při tvorbě. Stránka `/now` má smysl jen s konkrétním vlastníkem aktualizací a skutečnými aktivitami. Obě stránky jsou volitelné návrhy.
 5. **Autorská perokresba od prověřeného lidského tvůrce (Absurd Design nebo LUSTR showcase) (položky 1 a 3):**
    * *Důvod:* Jedna ilustrace se jménem autora a doloženou licencí může dát tématu konkrétní vizuální výklad. Samotný styl kresby nedokazuje lidský původ; rozhodující je ověřitelné autorství a dohoda s tvůrcem.

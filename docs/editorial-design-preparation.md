@@ -34,7 +34,7 @@ Trade-off: zakázka přidá vlastní interpretaci tématu a jasné autorství; s
 
 - Zákaz všech odrážek, čísel nebo patkových písem není pravidlem dobrého designu. Problém je mechanické opakování bez účelu; seznam je správně tam, kde pomáhá čtenáři.
 - Tvar kresby není spolehlivý detektor AI. Lidský původ se dokládá autorem a procesem.
-- `/colophon` může uvést skutečné autory, licence a použití AI. Nesmí tvrdit, že Alesvia vznikla bez pomoci AI.
+- Případný `/colophon` se omezí na písma, licence a kredity konkrétních použitých děl. Matias nechce na veřejném webu uvádět použití AI při tvorbě. Tiráž není nutnou součástí webu; tvrzení o tvorbě „bez AI“ se také nepřidává.
 - `/now` má smysl až s člověkem odpovědným za aktualizace. Bez něj rychle vznikne další zastaralá stránka.
 - Iniciály a optické vysunutí interpunkce jsou doplňky s fallbackem, nikoli podmínka čitelnosti nebo důkaz modernosti.
 

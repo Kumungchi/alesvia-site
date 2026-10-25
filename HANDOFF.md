@@ -176,6 +176,7 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - O-1: správce ani funkční kontaktní e-mail pro ochranu údajů zatím nejsou určeni. `privacy@alesvia.org` není založený. A-04 zůstává rozpracovaným návrhem; nelze ho vydávat za dokončené právní minimum.
 - O-2: poskytovatel e-mailu / SMTP zatím není určený; přijetí DPA není potvrzené („snad“). Neprezentovat DPA ani mechanismus předávání jako ověřené.
 - O-4: schválen statický náhled s odkazem místo živého iframe. Výhoda: rychlost a žádné načítání třetí strany před kliknutím; nevýhoda: nutnost aktualizace náhledu.
+- Veřejné kredity (upřesnění 25. 10. 2026): Matias nechce na webu uvádět, že byl vytvořen s pomocí AI. Nepřidávat takové sdělení do tiráže, patičky ani jiného veřejného obsahu. Případná tiráž se může omezit na písma, licence a kredity použitých děl; tvrzení „vytvořeno bez AI“ se nepřidává. Interní záznamy o práci agentů zůstávají pracovní dokumentací.
 - [x] Předání uložené v repozitáři; AGENTS.md odkazuje na HANDOFF.md a CLAUDE.md již importuje AGENTS.md.
 
 - A-01: opraveny registrace a metadata v CS/EN, tým a rada odpovídají přípravné fázi. Ostrava je uvedena jako plánované sídlo. Ověřeno vyhledáním všech variant tvrzení o probíhající registraci; právní identita správce zůstává součástí A-04.
