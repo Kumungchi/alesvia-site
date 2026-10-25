@@ -1,6 +1,6 @@
-# Texty nové homepage (návrh A) — ke schválení
+# Texty nové homepage — schválený český návrh
 
-Stav: **čeká na schválení Matiasem** (25. 10. 2026). Odpověz po číslech: ✅ ano · ✏️ upravit (napiš jak) · ❌ vypustit. Po schválení češtiny připravím angličtinu stejným postupem.
+Stav: **Matias schválil všech 27 bodů** (25. 10. 2026, „vše ano“), včetně kratší formulace Policy Labu u bodu 16. Současně požádal o alternativy úvodu: odstavec nemá být vedle motta a kompozice potřebuje výraznější charakter. Schválení textů není schválením kompozice ani nasazením. Anglická adaptace a zapracování do webu následují po výběru návrhu.
 
 Pravidla, podle kterých jsou texty psané: HANDOFF sekce 2 (co smíme tvrdit) a 3 (tón, žádná morální panika), audit znaků AI textu (`docs/ai-design-tells-audit.md`).
 
@@ -24,7 +24,7 @@ Pravidla, podle kterých jsou texty psané: HANDOFF sekce 2 (co smíme tvrdit) a
 | 9 | Téma „Praxe“ | **Porozumět, rozhodnout, použít.** Vzdělávání a odpovědné používání technologií propojuje porozumění s každodenní praxí. Konkrétní programy označujeme podle skutečného stavu příprav. |
 | 10 | Téma „Pravidla“ | **Společný svět, společná odpovědnost.** Digitalizace není jen individuální volba. Zahrnuje i společenské dopady, pravidla a možnost podílet se na jejich utváření. |
 
-Poznámka k 6–10: témata jsou širší než dosavadní zaměření (psychologie konverzační AI). Rozhodni, jestli Alesvia chce mluvit takto obecně.
+Body 6–10 schváleny: širší poslání zahrnuje digitalizaci, tempo života a osobní i kolektivní identitu; nejde o tvrzení o spuštěných programech.
 
 ## Projekty
 

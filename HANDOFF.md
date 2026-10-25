@@ -238,4 +238,7 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 
 - [x] Typografický systém zaveden do webu (PR #13, větev `design/type-system`): Figtree pro nadpisy/UI, Literata pro text, tokeny na `<body>`. Ověřeno na homepage a v článku. Prototyp a dokumentace v PR #12.
 
-- [ ] Texty nové homepage ke schválení: `docs/homepage-copy-proposal.md` (27 bodů). Motto barevně rozděleno (tmavá + modrá) už v PR #13.
+- [x] Texty nové homepage schváleny Matiasem („vše ano“, 25. 10. 2026): `docs/homepage-copy-proposal.md` (27 bodů). Motto barevně rozděleno (tmavá + modrá) už v PR #13.
+
+- [x] Tři alternativy úvodu bez odstavce vedle motta: `docs/design-proposals/hero-alternatives.html`. Figtree + Literata a původní logo/motto zachovány. A Otevřený prostor, B Vlastní směr, C Živý horizont. Samostatné návrhy, žádná změna aplikační homepage.
+- [ ] Matias vybere novou kompozici úvodu; schválené české texty budou potom adaptovány do EN a zapracovány.
