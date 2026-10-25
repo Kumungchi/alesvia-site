@@ -3,10 +3,11 @@
 @theme {
   --color-alesvia-bg: #F9F9F8;
   --color-alesvia-text: #221E22;
-  --color-alesvia-muted: #857E8B;
+  --color-alesvia-muted: #6B6472;
   --color-alesvia-trust: #0F2C59;
   --color-alesvia-primary: #31263E;
   --color-alesvia-accent: #ECA72C;
+  --color-alesvia-accent-ink: #9A6200;
   --color-alesvia-surface: #F4F4F2;
   --color-alesvia-white: #FFFFFF;
 }
@@ -77,7 +78,12 @@ details[open] summary .faq-icon {
 }
 
 .faq-icon {
-  transition: transform 0.3s var(--ease-spring);
+  transition: transform 0.2s ease-out;
+}
+
+/* ── Section labels: dark orange on light, brand orange on dark blocks ── */
+.on-dark .section-label {
+  color: var(--color-alesvia-accent);
 }
 
 /* ── Reduced motion ── */

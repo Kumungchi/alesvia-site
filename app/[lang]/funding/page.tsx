@@ -76,7 +76,7 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
         </section>
 
         <section>
-          <div className="bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
+          <div className="on-dark bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <div className="relative z-10">
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>

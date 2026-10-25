@@ -29,7 +29,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
         <div className="border-t border-alesvia-text/15 pt-6">
           <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.general_label}</h3>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.general_text}</p>
-          <a href="mailto:info@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
+          <a href="mailto:info@alesvia.org" className="text-alesvia-accent-ink font-medium text-sm hover:text-alesvia-primary transition-colors">
             info@alesvia.org
           </a>
         </div>
@@ -37,7 +37,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
         <div className="border-t border-alesvia-text/15 pt-6">
           <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.institutional_label}</h3>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.institutional_text}</p>
-          <a href="mailto:partners@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
+          <a href="mailto:partners@alesvia.org" className="text-alesvia-accent-ink font-medium text-sm hover:text-alesvia-primary transition-colors">
             partners@alesvia.org
           </a>
         </div>
@@ -45,7 +45,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
         <div className="border-t border-alesvia-text/15 pt-6">
           <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.media_label}</h3>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.media_text}</p>
-          <a href="mailto:press@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
+          <a href="mailto:press@alesvia.org" className="text-alesvia-accent-ink font-medium text-sm hover:text-alesvia-primary transition-colors">
             press@alesvia.org
           </a>
         </div>

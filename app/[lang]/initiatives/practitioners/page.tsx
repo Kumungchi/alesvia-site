@@ -39,13 +39,13 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
             <SectionLabel>{d.problem_label}</SectionLabel>
             <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.problem_text}</p>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed">
-              <a href={d.problem_source_url} className="underline underline-offset-4 hover:text-alesvia-accent">{d.problem_source_label}</a>
+              <a href={d.problem_source_url} className="underline underline-offset-4 hover:text-alesvia-accent-ink">{d.problem_source_label}</a>
             </p>
             {d.evidence_items.map((item) => (
               <div key={item.source_url} className="mt-8 max-w-3xl">
                 <p className="text-lg text-alesvia-text leading-relaxed">{item.text}</p>
                 <p className="mt-3 text-sm leading-relaxed">
-                  <a href={item.source_url} className="underline underline-offset-4 hover:text-alesvia-accent">{item.source_label}</a>
+                  <a href={item.source_url} className="underline underline-offset-4 hover:text-alesvia-accent-ink">{item.source_label}</a>
                 </p>
               </div>
             ))}
@@ -76,7 +76,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
           </section>
 
           <section className="border-t border-alesvia-muted/10 pt-16">
-            <div className="bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
+            <div className="on-dark bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
               <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-md inline-block hover:bg-alesvia-primary hover:text-alesvia-bg transition-colors">

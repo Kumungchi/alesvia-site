@@ -10,11 +10,11 @@ export default function CrisisSupport({ dict }: { dict: CrisisSupportDictionary 
       <ul className="mt-6 space-y-5">
         {dict.lines.map((line) => (
           <li key={line.phone_href}>
-            <a href={line.phone_href} className="inline-block py-2 font-semibold underline underline-offset-4 hover:text-alesvia-accent">
-              {line.name} — {line.phone}
+            <a href={line.phone_href} className="inline-block py-2 font-semibold underline underline-offset-4 hover:text-alesvia-accent-ink">
+              {line.name} – {line.phone}
             </a>
             <p className="text-sm leading-relaxed">{line.description}</p>
-            <a href={line.source_url} className="mt-1 inline-block py-2 text-sm underline underline-offset-4 hover:text-alesvia-accent">{line.source_label}</a>
+            <a href={line.source_url} className="mt-1 inline-block py-2 text-sm underline underline-offset-4 hover:text-alesvia-accent-ink">{line.source_label}</a>
           </li>
         ))}
       </ul>

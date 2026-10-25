@@ -29,7 +29,7 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <PageHeader label={d.label} title={d.title}>
         <div className="flex items-center gap-4 mt-4">
-          <span className="text-xs font-semibold bg-alesvia-accent/10 text-alesvia-accent px-3 py-1.5 rounded">{d.status}</span>
+          <span className="text-xs font-semibold bg-alesvia-accent/10 text-alesvia-accent-ink px-3 py-1.5 rounded">{d.status}</span>
           <p className="text-lg text-alesvia-muted font-light">{d.subtitle}</p>
         </div>
         <p className="text-xl text-alesvia-muted font-light leading-relaxed max-w-2xl mt-6">{d.intro}</p>
@@ -79,11 +79,11 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
             </a>
             <figcaption className="mt-3 text-sm text-alesvia-muted">{d.preview_caption}</figcaption>
           </figure>
-          <a href="https://www.unplugged.cz" className="mt-6 inline-block underline underline-offset-4 hover:text-alesvia-accent">{d.preview_link}</a>
+          <a href="https://www.unplugged.cz" className="mt-6 inline-block underline underline-offset-4 hover:text-alesvia-accent-ink">{d.preview_link}</a>
         </section>
 
         <section className="border-t border-alesvia-muted/10 pt-16">
-          <div className="bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
+          <div className="on-dark bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <SectionLabel>{d.cta_label}</SectionLabel>
             <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
             <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded hover:bg-alesvia-accent/90 transition-colors shadow-md inline-block">

@@ -9,7 +9,6 @@ type Pillar = {
   status: string;
   active: boolean;
   description: string;
-  points?: string[];
   href: string;
   linkLabel: string;
   external?: boolean;
@@ -29,7 +28,6 @@ export default function PillarList({ lang, dict, unpluggedExternal = false }: { 
       status: eco.status_active,
       active: true,
       description: eco.unplugged_desc,
-      points: eco.unplugged_points,
       href: unpluggedExternal ? 'https://www.unplugged.cz' : getPublicPath(lang, 'initiativeUnplugged'),
       linkLabel: unpluggedExternal ? eco.unplugged_link : moreLabel,
       external: unpluggedExternal,
@@ -61,13 +59,10 @@ export default function PillarList({ lang, dict, unpluggedExternal = false }: { 
   ];
 
   return (
-    <ol className="border-b border-alesvia-text/15">
-      {pillars.map((pillar, i) => (
+    <ul className="border-b border-alesvia-text/15">
+      {pillars.map((pillar) => (
         <li key={pillar.title} className="grid gap-4 md:grid-cols-12 md:gap-8 py-10 border-t border-alesvia-text/15">
-          <span aria-hidden="true" className="md:col-span-1 font-serif text-lg text-alesvia-muted tabular-nums">
-            {String(i + 1).padStart(2, '0')}
-          </span>
-          <div className="md:col-span-3">
+          <div className="md:col-span-4">
             <h4 className={`font-serif font-bold text-alesvia-text ${pillar.active ? 'text-3xl' : 'text-2xl'}`}>
               {pillar.title}
             </h4>
@@ -80,13 +75,6 @@ export default function PillarList({ lang, dict, unpluggedExternal = false }: { 
             <p className={`leading-relaxed ${pillar.active ? 'text-lg text-alesvia-text' : 'text-alesvia-muted'}`}>
               {pillar.description}
             </p>
-            {pillar.points && (
-              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-alesvia-muted">
-                {pillar.points.map((point) => (
-                  <li key={point}>— {point}</li>
-                ))}
-              </ul>
-            )}
           </div>
           <div className="md:col-span-2 md:text-right">
             {pillar.external ? (
@@ -101,6 +89,6 @@ export default function PillarList({ lang, dict, unpluggedExternal = false }: { 
           </div>
         </li>
       ))}
-    </ol>
+    </ul>
   );
 }

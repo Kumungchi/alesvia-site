@@ -26,9 +26,9 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <PageHeader label={content.label} title={content.title} description={content.intro}>
-        <div className="mt-10 border-l-4 border-alesvia-accent pl-6 md:pl-8 py-2 max-w-3xl">
+        <div className="mt-12 max-w-3xl">
           <SectionLabel>{content.principleLabel}</SectionLabel>
-          <p className="text-xl md:text-2xl font-light leading-relaxed text-alesvia-text">
+          <p className="font-serif text-2xl md:text-3xl leading-snug text-alesvia-primary">
             {content.principleText}
           </p>
         </div>
@@ -61,7 +61,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
         ))}
 
         <section className="pt-8">
-          <div className="bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
+          <div className="on-dark bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <div className="relative z-10 max-w-3xl">
               <SectionLabel>{content.closingLabel}</SectionLabel>
               <p className="text-alesvia-bg/85 text-lg md:text-xl leading-relaxed mb-8">

@@ -84,7 +84,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
 
   const inputGroupClass = "relative group";
   const inputClass = "peer w-full bg-alesvia-white border border-alesvia-text/20 rounded-md px-4 pt-6 pb-2 text-alesvia-text placeholder-transparent focus:outline-none focus:border-alesvia-accent/60 focus:bg-alesvia-bg/80 focus:ring-4 focus:ring-alesvia-accent/10 transition-all duration-300";
-  const labelClass = "absolute left-4 top-2 text-xs font-semibold text-alesvia-muted/80 transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-xs peer-focus:font-semibold peer-focus:text-alesvia-accent pointer-events-none";
+  const labelClass = "absolute left-4 top-2 text-xs font-semibold text-alesvia-muted transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-xs peer-focus:font-semibold peer-focus:text-alesvia-accent-ink pointer-events-none";
 
   const fallbackMessage =
     lang === 'cs'
@@ -118,7 +118,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
                 placeholder={dict.form_name}
               />
               <label htmlFor="contact-name" className={labelClass}>
-                {dict.form_name} <span className="text-alesvia-accent">*</span>
+                {dict.form_name} <span className="text-alesvia-accent-ink">*</span>
               </label>
             </div>
             <div className={inputGroupClass}>
@@ -131,7 +131,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
                 placeholder={dict.form_email}
               />
               <label htmlFor="contact-email" className={labelClass}>
-                {dict.form_email} <span className="text-alesvia-accent">*</span>
+                {dict.form_email} <span className="text-alesvia-accent-ink">*</span>
               </label>
             </div>
           </div>
@@ -149,8 +149,8 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
                 <option key={s.value} value={s.value}>{s.label}</option>
               ))}
             </select>
-            <label htmlFor="contact-subject" className={`absolute left-4 top-2 text-xs font-semibold text-alesvia-muted/80 transition-all duration-300 pointer-events-none`}>
-              {dict.form_subject} <span className="text-alesvia-accent">*</span>
+            <label htmlFor="contact-subject" className={`absolute left-4 top-2 text-xs font-semibold text-alesvia-muted transition-all duration-300 pointer-events-none`}>
+              {dict.form_subject} <span className="text-alesvia-accent-ink">*</span>
             </label>
             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-alesvia-muted">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -167,7 +167,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
               placeholder={dict.form_message}
             />
             <label htmlFor="contact-message" className={labelClass}>
-              {dict.form_message} <span className="text-alesvia-accent">*</span>
+              {dict.form_message} <span className="text-alesvia-accent-ink">*</span>
             </label>
           </div>
 
@@ -178,9 +178,9 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
           )}
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-2">
-            <p className="text-xs text-alesvia-muted/80 leading-relaxed max-w-[280px]">
+            <p className="text-xs text-alesvia-muted leading-relaxed max-w-[280px]">
               {dict.form_privacy}{' '}
-              <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent hover:text-alesvia-primary transition-colors font-medium underline underline-offset-4">
+              <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent-ink hover:text-alesvia-primary transition-colors font-medium underline underline-offset-4">
                 {lang === 'cs' ? 'zásadami ochrany osobních údajů' : 'privacy policy'}
               </Link>.
             </p>

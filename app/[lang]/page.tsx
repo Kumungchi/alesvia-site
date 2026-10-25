@@ -51,7 +51,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
 
         {/* ── Financing ── */}
         <section id="funding" className="py-20">
-          <div className="bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16 md:py-16">
+          <div className="on-dark bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16 md:py-16">
             <div className="max-w-3xl">
               <SectionLabel>{dict.financing.label}</SectionLabel>
               <h3 className="font-serif text-3xl md:text-5xl font-bold mb-6">
@@ -80,7 +80,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <details key={item.question} className="border-t border-alesvia-text/15">
                 <summary className="cursor-pointer py-6 font-serif text-lg font-bold text-alesvia-text flex justify-between items-center gap-4 hover:text-alesvia-primary">
                   {item.question}
-                  <span aria-hidden="true" className="faq-icon text-alesvia-accent text-2xl shrink-0 font-sans font-light">+</span>
+                  <span aria-hidden="true" className="faq-icon text-alesvia-accent-ink text-2xl shrink-0 font-sans font-light">+</span>
                 </summary>
                 <div className="pb-6 text-alesvia-muted leading-relaxed">
                   {item.answer}

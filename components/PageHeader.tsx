@@ -8,7 +8,7 @@ interface PageHeaderProps {
 export default function PageHeader({ label, title, description, children }: PageHeaderProps) {
   return (
     <section className="py-20 md:py-28 max-w-4xl">
-      <h2 className="font-sans text-xs font-bold uppercase tracking-widest text-alesvia-accent mb-4">
+      <h2 className="font-sans text-xs font-bold uppercase tracking-widest text-alesvia-accent-ink mb-4">
         {label}
       </h2>
       <h1 className="font-serif text-4xl md:text-6xl font-bold tracking-tight text-alesvia-primary leading-[1.1] mb-6">

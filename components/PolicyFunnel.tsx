@@ -38,21 +38,21 @@ export default function PolicyFunnel({ dict }: { dict: FunnelDict }) {
                 {/* Desktop Spacer (for alternating layout) */}
                 <div className="hidden md:block flex-1">
                   <div className={`w-full ${isEven ? 'text-right pr-12' : 'text-left pl-12'}`}>
-                     <h4 className="text-xl font-bold text-alesvia-text mb-2 group-hover:text-alesvia-accent transition-colors">{step.title}</h4>
+                     <h4 className="text-xl font-bold text-alesvia-text mb-2 group-hover:text-alesvia-accent-ink transition-colors">{step.title}</h4>
                      <p className="text-sm text-alesvia-muted leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
 
                 {/* Icon / Node */}
                 <div className="w-16 h-16 shrink-0 rounded-full bg-alesvia-surface border-2 border-alesvia-accent/30 flex items-center justify-center group-hover:border-alesvia-accent group-hover:shadow-alesvia-accent/20 transition-all duration-300 relative mx-0 md:mx-auto z-10">
-                  <svg className="w-6 h-6 text-alesvia-accent relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-alesvia-accent-ink relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={step.icon}></path>
                   </svg>
                 </div>
                 
                 {/* Mobile / Alternating Content */}
                 <div className="flex-1 md:hidden ml-16 md:ml-0 -mt-16 md:mt-0 pt-4 md:pt-0">
-                  <h4 className="text-lg font-bold text-alesvia-text mb-2 group-hover:text-alesvia-accent transition-colors">{step.title}</h4>
+                  <h4 className="text-lg font-bold text-alesvia-text mb-2 group-hover:text-alesvia-accent-ink transition-colors">{step.title}</h4>
                   <p className="text-sm text-alesvia-muted leading-relaxed">{step.desc}</p>
                 </div>
                 <div className="hidden md:block flex-1"></div>

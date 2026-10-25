@@ -57,7 +57,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ lang:
               <div className="flex items-center justify-between">
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
-                    <span key={tag} className="text-xs text-alesvia-muted/60 border border-alesvia-muted/10 px-2 py-0.5 rounded">
+                    <span key={tag} className="text-xs text-alesvia-muted border border-alesvia-muted/10 px-2 py-0.5 rounded">
                       {tag}
                     </span>
                   ))}

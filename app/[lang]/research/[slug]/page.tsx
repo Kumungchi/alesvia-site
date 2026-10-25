@@ -109,7 +109,7 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
       <div className="pt-16 mb-12">
         <Link
           href={getPublicPath(lang, 'research')}
-          className="text-sm text-alesvia-muted hover:text-alesvia-accent transition-colors mb-8 inline-flex items-center gap-2"
+          className="text-sm text-alesvia-muted hover:text-alesvia-accent-ink transition-colors mb-8 inline-flex items-center gap-2"
         >
           &larr; {d.back}
         </Link>

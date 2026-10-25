@@ -42,7 +42,7 @@ export default function NotFound() {
         <p className="text-lg text-alesvia-muted mb-2">
           {t.text}
         </p>
-        <p className="text-sm text-alesvia-muted/60 mb-10">
+        <p className="text-sm text-alesvia-muted mb-10">
           {t.subtext}
         </p>
 
