@@ -237,3 +237,5 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - Certifikace „na základě AI Actu“ (Matias): rozpracováno ve třech cestách v `docs/revenue-engines.md` 4.3 — dlouhodobě oznámený subjekt (čl. 31: nezávislost, zákaz poradenství → samostatná entita), hned kodex chování dle čl. 95 s ověřováním dodržování, a posouzení připravenosti. Nepoužívat „certifikováno dle AI Actu“ do získání statusu oznámeného subjektu. Písma: finální srovnání A (Nunito 800 + Source Sans 3) vs. B (Figtree 700 + Literata) v `docs/design-proposals/type-comparison-final.html`; ⚠️ čeká na volbu.
 
 - [x] Typografický systém zaveden do webu (PR #13, větev `design/type-system`): Figtree pro nadpisy/UI, Literata pro text, tokeny na `<body>`. Ověřeno na homepage a v článku. Prototyp a dokumentace v PR #12.
+
+- [ ] Texty nové homepage ke schválení: `docs/homepage-copy-proposal.md` (27 bodů). Motto barevně rozděleno (tmavá + modrá) už v PR #13.
