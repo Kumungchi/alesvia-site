@@ -171,6 +171,14 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 
 ## 11. Rozhodnutí a stav implementace
 
+### Aktualizované zadání designu — 25. 10. 2026
+
+- Matias odmítl editoriální homepage z PR #10 jako příliš suchou a bez vlastní identity. Předchozí „ship“ neznamená schválení; následná nezávislá revize vrátila `rebuild`.
+- Preferuje původní barevný web, modrý rám/plochy a efekty. Newsreader zůstává preferencí. Cíl: moderní, profesionální a přívětivé UI/UX s plynulým pohybem, nikoli plošné odstranění efektů.
+- Poslání Alesvie je širší než psychologie a AI: digitalizace, optimalizace, rychlost života a osobní i kolektivní identita. Jde o záběr poslání, ne tvrzení o nových fungujících programech. Základ zachycuje PRODUCT.md.
+- Homepage má oslovit všechny tři skupiny, především partnery a instituce; dále veřejnost a dárce.
+- [x] Připraveny tři návrhy filozofie v docs/design-philosophy.md a samostatná interaktivní deska docs/design-proposals/board.html (A Otevřený institut, B Živá platforma, C Současná veřejná instituce). Výběr směru není proveden. Matias výslovně chce nejdříve návrhy a vysvětlení, až potom aplikaci. Žádné změny aplikačních rout, komponent ani dictionaries v tomto úkolu.
+
 ### Upřesnění od Matiase — 25. 10. 2026
 
 - O-1: správce ani funkční kontaktní e-mail pro ochranu údajů zatím nejsou určeni. `privacy@alesvia.org` není založený. A-04 zůstává rozpracovaným návrhem; nelze ho vydávat za dokončené právní minimum.
