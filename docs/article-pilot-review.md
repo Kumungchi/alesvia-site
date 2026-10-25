@@ -8,6 +8,8 @@ Applied [Impeccable](https://github.com/pbakaus/impeccable), version 4.7.1, inst
 
 An independent read-only typographic assessment found the original article used an approximately 800px column, 16px Inter body text at 26px leading, and a 48px Playfair title. The `.prose-alesvia` class had no associated measure rule. The pilot uses an article-only Newsreader option, retains Playfair + Inter as a working comparison, and leaves the original article route intact.
 
+At Matias's request, the pilot was also compared with public Mobbin article galleries: mobile The Atlantic Magazine, web The New Yorker, and WSJ. Specific observations, rejected examples, and access limits are recorded in `docs/mobbin-article-references.md`. This is a follow-up design reference check; it does not retroactively attribute the original pilot to Mobbin or claim a new UI change.
+
 ## What is implemented
 
 - `/cs/design-preview/article` and `/en/design-preview/article` reuse every body block of the existing `why-human-autonomy-must-be-the-baseline-for-ai` article. Text is identical between typeface options. The small editorial note links to the existing thesis and identifies the text as an essay, not original research.
