@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Newsreader } from 'next/font/google';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
@@ -9,8 +8,6 @@ import { getResearchAbsoluteUrl, getSiteOrigin } from '../../../../lib/site';
 import { buildResearchPostMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
 import styles from '../../../../components/research/article.module.css';
-
-const newsreader = Newsreader({ subsets: ['latin', 'latin-ext'], weight: ['400', '500', '600'], display: 'swap', variable: '--font-newsreader' });
 
 export async function generateStaticParams() {
   return getPostSlugs().flatMap((slug) => [
@@ -88,7 +85,7 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
   const d = dict.research;
 
   return (
-    <article className={`${newsreader.variable} ${styles.article}`} data-research-article>
+    <article className={styles.article} data-research-article>
       <JsonLd data={{
         '@context': 'https://schema.org',
         '@type': 'Article',

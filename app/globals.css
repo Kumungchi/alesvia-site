@@ -14,8 +14,11 @@
 
 /* inline: next/font defines --font-* on <body>, so utilities must resolve them there, not on :root */
 @theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-heading: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-literata), ui-serif, Georgia, serif;
+  /* legacy utility names used across components: both resolve to the heading/UI family */
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* ── Easing system ── */
@@ -31,6 +34,13 @@
   }
   body {
     color: var(--color-alesvia-text);
+    /* defined here, not on :root: next/font sets --font-figtree / --font-literata on <body> */
+    --font-heading: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+    --font-body: var(--font-literata), ui-serif, Georgia, serif;
+  }
+  /* Running text is Literata (body); headings and interface are Figtree. */
+  h1, h2, h3, h4, h5, h6, nav, button, input, select, textarea, label, summary, footer {
+    font-family: var(--font-heading);
   }
   ::selection {
     background: color-mix(in srgb, var(--color-alesvia-accent) 30%, transparent);

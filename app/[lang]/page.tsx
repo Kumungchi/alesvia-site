@@ -1,4 +1,3 @@
-import { Newsreader } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getDictionary, Locale } from '../../dictionaries';
@@ -7,8 +6,6 @@ import CrisisSupport from '../../components/CrisisSupport';
 import { getPublicPath, getPublicResearchPath } from '../../lib/routes';
 import { getAllPosts } from '../../content/research/posts';
 import styles from '../../components/home/home.module.css';
-
-const newsreader = Newsreader({ subsets: ['latin', 'latin-ext'], weight: ['400', '500', '600'], display: 'swap', variable: '--font-newsreader' });
 
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
@@ -21,7 +18,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
   ] as const;
 
   return (
-    <div className={`${newsreader.variable} ${styles.home}`} data-editorial-home>
+    <div className={styles.home} data-editorial-home>
       <section className={styles.hero} aria-labelledby="home-title">
         <h1 id="home-title">{dict.hero.title}</h1>
         <div className={styles.heroCopy}>

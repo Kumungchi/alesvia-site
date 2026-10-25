@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Figtree, Literata } from "next/font/google";
 import { getDictionary, hasLocale, Locale } from "../../dictionaries";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -10,8 +10,9 @@ import { ConvexClientProvider } from "../../components/ConvexClientProvider";
 import { Analytics } from '@vercel/analytics/react';
 import "../globals.css";
 
-const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin", "latin-ext"], weight: ["400", "700", "900"], variable: "--font-playfair" });
+// Design system (docs/DESIGN.md): Figtree for headings and UI, Literata for running text.
+const figtree = Figtree({ subsets: ["latin", "latin-ext"], weight: ["400", "600", "700"], display: "swap", variable: "--font-figtree" });
+const literata = Literata({ subsets: ["latin", "latin-ext"], weight: ["400", "600"], style: ["normal", "italic"], display: "swap", variable: "--font-literata" });
 
 const fallbackLocale: Locale = "cs";
 
@@ -82,7 +83,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className={`${inter.variable} ${playfair.variable} font-sans bg-alesvia-bg text-alesvia-text antialiased`}>
+      <body className={`${figtree.variable} ${literata.variable} font-body bg-alesvia-bg text-alesvia-text antialiased`}>
         <ConvexClientProvider>
           <JsonLd data={{
             '@context': 'https://schema.org',
