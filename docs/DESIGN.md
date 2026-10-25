@@ -1,6 +1,6 @@
 # Alesvia — design system
 
-Stav: **návrh k potvrzení** (25. 10. 2026). Jediný zdroj pravdy pro vzhled webu. Co tu není, se nepřidává bez úpravy tohoto souboru. Ověřuje se v `docs/design-proposals/prototype-a.html`.
+Stav: **uzamčeno** — písma schválil Matias 25. 10. 2026 (varianta B). Jediný zdroj pravdy pro vzhled webu. Co tu není, se nepřidává bez úpravy tohoto souboru. Ověřuje se v `docs/design-proposals/prototype-a.html`.
 
 ## 1. Princip
 
@@ -10,13 +10,13 @@ Klidný, lidský, čitelný. Typografie a prostor nesou hierarchii; dekorace ne.
 
 | Role | Použití | Písmo |
 | --- | --- | --- |
-| **Nadpisová** (měkká) | H1–H3, motto, oznámení a stavy („Aktivní“, „V přípravě“), navigace, tlačítka, krátké štítky | ⚠️ čeká na volbu — výchozí Figtree |
-| **Textová** | odstavce, perexy, články, FAQ odpovědi, formulářové popisky | ⚠️ čeká na volbu — výchozí Literata |
+| **Nadpisová** (měkká) | H1–H3, motto, oznámení a stavy („Aktivní“, „V přípravě“), navigace, tlačítka, krátké štítky | **Figtree** (OFL, Erik Kennedy) |
+| **Textová** | odstavce, perexy, články, FAQ odpovědi, formulářové popisky | **Literata** (OFL, TypeTogether) |
 
 Pravidla:
 - Žádné třetí písmo. Žádná kurzíva jako ozdoba jednoho slova.
 - Obě rodiny: licence OFL, sady `latin` + `latin-ext` (čeština), načítání přes `next/font`, `display: swap`.
-- Nadpisy váha 600 (motto 600), text 400, zvýraznění v textu 600. Žádné 800/900.
+- Motto váha 700; nadpisy H2–H3 600–700; štítky a tlačítka 600; text 400, zvýraznění v textu 600. Žádné 800/900.
 - Prostrkání nadpisů −0,02 až −0,03 em; text 0.
 - Čtecí sloupec max. 68 znaků.
 
