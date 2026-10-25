@@ -178,6 +178,7 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - Poslání Alesvie je širší než psychologie a AI: digitalizace, optimalizace, rychlost života a osobní i kolektivní identita. Jde o záběr poslání, ne tvrzení o nových fungujících programech. Základ zachycuje PRODUCT.md.
 - Homepage má oslovit všechny tři skupiny, především partnery a instituce; dále veřejnost a dárce.
 - [x] Připraveny tři návrhy filozofie v docs/design-philosophy.md a samostatná interaktivní deska docs/design-proposals/board.html (A Otevřený institut, B Živá platforma, C Současná veřejná instituce). Výběr směru není proveden. Matias výslovně chce nejdříve návrhy a vysvětlení, až potom aplikaci. Žádné změny aplikačních rout, komponent ani dictionaries v tomto úkolu.
+- Návrhy jsou zálohované v draft PR #11 proti větvi PR #10; tento stack není souhlasem s odmítnutou homepage. Ověřeny všechny tři varianty na 728/390 px, přepínače a skutečná písma. Build (53 rout) a lint prošly (6 původních varování). Nezávislé `ship` platí jen pro předání plánovací desky; bez vybraného směru, bez schválení implementace. Výsledek dokumentace je v docs/design-proposals/README.md.
 
 ### Upřesnění od Matiase — 25. 10. 2026
 

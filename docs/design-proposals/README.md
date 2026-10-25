@@ -16,4 +16,8 @@ Read `../design-philosophy.md` for purpose, layout/type/color/motion rationale, 
 - `html_preview` at 728px rendered with no console errors; dark-theme note contrast corrected afterward.
 - Impeccable detector: small 10/11px declarations raised to 12px in the scaled sketch; shadow made neutral. Inter warning retained intentionally because it is the existing UI family paired with Newsreader. Font novelty is not presented as sufficient identity.
 - Reduced-motion CSS is included; no claim of OS-level emulation, whole-site accessibility or production performance verification.
-- No Next build/lint was needed: only documentation and a standalone HTML planning artifact changed. No production settings or data touched.
+- Full Next build passed (53 static routes); lint passed with zero errors and six existing warnings, following the repository pre-PR workflow. Only documentation and a standalone HTML planning artifact changed. No production settings or data touched.
+
+## Documentation review — 25 October 2026
+
+Disposition: **ship for planning-board selection only**, with no material fixes. Source review of `PRODUCT.md`, `../design-philosophy.md` and `board.template.html` is consistent with this README's contract: three proposals, illustrative copy, current versus planned activities, and explicit selection before implementation. The documented incumbent palette is blue #0F2C59, plum #31263E, gold #ECA72C and warm ground #F9F9F8; existing Newsreader and Inter supply the board's typography. These are source-grounded references, not approval of a new system. No direction is selected and no approved `DESIGN.md` or design system exists; neither `DESIGN.md` nor `.impeccable/design.json` is created. This review adds no live-site implementation or new browser, build or production verification.
