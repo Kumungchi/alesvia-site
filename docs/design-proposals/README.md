@@ -21,3 +21,17 @@ Read `../design-philosophy.md` for purpose, layout/type/color/motion rationale, 
 ## Documentation review — 25 October 2026
 
 Disposition: **ship for planning-board selection only**, with no material fixes. Source review of `PRODUCT.md`, `../design-philosophy.md` and `board.template.html` is consistent with this README's contract: three proposals, illustrative copy, current versus planned activities, and explicit selection before implementation. The documented incumbent palette is blue #0F2C59, plum #31263E, gold #ECA72C and warm ground #F9F9F8; existing Newsreader and Inter supply the board's typography. These are source-grounded references, not approval of a new system. No direction is selected and no approved `DESIGN.md` or design system exists; neither `DESIGN.md` nor `.impeccable/design.json` is created. This review adds no live-site implementation or new browser, build or production verification.
+
+## Prototype A — interactive draft (`prototype-a.html`)
+
+Selected direction A ("Otevřený institut") as a clickable Czech prototype: exact existing logo file, original motto, project overview in navigation, mobile menu, topic and collaboration switches. Regenerate with `node docs/design-proposals/build-prototype-a.mjs` (reads `board.html` fonts and `public/brand/alesvia-lockup-horizontal.svg`). Planning artifact only; no application route changed.
+
+Verified in T3 Chromium on 25 October 2026 (desktop 1280 px, iPhone 12 Pro 390 px):
+
+- Mobile menu: opens as a modal dialog with focus on "Zavřít"; Escape closes it and returns focus to "Menu"; an in-menu link closes the dialog and moves focus to the target section.
+- Desktop "Naše směry": opens with Enter; Escape closes it and returns focus to the summary.
+- "Omezit pohyb" removes animations and transitions (hero animation `none`, button transition `0s`); the OS reduced-motion preference is also honored.
+- No horizontal overflow at 390 px; Newsreader and Inter load from embedded files; no console errors or remote requests besides the local preview image.
+- Fixed during review: hover lift and shadow on buttons and the Unplugged preview (contradicted the A-07b audit), Czech URLs (`/cs/kontakt`, `/cs/vyzkum`, `/cs/financovani`), and the header CTA losing its horizontal padding.
+
+Open: the working tagline "Technologie. Společnost. Vlastní směr." is a rule-of-three pattern listed in the AI-tells audit; other copy apart from the motto is provisional. Inter remains the UI face by choice.
