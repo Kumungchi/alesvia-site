@@ -70,20 +70,27 @@ Pitch deck tvrdí: *„píšeme pravidla, podle kterých se firmy řídí, a pak
 - Policy Lab nedoporučuje vlastní produkty; veřejně zveřejňujeme, kdo za co platil.
 - Žádné peníze od výrobců AI companion produktů; žádné cash granty od AI laboratoří (HANDOFF sekce 3).
 
-### 4.3 Certifikace — rozhodnutí Matiase: dělat (s pojistkami)
+### 4.3 Certifikace na základě AI Actu — rozhodnutí Matiase (25. 10. 2026)
 
-Původní doporučení (níže) bylo certifikaci nedělat. Matias rozhodl, že ji dělat chce. Aby nepodkopala důvěru, platí tyto pojistky:
+Matias chce certifikaci **na základě AI Actu**. Co to právně znamená (ověřeno 25. 10. 2026, zdroje níže):
 
-- **Veřejná kritéria a metodika** — kdokoli si může ověřit, co certifikát znamená a co ne.
-- **Cena nezávisí na výsledku** — platí se za posouzení, ne za udělení; neúspěch se platí stejně.
-- **Jasný rozsah**: certifikát posuzuje dopad na lidskou autonomii a transparentnost dle metodiky Alesvie. **Není posouzením shody dle AI Actu** — musí to být uvedeno přímo u značky.
-- **Platnost omezená** (např. 12 měsíců nebo do podstatné změny modelu) a **veřejný registr** udělených i odebraných certifikátů.
-- **Oddělení rolí**: kdo poskytoval poradenství, ten neuděluje certifikát téže firmě.
-- **Ochranná známka** na název certifikátu a pravidla užití loga (vlastní ústav).
-- Před spuštěním právní kontrola (klamavá reklama, odpovědnost za škodu, pojištění).
+**Cesta 1 — oznámený subjekt (skutečná certifikace dle AI Actu, dlouhodobě).**
+- Certifikáty dle AI Actu vydávají jen **oznámené subjekty** (notified bodies, čl. 28–39). V ČR je oznamujícím orgánem podle dostupných materiálů **ÚNMZ** (k ověření v aktuálním znění); dozor nad trhem **ČTÚ** (oddělení pro AI od 1. 9. 2026; český zákon o AI zatím není schválen).
+- Čl. 31: subjekt musí být **nezávislý** na posuzovaných poskytovatelích, **nesmí jim poskytovat poradenství** a jeho lidé nesmí AI systémy vyvíjet ani prodávat. Nutná akreditace, pojištění, systém kvality.
+- Důsledek: certifikační jednotka **nemůže být ve stejné organizaci jako poradenství a SaaS pro stejné klienty**. Potřebovala by samostatnou právnickou osobu a přísné oddělení. Je to roky práce, ne první produkt.
+- Trh je úzký: certifikát od oznámeného subjektu potřebují hlavně vybrané vysoce rizikové systémy (např. biometrie a produkty dle Přílohy I); většina vysoce rizikových systémů dle Přílohy III se posuzuje **interní kontrolou** poskytovatele. **Chatboty nejsou vysoce rizikové** — pro ně certifikát dle AI Actu neexistuje.
 
-Původní úvaha:
-„Alesvia Certified“ (pitch deck, strategie) **nedoporučuji.** Posouzení shody dle AI Actu dělají výrobci nebo notifikované osoby; soukromá pečeť placená posuzovanou firmou může klamat uživatele a je to střet zájmů. Místo toho: **veřejná zpráva o posouzení s datem a rozsahem**.
+**Cesta 2 — kodex chování dle čl. 95 AI Actu (doporučeno jako start).**
+- Čl. 95 výslovně podporuje **dobrovolné kodexy**, které rozšiřují požadavky AI Actu na systémy, jež nejsou vysoce rizikové — tedy přesně **chatboty a AI asistenty**. Témata: důvěryhodná AI, AI gramotnost, ochrana zranitelných skupin, inkluzivní design; kodex má mít cíle a měřitelné ukazatele.
+- Kodex sepisují poskytovatelé / provozovatelé nebo jejich sdružení **za účasti občanské společnosti a akademie**. Alesvia může být iniciátorem a odborným garantem (např. se startupy z Impact Hubu a MSIC jako signatáři) a nabízet **nezávislé ověření dodržování kodexu**.
+- Pravdivé označení: „Ověřený soulad s Kodexem … dle čl. 95 AI Actu“.
+
+**Cesta 3 — posouzení připravenosti na AI Act (služba hned).**
+- Pro provozovatele, kterým od 2. 12. 2027 platí povinnosti pro vysoce rizikové systémy, a pro všechny ohledně čl. 4 a čl. 50. Výstup: zpráva a plán opatření, ne certifikát.
+
+**Pravidla označení (aby nešlo o klamavou reklamu):** nepoužívat „certifikováno dle AI Actu“, „CE“ ani „posouzení shody“, dokud Alesvia (nebo její samostatná certifikační entita) není oznámeným subjektem. Pojistky z předchozí verze platí dál: veřejná kritéria, cena nezávislá na výsledku, omezená platnost, veřejný registr, kdo radil, necertifikuje. **Před spuštěním právní kontrola.**
+
+Zdroje: [čl. 31 — AI Act Service Desk](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-31), [čl. 95 — AI Act Service Desk](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-95), [Lupa: ČTÚ rozjíždí dohled nad AI](https://www.lupa.cz/aktuality/ctu-rozjizdi-dohled-nad-umelou-inteligenci-nove-oddeleni-zahajilo-provoz/), [Dostupný advokát: český návrh zákona o AI](https://dostupnyadvokat.cz/blog/cesky-navrh-zakona-o-umele-inteligenci).
 
 ## 5. Co je v existujících dokumentech potřeba opravit
 
