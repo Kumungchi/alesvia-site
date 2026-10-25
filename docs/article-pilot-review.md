@@ -27,6 +27,7 @@ An independent read-only typographic assessment found the original article used 
 - Computed heading contrast: 13.49:1; note text: 5.40:1 against the site background. This does not certify every existing site component.
 - Print rules were inspected by applying their declarations in the same browser at an A4-equivalent content width. Navigation and controls disappeared, type sizes switched, and the thesis URL appeared. This caught two defects: a note return link remained visible due to specificity and a targeted note retained its focus outline. Both were corrected together.
 - An automated comparison confirmed that every original article body block exists in the CS/EN prerendered preview; no source article copy was rewritten. The rendered note and UI labels are localized in dictionaries.
+- Final confirmation after the print correction: both localized routes rebuilt successfully; the changed UI detector again returned `[]`. After loading the new stylesheet, the note return link was hidden and the targeted note had `outline: none` in the print-declaration check.
 
 ## Technical audit summary
 
@@ -43,3 +44,7 @@ Total: **16/20**, a scoped engineering assessment, not a WCAG certification. No 
 ## Review boundary
 
 This is a design pilot. The existing essay's factual and psychological claims have not been newly validated by this task. PR label: **čeká na kontrolu psychologem** for the reused article before final publication or broader rollout. Font selection remains Matias's decision; the site-wide font configuration stays as it was.
+
+## Remote preview blocker
+
+PR #8 is saved on GitHub. Vercel reported a failed deployment for the initial pilot commit: https://vercel.com/matias-projects-39de683d/alesvia-site/J1JqWidUMsegL7bChEBWE7Vr9E4o . The GitHub status only says the deployment failed. Reading its build log requires a Vercel login; neither the available browser profile nor CLI had one. The CLI login flow was cancelled. No cause has been verified, and no Vercel configuration, environment files, or Convex deployment was changed by this task. Matias was asked for the first redacted build error. The local build and functional browser checks above passed.
