@@ -12,7 +12,7 @@ Validation:
 - `npm run lint`: zero errors, six existing warnings in Policy Lab/generated Convex files.
 - Impeccable typography detector: no findings on the changed files.
 - All five published posts in both languages returned HTTP 200. Each non-empty source line, after removing its Markdown markers, was present in the server-rendered body; canonical and JSON-LD existed in all ten responses.
-- T3 Chromium: CS autonomy article and EN interpretability article viewed at desktop 1280px and mobile 360px. Computed Newsreader, 20px desktop / 18px mobile, no horizontal overflow. EN at 200% root text size also had no horizontal overflow.
+- T3 Chromium: CS autonomy article and EN interpretability article viewed at desktop 1280px and mobile 360px. Computed Newsreader, 20px desktop / 18px mobile, no horizontal overflow at default text size. At 200% root text size on 360px, the article stayed inside the viewport, but the existing global navigation's menu button extended about 12px beyond it. This is a remaining site-wide navigation issue, not a complete zoom-accessibility pass.
 - Applied the built print declarations in-browser: title 28pt, prose 11pt, navigation hidden and article header retained. Actual browser PDF pagination and physical print output still require manual review.
 
 Review paths (the CS canonical path is localized by the existing routing):
