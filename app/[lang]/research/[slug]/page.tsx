@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Newsreader } from 'next/font/google';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale, Locale } from '../../../../dictionaries';
@@ -7,6 +8,9 @@ import JsonLd from '../../../../components/JsonLd';
 import { getResearchAbsoluteUrl, getSiteOrigin } from '../../../../lib/site';
 import { buildResearchPostMetadata } from '../../../../lib/metadata';
 import { getPublicPath } from '../../../../lib/routes';
+import styles from '../../../../components/research/article.module.css';
+
+const newsreader = Newsreader({ subsets: ['latin', 'latin-ext'], weight: ['400', '500', '600'], display: 'swap', variable: '--font-newsreader' });
 
 export async function generateStaticParams() {
   return getPostSlugs().flatMap((slug) => [
@@ -37,22 +41,21 @@ function renderMarkdown(text: string) {
 
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={key++} className="font-serif text-2xl font-bold text-alesvia-text mt-10 mb-4">
+        <h2 key={key++}>
           {line.slice(3)}
         </h2>
       );
     } else if (line.startsWith('**') && line.endsWith('**')) {
       elements.push(
-        <p key={key++} className="font-semibold text-alesvia-text mt-6 mb-2">
-          {line.slice(2, -2)}
+        <p key={key++}>
+          <strong>{line.slice(2, -2)}</strong>
         </p>
       );
     } else if (line.startsWith('- ')) {
+      const items: string[] = [line.slice(2)];
+      while (i + 1 < lines.length && lines[i + 1].startsWith('- ')) items.push(lines[++i].slice(2));
       elements.push(
-        <li key={key++} className="flex items-start gap-3 ml-4">
-          <span className="w-1.5 h-1.5 bg-alesvia-accent rounded-full mt-2.5 shrink-0" />
-          <span>{line.slice(2)}</span>
-        </li>
+        <ul key={key++}>{items.map((item, index) => <li key={index}>{item}</li>)}</ul>
       );
     } else if (line.trim() === '') {
       // skip
@@ -61,12 +64,12 @@ function renderMarkdown(text: string) {
       const parts = line.split(/(\*\*.*?\*\*)/g);
       const rendered = parts.map((part, j) => {
         if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={j} className="text-alesvia-text font-semibold">{part.slice(2, -2)}</strong>;
+          return <strong key={j}>{part.slice(2, -2)}</strong>;
         }
         return part;
       });
       elements.push(
-        <p key={key++} className="text-alesvia-muted leading-relaxed mb-4">
+        <p key={key++}>
           {rendered}
         </p>
       );
@@ -85,7 +88,7 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
   const d = dict.research;
 
   return (
-    <div className="max-w-4xl mx-auto px-6 md:px-12 pb-24">
+    <article className={`${newsreader.variable} ${styles.article}`} data-research-article>
       <JsonLd data={{
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -106,16 +109,18 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
           url: getSiteOrigin(),
         },
       }} />
-      <div className="pt-16 mb-12">
+      <header className={styles.header} data-article-header>
         <Link
           href={getPublicPath(lang, 'research')}
-          className="text-sm text-alesvia-muted hover:text-alesvia-accent-ink transition-colors mb-8 inline-flex items-center gap-2"
+          className={styles.back}
         >
           &larr; {d.back}
         </Link>
 
-          <div className="mt-8">
-            <div className="flex flex-wrap items-center gap-3 mb-6">
+          <div>
+            <h1 className={styles.title}>{post.title[lang]}</h1>
+            <p className={styles.deck}>{post.excerpt[lang]}</p>
+            <div className={styles.metadata}>
               <time className="text-sm text-alesvia-muted" dateTime={post.date}>
                 {d.published}: {new Date(post.date).toLocaleDateString(lang === 'cs' ? 'cs-CZ' : 'en-US', {
                   year: 'numeric',
@@ -123,34 +128,25 @@ export default async function ResearchPostPage({ params }: { params: Promise<{ l
                   day: 'numeric',
                 })}
               </time>
-              <span className="text-xs font-semibold uppercase tracking-widest text-alesvia-primary">
+              <span>
                 {post.initiative}
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-alesvia-primary leading-tight mb-6">
-              {post.title[lang]}
-            </h1>
-
-            <p className="text-xl text-alesvia-muted font-light leading-relaxed">
-              {post.excerpt[lang]}
-            </p>
           </div>
-      </div>
+      </header>
 
-        <article className="prose-alesvia">
+        <div className={styles.body}>
           {renderMarkdown(post.body[lang])}
-        </article>
+        </div>
 
-      <div className="mt-12 pt-8 border-t border-alesvia-muted/10">
-        <div className="flex flex-wrap gap-2">
+      <div className={styles.tags}>
           {post.tags.map((tag) => (
             <span key={tag} className="text-xs text-alesvia-muted">
               {tag}
             </span>
           ))}
-        </div>
       </div>
-    </div>
+    </article>
   );
 }
