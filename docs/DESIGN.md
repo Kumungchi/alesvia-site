@@ -68,3 +68,7 @@ Hlavička s rozbalovacím přehledem směrů · mobilní menu jako modální dia
 ## 7. Změny systému
 
 Každá změna tokenu nebo pravidla = úprava tohoto souboru ve stejném commitu a záznam v HANDOFF.md.
+
+## 8. Značka
+
+Logo, symbol a wordmark se nemění (soubory v `public/brand/`). Výklad symbolu, původ jména a návrhy veřejných textů: `docs/brand-story.md`. Symbol: vnější A = instituce, zlatá středová linie = lidská autonomie. Jménu se nepřipisuje vymyšlená etymologie.
