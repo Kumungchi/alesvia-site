@@ -1,6 +1,6 @@
 # Značka Alesvia — výklad, příběh, návrhy textů
 
-Stav: **pracovní návrh k potvrzení Matiasem** (25. 10. 2026). Nic z toho zatím není na webu.
+Stav: **návrh podle výkladu Matiase, čeká na potvrzení formulace** (25. 10. 2026). Nic z toho zatím není na webu.
 
 ## 1. Co je doloženo
 
@@ -22,32 +22,25 @@ Původní věta identity: *vnější tvar je instituce, vnitřní zlatá cesta j
 
 **Wordmark:** „Alesvia“, patkové písmo, bez tečky, bez sloganu uvnitř loga.
 
-## 2. Co doloženo není
+## 2. Původ jména — výklad zakladatele (25. 10. 2026)
 
-**Jméno „Alesvia“ nemá zaznamenaný slovníkový ani etymologický význam.** Podle `docs/brand-decision.md` bylo vybráno ze seznamu kandidátů (záloha Selavika; dále Alenvia, Avenika, Lusevia, Consikia) podle výslovnosti v češtině i angličtině, odlišnosti, institucionálního tónu a dostupnosti domény.
+Matias: jméno vychází ze spojení **„ales“ — vše** a **„via“**, které chápe jako **vidění**: jen s nadhledem, pohledem shora, je možné najít autonomii a vlastní cestu. Stavba symbolu jsou zároveň instituce kolem nás i prostředí, kterým se obklopujeme — lidé, informace, digitální prostor. Naše práce je o tom, aby lidská autonomie zůstala středem i tam, kde rozhodují velké systémy.
 
-Na web proto nepíšeme žádnou vymyšlenou etymologii (např. „z řeckého…“, „cesta k…“). Pokud má jméno osobní příběh, musí ho dodat Matias.
+**Jazyková poznámka (nepsat na web jako etymologii):** latinské *via* znamená **cesta**, ne vidění (to je *visio*, *videre*). „Ales“ není samostatné slovo; význam „vše“ připomíná německé *alles*. Proto jméno na webu popisujeme jako **záměr zakladatele**, ne jako slovníkový původ, a „via“ vykládáme pravdivě jako cestu. Nadhled nese špička symbolu.
+
+Dříve (duben 2026, `docs/brand-decision.md`) bylo jméno vybráno ze shortlistu podle výslovnosti a dostupnosti domény; výklad zakladatele je pozdější a vlastní.
 
 ## 3. Návrhy veřejných textů
 
-### Symbol (CS, k použití na stránce O nás)
+### Jméno a symbol (CS) — doporučená verze
 
-> Symbol Alesvie je písmeno A postavené jako stavba s otevřeným středem. Vnější tvar představuje instituce a systémy, ve kterých dnes žijeme a které stále více spoluvytváří technologie. Zlatá linie uprostřed je člověk a jeho vlastní úsudek. Stojí uvnitř stavby, ale zůstává samostatná. Právě o tom je naše práce: aby lidská autonomie zůstala středem i tam, kde rozhodují velké systémy.
+> Jméno Alesvia spojuje dvě myšlenky: *ales* jako celek, vše kolem nás, a *via*, latinsky cesta. Vlastní cestu najdeme, když se na svět podíváme s nadhledem, jako ze špičky našeho symbolu. Ten má podobu písmene A postaveného jako stavba. Představuje instituce, které nás obklopují, i prostředí, které si sami volíme: lidi, informace a digitální prostor. Zlatá linie uprostřed je člověk a jeho vlastní úsudek. Naše práce je o tom, aby lidská autonomie zůstala středem i tam, kde rozhodují velké systémy.
 
-### Symbol (EN)
+### Name and symbol (EN)
 
-> The Alesvia symbol is the letter A built as a structure with an open centre. The outer form stands for the institutions and systems we live in, increasingly shaped by technology. The gold line in the middle is the person and their own judgement. It stands inside the structure, yet remains its own. That is what our work is about: keeping human autonomy at the centre, even where large systems decide.
-
-### Jméno — varianta A (poctivá, bez příběhu)
-
-> Jméno Alesvia jsme hledali tak, aby přirozeně znělo česky i anglicky a nepatřilo žádné jiné organizaci. Nenese skrytý slovníkový význam. Obsah mu dává práce, kterou pod ním děláme.
-
-### Jméno — varianta B (osobní příběh)
-
-Doplní Matias: proč právě toto jméno, co se mu na něm líbilo, případně co si pod ním představuje. Jednu až tři věty, vlastními slovy.
+> The name Alesvia joins two ideas: *ales*, the whole, everything around us, and *via*, Latin for way. We find our own way when we look at the world with perspective, as if from the peak of our symbol. The symbol is the letter A built as a structure. It stands for the institutions around us and for the surroundings we choose ourselves: people, information and digital space. The gold line in the middle is the person and their own judgement. Our work is about keeping human autonomy at the centre, even where large systems decide.
 
 ## 4. Otevřené otázky pro Matiase
 
-1. Sedí výklad symbolu tomu, jak ho vnímáš ty? Chceš něco přidat (např. že tvar připomíná i dům nebo dveře)?
-2. Má jméno Alesvia pro tebe osobní příběh, nebo použijeme poctivou variantu A?
-3. Kde má výklad žít: stránka O nás, krátká verze v patičce, nebo obojí?
+1. Souhlasíš s výkladem *via* jako „cesta“ (pravdivé) a nadhledu přes špičku symbolu?
+2. Kde má text žít: stránka O nás, krátká verze v patičce, nebo obojí?
