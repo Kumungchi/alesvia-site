@@ -235,3 +235,5 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - Rozhodnutí Matiase 25. 10. 2026 k příjmům: služby → SaaS (ano), první SaaS „Chatbot Autonomy Check“, s.r.o. pro SaaS vlastní ústav, firewall ano, certifikaci chce dělat (pojistky v `docs/revenue-engines.md` 4.3), kanály pro první rozhovory: Impact Hub a MSIC.
 
 - Certifikace „na základě AI Actu“ (Matias): rozpracováno ve třech cestách v `docs/revenue-engines.md` 4.3 — dlouhodobě oznámený subjekt (čl. 31: nezávislost, zákaz poradenství → samostatná entita), hned kodex chování dle čl. 95 s ověřováním dodržování, a posouzení připravenosti. Nepoužívat „certifikováno dle AI Actu“ do získání statusu oznámeného subjektu. Písma: finální srovnání A (Nunito 800 + Source Sans 3) vs. B (Figtree 700 + Literata) v `docs/design-proposals/type-comparison-final.html`; ⚠️ čeká na volbu.
+
+- [x] Typografický systém zaveden do webu (PR #13, větev `design/type-system`): Figtree pro nadpisy/UI, Literata pro text, tokeny na `<body>`. Ověřeno na homepage a v článku. Prototyp a dokumentace v PR #12.
