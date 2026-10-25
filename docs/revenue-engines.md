@@ -1,6 +1,6 @@
 # Příjmové motory: Policy Lab, think tank a SaaS
 
-Stav: **pracovní strategie k diskusi** (25. 10. 2026). Navazuje na `docs/strategy.md` a `docs/seed-pitch-deck.md` (duben 2026), které tímto dokumentem v bodech níže opravuje. Ceny jsou **hypotézy k ověření**, ne nabídka. Nic z toho není na webu.
+Stav: **schváleno Matiasem v bodech níže** (25. 10. 2026): služby → SaaS, první SaaS „Chatbot Autonomy Check“, SaaS vlastní ústav, firewall ano, certifikaci chce Matias dělat. Navazuje na `docs/strategy.md` a `docs/seed-pitch-deck.md` (duben 2026), které tímto dokumentem v bodech níže opravuje. Ceny jsou **hypotézy k ověření**, ne nabídka. Nic z toho není na webu.
 
 ## 0. Shrnutí
 
@@ -70,7 +70,19 @@ Pitch deck tvrdí: *„píšeme pravidla, podle kterých se firmy řídí, a pak
 - Policy Lab nedoporučuje vlastní produkty; veřejně zveřejňujeme, kdo za co platil.
 - Žádné peníze od výrobců AI companion produktů; žádné cash granty od AI laboratoří (HANDOFF sekce 3).
 
-### 4.3 Žádná „certifikace“
+### 4.3 Certifikace — rozhodnutí Matiase: dělat (s pojistkami)
+
+Původní doporučení (níže) bylo certifikaci nedělat. Matias rozhodl, že ji dělat chce. Aby nepodkopala důvěru, platí tyto pojistky:
+
+- **Veřejná kritéria a metodika** — kdokoli si může ověřit, co certifikát znamená a co ne.
+- **Cena nezávisí na výsledku** — platí se za posouzení, ne za udělení; neúspěch se platí stejně.
+- **Jasný rozsah**: certifikát posuzuje dopad na lidskou autonomii a transparentnost dle metodiky Alesvie. **Není posouzením shody dle AI Actu** — musí to být uvedeno přímo u značky.
+- **Platnost omezená** (např. 12 měsíců nebo do podstatné změny modelu) a **veřejný registr** udělených i odebraných certifikátů.
+- **Oddělení rolí**: kdo poskytoval poradenství, ten neuděluje certifikát téže firmě.
+- **Ochranná známka** na název certifikátu a pravidla užití loga (vlastní ústav).
+- Před spuštěním právní kontrola (klamavá reklama, odpovědnost za škodu, pojištění).
+
+Původní úvaha:
 „Alesvia Certified“ (pitch deck, strategie) **nedoporučuji.** Posouzení shody dle AI Actu dělají výrobci nebo notifikované osoby; soukromá pečeť placená posuzovanou firmou může klamat uživatele a je to střet zájmů. Místo toho: **veřejná zpráva o posouzení s datem a rozsahem**.
 
 ## 5. Co je v existujících dokumentech potřeba opravit
@@ -97,9 +109,9 @@ Podle pravdivostní tabulky: Policy Lab a Akademie jako **„v přípravě“** 
 ## 8. Otázky pro Matiase
 
 1. Souhlasíš s pořadím služby → SaaS a s prvním SaaS kandidátem „Chatbot Autonomy Check“?
-2. Kdo bude vlastnit s.r.o. pro SaaS (ústav, nebo ty)? → právník.
+2. ~~Vlastnictví~~ — **s.r.o. pro SaaS vlastní ústav** (Matias). Zisk se vrací do mise; investor může vstoupit do s.r.o., ne do ústavu. Smluvní podoba → právník.
 3. Souhlasíš s firewallem a s tím, že místo „certifikace“ budou veřejné zprávy?
 4. Smím přepsat `seed-pitch-deck.md` tak, aby odpovídal pravdě?
-5. Prvních 10 lidí/organizací na rozhovory — máš kontakty (banky, telco, edtech, úřady)?
+5. ~~Kontakty~~ — kanály: **Impact Hub** a **Moravskoslezské inovační centrum (MSIC)** (Matias). Přes ně oslovit startupy a menší firmy s chatboty / AI asistenty; banky a telco později.
 
 Zdroje k AI Actu: [EUR-Lex, nařízení (EU) 2026/1744](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ%3AL_202601744), [Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/), [Jones Walker](https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html), [Law & Technology — čl. 4](https://lawandtechnology.eu/en/ai-literacy-digital-omnibus-article-4-ai-act/). TA ČR SIGMA DC3: [MU FF](https://www.phil.muni.cz/en/about-us/organisational-structure/219915-project-support-office/news/sigma-sub-objective-3-supporting-the-innovation-potential-of-social-sciences-humanities-and-the-arts).

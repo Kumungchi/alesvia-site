@@ -231,3 +231,5 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - Výklad jména od Matiase (ales = vše, via → v návrhu pravdivě „cesta“, nadhled = špička symbolu) zapracován do `docs/brand-story.md`; čeká na potvrzení formulace.
 
 - [ ] Hlavní zaměření (Matias 25. 10. 2026): příjmové motory Policy Lab / think tank, produktizované služby a SaaS. Strategie v `docs/revenue-engines.md`: služby před SaaS, první SaaS kandidát „Chatbot Autonomy Check“, SaaS a investice jen přes s.r.o. (z.ú. nemůže prodat podíl), firewall think tank ↔ prodej, místo „certifikace“ veřejné zprávy. Ověřeno: Digital Omnibus (EU) 2026/1744 posunul high-risk na 2. 12. 2027; čl. 4 zmírněn, čl. 50 platí od 2. 8. 2026. `docs/seed-pitch-deck.md` obsahuje nepravdivou trakci — nepoužívat. ⚠️ Čeká na odpovědi Matiase (sekce 8).
+
+- Rozhodnutí Matiase 25. 10. 2026 k příjmům: služby → SaaS (ano), první SaaS „Chatbot Autonomy Check“, s.r.o. pro SaaS vlastní ústav, firewall ano, certifikaci chce dělat (pojistky v `docs/revenue-engines.md` 4.3), kanály pro první rozhovory: Impact Hub a MSIC.
