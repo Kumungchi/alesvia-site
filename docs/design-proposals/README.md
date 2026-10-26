@@ -44,7 +44,9 @@ Verze 2 (26. 10. 2026) po zamítnutí verze 1 („kapky, elementy, velké boxy�
 
 Výrazný prvek: **zlatá spojnice na středové ose** (zlatá cesta ze symbolu loga) mezi sekcemi; vysune se, když k ní čtenář doscrolluje. Motto se při načtení vysune řádek po řádku z účaří. Obojí vypnuto při omezení pohybu.
 
-Rozvržení (Matias 26. 10. 2026): **celá stránka stojí na jedné středové ose**, aby se zarovnání nestřídalo mezi středem a levým okrajem. Na střed jsou úvod, štítky a nadpisy sekcí, obsahové sloupce, tmavomodrý pruh i krizové linky. Dlouhé odstavce (témata, články, odpovědi FAQ) zůstávají uvnitř vycentrovaných bloků zarovnané vlevo kvůli čitelnosti. Varianta s úvodem vlevo a symbolem byla odstraněna. Ověřeno na 1440 px a 390 px (iframe přesné šířky), bez vodorovného přetečení.
+Rozvržení (Matias 26. 10. 2026): **celá stránka stojí na jedné středové ose**, aby se zarovnání nestřídalo mezi středem a levým okrajem. Na střed jsou úvod, štítky a nadpisy sekcí, obsahové sloupce, tmavomodrý pruh i krizové linky. Dlouhé odstavce (témata, články, odpovědi FAQ) zůstávají uvnitř vycentrovaných bloků zarovnané vlevo kvůli čitelnosti. Varianta s úvodem vlevo a symbolem byla odstraněna. Tmavá čára pod hlavičkou odstraněna (Matias: „buď málo, nebo až moc omezující“); hlavička a patička jsou na velkých monitorech omezené na 1440 px.
+
+Responzivita: `responsive-audit.mjs <url>` (headless Chrome přes CDP) projde 12 šířek od 320 do 2560 px. Výsledek 26. 10. 2026: bez vodorovného přetečení, všechny dotykové cíle ≥ 44 px, nadpisy přesně na středové ose, mobilní menu se otevírá i zavírá, nejmenší písmo 13 px (12 px jen štítek „Pokračovat“).
 
 Mobbin (veřejná galerie Sites): Titan — řádek faktů pod hlavičkou, vlasové linky a disciplína mřížky. Převzat princip, ne grafika.
 
