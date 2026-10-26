@@ -64,3 +64,17 @@ Poznámka k 16: poslední věta je spíš interní pojistka; navrhuji ji nahradi
 | --- | --- | --- |
 | 26 | „Alesvia vytváří výzkum, veřejné politiky, vzdělávání a praktické rámce…“ (hero.description ve slovníku) | přítomný čas tvrdí činnosti, které zatím neprobíhají (pravdivostní tabulka) |
 | 27 | „Čtyři pilíře, jedno poslání: lidská autonomie v éře AI.“ | nahrazuje #11 |
+
+## Dodatek 26. 10. 2026 — nové texty ke schválení
+
+Po kritice designu (Matias souhlasí se změnou textu pod mottem; Alesvia není jen o konverzační AI):
+
+| # | Místo | Návrh | Stav |
+| --- | --- | --- | --- |
+| 28 | Text pod mottem (nahrazuje #2) | „Alesvia vzniká pro otázky, které technologie a umělá inteligence otevírají v lidském myšlení, vztazích a rozhodování. Chceme, aby si lidé i instituce zachovali vlastní úsudek.“ | ⚠️ čeká |
+| 29 | Sekce Výzkum a analýzy | nadpis „Texty a analýzy.“, 3 nejnovější publikované články + „Všechny texty →“ | ⚠️ čeká |
+| 30 | FAQ „Co je Alesvia?“ | „Alesvia je vznikající český institut na pomezí psychologie a technologií. Zabývá se tím, jak technologie a umělá inteligence mění lidské myšlení, vztahy a rozhodování. Aktivním projektem je Unplugged.“ | ⚠️ čeká |
+| 31 | FAQ „Jak můžu s Alesvií spolupracovat?“ | odvozeno ze schválených bodů 19–21 | ⚠️ čeká |
+| 32 | FAQ lidský standard, sídlo, financování | zkrácené verze dosavadních odpovědí z webu | ⚠️ čeká |
+
+Vypuštěno: pruh faktů nad mottem (fakta jsou v FAQ „V jaké fázi Alesvia je?“ a „Kde Alesvia sídlí?“), FAQ „Co je Unplugged?“ (pokrývá sekce projektů). Lidé zatím nejsou — sekce Tým se nepřidává.
