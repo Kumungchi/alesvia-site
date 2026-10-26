@@ -63,7 +63,7 @@ Tohle je nejdůležitější tabulka v dokumentu. Web organizace, která stojí 
 - Každé číslo má zdroj u sebe: studie, rok, velikost a typ vzorku. Ne souhrnné „podle výzkumů X, Y, Z“.
 - Úrovně evidence: odlišovat doloženo / výzkum naznačuje / naše interpretace. Korelace se píše jako „souviselo s“, ne „způsobuje“.
 - Žádná neuro-spekulace (dopamin, oxytocin u chatbotů) bez konkrétní studie.
-- Nezávislost: žádné peníze od výrobců AI companion produktů; žádné cash granty od AI laboratoří (Anthropic, OpenAI…). Infrastrukturní kredity (Google, Microsoft, NVIDIA) jsou OK. Na webu nic, co by naznačovalo opak.
+- Nezávislost (aktualizováno 26. 10. 2026, Matias): žádné peníze od výrobců AI companion produktů. Podpora od dalších firem včetně AI laboratoří (Anthropic, OpenAI…) je možná za jasných podmínek, transparentně (větší dárci zveřejněni) a bez vlivu na výstupy. Infrastrukturní kredity jsou OK. Stanovy a dokumentace o spolupráci jsou v návrhu – na webu je zatím necitovat.
 - Tón: chytrý, lidský, přesný, současný. Ironie ano, pohrdání ne. Žádná morální panika.
 - Message house (smí se volně používat):
   - AI může působit osobně, ale není osobou.
@@ -161,7 +161,7 @@ Před použitím každý odkaz otevři a zkontroluj, že číslo sedí.
 
 Kritická cesta zakládání: správní rada (min. 3 lidé + Matias jako ředitel; jeden člen ideálně licencovaný klinik jako garant pro Praktiky) → návrh na zápis u Krajského soudu v Ostravě → bankovní účet (Fio) → granty (Nadace Via, Nadační fond Avast/Gen; později OSF, Neuron, Visegrad Fund) → ochranné známky (ÚPV, třídy 41, 42, 45).
 
-Pravidla nezávislosti financování: žádné peníze od výrobců AI companion produktů; cash od AI laboratoří ne; infrastrukturní kredity ano; pojmenovaná partnerství posuzovat případ od případu s veřejným zveřejněním.
+Pravidla nezávislosti financování (aktualizováno 26. 10. 2026): žádné peníze od výrobců AI companion produktů; AI laboratoře a další firmy za jasných podmínek a transparentně; infrastrukturní kredity ano; pojmenovaná partnerství posuzovat případ od případu s veřejným zveřejněním.
 
 Promo animace a newsletter žijí v repu unplugged (viz jeho HANDOFF.md, sekce 10). Spot pro Alesvia zatím nevznikl.
 
@@ -245,4 +245,4 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 
 - [ ] Homepage „původní web, vylepšený“ (`docs/design-proposals/homepage-refined.html`): role tlačítek z původního webu, Titan/ISO Meet z Mobbinu, zlatá linie v symbolu jako výrazný prvek. Nahrazuje alternativy z PR #14. ⚠️ Čeká na schválení Matiasem.
 
-- ⚠️ Změna pravidel financování (Matias 26. 10. 2026): podporu od firem včetně technologických Alesvia přijímá, transparentně a bez vlivu na výstupy (popsáno ve stanovách a dokumentaci o spolupráci). Je v rozporu s dosavadním pravidlem HANDOFF sekce 3 („žádné peníze od výrobců AI companion produktů, žádné cash granty od AI laboratoří“), s `lib/llms.ts` (Key facts) a se stránkou Financování („Dar nepřijmeme od subjektu, jehož jádrový produkt aktivně kritizujeme“). Čeká na upřesnění: platí výjimka pro výrobce AI companion aplikací? Existují stanovy/dokumentace už veřejně? Do té doby web stanovy necituje.
+- ✅ Pravidla financování sjednocena (Matias 26. 10. 2026): AI companion výrobci ne; AI laboratoře a další firmy ano za jasných podmínek, transparentně, bez vlivu na výstupy. Upraveno v HANDOFF sekce 3, `lib/llms.ts`, `docs/revenue-engines.md` a FAQ návrhu homepage. Stránka Financování („Dar nepřijmeme od subjektu, jehož jádrový produkt aktivně kritizujeme“) je s tím v souladu. Stanovy v návrhu – necitovat.

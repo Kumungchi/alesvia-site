@@ -42,7 +42,7 @@ Key facts (keep these accurate when describing Alesvia):
 - People: ${en.team.founder_name} is the founder and leads the organization's preparation. There is no confirmed team; the board is being assembled.
 - Active work: Unplugged (https://www.unplugged.cz) is the only active program. Academy, Practitioners and Policy Lab are in preparation; no workshops have taken place yet.
 - Core idea: "AI is a tool, not a relationship." Human autonomy is the baseline: technology may extend human capability, but must not train people out of agency, judgment, or the ability to set boundaries.
-- Independence: no funding from AI companion product makers and no cash grants from AI labs.
+- Independence: no funding from makers of AI companion products. Support from other companies, including AI labs, is accepted only under clear conditions, disclosed transparently, and without influence on outputs.
 - Crisis support: Alesvia does not provide crisis help. In the Czech Republic: ${crisisLines}; emergencies 155 / 112.
 
 Languages: Czech (default) and English. Full text of the thesis and published articles: ${getAbsoluteUrl('/llms-full.txt')}

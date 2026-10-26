@@ -68,7 +68,7 @@ Validace před vývojem: 10 rozhovorů s odpovědnými lidmi (produkt, complianc
 Pitch deck tvrdí: *„píšeme pravidla, podle kterých se firmy řídí, a pak jim prodáme řešení“*. Pro think tank je to **střet zájmů**, který by zničil právě tu důvěru, na které model stojí. Pravidla:
 - Metodika a stanoviska Policy Labu jsou veřejné a nezávislé na tom, co se prodává.
 - Policy Lab nedoporučuje vlastní produkty; veřejně zveřejňujeme, kdo za co platil.
-- Žádné peníze od výrobců AI companion produktů; žádné cash granty od AI laboratoří (HANDOFF sekce 3).
+- Žádné peníze od výrobců AI companion produktů. Podpora od dalších firem včetně AI laboratoří jen za jasných podmínek, transparentně a bez vlivu na výstupy (rozhodnutí Matiase 26. 10. 2026, HANDOFF sekce 3).
 
 ### 4.3 Certifikace na základě AI Actu — rozhodnutí Matiase (25. 10. 2026)
 
