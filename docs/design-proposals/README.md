@@ -38,12 +38,12 @@ Removed at Matias's request: the rule-of-three tagline "Technologie. Společnost
 
 Motto typeface comparison (requested 25 October 2026: softer letterforms than Newsreader): a switch above the prototype toggles the motto between Newsreader (current), Fraunces with the SOFT axis at 100 and WONK 0, and Literata. Both candidates are OFL, embedded from `fonts/` (latin + latin-ext only, licenses alongside) and verified loaded in the browser. Only the motto changes; applying a choice to other headings is a separate decision.
 
-## Homepage — původní web, vylepšený (`homepage-refined.html`)
+## Homepage — editoriální návrh (`homepage-refined.html`)
 
-Na žádost Matiase (26. 10. 2026) po odmítnutí alternativ z PR #14: vychází ze struktury, barev a **rolí tlačítek původního webu** — plné lilkové `#31263E` pro hlavní akci (i v hlavičce), světlé s jemným rámečkem pro vedlejší, zlaté na tmavomodrém bloku. Schválená písma Figtree + Literata a všech 27 schválených textů.
+Verze 2 (26. 10. 2026) po zamítnutí verze 1 („kapky, elementy, velké boxy“). Postaveno podle design skillu jako **tištěný editorial veřejného institutu**: typografie a mřížka nesou celou stránku; žádné karty, krabice, pilulky ani stíny; zaoblená jsou jen původní tlačítka (role zachovány: lilkové hlavní, světlé vedlejší, zlaté na tmavomodrém). Jediná barevná plocha je tmavomodrý pruh spolupráce přes celou šířku, bez zaoblení.
 
-Reference z Mobbin (veřejná galerie Sites, bez přihlášení vidět jen první stránka, 26. 10. 2026): **Titan** — úvod v rámu se svislými linkami sloupců, titulek vlevo, výrazný obraz vpravo, řádek faktů s vlasovými linkami; **ISO Meet** — přímý titulek a jeden dominantní obraz. Převzat princip, ne grafika.
+Výrazný prvek: **zlatá svislá linie v levém okraji** (zlatá cesta ze symbolu loga) roste s postupem čtení; motto se při načtení vysune řádek po řádku z účaří. Obojí vypnuto při omezení pohybu.
 
-Výrazný prvek: symbol Alesvie ve velkém v pravé části úvodu; **zlatá středová linie (autonomie) se při načtení vysune nahoru** (1,1 s, jednou). Při omezení pohybu statické. Řádek faktů jen s pravdivými údaji (aktivní Unplugged, tři pilíře v přípravě, plánované sídlo Ostrava, registrace v přípravě).
+Mobbin (veřejná galerie Sites): Titan — řádek faktů pod hlavičkou, vlasové linky a disciplína mřížky. Převzat princip, ne grafika.
 
-Ověřeno v T3 Chromium: 1280 px a 390 px bez přetečení; computed barvy tlačítek odpovídají rolím; rozbalovací „Naše směry“ (Escape zavře); mobilní menu jako dialog s návratem fokusu; Figtree a Literata načtené z vložených souborů. Opraveno při kontrole: tlačítko v hlavičce přebíjené stylem odkazů, velikost loga v patičce.
+Ověřeno v T3 Chromium 1440 px a 390 px: bez přetečení, 0 stínů, žádné zaoblení nad 8 px, mobilní dialog s návratem fokusu, rozbalovací „Naše směry“. Impeccable detector: 2× „cramped padding“ posouzeno jako falešný poplach (záměrná linka nad seznamem pilířů s 20 px odsazením; modrý pruh má vnitřní okraj >100 px).

@@ -3,329 +3,328 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Alesvia — původní web, vylepšený (klikací návrh)</title>
+<title>Alesvia — homepage, editoriální návrh</title>
 <style>
 /*FACES*/
 :root{
-  --bg:#F9F9F8;--text:#221E22;--muted:#6B6472;--trust:#0F2C59;--primary:#31263E;--accent:#ECA72C;--accent-ink:#9A6200;--surface:#F4F4F2;--white:#fff;
-  --rule:rgba(34,30,34,.14);--fh:Figtree,system-ui,sans-serif;--fb:Literata,Georgia,serif;--ease:cubic-bezier(.16,1,.3,1);
+  --paper:#F9F9F8;--ink:#221E22;--muted:#6B6472;--navy:#0F2C59;--plum:#31263E;--gold:#ECA72C;--gold-ink:#9A6200;
+  --rule:#221E22;--hair:rgba(34,30,34,.16);
+  --fh:Figtree,system-ui,sans-serif;--fb:Literata,Georgia,serif;
+  --gutter:clamp(20px,4vw,56px);--margin:clamp(28px,7vw,120px);
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.62 var(--fb);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 h1,h2,h3,h4,nav,button,summary,.ui{font-family:var(--fh)}
-h1,h2,h3,p{margin:0}a{color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
-.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:50;background:var(--primary);color:#fff;padding:12px 16px;border-radius:8px}
+h1,h2,h3,p,dl,dd{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:60;background:var(--plum);color:#fff;padding:12px 16px}
 
-/* Buttons — the original site's roles, unchanged */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 22px;border-radius:8px;font:600 15px/1.2 var(--fh);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background-color .2s ease-out,border-color .2s ease-out,color .2s ease-out}
-.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:#241B2E}
-.btn-secondary{background:var(--white);color:var(--text);border-color:rgba(107,100,114,.28)}.btn-secondary:hover{border-color:var(--primary)}
-.btn-gold{background:var(--accent);color:var(--text)}.btn-gold:hover{background:#F3BC57}
-.btn-ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}.btn-ghost-light:hover{background:rgba(255,255,255,.1)}
-.btn svg{width:18px;height:18px;transition:transform .2s ease-out}.btn:hover svg{transform:translateX(3px)}
+/* The page sits on a grid with a wide left margin that carries the gold line */
+.page{position:relative;padding-left:var(--margin);padding-right:var(--gutter)}
+.line{position:absolute;left:calc(var(--margin) / 2);top:0;bottom:0;width:3px;background:var(--hair);z-index:1}
+.line i{position:sticky;top:0;display:block;width:3px;height:100vh;background:var(--gold);transform-origin:top;transform:scaleY(var(--p,1))}
 
-/* Header (original structure) */
-.site-header{position:sticky;top:0;z-index:20;background:rgba(249,249,248,.96);border-bottom:1px solid var(--rule)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
-.logo svg{display:block;width:150px;height:auto}
-.navlinks{display:flex;align-items:center;gap:28px;font-size:15px}
-.navlinks>a,.navlinks summary{text-decoration:none;color:var(--muted);padding:10px 0}
-.navlinks>a:hover,.navlinks summary:hover{color:var(--text)}
-.navlinks>a.btn{color:#fff;padding:12px 20px}.navlinks>a.btn:hover{color:#fff}
-.dd{position:relative}.dd summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px}.dd summary::-webkit-details-marker{display:none}
-.dd summary svg{width:16px;height:16px;transition:transform .2s ease-out}.dd[open] summary svg{transform:rotate(180deg)}
-.dd-panel{position:absolute;top:calc(100% + 14px);left:-24px;width:560px;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:4px;box-shadow:0 16px 40px rgba(34,30,34,.12)}
-.dd-panel a{display:block;padding:14px 16px;border-radius:8px;text-decoration:none}.dd-panel a:hover{background:var(--surface)}
-.dd-panel strong{display:block;font:600 16px var(--fh);color:var(--text)}.dd-panel small{display:block;font:400 13px var(--fh);color:var(--muted);margin-top:2px}
-.dd-panel .live small{color:var(--accent-ink)}
-.lang{display:flex;gap:8px;font:600 12px var(--fh);letter-spacing:.06em;color:var(--muted);padding-left:20px;border-left:1px solid var(--rule)}.lang b{color:var(--text)}
-.menu-btn{display:none;min-height:44px;padding:10px 14px;border:1px solid rgba(107,100,114,.28);border-radius:8px;background:#fff;font:600 15px var(--fh);color:var(--text);align-items:center;gap:8px}
+/* Buttons — original roles, unchanged */
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:12px 22px;border-radius:8px;font:600 15px/1.2 var(--fh);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background-color .2s ease-out,border-color .2s ease-out}
+.btn-primary{background:var(--plum);color:#fff}.btn-primary:hover{background:#241B2E}
+.btn-secondary{background:#fff;color:var(--ink);border-color:rgba(107,100,114,.32)}.btn-secondary:hover{border-color:var(--plum)}
+.btn-gold{background:var(--gold);color:var(--ink)}.btn-gold:hover{background:#F3BC57}
+.btn .arr{transition:transform .2s ease-out}.btn:hover .arr{transform:translateX(3px)}
 
-/* Hero — Titan-style framed grid with visible rules; brand symbol as the signature element */
-.hero{border-bottom:1px solid var(--rule)}
-.hero-grid{display:grid;grid-template-columns:7fr 5fr;border-left:1px solid var(--rule);border-right:1px solid var(--rule)}
-.hero-copy{padding:84px 56px 64px 40px;border-right:1px solid var(--rule)}
-.hero h1{font:700 clamp(46px,6.6vw,88px)/1.02 var(--fh);letter-spacing:-.03em;color:var(--text);max-width:11ch}
-.hero h1 span{color:var(--trust)}
-.hero .lead{margin-top:28px;font-size:20px;line-height:1.6;color:var(--muted);max-width:34ch}
-.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.hero-mark{position:relative;display:grid;place-items:center;background:var(--surface);overflow:hidden;min-height:440px}
-.hero-mark svg{width:min(78%,380px);height:auto;overflow:visible}
-.mark-outline{fill:none;stroke:var(--trust);stroke-width:1.6}
-.mark-fill{fill:var(--trust)}
-.mark-path{fill:var(--accent);transform-box:fill-box;transform-origin:50% 100%}
-.mark-guides line{stroke:var(--rule);stroke-width:1}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--rule);border-right:1px solid var(--rule);border-top:1px solid var(--rule)}
-.facts div{padding:18px 24px 20px;border-right:1px solid var(--rule)}.facts div:last-child{border-right:0}
-.facts dt{font:600 12px var(--fh);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.facts dd{margin:6px 0 0;font:600 16px var(--fh);color:var(--text)}
-.facts .live{display:inline-flex;align-items:center;gap:8px}.facts .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+/* Masthead — like the head of a printed report */
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.masthead .logo svg{display:block;width:142px;height:auto}
+.mast-nav{display:flex;align-items:center;gap:30px;font-size:15px}
+.mast-nav>a,.mast-nav summary{color:var(--ink);text-decoration:none;padding:8px 0;background:linear-gradient(var(--gold),var(--gold)) 0 100%/0 2px no-repeat;transition:background-size .25s ease-out}
+.mast-nav>a:hover,.mast-nav summary:hover{background-size:100% 2px}
+.mast-nav>a.btn{background:var(--plum);color:#fff;padding:12px 20px}.mast-nav>a.btn:hover{background:#241B2E}
+.lang{font:600 12px var(--fh);letter-spacing:.08em;color:var(--muted)}.lang b{color:var(--ink)}
+.dd{position:relative}.dd summary{list-style:none;cursor:pointer}.dd summary::-webkit-details-marker{display:none}
+.dd-panel{position:absolute;right:-20px;top:calc(100% + 18px);z-index:30;width:520px;background:var(--paper);border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:6px 0}
+.dd-panel a{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 20px;text-decoration:none;border-bottom:1px solid var(--hair)}.dd-panel a:last-child{border-bottom:0}
+.dd-panel a:hover b{color:var(--navy)}
+.dd-panel b{font:700 17px var(--fh)}.dd-panel span{font:400 14px/1.5 var(--fb);color:var(--muted)}
+.dd-panel .on span{color:var(--gold-ink)}
+.menu-btn{display:none;background:none;border:0;border-bottom:2px solid var(--ink);font:600 16px var(--fh);padding:6px 0;cursor:pointer;color:var(--ink)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 28px;padding:12px 0;border-bottom:1px solid var(--hair);font:600 12px var(--fh);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.meta div{display:flex;gap:8px}.meta dt,.meta dd{display:inline}
+.meta b{color:var(--ink);font-weight:600}
+.meta .live b{color:var(--gold-ink)}
 
-/* Motion: one orchestrated arrival — the gold path rises inside the A */
-@media (prefers-reduced-motion: no-preference){
-  .animate .mark-path{animation:rise 1.1s var(--ease) .35s both}
-  .animate .mark-fill{animation:settle .7s var(--ease) both}
-  .animate .hero-copy>*{animation:fade .6s ease-out both}
-  .animate .hero-copy>*:nth-child(2){animation-delay:.08s}.animate .hero-copy>*:nth-child(3){animation-delay:.16s}
-}
-@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-@keyframes settle{from{opacity:0}to{opacity:1}}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-.reduce *{animation:none!important;transition:none!important}
+/* Hero — the motto is the image */
+.hero{padding:clamp(56px,9vw,128px) 0 clamp(48px,7vw,96px)}
+.hero h1{font:700 clamp(54px,11.2vw,184px)/.92 var(--fh);letter-spacing:-.045em;color:var(--ink)}
+.hero h1 .row{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.1em}
+.hero h1 .row span{display:block}
+.hero h1 .accent{color:var(--navy)}
+.hero-below{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);margin-top:clamp(36px,5vw,64px)}
+.hero-below .lead{grid-column:6 / span 6;font-size:clamp(20px,1.7vw,24px);line-height:1.5}
+.hero-below .actions{grid-column:6 / span 7;display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
 
-/* Sections */
-section.block{padding:96px 0;border-bottom:1px solid var(--rule)}
-.label{font:600 12px var(--fh);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:14px}
-.block h2{font:700 clamp(32px,3.6vw,46px)/1.12 var(--fh);letter-spacing:-.025em;max-width:22ch}
+/* Section scaffolding: label column + content, divided by a heavy rule */
+.sec{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);border-top:2px solid var(--rule);padding:clamp(48px,6vw,88px) 0}
+.sec>.k{grid-column:1 / span 3;font:600 13px var(--fh);letter-spacing:.09em;text-transform:uppercase;color:var(--gold-ink);padding-top:.6em}
+.sec>.c{grid-column:4 / span 9}
+.sec h2{font:700 clamp(36px,4.6vw,68px)/1.02 var(--fh);letter-spacing:-.035em;max-width:16ch}
 
-/* Themes: original button language for the switch */
-.themes{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
-.topic-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.topic-tabs button{min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid rgba(107,100,114,.28);background:#fff;color:var(--text);font:600 14px var(--fh);cursor:pointer;transition:background-color .2s ease-out,color .2s ease-out}
-.topic-tabs button[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:#fff}
-.topic-panel{border-left:3px solid transparent;padding-top:8px}
-.topic-panel h3{font:700 30px/1.2 var(--fh);letter-spacing:-.02em;color:var(--trust)}
-.topic-panel p{margin-top:16px;font-size:19px;color:var(--text);max-width:46ch}
-.topic-panel.swap{animation:fade .35s ease-out}
+/* Themes as an index of large words */
+.topics{margin-top:40px;display:grid;grid-template-columns:5fr 7fr;gap:var(--gutter);align-items:start}
+.topic-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--hair)}
+.topic-list button{display:flex;justify-content:space-between;align-items:baseline;width:100%;background:none;border:0;border-bottom:1px solid var(--hair);padding:16px 0;font:700 clamp(22px,2.2vw,30px)/1.1 var(--fh);letter-spacing:-.02em;color:var(--muted);text-align:left;cursor:pointer;transition:color .2s ease-out}
+.topic-list button::after{content:"";width:28px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s ease-out;align-self:center}
+.topic-list button:hover{color:var(--ink)}
+.topic-list button[aria-pressed=true]{color:var(--ink)}.topic-list button[aria-pressed=true]::after{transform:scaleX(1)}
+.topic-text{padding-top:14px}
+.topic-text h3{font:700 clamp(24px,2.4vw,34px)/1.15 var(--fh);letter-spacing:-.02em;color:var(--navy)}
+.topic-text p{margin-top:14px;font-size:20px;max-width:40ch}
+.topic-text.swap>*{animation:fadein .35s ease-out}
 
 /* Projects */
-.projects-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}
-.projects-head p{color:var(--muted);font-size:16px}
-.feature{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:40px}
-.status{display:inline-flex;align-items:center;gap:8px;font:600 13px var(--fh);color:var(--accent-ink);background:rgba(236,167,44,.14);padding:6px 12px;border-radius:999px}
-.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
-.feature h3{font:700 44px/1.05 var(--fh);letter-spacing:-.025em;margin-top:18px}
-.feature .claim{margin-top:14px;font:700 20px var(--fh);color:var(--trust)}
-.feature p.desc{margin-top:10px;color:var(--muted)}
-.feature .actions{margin-top:26px}
-.preview{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--rule);text-decoration:none;background:var(--surface)}
-.preview img{display:block;width:100%;height:auto}
-.preview span{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font:600 14px var(--fh);color:var(--text)}
-.preview:hover span{text-decoration:underline;text-underline-offset:4px}
-.planned{margin-top:16px;border-radius:12px;background:var(--primary);color:#fff;padding:8px 40px}
-.planned details{border-bottom:1px solid rgba(255,255,255,.14)}.planned details:last-child{border-bottom:0}
-.planned summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;min-height:76px}
-.planned summary::-webkit-details-marker{display:none}
-.planned summary b{font:700 24px var(--fh);letter-spacing:-.015em}
-.planned summary small{margin-left:auto;font:600 13px var(--fh);color:rgba(255,255,255,.72)}
-.planned summary svg{width:20px;height:20px;transition:transform .2s ease-out}.planned details[open] summary svg{transform:rotate(180deg)}
-.planned details p{padding:0 0 24px;color:rgba(255,255,255,.86);max-width:62ch}
+.unplugged{display:grid;grid-template-columns:repeat(9,1fr);gap:var(--gutter);margin-top:44px;align-items:start}
+.unplugged .copy{grid-column:1 / span 4}
+.unplugged .state{font:600 13px var(--fh);letter-spacing:.09em;text-transform:uppercase;color:var(--gold-ink)}
+.unplugged h3{font:700 clamp(46px,5.4vw,84px)/.95 var(--fh);letter-spacing:-.04em;margin-top:10px}
+.unplugged .claim{margin-top:18px;font:700 22px/1.25 var(--fh);color:var(--navy)}
+.unplugged .desc{margin-top:10px;color:var(--muted)}
+.unplugged .actions{margin-top:28px}
+.shot{grid-column:5 / span 5;display:block;text-decoration:none}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+.shot figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:400 14px var(--fb);color:var(--muted)}
+.shot:hover figcaption span{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.ledger{margin-top:64px;border-top:1px solid var(--rule)}
+.ledger details{border-bottom:1px solid var(--hair)}
+.ledger summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:4fr 2fr 1fr;align-items:baseline;gap:var(--gutter);padding:20px 0}
+.ledger summary::-webkit-details-marker{display:none}
+.ledger summary b{font:700 clamp(24px,2.4vw,32px)/1.1 var(--fh);letter-spacing:-.02em}
+.ledger summary span{font:600 13px var(--fh);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.ledger summary i{font-style:normal;justify-self:end;font:400 26px/1 var(--fh);color:var(--gold-ink);transition:transform .2s ease-out}
+.ledger details[open] summary i{transform:rotate(45deg)}
+.ledger details p{padding:0 0 24px;max-width:56ch;color:var(--muted)}
 
-/* Collaboration — original navy block with gold primary button */
-.collab{background:var(--trust);color:#fff;border-radius:16px;padding:64px}
-.collab .label{color:var(--accent)}
-.collab h2{color:#fff}
-.collab>p{margin-top:18px;color:rgba(255,255,255,.85);max-width:56ch;font-size:19px}
-.paths{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 24px}
-.paths button{min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:600 14px var(--fh);cursor:pointer}
-.paths button[aria-pressed=true]{background:#fff;color:var(--trust);border-color:#fff}
-.path-panel{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid rgba(255,255,255,.18);padding-top:24px}
-.path-panel p{max-width:52ch;color:rgba(255,255,255,.9)}
+/* Collaboration — one full-bleed navy band, square, typographic */
+.band{background:var(--navy);color:#fff;margin-left:calc(var(--margin) * -1);margin-right:calc(var(--gutter) * -1);padding:clamp(56px,7vw,104px) var(--gutter) clamp(56px,7vw,104px) var(--margin);position:relative;z-index:2}
+.band .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)}
+.band .k{grid-column:1 / span 3;font:600 13px var(--fh);letter-spacing:.09em;text-transform:uppercase;color:var(--gold);padding-top:.6em}
+.band .c{grid-column:4 / span 9}
+.band h2{font:700 clamp(36px,4.6vw,68px)/1.02 var(--fh);letter-spacing:-.035em;max-width:15ch}
+.band .intro{margin-top:20px;font-size:21px;color:rgba(255,255,255,.88);max-width:44ch}
+.paths{display:flex;flex-wrap:wrap;gap:28px;margin-top:40px;border-bottom:1px solid rgba(255,255,255,.22)}
+.paths button{background:none;border:0;color:rgba(255,255,255,.7);font:600 17px var(--fh);padding:0 0 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.paths button:hover{color:#fff}
+.paths button[aria-pressed=true]{color:#fff;border-bottom-color:var(--gold)}
+.path-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;margin-top:28px}
+.path-row p{max-width:46ch;font-size:19px;color:rgba(255,255,255,.92)}
 
 /* FAQ + crisis */
-.faq{display:grid;grid-template-columns:5fr 7fr;gap:64px}
-.faq details{border-top:1px solid var(--rule)}.faq details:last-child{border-bottom:1px solid var(--rule)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:600 19px var(--fh)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary i{font-style:normal;color:var(--accent-ink);font-size:24px;transition:transform .2s ease-out}.faq details[open] summary i{transform:rotate(45deg)}
-.faq details p{padding:0 0 22px;color:var(--muted);max-width:60ch}
-.crisis{max-width:760px}.crisis h2{font-size:28px}.crisis p{margin-top:12px}
-.crisis ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:14px}
-.crisis a.tel{font:700 18px var(--fh);color:var(--trust)}
+.qa details{border-bottom:1px solid var(--hair)}.qa details:first-of-type{border-top:1px solid var(--hair)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font:700 22px/1.25 var(--fh);letter-spacing:-.01em}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary i{font-style:normal;color:var(--gold-ink);font-weight:400;transition:transform .2s ease-out}
+.qa details[open] summary i{transform:rotate(45deg)}
+.qa details p{padding:0 0 24px;max-width:58ch;color:var(--muted)}
+.crisis h2{font-size:clamp(28px,3vw,40px);max-width:none}
+.crisis .note{margin-top:14px;max-width:56ch}
+.lines{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter)}
+.lines a{display:block;font:700 clamp(30px,3.2vw,46px)/1 var(--fh);letter-spacing:-.03em;color:var(--navy);text-decoration:none}
+.lines a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.lines p{margin-top:8px;font-size:16px;color:var(--muted)}
+.lines small{display:block;font:600 13px var(--fh);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.sos{margin-top:28px;padding-top:16px;border-top:1px solid var(--hair)}.sos a{font-weight:700;color:var(--navy)}
 
-/* Footer (original three columns) */
-footer{padding:64px 0 40px;font-family:var(--fh)}
-.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-.foot h4{margin:0 0 14px;font:600 12px var(--fh);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:15px}.foot a{text-decoration:none}.foot a:hover{text-decoration:underline}
-.foot svg{display:block;width:150px;height:auto}
-.foot p{color:var(--muted);font-size:14px;max-width:30ch;margin-top:14px}
-.copy{margin-top:48px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+/* Footer */
+footer{border-top:2px solid var(--rule);padding:48px 0 36px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);font-family:var(--fh)}
+footer .brand{grid-column:1 / span 4}footer .brand svg{display:block;width:142px;height:auto}
+footer .brand p{margin-top:14px;font:400 15px var(--fb);color:var(--muted)}
+footer .col{grid-column:span 2}footer .col:first-of-type{grid-column:6 / span 2}
+footer h4{margin:0 0 12px;font:600 12px var(--fh);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px}footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+footer .copy{grid-column:1 / -1;margin-top:28px;padding-top:16px;border-top:1px solid var(--hair);font-size:13px;color:var(--muted)}
 
-/* Mobile menu dialog */
-dialog{border:0;border-radius:16px;padding:24px;width:min(420px,calc(100% - 32px));background:var(--bg);color:var(--text)}
-dialog::backdrop{background:rgba(15,44,89,.45)}
-dialog header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-dialog nav a{display:block;padding:14px 4px;border-bottom:1px solid var(--rule);text-decoration:none;font:600 19px var(--fh)}
+/* Mobile menu */
+dialog{border:0;border-top:3px solid var(--gold);padding:24px;width:min(440px,calc(100% - 24px));background:var(--paper);color:var(--ink)}
+dialog::backdrop{background:rgba(15,44,89,.5)}
+dialog .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+dialog nav a{display:block;padding:14px 0;border-bottom:1px solid var(--hair);text-decoration:none;font:700 24px var(--fh);letter-spacing:-.02em}
 
-/* Review toolbar (not part of the design) */
-.review{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;gap:8px;font-family:var(--fh)}
-.review button{min-height:40px;padding:8px 12px;border-radius:8px;border:1px solid var(--rule);background:#fff;font:600 13px var(--fh);cursor:pointer}
+/* Review controls (not part of the design) */
+.review{position:fixed;right:14px;bottom:14px;z-index:50;display:flex;gap:6px}
+.review button{min-height:38px;padding:6px 12px;border:1px solid var(--hair);background:#fff;font:600 13px var(--fh);cursor:pointer}
+
+/* Motion: one arrival — motto rows rise from their baseline; the gold line follows reading */
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:no-preference){
+  .arrive .hero h1 .row span{animation:rise .9s cubic-bezier(.16,1,.3,1) both}
+  .arrive .hero h1 .row:nth-child(2) span{animation-delay:.09s}
+  .arrive .hero h1 .row:nth-child(3) span{animation-delay:.18s}
+  .arrive .hero-below{animation:fadein .6s ease-out .45s both}
+}
+.reduce *,.reduce *::after{animation:none!important;transition:none!important}
 
 @media (max-width:900px){
-  .wrap{padding:0 20px}
-  .navlinks{display:none}.menu-btn{display:inline-flex}
-  .hero-grid{grid-template-columns:1fr}.hero-copy{padding:56px 24px 40px;border-right:0;border-bottom:1px solid var(--rule)}
-  .hero-mark{min-height:280px}
-  .facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-right:0}.facts div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
-  .themes,.faq,.feature{grid-template-columns:1fr;gap:28px}
-  .feature{padding:24px}.planned{padding:4px 24px}.collab{padding:36px 24px}
-  .projects-head{display:block}.projects-head p{margin-top:8px}
-  .foot{grid-template-columns:1fr 1fr}
-  section.block{padding:64px 0}
+  :root{--margin:28px}
+  .line{left:12px;width:2px}.line i{width:2px}
+  .mast-nav{display:none}.menu-btn{display:inline-block}
+  .hero-below .lead,.hero-below .actions{grid-column:1 / -1}
+  .sec>.k,.sec>.c,.band .k,.band .c{grid-column:1 / -1}
+  .topics{grid-template-columns:1fr}
+  .unplugged{grid-template-columns:1fr}.unplugged .copy,.shot{grid-column:1 / -1}
+  .ledger summary{grid-template-columns:1fr auto}.ledger summary span{grid-row:2;grid-column:1}
+  .lines{grid-template-columns:1fr}
+  footer .brand,footer .col,footer .col:first-of-type{grid-column:1 / -1}
 }
-@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
-<body class="animate">
+<body class="arrive">
 <a class="skip" href="#main">Přejít na obsah</a>
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="logo" href="#main" aria-label="Alesvia — úvod">LOCKUP_SVG</a>
-    <nav class="navlinks" aria-label="Hlavní navigace">
-      <a href="#themes">O Alesvii</a>
-      <details class="dd" id="dd">
-        <summary>Naše směry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-        <div class="dd-panel">
-          <a class="live" href="#projects"><strong>Unplugged</strong><small>Aktivní projekt · osvěta a vzdělávání</small></a>
-          <a href="#planned"><strong>Akademie</strong><small>V přípravě · gramotnost a praxe</small></a>
-          <a href="#planned"><strong>Praktici</strong><small>V přípravě · klinické vzdělávání</small></a>
-          <a href="#planned"><strong>Policy Lab</strong><small>V přípravě · výzkum a pravidla</small></a>
-        </div>
-      </details>
-      <a href="#collaboration">Spolupráce</a>
-      <span class="lang" aria-label="Jazyk"><span>EN</span><b>CS</b></span>
-      <a class="btn btn-primary" href="#collaboration">Spojme se</a>
-    </nav>
-    <button class="menu-btn" id="openMenu" aria-haspopup="dialog">Menu</button>
-  </div>
-</header>
+<div class="page">
+  <div class="line" aria-hidden="true"><i id="gold"></i></div>
 
-<main id="main">
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1>Lidská autonomie <span>je základ.</span></h1>
-          <p class="lead">Technologie mění svět, ve kterém žijeme. Alesvia vzniká pro otázky digitalizace, společnosti a prostoru zůstat sami sebou.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#collaboration">Pro instituce a partnery <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
-            <a class="btn btn-secondary" href="#projects">Poznat naše směry</a>
+  <header>
+    <div class="masthead">
+      <a class="logo" href="#main" aria-label="Alesvia — úvod">LOCKUP_SVG</a>
+      <nav class="mast-nav" aria-label="Hlavní navigace">
+        <a href="#about">O Alesvii</a>
+        <details class="dd" id="dd">
+          <summary>Naše směry</summary>
+          <div class="dd-panel">
+            <a class="on" href="#projects"><b>Unplugged</b><span>Aktivní projekt · osvěta a vzdělávání</span></a>
+            <a href="#ledger"><b>Akademie</b><span>V přípravě · gramotnost a praxe</span></a>
+            <a href="#ledger"><b>Praktici</b><span>V přípravě · klinické vzdělávání</span></a>
+            <a href="#ledger"><b>Policy Lab</b><span>V přípravě · výzkum a pravidla</span></a>
+          </div>
+        </details>
+        <a href="#collaboration">Spolupráce</a>
+        <span class="lang"><span>EN</span> · <b>CS</b></span>
+        <a class="btn" href="#collaboration">Spojme se</a>
+      </nav>
+      <button class="menu-btn" id="openMenu" aria-haspopup="dialog">Menu</button>
+    </div>
+    <dl class="meta">
+      <div class="live"><dt>Aktivní projekt</dt><dd><b>Unplugged</b></dd></div>
+      <div><dt>V přípravě</dt><dd><b>Akademie, Praktici, Policy Lab</b></dd></div>
+      <div><dt>Plánované sídlo</dt><dd><b>Ostrava</b></dd></div>
+      <div><dt>Stav</dt><dd><b>Registraci ústavu připravujeme</b></dd></div>
+    </dl>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="motto">
+      <h1 id="motto"><span class="row"><span>Lidská</span></span><span class="row"><span>autonomie</span></span><span class="row"><span class="accent">je základ.</span></span></h1>
+      <div class="hero-below">
+        <p class="lead">Technologie mění svět, ve kterém žijeme. Alesvia vzniká pro otázky digitalizace, společnosti a prostoru zůstat sami sebou.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#collaboration">Pro instituce a partnery <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href="#projects">Poznat naše směry</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="about" aria-labelledby="about-h">
+      <p class="k">O Alesvii</p>
+      <div class="c">
+        <h2 id="about-h">Digitální svět má lidskou stránku.</h2>
+        <div class="topics">
+          <ul class="topic-list" role="list">
+            <li><button aria-pressed="true" data-topic="0">Identita</button></li>
+            <li><button aria-pressed="false" data-topic="1">Tempo života</button></li>
+            <li><button aria-pressed="false" data-topic="2">Praxe</button></li>
+            <li><button aria-pressed="false" data-topic="3">Pravidla</button></li>
+          </ul>
+          <div class="topic-text" id="topic" aria-live="polite">
+            <h3>Prostor být sami sebou.</h3>
+            <p>Jak digitalizace proměňuje naše vnímání sebe sama i toho, kým jsme společně? Osobní a kolektivní identita patří do širšího záběru Alesvie.</p>
           </div>
         </div>
-        <div class="hero-mark" aria-hidden="true">
-          <svg viewBox="0 0 128 128">
-            <g class="mark-guides"><line x1="0" y1="108" x2="128" y2="108"/><line x1="64" y1="0" x2="64" y2="20"/><line x1="24" y1="62" x2="0" y2="62"/><line x1="104" y1="62" x2="128" y2="62"/></g>
-            <path class="mark-fill" d="M24 108V62L64 20L104 62V108H86V69L64 46L42 69V108H24Z"/>
-            <path class="mark-path" d="M58 108V64L64 58L70 64V108H58Z"/>
-          </svg>
-        </div>
       </div>
-      <dl class="facts">
-        <div><dt>Aktivní projekt</dt><dd class="live">Unplugged</dd></div>
-        <div><dt>V přípravě</dt><dd>Akademie · Praktici · Policy Lab</dd></div>
-        <div><dt>Plánované sídlo</dt><dd>Ostrava</dd></div>
-        <div><dt>Právní forma</dt><dd>Registraci ústavu připravujeme.</dd></div>
-      </dl>
-    </div>
-  </section>
+    </section>
 
-  <section class="block" id="themes">
-    <div class="wrap themes">
-      <div>
-        <p class="label">O Alesvii</p>
-        <h2>Digitální svět má lidskou stránku.</h2>
-        <div class="topic-tabs" role="group" aria-label="Oblasti zájmu">
-          <button aria-pressed="true" data-topic="0">Identita</button>
-          <button aria-pressed="false" data-topic="1">Tempo života</button>
-          <button aria-pressed="false" data-topic="2">Praxe</button>
-          <button aria-pressed="false" data-topic="3">Pravidla</button>
+    <section class="sec" id="projects" aria-labelledby="projects-h">
+      <p class="k">Naše směry</p>
+      <div class="c">
+        <h2 id="projects-h">Od otázek ke konkrétní práci.</h2>
+        <p style="margin-top:14px;color:var(--muted)">Co už existuje a co připravujeme.</p>
+        <div class="unplugged">
+          <div class="copy">
+            <p class="state ui">Aktivní projekt</p>
+            <h3>Unplugged</h3>
+            <p class="claim">AI je nástroj. Ne vztah.</p>
+            <p class="desc">Newsletter, osvěta a nabídka pilotních workshopů o tom, když AI napodobuje lidskou blízkost.</p>
+            <div class="actions"><a class="btn btn-primary" href="https://www.unplugged.cz" target="_blank" rel="noopener">Prozkoumat Unplugged <span class="arr" aria-hidden="true">↗</span></a></div>
+          </div>
+          <a class="shot" href="https://www.unplugged.cz" target="_blank" rel="noopener">
+            <figure style="margin:0">
+              <img src="UNPLUGGED_IMG" width="1280" height="680" alt="Úvodní stránka webu Unplugged">
+              <figcaption><span>Skutečný projekt. Vlastní hlas.</span><span aria-hidden="true">unplugged.cz ↗</span></figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="ledger" id="ledger">
+          <details><summary><b>Akademie</b><span>V přípravě</span><i aria-hidden="true">+</i></summary><p>Připravovaný směr zaměřený na AI gramotnost a implementaci pro firmy a veřejnou správu. Nabídku teprve připravujeme.</p></details>
+          <details><summary><b>Praktici</b><span>V přípravě</span><i aria-hidden="true">+</i></summary><p>Záměr klinického vzdělávání pro terapeuty a psychology. Jeho rozvoj závisí na zajištění klinického garanta.</p></details>
+          <details><summary><b>Policy Lab</b><span>V přípravě</span><i aria-hidden="true">+</i></summary><p>Výzkum a stanoviska k regulaci AI připravujeme.</p></details>
         </div>
       </div>
-      <div class="topic-panel" id="topic" aria-live="polite">
-        <h3>Prostor být sami sebou.</h3>
-        <p>Jak digitalizace proměňuje naše vnímání sebe sama i toho, kým jsme společně? Osobní a kolektivní identita patří do širšího záběru Alesvie.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block" id="projects">
-    <div class="wrap">
-      <div class="projects-head">
-        <div><p class="label">Naše směry</p><h2>Od otázek ke konkrétní práci.</h2></div>
-        <p>Co už existuje a co připravujeme.</p>
-      </div>
-      <article class="feature">
-        <div>
-          <span class="status">Aktivní projekt</span>
-          <h3>Unplugged</h3>
-          <p class="claim">AI je nástroj. Ne vztah.</p>
-          <p class="desc">Newsletter, osvěta a nabídka pilotních workshopů o tom, když AI napodobuje lidskou blízkost.</p>
-          <div class="actions"><a class="btn btn-primary" href="https://www.unplugged.cz" target="_blank" rel="noopener">Prozkoumat Unplugged <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+    <section class="band" id="collaboration" aria-labelledby="collab-h">
+      <div class="grid">
+        <p class="k">Spolupráce</p>
+        <div class="c">
+          <h2 id="collab-h">Dobré otázky si zaslouží společnou práci.</h2>
+          <p class="intro">Hledáte prostor pro spolupráci, chcete se zorientovat nebo podpořit vznik Alesvie?</p>
+          <div class="paths" role="group" aria-label="Zvolte svou cestu">
+            <button aria-pressed="true" data-path="0">Instituce a partneři</button>
+            <button aria-pressed="false" data-path="1">Veřejnost</button>
+            <button aria-pressed="false" data-path="2">Podporovatelé</button>
+          </div>
+          <div class="path-row" aria-live="polite">
+            <p id="pathText">Pojďme probrat společné téma, vzdělávací potřebu nebo možnost podílet se na přípravě organizace.</p>
+            <a id="pathLink" class="btn btn-gold" href="https://www.alesvia.org/cs/kontakt" target="_blank" rel="noopener"><span id="pathLabel">Přejít na kontakt</span> <span class="arr" aria-hidden="true">→</span></a>
+          </div>
         </div>
-        <a class="preview" href="https://www.unplugged.cz" target="_blank" rel="noopener">
-          <img src="UNPLUGGED_IMG" width="1280" height="680" alt="Úvodní stránka webu Unplugged">
-          <span>Skutečný projekt. Vlastní hlas. <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
-        </a>
-      </article>
-      <div class="planned" id="planned">
-        <details><summary><b>Akademie</b><small>V přípravě</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Připravovaný směr zaměřený na AI gramotnost a implementaci pro firmy a veřejnou správu. Nabídku teprve připravujeme.</p></details>
-        <details><summary><b>Praktici</b><small>V přípravě</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Záměr klinického vzdělávání pro terapeuty a psychology. Jeho rozvoj závisí na zajištění klinického garanta.</p></details>
-        <details><summary><b>Policy Lab</b><small>V přípravě</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Výzkum a stanoviska k regulaci AI připravujeme.</p></details>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block" id="collaboration" style="border-bottom:0">
-    <div class="wrap">
-      <div class="collab">
-        <p class="label">Spolupráce</p>
-        <h2>Dobré otázky si zaslouží společnou práci.</h2>
-        <p>Hledáte prostor pro spolupráci, chcete se zorientovat nebo podpořit vznik Alesvie?</p>
-        <div class="paths" role="group" aria-label="Zvolte svou cestu">
-          <button aria-pressed="true" data-path="0">Instituce a partneři</button>
-          <button aria-pressed="false" data-path="1">Veřejnost</button>
-          <button aria-pressed="false" data-path="2">Podporovatelé</button>
-        </div>
-        <div class="path-panel" aria-live="polite">
-          <p id="pathText">Pojďme probrat společné téma, vzdělávací potřebu nebo možnost podílet se na přípravě organizace.</p>
-          <a id="pathLink" class="btn btn-gold" href="https://www.alesvia.org/cs/kontakt" target="_blank" rel="noopener">Přejít na kontakt</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="faq">
-    <div class="wrap faq">
-      <div><p class="label">Otázky</p><h2>Časté otázky</h2></div>
-      <div>
+    <section class="sec" id="faq" aria-labelledby="faq-h" style="border-top:0">
+      <p class="k">Otázky</p>
+      <div class="c qa">
+        <h2 id="faq-h" style="margin-bottom:28px">Časté otázky</h2>
         <details open><summary>V jaké fázi Alesvia je? <i aria-hidden="true">+</i></summary><p>Registraci ústavu připravujeme. Unplugged je aktivní veřejný projekt, ostatní tři pilíře jsou v přípravě. Představená témata nejsou seznamem již poskytovaných služeb.</p></details>
         <details><summary>Co když hledám osobní psychickou pomoc? <i aria-hidden="true">+</i></summary><p>Alesvia neposkytuje krizovou pomoc. Kontakty na odbornou pomoc najdete níže.</p></details>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block" id="crisis" style="border-bottom:0">
-    <div class="wrap crisis">
-      <h2>Když je toho moc, mluv s člověkem.</h2>
-      <p>V České republice se můžeš obrátit na následující linky. Alesvia neposkytuje krizovou pomoc; její formuláře k tomu nejsou určené.</p>
-      <ul>
-        <li><a class="tel" href="tel:116123">Linka první psychické pomoci – 116 123</a><br>Pro dospělé a jejich blízké. Zdarma, nonstop.</li>
-        <li><a class="tel" href="tel:116111">Linka bezpečí – 116 111</a><br>Pro děti a studenty do 26 let. Telefon zdarma a nonstop.</li>
-      </ul>
-      <p>Při bezprostředním ohrožení života volej <a class="tel" href="tel:155">155</a> / <a class="tel" href="tel:112">112</a>.</p>
-    </div>
-  </section>
-</main>
+    <section class="sec crisis" id="crisis" aria-labelledby="crisis-h">
+      <p class="k">Pomoc</p>
+      <div class="c">
+        <h2 id="crisis-h">Když je toho moc, mluv s člověkem.</h2>
+        <p class="note">V České republice se můžeš obrátit na následující linky. Alesvia neposkytuje krizovou pomoc; její formuláře k tomu nejsou určené.</p>
+        <div class="lines">
+          <div><small>Linka první psychické pomoci</small><a href="tel:116123">116 123</a><p>Pro dospělé a jejich blízké. Zdarma, nonstop.</p></div>
+          <div><small>Linka bezpečí</small><a href="tel:116111">116 111</a><p>Pro děti a studenty do 26 let. Telefon zdarma a nonstop.</p></div>
+        </div>
+        <p class="sos">Při bezprostředním ohrožení života volej <a href="tel:155">155</a> / <a href="tel:112">112</a>.</p>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>LOCKUP_SVG<p>Lidská autonomie je základ.</p></div>
-      <div><h4>Pilíře</h4><ul><li><a href="#projects">Unplugged</a></li><li><a href="#planned">Akademie</a></li><li><a href="#planned">Praktici</a></li><li><a href="#planned">Policy Lab</a></li></ul></div>
-      <div><h4>Organizace</h4><ul><li><a href="#themes">O Alesvii</a></li><li><a href="https://www.alesvia.org/cs/tym">Tým</a></li><li><a href="https://www.alesvia.org/cs/financovani">Financování</a></li><li><a href="https://www.alesvia.org/cs/vyzkum">Výzkum a analýzy</a></li></ul></div>
-      <div><h4>Právní informace</h4><ul><li><a href="https://www.alesvia.org/cs/pravni/ochrana-udaju">Ochrana osobních údajů</a></li><li><a href="https://www.alesvia.org/cs/pravni/impressum">Impressum</a></li></ul></div>
-    </div>
+  <footer>
+    <div class="brand">LOCKUP_SVG<p>Lidská autonomie je základ.</p></div>
+    <div class="col"><h4>Pilíře</h4><ul><li><a href="#projects">Unplugged</a></li><li><a href="#ledger">Akademie</a></li><li><a href="#ledger">Praktici</a></li><li><a href="#ledger">Policy Lab</a></li></ul></div>
+    <div class="col"><h4>Organizace</h4><ul><li><a href="#about">O Alesvii</a></li><li><a href="https://www.alesvia.org/cs/tym">Tým</a></li><li><a href="https://www.alesvia.org/cs/financovani">Financování</a></li><li><a href="https://www.alesvia.org/cs/vyzkum">Výzkum a analýzy</a></li></ul></div>
+    <div class="col"><h4>Právní informace</h4><ul><li><a href="https://www.alesvia.org/cs/pravni/ochrana-udaju">Ochrana osobních údajů</a></li><li><a href="https://www.alesvia.org/cs/pravni/impressum">Impressum</a></li></ul></div>
     <p class="copy">© 2026 Alesvia</p>
-  </div>
-</footer>
+  </footer>
+</div>
 
 <dialog id="menu" aria-labelledby="menuTitle">
-  <header><strong id="menuTitle" class="ui">Menu</strong><button class="btn btn-secondary" id="closeMenu" autofocus>Zavřít</button></header>
-  <nav aria-label="Mobilní navigace"><a href="#themes">O Alesvii</a><a href="#projects">Naše směry</a><a href="#collaboration">Spolupráce</a></nav>
-  <p style="margin-top:20px"><a class="btn btn-primary" href="#collaboration" style="width:100%">Spojme se</a></p>
+  <div class="top"><strong id="menuTitle" class="ui">Menu</strong><button class="btn btn-secondary" id="closeMenu" autofocus>Zavřít</button></div>
+  <nav aria-label="Mobilní navigace"><a href="#about">O Alesvii</a><a href="#projects">Naše směry</a><a href="#collaboration">Spolupráce</a></nav>
+  <p style="margin-top:22px"><a class="btn btn-primary" href="#collaboration">Spojme se</a></p>
 </dialog>
 
 <div class="review" aria-label="Ovládání náhledu (není součástí návrhu)">
@@ -335,10 +334,10 @@ dialog nav a{display:block;padding:14px 4px;border-bottom:1px solid var(--rule);
 
 <script>
 const topics=[["Prostor být sami sebou.","Jak digitalizace proměňuje naše vnímání sebe sama i toho, kým jsme společně? Osobní a kolektivní identita patří do širšího záběru Alesvie."],["Rychleji není jediný směr.","Co nám tlak na rychlost a optimalizaci přináší a co při něm ztrácíme? Alesvia chce otevírat i otázky tempa každodenního života."],["Porozumět, rozhodnout, použít.","Vzdělávání a odpovědné používání technologií propojuje porozumění s každodenní praxí. Konkrétní programy označujeme podle skutečného stavu příprav."],["Společný svět, společná odpovědnost.","Digitalizace není jen individuální volba. Zahrnuje i společenské dopady, pravidla a možnost podílet se na jejich utváření."]];
-const panel=document.getElementById('topic');
-document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-topic]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const t=topics[+b.dataset.topic];panel.querySelector('h3').textContent=t[0];panel.querySelector('p').textContent=t[1];panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');}));
+const tp=document.getElementById('topic');
+document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-topic]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const t=topics[+b.dataset.topic];tp.querySelector('h3').textContent=t[0];tp.querySelector('p').textContent=t[1];tp.classList.remove('swap');void tp.offsetWidth;tp.classList.add('swap');}));
 const paths=[["Pojďme probrat společné téma, vzdělávací potřebu nebo možnost podílet se na přípravě organizace.","Přejít na kontakt","https://www.alesvia.org/cs/kontakt"],["Začněte u aktivního projektu Unplugged: newsletteru a osvětového obsahu o používání konverzační AI.","Navštívit Unplugged","https://www.unplugged.cz"],["Seznamte se s plánovaným financováním a pravidly nezávislosti vznikající organizace.","Poznat financování","https://www.alesvia.org/cs/financovani"]];
-document.querySelectorAll('[data-path]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-path]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const p=paths[+b.dataset.path];document.getElementById('pathText').textContent=p[0];const a=document.getElementById('pathLink');a.textContent=p[1];a.href=p[2];}));
+document.querySelectorAll('[data-path]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-path]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const p=paths[+b.dataset.path];document.getElementById('pathText').textContent=p[0];document.getElementById('pathLabel').textContent=p[1];document.getElementById('pathLink').href=p[2];}));
 const menu=document.getElementById('menu');
 document.getElementById('openMenu').addEventListener('click',()=>menu.showModal());
 document.getElementById('closeMenu').addEventListener('click',()=>menu.close());
@@ -347,8 +346,13 @@ const dd=document.getElementById('dd');
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dd.open){dd.open=false;dd.querySelector('summary').focus();}});
 document.addEventListener('click',e=>{if(!dd.contains(e.target))dd.open=false;});
 dd.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{dd.open=false;}));
-document.getElementById('replay').addEventListener('click',()=>{document.body.classList.remove('animate');void document.body.offsetWidth;document.body.classList.add('animate');});
-document.getElementById('reduce').addEventListener('click',function(){const on=document.documentElement.classList.toggle('reduce');this.setAttribute('aria-pressed',String(on));});
+// The gold line grows with reading progress (full and static when motion is reduced).
+const gold=document.getElementById('gold');
+const still=()=>matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('reduce');
+function progress(){const max=document.documentElement.scrollHeight-innerHeight;gold.style.setProperty('--p',still()?1:Math.max(.06,Math.min(1,scrollY/Math.max(1,max))));}
+addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress);progress();
+document.getElementById('replay').addEventListener('click',()=>{document.body.classList.remove('arrive');void document.body.offsetWidth;document.body.classList.add('arrive');scrollTo({top:0});});
+document.getElementById('reduce').addEventListener('click',function(){const on=document.documentElement.classList.toggle('reduce');this.setAttribute('aria-pressed',String(on));progress();});
 </script>
 </body>
 </html>
