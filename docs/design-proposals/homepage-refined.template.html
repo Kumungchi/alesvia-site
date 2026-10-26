@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alesvia — původní web, vylepšený (klikací návrh)</title>
+<style>
+/*FACES*/
+:root{
+  --bg:#F9F9F8;--text:#221E22;--muted:#6B6472;--trust:#0F2C59;--primary:#31263E;--accent:#ECA72C;--accent-ink:#9A6200;--surface:#F4F4F2;--white:#fff;
+  --rule:rgba(34,30,34,.14);--fh:Figtree,system-ui,sans-serif;--fb:Literata,Georgia,serif;--ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,nav,button,summary,.ui{font-family:var(--fh)}
+h1,h2,h3,p{margin:0}a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:50;background:var(--primary);color:#fff;padding:12px 16px;border-radius:8px}
+
+/* Buttons — the original site's roles, unchanged */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 22px;border-radius:8px;font:600 15px/1.2 var(--fh);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background-color .2s ease-out,border-color .2s ease-out,color .2s ease-out}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:#241B2E}
+.btn-secondary{background:var(--white);color:var(--text);border-color:rgba(107,100,114,.28)}.btn-secondary:hover{border-color:var(--primary)}
+.btn-gold{background:var(--accent);color:var(--text)}.btn-gold:hover{background:#F3BC57}
+.btn-ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}.btn-ghost-light:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:18px;height:18px;transition:transform .2s ease-out}.btn:hover svg{transform:translateX(3px)}
+
+/* Header (original structure) */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(249,249,248,.96);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo svg{display:block;width:150px;height:auto}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:15px}
+.navlinks>a,.navlinks summary{text-decoration:none;color:var(--muted);padding:10px 0}
+.navlinks>a:hover,.navlinks summary:hover{color:var(--text)}
+.navlinks>a.btn{color:#fff;padding:12px 20px}.navlinks>a.btn:hover{color:#fff}
+.dd{position:relative}.dd summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px}.dd summary::-webkit-details-marker{display:none}
+.dd summary svg{width:16px;height:16px;transition:transform .2s ease-out}.dd[open] summary svg{transform:rotate(180deg)}
+.dd-panel{position:absolute;top:calc(100% + 14px);left:-24px;width:560px;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:4px;box-shadow:0 16px 40px rgba(34,30,34,.12)}
+.dd-panel a{display:block;padding:14px 16px;border-radius:8px;text-decoration:none}.dd-panel a:hover{background:var(--surface)}
+.dd-panel strong{display:block;font:600 16px var(--fh);color:var(--text)}.dd-panel small{display:block;font:400 13px var(--fh);color:var(--muted);margin-top:2px}
+.dd-panel .live small{color:var(--accent-ink)}
+.lang{display:flex;gap:8px;font:600 12px var(--fh);letter-spacing:.06em;color:var(--muted);padding-left:20px;border-left:1px solid var(--rule)}.lang b{color:var(--text)}
+.menu-btn{display:none;min-height:44px;padding:10px 14px;border:1px solid rgba(107,100,114,.28);border-radius:8px;background:#fff;font:600 15px var(--fh);color:var(--text);align-items:center;gap:8px}
+
+/* Hero — Titan-style framed grid with visible rules; brand symbol as the signature element */
+.hero{border-bottom:1px solid var(--rule)}
+.hero-grid{display:grid;grid-template-columns:7fr 5fr;border-left:1px solid var(--rule);border-right:1px solid var(--rule)}
+.hero-copy{padding:84px 56px 64px 40px;border-right:1px solid var(--rule)}
+.hero h1{font:700 clamp(46px,6.6vw,88px)/1.02 var(--fh);letter-spacing:-.03em;color:var(--text);max-width:11ch}
+.hero h1 span{color:var(--trust)}
+.hero .lead{margin-top:28px;font-size:20px;line-height:1.6;color:var(--muted);max-width:34ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero-mark{position:relative;display:grid;place-items:center;background:var(--surface);overflow:hidden;min-height:440px}
+.hero-mark svg{width:min(78%,380px);height:auto;overflow:visible}
+.mark-outline{fill:none;stroke:var(--trust);stroke-width:1.6}
+.mark-fill{fill:var(--trust)}
+.mark-path{fill:var(--accent);transform-box:fill-box;transform-origin:50% 100%}
+.mark-guides line{stroke:var(--rule);stroke-width:1}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--rule);border-right:1px solid var(--rule);border-top:1px solid var(--rule)}
+.facts div{padding:18px 24px 20px;border-right:1px solid var(--rule)}.facts div:last-child{border-right:0}
+.facts dt{font:600 12px var(--fh);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:6px 0 0;font:600 16px var(--fh);color:var(--text)}
+.facts .live{display:inline-flex;align-items:center;gap:8px}.facts .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+
+/* Motion: one orchestrated arrival — the gold path rises inside the A */
+@media (prefers-reduced-motion: no-preference){
+  .animate .mark-path{animation:rise 1.1s var(--ease) .35s both}
+  .animate .mark-fill{animation:settle .7s var(--ease) both}
+  .animate .hero-copy>*{animation:fade .6s ease-out both}
+  .animate .hero-copy>*:nth-child(2){animation-delay:.08s}.animate .hero-copy>*:nth-child(3){animation-delay:.16s}
+}
+@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes settle{from{opacity:0}to{opacity:1}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.reduce *{animation:none!important;transition:none!important}
+
+/* Sections */
+section.block{padding:96px 0;border-bottom:1px solid var(--rule)}
+.label{font:600 12px var(--fh);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:14px}
+.block h2{font:700 clamp(32px,3.6vw,46px)/1.12 var(--fh);letter-spacing:-.025em;max-width:22ch}
+
+/* Themes: original button language for the switch */
+.themes{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.topic-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.topic-tabs button{min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid rgba(107,100,114,.28);background:#fff;color:var(--text);font:600 14px var(--fh);cursor:pointer;transition:background-color .2s ease-out,color .2s ease-out}
+.topic-tabs button[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:#fff}
+.topic-panel{border-left:3px solid transparent;padding-top:8px}
+.topic-panel h3{font:700 30px/1.2 var(--fh);letter-spacing:-.02em;color:var(--trust)}
+.topic-panel p{margin-top:16px;font-size:19px;color:var(--text);max-width:46ch}
+.topic-panel.swap{animation:fade .35s ease-out}
+
+/* Projects */
+.projects-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}
+.projects-head p{color:var(--muted);font-size:16px}
+.feature{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center;background:#fff;border:1px solid var(--rule);border-radius:12px;padding:40px}
+.status{display:inline-flex;align-items:center;gap:8px;font:600 13px var(--fh);color:var(--accent-ink);background:rgba(236,167,44,.14);padding:6px 12px;border-radius:999px}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.feature h3{font:700 44px/1.05 var(--fh);letter-spacing:-.025em;margin-top:18px}
+.feature .claim{margin-top:14px;font:700 20px var(--fh);color:var(--trust)}
+.feature p.desc{margin-top:10px;color:var(--muted)}
+.feature .actions{margin-top:26px}
+.preview{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--rule);text-decoration:none;background:var(--surface)}
+.preview img{display:block;width:100%;height:auto}
+.preview span{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font:600 14px var(--fh);color:var(--text)}
+.preview:hover span{text-decoration:underline;text-underline-offset:4px}
+.planned{margin-top:16px;border-radius:12px;background:var(--primary);color:#fff;padding:8px 40px}
+.planned details{border-bottom:1px solid rgba(255,255,255,.14)}.planned details:last-child{border-bottom:0}
+.planned summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;min-height:76px}
+.planned summary::-webkit-details-marker{display:none}
+.planned summary b{font:700 24px var(--fh);letter-spacing:-.015em}
+.planned summary small{margin-left:auto;font:600 13px var(--fh);color:rgba(255,255,255,.72)}
+.planned summary svg{width:20px;height:20px;transition:transform .2s ease-out}.planned details[open] summary svg{transform:rotate(180deg)}
+.planned details p{padding:0 0 24px;color:rgba(255,255,255,.86);max-width:62ch}
+
+/* Collaboration — original navy block with gold primary button */
+.collab{background:var(--trust);color:#fff;border-radius:16px;padding:64px}
+.collab .label{color:var(--accent)}
+.collab h2{color:#fff}
+.collab>p{margin-top:18px;color:rgba(255,255,255,.85);max-width:56ch;font-size:19px}
+.paths{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 24px}
+.paths button{min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:600 14px var(--fh);cursor:pointer}
+.paths button[aria-pressed=true]{background:#fff;color:var(--trust);border-color:#fff}
+.path-panel{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid rgba(255,255,255,.18);padding-top:24px}
+.path-panel p{max-width:52ch;color:rgba(255,255,255,.9)}
+
+/* FAQ + crisis */
+.faq{display:grid;grid-template-columns:5fr 7fr;gap:64px}
+.faq details{border-top:1px solid var(--rule)}.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:600 19px var(--fh)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{font-style:normal;color:var(--accent-ink);font-size:24px;transition:transform .2s ease-out}.faq details[open] summary i{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:60ch}
+.crisis{max-width:760px}.crisis h2{font-size:28px}.crisis p{margin-top:12px}
+.crisis ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:14px}
+.crisis a.tel{font:700 18px var(--fh);color:var(--trust)}
+
+/* Footer (original three columns) */
+footer{padding:64px 0 40px;font-family:var(--fh)}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.foot h4{margin:0 0 14px;font:600 12px var(--fh);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:15px}.foot a{text-decoration:none}.foot a:hover{text-decoration:underline}
+.foot svg{display:block;width:150px;height:auto}
+.foot p{color:var(--muted);font-size:14px;max-width:30ch;margin-top:14px}
+.copy{margin-top:48px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+
+/* Mobile menu dialog */
+dialog{border:0;border-radius:16px;padding:24px;width:min(420px,calc(100% - 32px));background:var(--bg);color:var(--text)}
+dialog::backdrop{background:rgba(15,44,89,.45)}
+dialog header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+dialog nav a{display:block;padding:14px 4px;border-bottom:1px solid var(--rule);text-decoration:none;font:600 19px var(--fh)}
+
+/* Review toolbar (not part of the design) */
+.review{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;gap:8px;font-family:var(--fh)}
+.review button{min-height:40px;padding:8px 12px;border-radius:8px;border:1px solid var(--rule);background:#fff;font:600 13px var(--fh);cursor:pointer}
+
+@media (max-width:900px){
+  .wrap{padding:0 20px}
+  .navlinks{display:none}.menu-btn{display:inline-flex}
+  .hero-grid{grid-template-columns:1fr}.hero-copy{padding:56px 24px 40px;border-right:0;border-bottom:1px solid var(--rule)}
+  .hero-mark{min-height:280px}
+  .facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-right:0}.facts div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  .themes,.faq,.feature{grid-template-columns:1fr;gap:28px}
+  .feature{padding:24px}.planned{padding:4px 24px}.collab{padding:36px 24px}
+  .projects-head{display:block}.projects-head p{margin-top:8px}
+  .foot{grid-template-columns:1fr 1fr}
+  section.block{padding:64px 0}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="animate">
+<a class="skip" href="#main">Přejít na obsah</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="#main" aria-label="Alesvia — úvod">LOCKUP_SVG</a>
+    <nav class="navlinks" aria-label="Hlavní navigace">
+      <a href="#themes">O Alesvii</a>
+      <details class="dd" id="dd">
+        <summary>Naše směry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="dd-panel">
+          <a class="live" href="#projects"><strong>Unplugged</strong><small>Aktivní projekt · osvěta a vzdělávání</small></a>
+          <a href="#planned"><strong>Akademie</strong><small>V přípravě · gramotnost a praxe</small></a>
+          <a href="#planned"><strong>Praktici</strong><small>V přípravě · klinické vzdělávání</small></a>
+          <a href="#planned"><strong>Policy Lab</strong><small>V přípravě · výzkum a pravidla</small></a>
+        </div>
+      </details>
+      <a href="#collaboration">Spolupráce</a>
+      <span class="lang" aria-label="Jazyk"><span>EN</span><b>CS</b></span>
+      <a class="btn btn-primary" href="#collaboration">Spojme se</a>
+    </nav>
+    <button class="menu-btn" id="openMenu" aria-haspopup="dialog">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Lidská autonomie <span>je základ.</span></h1>
+          <p class="lead">Technologie mění svět, ve kterém žijeme. Alesvia vzniká pro otázky digitalizace, společnosti a prostoru zůstat sami sebou.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#collaboration">Pro instituce a partnery <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+            <a class="btn btn-secondary" href="#projects">Poznat naše směry</a>
+          </div>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <svg viewBox="0 0 128 128">
+            <g class="mark-guides"><line x1="0" y1="108" x2="128" y2="108"/><line x1="64" y1="0" x2="64" y2="20"/><line x1="24" y1="62" x2="0" y2="62"/><line x1="104" y1="62" x2="128" y2="62"/></g>
+            <path class="mark-fill" d="M24 108V62L64 20L104 62V108H86V69L64 46L42 69V108H24Z"/>
+            <path class="mark-path" d="M58 108V64L64 58L70 64V108H58Z"/>
+          </svg>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Aktivní projekt</dt><dd class="live">Unplugged</dd></div>
+        <div><dt>V přípravě</dt><dd>Akademie · Praktici · Policy Lab</dd></div>
+        <div><dt>Plánované sídlo</dt><dd>Ostrava</dd></div>
+        <div><dt>Právní forma</dt><dd>Registraci ústavu připravujeme.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="themes">
+    <div class="wrap themes">
+      <div>
+        <p class="label">O Alesvii</p>
+        <h2>Digitální svět má lidskou stránku.</h2>
+        <div class="topic-tabs" role="group" aria-label="Oblasti zájmu">
+          <button aria-pressed="true" data-topic="0">Identita</button>
+          <button aria-pressed="false" data-topic="1">Tempo života</button>
+          <button aria-pressed="false" data-topic="2">Praxe</button>
+          <button aria-pressed="false" data-topic="3">Pravidla</button>
+        </div>
+      </div>
+      <div class="topic-panel" id="topic" aria-live="polite">
+        <h3>Prostor být sami sebou.</h3>
+        <p>Jak digitalizace proměňuje naše vnímání sebe sama i toho, kým jsme společně? Osobní a kolektivní identita patří do širšího záběru Alesvie.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="projects-head">
+        <div><p class="label">Naše směry</p><h2>Od otázek ke konkrétní práci.</h2></div>
+        <p>Co už existuje a co připravujeme.</p>
+      </div>
+      <article class="feature">
+        <div>
+          <span class="status">Aktivní projekt</span>
+          <h3>Unplugged</h3>
+          <p class="claim">AI je nástroj. Ne vztah.</p>
+          <p class="desc">Newsletter, osvěta a nabídka pilotních workshopů o tom, když AI napodobuje lidskou blízkost.</p>
+          <div class="actions"><a class="btn btn-primary" href="https://www.unplugged.cz" target="_blank" rel="noopener">Prozkoumat Unplugged <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+        </div>
+        <a class="preview" href="https://www.unplugged.cz" target="_blank" rel="noopener">
+          <img src="UNPLUGGED_IMG" width="1280" height="680" alt="Úvodní stránka webu Unplugged">
+          <span>Skutečný projekt. Vlastní hlas. <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
+        </a>
+      </article>
+      <div class="planned" id="planned">
+        <details><summary><b>Akademie</b><small>V přípravě</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Připravovaný směr zaměřený na AI gramotnost a implementaci pro firmy a veřejnou správu. Nabídku teprve připravujeme.</p></details>
+        <details><summary><b>Praktici</b><small>V přípravě</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Záměr klinického vzdělávání pro terapeuty a psychology. Jeho rozvoj závisí na zajištění klinického garanta.</p></details>
+        <details><summary><b>Policy Lab</b><small>V přípravě</small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Výzkum a stanoviska k regulaci AI připravujeme.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="collaboration" style="border-bottom:0">
+    <div class="wrap">
+      <div class="collab">
+        <p class="label">Spolupráce</p>
+        <h2>Dobré otázky si zaslouží společnou práci.</h2>
+        <p>Hledáte prostor pro spolupráci, chcete se zorientovat nebo podpořit vznik Alesvie?</p>
+        <div class="paths" role="group" aria-label="Zvolte svou cestu">
+          <button aria-pressed="true" data-path="0">Instituce a partneři</button>
+          <button aria-pressed="false" data-path="1">Veřejnost</button>
+          <button aria-pressed="false" data-path="2">Podporovatelé</button>
+        </div>
+        <div class="path-panel" aria-live="polite">
+          <p id="pathText">Pojďme probrat společné téma, vzdělávací potřebu nebo možnost podílet se na přípravě organizace.</p>
+          <a id="pathLink" class="btn btn-gold" href="https://www.alesvia.org/cs/kontakt" target="_blank" rel="noopener">Přejít na kontakt</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap faq">
+      <div><p class="label">Otázky</p><h2>Časté otázky</h2></div>
+      <div>
+        <details open><summary>V jaké fázi Alesvia je? <i aria-hidden="true">+</i></summary><p>Registraci ústavu připravujeme. Unplugged je aktivní veřejný projekt, ostatní tři pilíře jsou v přípravě. Představená témata nejsou seznamem již poskytovaných služeb.</p></details>
+        <details><summary>Co když hledám osobní psychickou pomoc? <i aria-hidden="true">+</i></summary><p>Alesvia neposkytuje krizovou pomoc. Kontakty na odbornou pomoc najdete níže.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="crisis" style="border-bottom:0">
+    <div class="wrap crisis">
+      <h2>Když je toho moc, mluv s člověkem.</h2>
+      <p>V České republice se můžeš obrátit na následující linky. Alesvia neposkytuje krizovou pomoc; její formuláře k tomu nejsou určené.</p>
+      <ul>
+        <li><a class="tel" href="tel:116123">Linka první psychické pomoci – 116 123</a><br>Pro dospělé a jejich blízké. Zdarma, nonstop.</li>
+        <li><a class="tel" href="tel:116111">Linka bezpečí – 116 111</a><br>Pro děti a studenty do 26 let. Telefon zdarma a nonstop.</li>
+      </ul>
+      <p>Při bezprostředním ohrožení života volej <a class="tel" href="tel:155">155</a> / <a class="tel" href="tel:112">112</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>LOCKUP_SVG<p>Lidská autonomie je základ.</p></div>
+      <div><h4>Pilíře</h4><ul><li><a href="#projects">Unplugged</a></li><li><a href="#planned">Akademie</a></li><li><a href="#planned">Praktici</a></li><li><a href="#planned">Policy Lab</a></li></ul></div>
+      <div><h4>Organizace</h4><ul><li><a href="#themes">O Alesvii</a></li><li><a href="https://www.alesvia.org/cs/tym">Tým</a></li><li><a href="https://www.alesvia.org/cs/financovani">Financování</a></li><li><a href="https://www.alesvia.org/cs/vyzkum">Výzkum a analýzy</a></li></ul></div>
+      <div><h4>Právní informace</h4><ul><li><a href="https://www.alesvia.org/cs/pravni/ochrana-udaju">Ochrana osobních údajů</a></li><li><a href="https://www.alesvia.org/cs/pravni/impressum">Impressum</a></li></ul></div>
+    </div>
+    <p class="copy">© 2026 Alesvia</p>
+  </div>
+</footer>
+
+<dialog id="menu" aria-labelledby="menuTitle">
+  <header><strong id="menuTitle" class="ui">Menu</strong><button class="btn btn-secondary" id="closeMenu" autofocus>Zavřít</button></header>
+  <nav aria-label="Mobilní navigace"><a href="#themes">O Alesvii</a><a href="#projects">Naše směry</a><a href="#collaboration">Spolupráce</a></nav>
+  <p style="margin-top:20px"><a class="btn btn-primary" href="#collaboration" style="width:100%">Spojme se</a></p>
+</dialog>
+
+<div class="review" aria-label="Ovládání náhledu (není součástí návrhu)">
+  <button id="replay">Přehrát úvod</button>
+  <button id="reduce" aria-pressed="false">Omezit pohyb</button>
+</div>
+
+<script>
+const topics=[["Prostor být sami sebou.","Jak digitalizace proměňuje naše vnímání sebe sama i toho, kým jsme společně? Osobní a kolektivní identita patří do širšího záběru Alesvie."],["Rychleji není jediný směr.","Co nám tlak na rychlost a optimalizaci přináší a co při něm ztrácíme? Alesvia chce otevírat i otázky tempa každodenního života."],["Porozumět, rozhodnout, použít.","Vzdělávání a odpovědné používání technologií propojuje porozumění s každodenní praxí. Konkrétní programy označujeme podle skutečného stavu příprav."],["Společný svět, společná odpovědnost.","Digitalizace není jen individuální volba. Zahrnuje i společenské dopady, pravidla a možnost podílet se na jejich utváření."]];
+const panel=document.getElementById('topic');
+document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-topic]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const t=topics[+b.dataset.topic];panel.querySelector('h3').textContent=t[0];panel.querySelector('p').textContent=t[1];panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');}));
+const paths=[["Pojďme probrat společné téma, vzdělávací potřebu nebo možnost podílet se na přípravě organizace.","Přejít na kontakt","https://www.alesvia.org/cs/kontakt"],["Začněte u aktivního projektu Unplugged: newsletteru a osvětového obsahu o používání konverzační AI.","Navštívit Unplugged","https://www.unplugged.cz"],["Seznamte se s plánovaným financováním a pravidly nezávislosti vznikající organizace.","Poznat financování","https://www.alesvia.org/cs/financovani"]];
+document.querySelectorAll('[data-path]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-path]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const p=paths[+b.dataset.path];document.getElementById('pathText').textContent=p[0];const a=document.getElementById('pathLink');a.textContent=p[1];a.href=p[2];}));
+const menu=document.getElementById('menu');
+document.getElementById('openMenu').addEventListener('click',()=>menu.showModal());
+document.getElementById('closeMenu').addEventListener('click',()=>menu.close());
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.close()));
+const dd=document.getElementById('dd');
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dd.open){dd.open=false;dd.querySelector('summary').focus();}});
+document.addEventListener('click',e=>{if(!dd.contains(e.target))dd.open=false;});
+dd.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{dd.open=false;}));
+document.getElementById('replay').addEventListener('click',()=>{document.body.classList.remove('animate');void document.body.offsetWidth;document.body.classList.add('animate');});
+document.getElementById('reduce').addEventListener('click',function(){const on=document.documentElement.classList.toggle('reduce');this.setAttribute('aria-pressed',String(on));});
+</script>
+</body>
+</html>

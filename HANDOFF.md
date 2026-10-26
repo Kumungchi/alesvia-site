@@ -242,3 +242,5 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 
 - [x] Tři alternativy úvodu bez odstavce vedle motta: `docs/design-proposals/hero-alternatives.html`. Figtree + Literata a původní logo/motto zachovány. A Otevřený prostor, B Vlastní směr, C Živý horizont. Samostatné návrhy, žádná změna aplikační homepage.
 - [ ] Matias vybere novou kompozici úvodu; schválené české texty budou potom adaptovány do EN a zapracovány.
+
+- [ ] Homepage „původní web, vylepšený“ (`docs/design-proposals/homepage-refined.html`): role tlačítek z původního webu, Titan/ISO Meet z Mobbinu, zlatá linie v symbolu jako výrazný prvek. Nahrazuje alternativy z PR #14. ⚠️ Čeká na schválení Matiasem.

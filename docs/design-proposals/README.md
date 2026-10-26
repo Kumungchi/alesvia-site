@@ -37,3 +37,13 @@ Verified in T3 Chromium on 25 October 2026 (desktop 1280 px, iPhone 12 Pro 390 p
 Removed at Matias's request: the rule-of-three tagline "Technologie. Společnost. Vlastní směr." Other copy apart from the motto is provisional; Inter remains the UI face by choice.
 
 Motto typeface comparison (requested 25 October 2026: softer letterforms than Newsreader): a switch above the prototype toggles the motto between Newsreader (current), Fraunces with the SOFT axis at 100 and WONK 0, and Literata. Both candidates are OFL, embedded from `fonts/` (latin + latin-ext only, licenses alongside) and verified loaded in the browser. Only the motto changes; applying a choice to other headings is a separate decision.
+
+## Homepage — původní web, vylepšený (`homepage-refined.html`)
+
+Na žádost Matiase (26. 10. 2026) po odmítnutí alternativ z PR #14: vychází ze struktury, barev a **rolí tlačítek původního webu** — plné lilkové `#31263E` pro hlavní akci (i v hlavičce), světlé s jemným rámečkem pro vedlejší, zlaté na tmavomodrém bloku. Schválená písma Figtree + Literata a všech 27 schválených textů.
+
+Reference z Mobbin (veřejná galerie Sites, bez přihlášení vidět jen první stránka, 26. 10. 2026): **Titan** — úvod v rámu se svislými linkami sloupců, titulek vlevo, výrazný obraz vpravo, řádek faktů s vlasovými linkami; **ISO Meet** — přímý titulek a jeden dominantní obraz. Převzat princip, ne grafika.
+
+Výrazný prvek: symbol Alesvie ve velkém v pravé části úvodu; **zlatá středová linie (autonomie) se při načtení vysune nahoru** (1,1 s, jednou). Při omezení pohybu statické. Řádek faktů jen s pravdivými údaji (aktivní Unplugged, tři pilíře v přípravě, plánované sídlo Ostrava, registrace v přípravě).
+
+Ověřeno v T3 Chromium: 1280 px a 390 px bez přetečení; computed barvy tlačítek odpovídají rolím; rozbalovací „Naše směry“ (Escape zavře); mobilní menu jako dialog s návratem fokusu; Figtree a Literata načtené z vložených souborů. Opraveno při kontrole: tlačítko v hlavičce přebíjené stylem odkazů, velikost loga v patičce.
