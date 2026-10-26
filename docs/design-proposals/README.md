@@ -42,7 +42,9 @@ Motto typeface comparison (requested 25 October 2026: softer letterforms than Ne
 
 Verze 2 (26. 10. 2026) po zamítnutí verze 1 („kapky, elementy, velké boxy“). Postaveno podle design skillu jako **tištěný editorial veřejného institutu**: typografie a mřížka nesou celou stránku; žádné karty, krabice, pilulky ani stíny; zaoblená jsou jen původní tlačítka (role zachovány: lilkové hlavní, světlé vedlejší, zlaté na tmavomodrém). Jediná barevná plocha je tmavomodrý pruh spolupráce přes celou šířku, bez zaoblení.
 
-Výrazný prvek: **zlatá svislá linie v levém okraji** (zlatá cesta ze symbolu loga) roste s postupem čtení; motto se při načtení vysune řádek po řádku z účaří. Obojí vypnuto při omezení pohybu.
+Výrazný prvek: **zlatá spojnice na středové ose** (zlatá cesta ze symbolu loga) mezi sekcemi; vysune se, když k ní čtenář doscrolluje. Motto se při načtení vysune řádek po řádku z účaří. Obojí vypnuto při omezení pohybu.
+
+Rozvržení (Matias 26. 10. 2026): **celá stránka stojí na jedné středové ose**, aby se zarovnání nestřídalo mezi středem a levým okrajem. Na střed jsou úvod, štítky a nadpisy sekcí, obsahové sloupce, tmavomodrý pruh i krizové linky. Dlouhé odstavce (témata, články, odpovědi FAQ) zůstávají uvnitř vycentrovaných bloků zarovnané vlevo kvůli čitelnosti. Varianta s úvodem vlevo a symbolem byla odstraněna. Ověřeno na 1440 px a 390 px (iframe přesné šířky), bez vodorovného přetečení.
 
 Mobbin (veřejná galerie Sites): Titan — řádek faktů pod hlavičkou, vlasové linky a disciplína mřížky. Převzat princip, ne grafika.
 
