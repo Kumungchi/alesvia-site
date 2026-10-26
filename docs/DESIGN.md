@@ -48,6 +48,8 @@ Matias 26. 10. výslovně požádal o navrácení animací, které při plošné
 
 Navigace kreslí zlaté podtržení, menu a dialog se otevřou za 240–300 ms, změna cesty spolupráce má přechod 300 ms. Tlačítka drží své barvy a šipka se posune o 3 px, bez zvedání celého tlačítka. Vše používá exponenciální ease-out, bez pružení a nekonečných smyček.
 
+Vodorovné oddělovače témat, pilířů a výpisů se při zobrazení postupně vyplní zlatou zleva doprava (1100 ms). Šedý základ zůstává čitelný i bez JavaScriptu. Horní 2px zlatá linka navazuje na původní web a ukazuje skutečný průchod stránkou; reaguje také na změnu délky obsahu. Při omezeném pohybu a v tisku je horní ukazatel skrytý, oddělovače se vybarví bez přechodu.
+
 Obsah je v serverovém HTML viditelný; JavaScript přidává pohyb, nikoli podmínku zobrazení. Systémové omezení pohybu vypíná animace i přechody, včetně již běžících Web Animations. Výchozí stav a tisk jsou plně čitelné. Implementace: společný `components/SiteMotion.tsx`, jeden IntersectionObserver a cleanup při navigaci; bez nové knihovny a bez scroll listeneru na každé sekci.
 
 ## Sdílené komponenty

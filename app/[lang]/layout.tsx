@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import JsonLd from "../../components/JsonLd";
 import SiteMotion from "../../components/SiteMotion";
+import ReadingProgress from "../../components/ReadingProgress";
 import { getAbsoluteUrl, getSiteOrigin } from "../../lib/site";
 import { getPublicPath } from "../../lib/routes";
 import { ConvexClientProvider } from "../../components/ConvexClientProvider";
@@ -133,6 +134,7 @@ export default async function RootLayout({
               {children}
             </main>
             <SiteMotion />
+            <ReadingProgress />
             <Footer dict={dict.footer} lang={lang} />
           </div>
         </ConvexClientProvider>

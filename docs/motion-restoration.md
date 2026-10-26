@@ -22,3 +22,9 @@ Server HTML and default CSS keep all content visible. Only offscreen gold connec
 - JavaScript disabled: the English homepage retains all six sections, zero hidden sections and zero pending motion states.
 
 Preview /cs, /en, /cs/o-nas and a research article; scroll through the homepage and switch collaboration paths. The change does not edit content, colors, backend behavior, deployment settings or data. Physical-device performance is not independently certified.
+
+## Horizontal rule clarification
+
+Matias specifically called out the previous horizontal lines progressively filling with color. Homepage topic/project/post dividers and research/process rows now draw a 1px gold overlay left-to-right over 1100 ms. They share the existing observer and do not translate their content. The original site's top reading-progress line is restored as a solid brand-gold 2px indicator, with one requestAnimationFrame-throttled passive scroll handler and a ResizeObserver for changing document length. Both clean up on navigation.
+
+Browser measurements confirmed a divider at scaleX .516 mid-transition and 1 at completion; reading progress was 0 at the top, .152 partway and 1 at the bottom. Mobile 390px has no horizontal overflow. Reduced-motion emulation hides the top indicator and leaves zero running animations/pending targets; live preference changes cancel motion. Disabled JavaScript preserves the baseline dividers and all content. Build and lint passed; the targeted detector reported no findings.

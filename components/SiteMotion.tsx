@@ -19,6 +19,7 @@ export default function SiteMotion() {
     const reveal = (element: HTMLElement, entrance = false) => {
       element.dataset.motionState = 'revealed';
       pending.delete(element);
+      if (element.hasAttribute('data-motion-rule')) return;
       if (preference.matches || !element.animate) return;
       const animation = element.animate([
         { opacity: entrance ? .65 : .8, transform: `translateY(${entrance ? 18 : 12}px)` },
@@ -40,10 +41,11 @@ export default function SiteMotion() {
 
     const discover = () => {
       if (disposed) return;
-      root.querySelectorAll<HTMLElement>('.content-section, [data-motion="section"], .page-header, [data-article-header]').forEach(element => {
+      root.querySelectorAll<HTMLElement>('.research-list > article, .policy-process li').forEach(element => { element.dataset.motionRule = 'top'; });
+      root.querySelectorAll<HTMLElement>('.content-section, [data-motion="section"], .page-header, [data-article-header], [data-motion-rule]').forEach(element => {
         if (seen.has(element)) return;
         seen.add(element);
-        if (preference.matches) return;
+        if (preference.matches) { element.dataset.motionState = 'revealed'; return; }
         const bounds = element.getBoundingClientRect();
         const entrance = element.matches('.page-header, [data-article-header]');
         if (entrance && bounds.bottom > 0 && bounds.top < window.innerHeight) {
@@ -52,6 +54,8 @@ export default function SiteMotion() {
           pending.add(element);
           element.dataset.motionState = 'pending';
           observer.observe(element);
+        } else {
+          element.dataset.motionState = 'revealed';
         }
       });
     };

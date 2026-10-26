@@ -32,7 +32,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     </section>
     <section id="themes" className={styles.section} data-motion="section" aria-labelledby="themes-title">
       <h2 id="themes-title">{d.themes_title}</h2>
-      <div className={styles.themes}>{d.themes.map(theme => <article key={theme.label}>
+      <div className={styles.themes} data-motion-rule="top">{d.themes.map(theme => <article key={theme.label}>
         <p className={styles.themeLabel}>{theme.label}</p><h3>{theme.title}</h3><p>{theme.text}</p>
       </article>)}</div>
     </section>
@@ -50,14 +50,14 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
           <figcaption><span>{d.preview_caption}</span><span>unplugged.cz</span></figcaption></figure>
         </a>
       </div>
-      <ul className={styles.planned}>{planned.map((pillar,index) => <li key={pillar.route}>
+      <ul className={styles.planned} data-motion-rule="top">{planned.map((pillar,index) => <li key={pillar.route} data-motion-rule="bottom">
         <h3><Link href={getPublicPath(lang,pillar.route)}>{pillar.title}</Link></h3>
         <span className={styles.status}>{dict.ecosystem.status_incubating}</span><p>{d.planned[index]}</p>
       </li>)}</ul>
     </section>
     <section className={styles.section} data-motion="section" aria-labelledby="writing-title">
       <div className={styles.researchHeading}><h2 id="writing-title">{d.writing_title}</h2><Link className="text-link" href={getPublicPath(lang,'research')}>{dict.research.all_posts}</Link></div>
-      <div className={styles.posts}>{getAllPosts().slice(0,3).map(post => <article key={post.slug}><Link href={getPublicResearchPath(lang,post.slug)}>
+      <div className={styles.posts} data-motion-rule="top">{getAllPosts().slice(0,3).map(post => <article key={post.slug}><Link href={getPublicResearchPath(lang,post.slug)}>
         <time dateTime={post.date}>{new Date(post.date).toLocaleDateString(lang==='cs'?'cs-CZ':'en-US',{day:'numeric',month:'long',year:'numeric'})}</time>
         <h3>{post.title[lang]}</h3><p>{post.excerpt[lang]}</p>
       </Link></article>)}</div>
