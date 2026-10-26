@@ -86,6 +86,6 @@ Matias 26. 10. 2026: „schvaluju text a FAQ – klidně rozšiřme“. Doplněn
 | 33 | Pro koho Alesvia je? | instituce zavádějící technologie a AI, odborníci pracující s jejich dopady, veřejnost přes Unplugged |
 | 34 | Je Alesvia proti umělé inteligenci? | Ne. Používat AI je v pořádku (HANDOFF sekce 3); jde o to, aby technologie nenahrazovala úsudek a vztahy |
 | 35 | Nabízíte workshopy? | pilotní workshopy přes Unplugged; Akademie a Praktici v přípravě (pravdivostní tabulka) |
-| 36 | Přijímáte peníze od firem, které vyvíjejí AI? | pravidla nezávislosti z HANDOFF sekce 3: žádné peníze od výrobců AI companion aplikací, žádné finanční granty od AI laboratoří, technologické kredity ano |
+| 36 | Přijímáte podporu od firem, včetně technologických? | Matias 26. 10.: ano, transparentně; větší dárci zveřejněni, příspěvky bez vlivu na výstupy; odkaz na pravidla na stránce Financování |
 
 Úvod: Matias chce porovnat variantu na střed a vlevo (vlevo doplněna o velký symbol loga vpravo).

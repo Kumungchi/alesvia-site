@@ -244,3 +244,5 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - [ ] Matias vybere novou kompozici úvodu; schválené české texty budou potom adaptovány do EN a zapracovány.
 
 - [ ] Homepage „původní web, vylepšený“ (`docs/design-proposals/homepage-refined.html`): role tlačítek z původního webu, Titan/ISO Meet z Mobbinu, zlatá linie v symbolu jako výrazný prvek. Nahrazuje alternativy z PR #14. ⚠️ Čeká na schválení Matiasem.
+
+- ⚠️ Změna pravidel financování (Matias 26. 10. 2026): podporu od firem včetně technologických Alesvia přijímá, transparentně a bez vlivu na výstupy (popsáno ve stanovách a dokumentaci o spolupráci). Je v rozporu s dosavadním pravidlem HANDOFF sekce 3 („žádné peníze od výrobců AI companion produktů, žádné cash granty od AI laboratoří“), s `lib/llms.ts` (Key facts) a se stránkou Financování („Dar nepřijmeme od subjektu, jehož jádrový produkt aktivně kritizujeme“). Čeká na upřesnění: platí výjimka pro výrobce AI companion aplikací? Existují stanovy/dokumentace už veřejně? Do té doby web stanovy necituje.
