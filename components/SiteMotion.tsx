@@ -14,6 +14,8 @@ export default function SiteMotion() {
     const seen = new WeakSet<HTMLElement>();
     const pending = new Set<HTMLElement>();
     const animations = new Set<Animation>();
+    const ruleParents = new WeakMap<Element, HTMLElement>();
+    const markers = new Set<HTMLElement>();
     let disposed = false;
 
     const reveal = (element: HTMLElement, entrance = false) => {
@@ -33,9 +35,9 @@ export default function SiteMotion() {
     const observer = new IntersectionObserver(entries => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
-        const element = entry.target as HTMLElement;
+        const element = ruleParents.get(entry.target) ?? entry.target as HTMLElement;
         reveal(element);
-        observer.unobserve(element);
+        observer.unobserve(entry.target);
       }
     }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
@@ -47,13 +49,23 @@ export default function SiteMotion() {
         seen.add(element);
         if (preference.matches) { element.dataset.motionState = 'revealed'; return; }
         const bounds = element.getBoundingClientRect();
+        const rule = element.dataset.motionRule;
+        const position = rule === 'bottom' ? bounds.bottom : bounds.top;
         const entrance = element.matches('.page-header, [data-article-header]');
         if (entrance && bounds.bottom > 0 && bounds.top < window.innerHeight) {
           reveal(element, true);
-        } else if (!entrance && bounds.top > window.innerHeight * .85) {
+        } else if (!entrance && position > window.innerHeight * .85) {
           pending.add(element);
           element.dataset.motionState = 'pending';
-          observer.observe(element);
+          if (rule) {
+            const marker = document.createElement('span');
+            marker.setAttribute('aria-hidden', 'true');
+            marker.style.cssText = `position:absolute;left:0;right:0;height:1px;pointer-events:none;${rule === 'bottom' ? 'bottom:0' : 'top:0'}`;
+            element.append(marker);
+            markers.add(marker);
+            ruleParents.set(marker, element);
+            observer.observe(marker);
+          } else observer.observe(element);
         } else {
           element.dataset.motionState = 'revealed';
         }
@@ -64,6 +76,7 @@ export default function SiteMotion() {
       if (!preference.matches) return;
       animations.forEach(animation => animation.cancel());
       pending.forEach(element => { element.dataset.motionState = 'revealed'; });
+      markers.forEach(marker => marker.remove());
       pending.clear();
       observer.disconnect();
     };
@@ -81,6 +94,7 @@ export default function SiteMotion() {
       preference.removeEventListener('change', stopMotion);
       animations.forEach(animation => animation.cancel());
       pending.forEach(element => { element.dataset.motionState = 'revealed'; });
+      markers.forEach(marker => marker.remove());
     };
   }, [pathname]);
 

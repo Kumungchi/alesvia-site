@@ -32,7 +32,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     </section>
     <section id="themes" className={styles.section} data-motion="section" aria-labelledby="themes-title">
       <h2 id="themes-title">{d.themes_title}</h2>
-      <div className={styles.themes} data-motion-rule="top">{d.themes.map(theme => <article key={theme.label}>
+      <div className={styles.themes} data-motion-rule="top">{d.themes.map(theme => <article key={theme.label} data-motion-rule="bottom">
         <p className={styles.themeLabel}>{theme.label}</p><h3>{theme.title}</h3><p>{theme.text}</p>
       </article>)}</div>
     </section>
@@ -64,7 +64,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     </section>
     <Collaboration title={d.collaboration_title} intro={d.collaboration_intro} label={d.paths_label} paths={d.paths.map((path,index)=>({...path,href:destinations[index]}))} />
     <section className={styles.section} data-motion="section" aria-labelledby="faq-title">
-      <h2 id="faq-title">{d.faq_title}</h2><div className={styles.faq}>{dict.faq.items.map((item,index)=><details key={item.question} open={index===0}>
+      <h2 id="faq-title">{d.faq_title}</h2><div className={styles.faq}>{dict.faq.items.map((item,index)=><details key={item.question} data-motion-rule="bottom" open={index===0}>
         <summary>{item.question}<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M10 3v14M3 10h14"/></svg></summary><p>{item.answer}</p>
       </details>)}</div>
     </section>
