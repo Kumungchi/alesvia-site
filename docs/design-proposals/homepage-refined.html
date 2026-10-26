@@ -95,6 +95,11 @@ a{color:inherit}
 .hero h1 .row{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.1em}
 .hero h1 .row span{display:block}
 .hero h1 .accent{color:var(--navy)}
+.hero-mark{display:none}
+.hero-left .hero-mark{display:block;position:absolute;right:0;top:50%;transform:translateY(-58%);width:min(34vw,440px);height:auto}
+.hero-mark .mf{fill:var(--navy)}.hero-mark .mp{fill:var(--gold);transform-box:fill-box;transform-origin:50% 100%}
+@media (prefers-reduced-motion:no-preference){.arrive.hero-left .hero-mark .mp{animation:grow 1.1s cubic-bezier(.16,1,.3,1) .4s both}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:none}}
 .hero-left .hero{align-items:flex-start;text-align:left}.hero-left .hero-below{align-items:flex-start}.hero-left .hero-below .actions{justify-content:flex-start}.hero-left .cue{left:0;transform:none;align-items:flex-start}
 .hero-below{display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:clamp(24px,4vh,44px)}
 .hero-below .lead{max-width:48ch;font-size:clamp(19px,1.6vw,23px);line-height:1.5;color:var(--ink)}
@@ -224,6 +229,7 @@ dialog nav a{display:block;padding:14px 0;border-bottom:1px solid var(--hair);te
 .reduce *,.reduce *::after{animation:none!important;transition:none!important}
 
 @media (max-width:900px){
+  .hero-left .hero-mark{display:none}
   .themes4,.posts{grid-template-columns:1fr}.ledger .row{grid-template-columns:1fr auto}.ledger .row p{grid-column:1 / -1}.research-head{display:block}
   :root{--margin:28px}
   .line{left:12px;width:2px}.line i{width:2px}
@@ -291,6 +297,7 @@ dialog nav a{display:block;padding:14px 0;border-bottom:1px solid var(--hair);te
           <a class="btn btn-secondary" href="#projects">Poznat naše směry</a>
         </div>
       </div>
+      <svg class="hero-mark" viewBox="0 0 128 128" aria-hidden="true"><path class="mf" d="M24 108V62L64 20L104 62V108H86V69L64 46L42 69V108H24Z"/><path class="mp" d="M58 108V64L64 58L70 64V108H58Z"/></svg>
       <a class="cue" href="#about">Pokračovat<i aria-hidden="true"></i></a>
     </section>
 
@@ -371,11 +378,15 @@ dialog nav a{display:block;padding:14px 0;border-bottom:1px solid var(--hair);te
       <div class="c qa">
         <h2 id="faq-h" style="margin-bottom:28px">Časté otázky</h2>
         <details open><summary>Co je Alesvia? <i aria-hidden="true">+</i></summary><p>Alesvia je vznikající český institut na pomezí psychologie a technologií. Zabývá se tím, jak technologie a umělá inteligence mění lidské myšlení, vztahy a rozhodování. Aktivním projektem je Unplugged.</p></details>
+        <details><summary>Pro koho Alesvia je? <i aria-hidden="true">+</i></summary><p>Pro instituce, které technologie a AI zavádějí, pro odborníky, kteří s jejich dopady na lidi pracují, a pro veřejnost, kterou dnes oslovujeme projektem Unplugged.</p></details>
+        <details><summary>Je Alesvia proti umělé inteligenci? <i aria-hidden="true">+</i></summary><p>Ne. Používat AI je v pořádku. Zajímá nás, aby technologie lidem sloužila a nenahrazovala jejich vlastní úsudek ani vztahy s druhými lidmi.</p></details>
         <details><summary>V jaké fázi Alesvia je? <i aria-hidden="true">+</i></summary><p>Registraci ústavu připravujeme. Unplugged je aktivní veřejný projekt, ostatní tři pilíře jsou v přípravě. Představená témata nejsou seznamem již poskytovaných služeb.</p></details>
         <details><summary>Co je lidský standard? <i aria-hidden="true">+</i></summary><p>Lidský standard je klíčový koncept Alesvie: soubor práv, schopností a hranic, které musí zůstat zachovány, zatímco automatizace přetváří společnost. Představuje minimální úroveň lidské autonomie, kterou by technologie neměla narušit.</p></details>
         <details><summary>Kde Alesvia sídlí? <i aria-hidden="true">+</i></summary><p>Alesvia vzniká jako zapsaný ústav (z.ú.) s plánovaným sídlem v Ostravě; registraci připravujeme. Tato právní forma je určena pro organizace řízené posláním, které upřednostňují veřejný prospěch před ziskem.</p></details>
         <details><summary>Jak bude Alesvia financována? <i aria-hidden="true">+</i></summary><p>Směřujeme k modelu, jehož hlavním zdrojem budou vlastní příjmy ze vzdělávání a služeb, doplněné granty a filantropickými partnerstvími. Nepřijmeme financování, které by ohrozilo naše poslání nebo vytvářelo střet zájmů.</p></details>
+        <details><summary>Nabízíte workshopy? <i aria-hidden="true">+</i></summary><p>Pilotní workshopy nabízí projekt Unplugged. Programy Akademie pro organizace a vzdělávání pro odborníky v rámci Praktiků připravujeme.</p></details>
         <details><summary>Jak můžu s Alesvií spolupracovat? <i aria-hidden="true">+</i></summary><p>Instituce a partneři se mohou ozvat kvůli společnému tématu nebo vzdělávací potřebě. Veřejnost najde aktivní obsah na Unplugged. Podporovatelé se mohou seznámit s plánovaným modelem financování a pravidly nezávislosti.</p></details>
+        <details><summary>Přijímáte peníze od firem, které vyvíjejí AI? <i aria-hidden="true">+</i></summary><p>Nepřijímáme peníze od výrobců AI companion aplikací ani finanční granty od AI laboratoří. Přijmout můžeme technologické kredity, například na cloudovou infrastrukturu. Pravidla nezávislosti jsou na stránce Financování.</p></details>
         <details><summary>Co když hledám osobní psychickou pomoc? <i aria-hidden="true">+</i></summary><p>Alesvia neposkytuje krizovou pomoc. Kontakty na odbornou pomoc najdete níže.</p></details>
       </div>
     </section>

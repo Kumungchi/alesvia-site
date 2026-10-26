@@ -71,10 +71,21 @@ Po kritice designu (Matias souhlasí se změnou textu pod mottem; Alesvia není 
 
 | # | Místo | Návrh | Stav |
 | --- | --- | --- | --- |
-| 28 | Text pod mottem (nahrazuje #2) | „Alesvia vzniká pro otázky, které technologie a umělá inteligence otevírají v lidském myšlení, vztazích a rozhodování. Chceme, aby si lidé i instituce zachovali vlastní úsudek.“ | ⚠️ čeká |
+| 28 | Text pod mottem (nahrazuje #2) | „Alesvia vzniká pro otázky, které technologie a umělá inteligence otevírají v lidském myšlení, vztazích a rozhodování. Chceme, aby si lidé i instituce zachovali vlastní úsudek.“ | ✅ schváleno 26. 10. |
 | 29 | Sekce Výzkum a analýzy | nadpis „Texty a analýzy.“, 3 nejnovější publikované články + „Všechny texty →“ | ⚠️ čeká |
-| 30 | FAQ „Co je Alesvia?“ | „Alesvia je vznikající český institut na pomezí psychologie a technologií. Zabývá se tím, jak technologie a umělá inteligence mění lidské myšlení, vztahy a rozhodování. Aktivním projektem je Unplugged.“ | ⚠️ čeká |
-| 31 | FAQ „Jak můžu s Alesvií spolupracovat?“ | odvozeno ze schválených bodů 19–21 | ⚠️ čeká |
-| 32 | FAQ lidský standard, sídlo, financování | zkrácené verze dosavadních odpovědí z webu | ⚠️ čeká |
+| 30 | FAQ „Co je Alesvia?“ | „Alesvia je vznikající český institut na pomezí psychologie a technologií. Zabývá se tím, jak technologie a umělá inteligence mění lidské myšlení, vztahy a rozhodování. Aktivním projektem je Unplugged.“ | ✅ schváleno 26. 10. |
+| 31 | FAQ „Jak můžu s Alesvií spolupracovat?“ | odvozeno ze schválených bodů 19–21 | ✅ schváleno 26. 10. |
+| 32 | FAQ lidský standard, sídlo, financování | zkrácené verze dosavadních odpovědí z webu | ✅ schváleno 26. 10. |
 
 Vypuštěno: pruh faktů nad mottem (fakta jsou v FAQ „V jaké fázi Alesvia je?“ a „Kde Alesvia sídlí?“), FAQ „Co je Unplugged?“ (pokrývá sekce projektů). Lidé zatím nejsou — sekce Tým se nepřidává.
+
+Matias 26. 10. 2026: „schvaluju text a FAQ – klidně rozšiřme“. Doplněno (v duchu schválení, k případné úpravě):
+
+| # | Otázka | Odpověď |
+| --- | --- | --- |
+| 33 | Pro koho Alesvia je? | instituce zavádějící technologie a AI, odborníci pracující s jejich dopady, veřejnost přes Unplugged |
+| 34 | Je Alesvia proti umělé inteligenci? | Ne. Používat AI je v pořádku (HANDOFF sekce 3); jde o to, aby technologie nenahrazovala úsudek a vztahy |
+| 35 | Nabízíte workshopy? | pilotní workshopy přes Unplugged; Akademie a Praktici v přípravě (pravdivostní tabulka) |
+| 36 | Přijímáte peníze od firem, které vyvíjejí AI? | pravidla nezávislosti z HANDOFF sekce 3: žádné peníze od výrobců AI companion aplikací, žádné finanční granty od AI laboratoří, technologické kredity ano |
+
+Úvod: Matias chce porovnat variantu na střed a vlevo (vlevo doplněna o velký symbol loga vpravo).
