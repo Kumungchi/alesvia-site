@@ -1,74 +1,63 @@
 # Alesvia — design system
 
-Stav: **uzamčeno** — písma schválil Matias 25. 10. 2026 (varianta B). Jediný zdroj pravdy pro vzhled webu. Co tu není, se nepřidává bez úpravy tohoto souboru. Ověřuje se v `docs/design-proposals/prototype-a.html`.
+Stav: **schválený základ pro celý web**. Figtree + Literata schválil Matias 25. 10. 2026. Dne 26. 10. potvrdil mobilní podobu `docs/design-proposals/homepage-refined.html` a požádal o stejný vzhled článků a ostatních stránek. Starší kompozice jsou historií návrhů.
 
-## 1. Princip
+## Princip
 
-Klidný, lidský, čitelný. Typografie a prostor nesou hierarchii; dekorace ne. Web nemá vypadat jako šablona — závazný seznam toho, čemu se vyhýbáme, je v `docs/ai-design-tells-audit.md`.
+Nadpisy a obsahové bloky mají společnou středovou osu. Dlouhé odstavce uvnitř zůstávají vlevo. Zlatá spojnice mezi sekcemi navazuje na symbol loga. Původní logo, motto a role barev tlačítek se zachovávají. Přenos vychází z přijatého prototypu, nikoli z dřívějších alternativ.
 
-## 2. Písmo — dvě rodiny, každá s jednou rolí
+## Písmo a měřítko
 
-| Role | Použití | Písmo |
-| --- | --- | --- |
-| **Nadpisová** (měkká) | H1–H3, motto, oznámení a stavy („Aktivní“, „V přípravě“), navigace, tlačítka, krátké štítky | **Figtree** (OFL, Erik Kennedy) |
-| **Textová** | odstavce, perexy, články, FAQ odpovědi, formulářové popisky | **Literata** (OFL, TypeTogether) |
+- **Figtree**, váhy 400/600/700: nadpisy, navigace, tlačítka, popisky, formulářové prvky, metadata.
+- **Literata**, váhy 400/600: odstavce, perexy, články a odpovědi FAQ.
+- Obě rodiny přes `next/font/google`, latin + latin-ext, `display: swap`; návštěvník nestahuje fonty z Googlu.
+- Motto homepage: `clamp(46px, min(15vw, 13.6vh), 164px)`, řádkování .92, tři řádky podle přijatého prototypu.
+- Nadpis stránky: 40–76 px; nadpis sekce: 28–44 px, na homepage 36–68 px.
+- Článek: text 18 px mobil / 20 px desktop, řádkování 1.65 a sloupec 68ch. Titulek 40 px mobil / 64 px desktop.
+- Nadpisy váha 600–700, tracking nejméně −.04em. Žádné ozdobné třetí písmo.
 
-Pravidla:
-- Žádné třetí písmo. Žádná kurzíva jako ozdoba jednoho slova.
-- Obě rodiny: licence OFL, sady `latin` + `latin-ext` (čeština), načítání přes `next/font`, `display: swap`.
-- Motto váha 700; nadpisy H2–H3 600–700; štítky a tlačítka 600; text 400, zvýraznění v textu 600. Žádné 800/900.
-- Prostrkání nadpisů −0,02 až −0,03 em; text 0.
-- Čtecí sloupec max. 68 znaků.
-
-### Typografická škála (desktop → mobil)
-
-| Token | Velikost | Řádkování | Rodina |
-| --- | --- | --- | --- |
-| `display` (motto) | clamp(44px, 7.4cqw, 84px) | 1.04 | nadpisová |
-| `h2` | 40 → 34 px | 1.1 | nadpisová |
-| `h3` | 25–28 px | 1.2 | nadpisová |
-| `lead` (perex) | 18–20 px | 1.6 | textová |
-| `body` | 16 px (článek 18 → 20 px) | 1.65 | textová |
-| `small` / štítek | 13–14 px | 1.5 | nadpisová |
-
-Minimum 12 px; nic menšího.
-
-## 3. Barvy (existující značka, beze změny odstínů)
+## Barvy a role
 
 | Token | Hex | Role |
 | --- | --- | --- |
-| `bg` | #F9F9F8 | pozadí |
-| `text` | #221E22 | text |
-| `muted` | #6B6472 | vedlejší text (5,40 : 1) |
-| `trust` | #0F2C59 | modrý rám, primární plochy |
-| `primary` | #31263E | lilková — sekce spolupráce, tlačítka |
-| `accent` | #ECA72C | zlatá — jen plochy, tečky a text na tmavém (6,64 : 1) |
-| `accent-ink` | #9A6200 | zlatá pro text na světlém (4,84 : 1) |
-| `surface` | #F4F4F2 / #E8EDF4 | tlumené sekce |
+| bg | #F9F9F8 | papírové pozadí |
+| text | #221E22 | hlavní text |
+| muted | #6B6472 | vedlejší text na světlém |
+| trust | #0F2C59 | modrý pás a důraz v mottu |
+| primary | #31263E | hlavní tlačítka na světlém |
+| accent | #ECA72C | spojnice a hlavní akce na modrém |
+| accent-ink | #9A6200 | zlatý text a fokus na světlém |
+| surface | #F4F4F2 | tlumená plocha |
 
-Kontrast textu vždy ≥ 4,5 : 1. Žádné gradienty, žádný text s průhledností pod 100 %.
+Hlavní tlačítko je lilkové s bílým textem, vedlejší bílé s jemným obrysem, hlavní na modrém zlaté s tmavým textem. Hover lilkové ztmaví na #241B2E, nemění ji na modrou; zlaté zesvětlí na #F3BC57. Fokus je tmavě zlatý na světlém a světle zlatý na modrém.
 
-## 4. Prostor a tvar
+Běžný text má kontrast alespoň 4,5 : 1. Na modrém se používá bílá nebo světlý modrý odstín (#E3E9F2 / #C5D0E1).
 
-- Mezery v násobcích 4 px; sekce 52 px (desktop) / 36 px (mobil) svisle.
-- Zaoblení: 8 px ovládací prvky a náhledy, 12 px panely; motto-rám jediná výjimka (asymetrický roh 44 px).
-- Oddělení obsahu linkou (1 px), ne kartou se stínem. Stín jen u plovoucích vrstev (rozbalovací navigace, dialog).
-- Cílová plocha ovládacích prvků ≥ 44 × 44 px.
+## Prostor a tvar
 
-## 5. Pohyb
+- Vnější odsazení: `clamp(20px, 4vw, 56px)`.
+- Obsah hlavičky a patičky nejvýše 1440 px; institucionální sekce 1080 px; dlouhé odstavce nejvýše 68ch.
+- Rozestupy sekcí 64–112 px. Zlaté spojnice 56–64 px, šířka 2 px.
+- Zaoblení tlačítek a polí 8 px. Obsahové sekce a modrý pás jsou rovné; bez dekorativních stínů.
+- Stín pouze u plovoucí navigace. Cíle společných ovládacích prvků alespoň 44 × 44 px.
+- Hlavička bez spodní čáry, shodná na homepage i podstránkách.
 
-- Jen jako odezva na akci: otevření panelu 300–400 ms, změna obsahu 400 ms, barva tlačítka 200 ms, `ease-out`.
-- Žádné zvedání při najetí myší, žádné pružné/překmitávající křivky, žádné animace při scrollování.
-- `prefers-reduced-motion: reduce` vypíná vše.
+## Pohyb
 
-## 6. Komponenty (z prototypu A)
+Homepage má jednu úvodní animaci řádků motta (800 ms, exponenciální ease-out). Ostatní obsah a ovládání jsou dostupné nezávisle. Zlaté spojnice na podstránkách jsou statické. Tlačítka mění barvu 200 ms ease-out, bez zvedání a pružení. Systémové omezení pohybu vypíná animace, přechody i plynulé posouvání.
 
-Hlavička s rozbalovacím přehledem směrů · mobilní menu jako modální dialog (Escape, návrat fokusu) · motto v modrém rámu · projekt Unplugged se skutečným náhledem · připravované pilíře jako rozbalovací řádky · přepínač cest ke spolupráci · krizové kontakty · patička.
+## Sdílené komponenty
 
-## 7. Změny systému
+- Původní SVG lockup v hlavičce i patičce.
+- Přehled směrů s jejich skutečným stavem; mobilní nativní dialog, Escape, návrat fokusu a zámek scrollování.
+- Vycentrovaný PageHeader, nadpisy sekcí a čtecí bloky.
+- Projekt Unplugged se skutečným lokálním náhledem, připravované pilíře jako přehledné řádky.
+- Modrý pás s přepínačem spolupráce a zlatým CTA.
+- Formuláře se společnými poli a lilkovým odesíláním, krizové kontakty, společná patička.
+- Články s vlastní čtecí šířkou a zachovanými tiskovými pravidly A4.
 
-Každá změna tokenu nebo pravidla = úprava tohoto souboru ve stejném commitu a záznam v HANDOFF.md.
+## Implementace a změny
 
-## 8. Značka
+Sdílené styly: `app/site-system.css`. Homepage a články mají scoped CSS Modules. Tokeny barev a rodiny písem zůstávají v `app/globals.css`; fonty vlastní společný layout. Při změně systému upravit tento dokument i HANDOFF.md.
 
-Logo, symbol a wordmark se nemění (soubory v `public/brand/`). Výklad symbolu, původ jména a návrhy veřejných textů: `docs/brand-story.md`. Symbol: vnější A = instituce, zlatá středová linie = lidská autonomie. Jménu se nepřipisuje vymyšlená etymologie.
+Logo, symbol a wordmark se neupravují. Výklad značky a nezodpovězené obsahové otázky jsou v `docs/brand-story.md`. Zdokumentované vizuální sjednocení nezavršuje nevyřešené zásady ochrany údajů ani lidskou kontrolu psychologického obsahu.

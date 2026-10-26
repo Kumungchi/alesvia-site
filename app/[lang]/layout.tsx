@@ -9,6 +9,7 @@ import { getPublicPath } from "../../lib/routes";
 import { ConvexClientProvider } from "../../components/ConvexClientProvider";
 import { Analytics } from '@vercel/analytics/react';
 import "../globals.css";
+import "../site-system.css";
 
 // Design system (docs/DESIGN.md): Figtree for headings and UI, Literata for running text.
 const figtree = Figtree({ subsets: ["latin", "latin-ext"], weight: ["400", "600", "700"], display: "swap", variable: "--font-figtree" });
@@ -126,7 +127,7 @@ export default async function RootLayout({
             >
               {lang === 'cs' ? 'Přeskočit na obsah' : 'Skip to content'}
             </a>
-            <Navbar dict={dict.nav} lang={lang} />
+            <Navbar dict={dict} lang={lang} />
             <main id="main-content" className="flex-1" role="main">
               {children}
             </main>

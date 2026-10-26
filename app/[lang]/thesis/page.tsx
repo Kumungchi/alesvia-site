@@ -24,7 +24,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
   const content = getThesisContent(lang);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={content.label} title={content.title} description={content.intro}>
         <div className="mt-12 max-w-3xl">
           <SectionLabel>{content.principleLabel}</SectionLabel>
@@ -36,7 +36,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
 
       <div className="space-y-20 pb-24">
         {content.sections.map((section) => (
-          <section key={section.heading} className="border-t border-alesvia-muted/10 pt-16 max-w-4xl">
+          <section key={section.heading} className="content-section max-w-4xl">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-alesvia-text mb-8">
               {section.heading}
             </h2>
@@ -60,7 +60,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
           </section>
         ))}
 
-        <section className="pt-8">
+        <section className="content-section pt-8">
           <div className="on-dark bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <div className="relative z-10 max-w-3xl">
               <SectionLabel>{content.closingLabel}</SectionLabel>
@@ -70,7 +70,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={getPublicPath(lang, 'initiatives')}
-                  className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-lg text-center"
+                  className="button button-gold"
                 >
                   {content.primaryCta}
                 </Link>

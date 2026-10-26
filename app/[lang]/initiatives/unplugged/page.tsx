@@ -26,7 +26,7 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
   const d = dict.unplugged;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title}>
         <div className="flex items-center gap-4 mt-4">
           <span className="text-xs font-semibold bg-alesvia-accent/10 text-alesvia-accent-ink px-3 py-1.5 rounded">{d.status}</span>
@@ -36,17 +36,17 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
       </PageHeader>
 
       <div className="space-y-20 pb-24">
-        <section>
+        <section className="content-section">
           <SectionLabel>{d.problem_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.problem_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.approach_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.approach_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.principles_label}</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div className="border-t border-alesvia-text/15 pt-6">
@@ -64,7 +64,7 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
           </div>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.preview_label}</SectionLabel>
           <figure className="mt-8 max-w-4xl">
             <a href="https://www.unplugged.cz" className="block overflow-hidden rounded-lg border border-alesvia-muted/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-alesvia-accent">
@@ -82,11 +82,11 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
           <a href="https://www.unplugged.cz" className="mt-6 inline-block underline underline-offset-4 hover:text-alesvia-accent-ink">{d.preview_link}</a>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <div className="on-dark bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <SectionLabel>{d.cta_label}</SectionLabel>
             <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-            <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded hover:bg-alesvia-accent/90 transition-colors shadow-md inline-block">
+            <Link href={getPublicPath(lang, 'contact')} className="button button-gold">
               {d.cta_label}
             </Link>
           </div>

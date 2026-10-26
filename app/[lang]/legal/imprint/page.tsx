@@ -28,7 +28,7 @@ export default async function ImprintPage({ params }: { params: Promise<{ lang: 
   ];
 
   return (
-    <div className="max-w-3xl mx-auto px-6 md:px-12 py-20">
+    <div className="site-page legal-page">
       <h1 className="font-serif text-4xl font-bold text-alesvia-primary mb-4">{d.title}</h1>
       <p className="font-serif text-xl text-alesvia-text font-bold mb-12">{d.org_name}</p>
 

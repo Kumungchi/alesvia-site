@@ -12,22 +12,20 @@ export default function LanguageSwitcher({ currentLang, onClick, className }: { 
     <div
       role="group"
       aria-label={currentLang === 'cs' ? 'Přepínač jazyka' : 'Language switcher'}
-      className={className || "flex space-x-2 pl-4 border-l border-alesvia-muted/20 items-center"}
+      className={className || "language-switcher"}
     >
       <Link 
         href={switchLocalePath(currentPath, 'en')} 
         onClick={onClick}
         aria-current={currentLang === 'en' ? 'page' : undefined}
-        className={`hover:text-alesvia-text transition-colors text-xs font-semibold tracking-wider ${currentLang === 'en' ? 'text-alesvia-primary' : 'text-alesvia-muted'}`}
       >
         EN
       </Link>
-      <span className="text-alesvia-muted/30 text-xs">|</span>
+      <span aria-hidden="true">·</span>
       <Link 
         href={switchLocalePath(currentPath, 'cs')} 
         onClick={onClick}
         aria-current={currentLang === 'cs' ? 'page' : undefined}
-        className={`hover:text-alesvia-text transition-colors text-xs font-semibold tracking-wider ${currentLang === 'cs' ? 'text-alesvia-primary' : 'text-alesvia-muted'}`}
       >
         CS
       </Link>

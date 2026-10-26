@@ -48,6 +48,8 @@ Rozvržení (Matias 26. 10. 2026): **celá stránka stojí na jedné středové 
 
 Responzivita: `responsive-audit.mjs <url>` (headless Chrome přes CDP) projde 12 šířek od 320 do 2560 px. Výsledek 26. 10. 2026: bez vodorovného přetečení, všechny dotykové cíle ≥ 44 px, nadpisy přesně na středové ose, mobilní menu se otevírá i zavírá, nejmenší písmo 13 px (12 px jen štítek „Pokračovat“).
 
+Matias následně potvrdil mobilní návrh a požádal o stejný vzhled článků i ostatních stránek. Implementace skutečného Next.js webu a nové ověření všech veřejných URL jsou popsány v `../sitewide-design-rollout.md`; aktuální systém v `../DESIGN.md`. Tento kontrolní skript zůstává určený samostatnému prototypu, nikoli novým React komponentám.
+
 Mobbin (veřejná galerie Sites): Titan — řádek faktů pod hlavičkou, vlasové linky a disciplína mřížky. Převzat princip, ne grafika.
 
 Ověřeno v T3 Chromium 1440 px a 390 px: bez přetečení, 0 stínů, žádné zaoblení nad 8 px, mobilní dialog s návratem fokusu, rozbalovací „Naše směry“. Impeccable detector: 2× „cramped padding“ posouzeno jako falešný poplach (záměrná linka nad seznamem pilířů s 20 px odsazením; modrý pruh má vnitřní okraj >100 px).

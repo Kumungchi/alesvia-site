@@ -25,10 +25,10 @@ export default async function ResearchPage({ params }: { params: Promise<{ lang:
   const posts = getAllPosts();
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
-      <div className="pb-24 max-w-4xl border-b border-alesvia-text/15">
+      <div className="research-list">
         {posts.map((post) => (
           <article key={post.slug} className="py-10 border-t border-alesvia-text/15">
               <div className="flex flex-wrap items-center gap-3 mb-4">

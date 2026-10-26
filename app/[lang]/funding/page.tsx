@@ -31,16 +31,16 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
       <div className="space-y-20 pb-24">
-        <section>
+        <section className="content-section">
           <SectionLabel>{d.model_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.model_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.sources_label}</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             {sources.map((source) => (
@@ -52,7 +52,7 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
           </div>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.rules_label}</SectionLabel>
           <ul className="space-y-4 mt-6 max-w-3xl">
             {d.rules_items.map((item: string, i: number) => (
@@ -65,22 +65,22 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
           <p className="text-alesvia-muted text-sm italic mt-6 max-w-3xl">{d.rules_note}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.partners_label}</SectionLabel>
           <p className="text-lg text-alesvia-muted leading-relaxed max-w-3xl italic">{d.partners_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.transparency_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.transparency_text}</p>
         </section>
 
-        <section>
+        <section className="content-section">
           <div className="on-dark bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <div className="relative z-10">
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-              <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded hover:bg-alesvia-accent/90 transition-colors shadow-md inline-block">
+              <Link href={getPublicPath(lang, 'contact')} className="button button-gold">
                 {d.cta_label}
               </Link>
             </div>

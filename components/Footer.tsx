@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BrandLogo } from './BrandMark';
+import Image from 'next/image';
 import type { Locale } from '../dictionaries';
 import { getPublicPath } from '../lib/routes';
 
@@ -25,16 +25,11 @@ interface FooterDict {
 
 export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale }) {
   return (
-    <footer role="contentinfo" aria-label="Site footer" className="border-t border-alesvia-muted/10 py-16 mt-12 bg-alesvia-surface/50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
-          <div className="col-span-2 md:col-span-1">
-            <BrandLogo
-              className="inline-flex items-center gap-3"
-              markClassName="w-8 h-8 shrink-0"
-              textClassName="font-serif text-xl font-bold tracking-tight"
-              title="Alesvia"
-            />
+    <footer role="contentinfo" className="site-footer">
+      <div >
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <Link className="brand-link" href={getPublicPath(lang, 'home')}><Image src="/brand/alesvia-lockup-horizontal.svg" width={560} height={148} alt="Alesvia" /></Link>
           </div>
 
           <div>
@@ -69,7 +64,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
           </div>
         </div>
 
-        <div className="border-t border-alesvia-muted/10 pt-8 text-sm text-alesvia-muted">
+        <div className="footer-rights">
           <p>&copy; {new Date().getFullYear()} {dict.rights}</p>
         </div>
       </div>

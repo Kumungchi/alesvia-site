@@ -5,20 +5,23 @@
   },
   "nav": {
     "brand": "Alesvia.",
-    "about": "O nás",
-    "initiatives": "Iniciativy",
+    "about": "O Alesvii",
+    "initiatives": "Naše směry",
     "funding": "Financování",
     "research": "Výzkum a analýzy",
     "contact": "Kontakt",
-    "partner": "Spolupracujte s námi"
+    "partner": "Spojme se",
+    "collaboration": "Spolupráce",
+    "menu": "Menu",
+    "close": "Zavřít"
   },
   "hero": {
     "title": "Lidská autonomie je základ.",
     "title_lead": "Lidská autonomie",
     "title_accent": "je základ.",
-    "description": "Alesvia vytváří výzkum, veřejné politiky, vzdělávání a praktické rámce, které pomáhají lidem i institucím zůstat v kontrole, zatímco se AI stává součástí každodenního života.",
-    "primary_link": "Přečíst tezi",
-    "secondary_link": "Prohlédnout naši práci"
+    "description": "Alesvia vzniká pro otázky, které technologie a umělá inteligence otevírají v lidském myšlení, vztazích a rozhodování. Chceme, aby si lidé i instituce zachovali vlastní úsudek.",
+    "primary_link": "Pro instituce a partnery",
+    "secondary_link": "Poznat naše směry"
   },
   "ecosystem": {
     "label": "Ekosystém",
@@ -27,7 +30,11 @@
     "status_incubating": "V přípravě",
     "unplugged_title": "Unplugged",
     "unplugged_desc": "Unplugged pomáhá lidem nastavovat zdravé hranice s konverzační AI – srozumitelně a bez moralizování. AI je nástroj, ne vztah.",
-    "unplugged_points": ["Srozumitelnost bez moralizování", "AI je nástroj, ne vztah", "Zdravé hranice"],
+    "unplugged_points": [
+      "Srozumitelnost bez moralizování",
+      "AI je nástroj, ne vztah",
+      "Zdravé hranice"
+    ],
     "unplugged_link": "Navštívit unplugged.cz →",
     "academy_title": "Akademie",
     "academy_desc": "AI gramotnost a lidsky udržitelné nasazení AI pro firmy, školy a veřejnou správu (mj. povinnost AI gramotnosti podle čl. 4 EU AI Actu). Příjmy z těchto služeb financují veřejně prospěšné programy.",
@@ -388,27 +395,47 @@
     "items": [
       {
         "question": "Co je Alesvia?",
-        "answer": "Alesvia je vznikající český institut pro psychologickou stránku umělé inteligence. Přes Unplugged pomáhá lidem nastavit zdravé hranice s konverzační AI; připravuje vzdělávání organizací v AI gramotnosti a programy pro terapeuty. Alesvia vzniká jako zapsaný ústav (z.ú.); registraci připravujeme. Aktivním programem je Unplugged."
+        "answer": "Alesvia je vznikající český institut na pomezí psychologie a technologií. Zabývá se tím, jak technologie a umělá inteligence mění lidské myšlení, vztahy a rozhodování. Aktivním projektem je Unplugged."
       },
       {
-        "question": "Co Alesvia dělá?",
-        "answer": "Alesvia staví svou práci na čtyřech pilířích: Unplugged (zdravé hranice s konverzační AI – aktivní), Akademie (AI gramotnost a lidsky udržitelné nasazení AI pro firmy, školy a veřejnou správu – v přípravě), Praktici (vzdělávání psychologů a terapeutů pro éru AI – v přípravě) a Policy Lab (překlad etických rámců do legislativy a směrnic – v přípravě)."
+        "question": "Pro koho Alesvia je?",
+        "answer": "Pro instituce, které technologie a AI zavádějí, pro odborníky, kteří s jejich dopady na lidi pracují, a pro veřejnost, kterou dnes oslovujeme projektem Unplugged."
+      },
+      {
+        "question": "Je Alesvia proti umělé inteligenci?",
+        "answer": "Ne. Používat AI je v pořádku. Zajímá nás, aby technologie lidem sloužila a nenahrazovala jejich vlastní úsudek ani vztahy s druhými lidmi."
+      },
+      {
+        "question": "V jaké fázi Alesvia je?",
+        "answer": "Registraci ústavu připravujeme. Unplugged je aktivní veřejný projekt, ostatní tři pilíře jsou v přípravě. Představená témata nejsou seznamem již poskytovaných služeb."
       },
       {
         "question": "Co je lidský standard?",
-        "answer": "Lidský standard je klíčový koncept Alesvia – nezpochybnitelný soubor práv, schopností a hranic, které musí být zachovány, zatímco automatizace přetváří společnost. Představuje minimální standard lidské autonomie, který by technologie neměla mít právo narušit."
+        "answer": "Lidský standard je klíčový koncept Alesvie: soubor práv, schopností a hranic, které musí zůstat zachovány, zatímco automatizace přetváří společnost. Představuje minimální úroveň lidské autonomie, kterou by technologie neměla narušit."
       },
       {
-        "question": "Kde sídlí Alesvia?",
-        "answer": "Alesvia vzniká jako zapsaný ústav (z.ú.) s plánovaným sídlem v Ostravě; registraci připravujeme. Tato právní forma je určena pro organizace řízené misí, které upřednostňují veřejný prospěch před ziskem."
+        "question": "Kde Alesvia sídlí?",
+        "answer": "Alesvia vzniká jako zapsaný ústav (z.ú.) s plánovaným sídlem v Ostravě; registraci připravujeme. Tato právní forma je určena pro organizace řízené posláním, které upřednostňují veřejný prospěch před ziskem."
       },
       {
-        "question": "Jak je Alesvia financována?",
-        "answer": "Alesvia směřuje k modelu, jehož primárním motorem jsou vlastní příjmy ze služeb Akademie a Praktiků – AI gramotnost a vzdělávání pro firmy, školy a veřejnou správu. Příjmy z těchto služeb financují veřejně prospěšné programy. Model doplňují granty, filantropická partnerství a infrastrukturní podpora. Organizace nepřijme financování, které by kompromitovalo její misi nebo vytvářelo střety zájmů."
+        "question": "Jak bude Alesvia financována?",
+        "answer": "Směřujeme k modelu, jehož hlavním zdrojem budou vlastní příjmy ze vzdělávání a služeb, doplněné granty a filantropickými partnerstvími. Nepřijmeme financování, které by ohrozilo naše poslání nebo vytvářelo střet zájmů."
       },
       {
-        "question": "Co je Unplugged?",
-        "answer": "Unplugged pomáhá lidem nastavovat zdravé hranice s konverzační AI – srozumitelně a bez moralizování. AI je nástroj, ne vztah. Je to vlajkový a aktuálně aktivní program Alesvia."
+        "question": "Nabízíte workshopy?",
+        "answer": "Pilotní workshopy nabízí projekt Unplugged. Programy Akademie pro organizace a vzdělávání pro odborníky v rámci Praktiků připravujeme."
+      },
+      {
+        "question": "Jak můžu s Alesvií spolupracovat?",
+        "answer": "Instituce a partneři se mohou ozvat kvůli společnému tématu nebo vzdělávací potřebě. Veřejnost najde aktivní obsah na Unplugged. Podporovatelé se mohou seznámit s plánovaným modelem financování a pravidly nezávislosti."
+      },
+      {
+        "question": "Přijímáte podporu od firem, včetně technologických?",
+        "answer": "Ano, za jasných podmínek a vždy transparentně. Větší dárce a partnery zveřejňujeme a jejich příspěvky nemají vliv na naše výstupy, stanoviska ani doporučení. Nepřijímáme podporu od výrobců AI companion aplikací, protože jejich design otevřeně kritizujeme. Pravidla nezávislosti najdete na stránce Financování."
+      },
+      {
+        "question": "Co když hledám osobní psychickou pomoc?",
+        "answer": "Alesvia neposkytuje krizovou pomoc. Kontakty na odbornou pomoc najdete níže."
       }
     ]
   },
@@ -507,5 +534,72 @@
     "step3_desc": "Vytváření konkrétních politických šablon, vzorové legislativy a pokynů pro dodržování předpisů pro MSP.",
     "step4_title": "4. Institucionální implementace",
     "step4_desc": "Poskytování přímého poradenství a sad nástrojů (toolkits) orgánům veřejné správy a vzdělávacím institucím."
+  },
+  "homepage": {
+    "motto_lines": [
+      "Lidská",
+      "autonomie",
+      "je základ."
+    ],
+    "description": "Alesvia vzniká pro otázky, které technologie a umělá inteligence otevírají v lidském myšlení, vztazích a rozhodování. Chceme, aby si lidé i instituce zachovali vlastní úsudek.",
+    "primary": "Pro instituce a partnery",
+    "secondary": "Poznat naše směry",
+    "continue": "Pokračovat",
+    "themes_title": "Digitální svět má lidskou stránku.",
+    "themes": [
+      {
+        "label": "Identita",
+        "title": "Prostor být sami sebou.",
+        "text": "Jak digitalizace proměňuje naše vnímání sebe sama i toho, kým jsme společně? Osobní a kolektivní identita patří do širšího záběru Alesvie."
+      },
+      {
+        "label": "Tempo života",
+        "title": "Rychleji není jediný směr.",
+        "text": "Co nám tlak na rychlost a optimalizaci přináší a co při něm ztrácíme? Alesvia chce otevírat i otázky tempa každodenního života."
+      },
+      {
+        "label": "Praxe",
+        "title": "Porozumět, rozhodnout, použít.",
+        "text": "Vzdělávání a odpovědné používání technologií propojuje porozumění s každodenní praxí. Konkrétní programy označujeme podle skutečného stavu příprav."
+      },
+      {
+        "label": "Pravidla",
+        "title": "Společný svět, společná odpovědnost.",
+        "text": "Digitalizace není jen individuální volba. Zahrnuje i společenské dopady, pravidla a možnost podílet se na jejich utváření."
+      }
+    ],
+    "projects_title": "Od otázek ke konkrétní práci.",
+    "projects_intro": "Co už existuje a co připravujeme.",
+    "unplugged_claim": "AI je nástroj. Ne vztah.",
+    "unplugged_description": "Newsletter, osvěta a nabídka pilotních workshopů o tom, když AI napodobuje lidskou blízkost.",
+    "unplugged_link": "Prozkoumat Unplugged",
+    "preview_caption": "Skutečný projekt. Vlastní hlas.",
+    "planned": [
+      "Připravovaný směr zaměřený na AI gramotnost a implementaci pro firmy a veřejnou správu. Nabídku teprve připravujeme.",
+      "Záměr klinického vzdělávání pro terapeuty a psychology. Jeho rozvoj závisí na zajištění klinického garanta.",
+      "Výzkum a stanoviska k regulaci AI připravujeme."
+    ],
+    "writing_title": "Texty a analýzy.",
+    "collaboration_title": "Dobré otázky si zaslouží společnou práci.",
+    "collaboration_intro": "Hledáte prostor pro spolupráci, chcete se zorientovat nebo podpořit vznik Alesvie?",
+    "paths_label": "Zvolte svou cestu",
+    "paths": [
+      {
+        "label": "Instituce a partneři",
+        "text": "Pojďme probrat společné téma, vzdělávací potřebu nebo možnost podílet se na přípravě organizace.",
+        "action": "Přejít na kontakt"
+      },
+      {
+        "label": "Veřejnost",
+        "text": "Začněte u aktivního projektu Unplugged: newsletteru a osvětového obsahu o používání konverzační AI.",
+        "action": "Navštívit Unplugged"
+      },
+      {
+        "label": "Podporovatelé",
+        "text": "Seznamte se s plánovaným financováním a pravidly nezávislosti vznikající organizace.",
+        "action": "Poznat financování"
+      }
+    ],
+    "faq_title": "Časté otázky"
   }
 }

@@ -73,7 +73,7 @@ export default function PolicyForm({ dict }: { dict: PolicyFormDict }) {
   const inputClass = "w-full bg-alesvia-white border border-alesvia-text/20 rounded-md px-4 py-3 text-sm text-alesvia-text focus:outline-none focus:border-alesvia-accent focus:ring-1 focus:ring-alesvia-accent transition-colors";
 
   return (
-    <div className="bg-alesvia-white rounded-md p-8 md:p-10 border border-alesvia-text/15">
+    <div className="site-form">
       
       <h3 className="font-serif text-2xl font-bold text-alesvia-text mb-8">{dict.title}</h3>
 

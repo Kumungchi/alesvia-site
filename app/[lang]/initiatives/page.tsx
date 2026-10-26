@@ -22,7 +22,7 @@ export default async function InitiativesPage({ params }: { params: Promise<{ la
   const d = dict.initiatives_index;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
       <div className="pb-24">

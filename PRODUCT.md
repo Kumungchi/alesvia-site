@@ -12,7 +12,7 @@ Primary: prospective partners and institutions evaluating Alesvia and considerin
 
 ## Product Purpose
 
-Alesvia addresses people and society in a digitalizing world, including AI, digitalization, pressure to optimize, accelerating life, and personal and collective identity. This broader scope was explicitly confirmed by Matias; describing the entire organization as only psychology of AI is incomplete. Final public mission wording remains to be approved.
+Alesvia addresses people and society in a digitalizing world, including AI, digitalization, pressure to optimize, accelerating life, and personal and collective identity. This broader scope was explicitly confirmed by Matias; describing the entire organization as only psychology of AI is incomplete. Czech homepage copy was approved on 25 October 2026; the refined hero wording is preserved from the accepted 26 October prototype.
 
 ## Capabilities and Constraints
 
@@ -20,7 +20,7 @@ The organization is being prepared for registration; no application has been fil
 
 ## Brand Commitments
 
-Matias prefers the original colorful website, particularly the blue framed area and its professional presence. Preserve the existing logo and blue/plum/gold identity while developing modern, friendly UI and deliberate smooth motion. Newsreader is a confirmed preference, not approval of the rejected plain editorial homepage. Do not add public AI-making credits or claim the work was made without AI.
+Preserve the exact existing logo and blue/plum/gold identity, including plum primary buttons, white secondary buttons and gold actions on navy. Figtree supplies headings and interface; Literata supplies running text. The accepted 26 October prototype uses a central axis, prominent motto, restrained gold section connectors and a navy collaboration band. Earlier Newsreader and geometric hero alternatives are historical proposals. Do not add public AI-making credits or claim the work was made without AI.
 
 ## Evidence on Hand
 
@@ -39,4 +39,4 @@ Desktop and mobile, Czech and English, keyboard access, readable contrast and re
 
 ## Current Work Boundary
 
-Design philosophy and comparative proposals only. Matias explicitly requires a direction decision before implementation. No selected visual system or production redesign is approved.
+On 26 October 2026 Matias confirmed that the refined homepage works well on mobile and requested the same visual language across articles and the rest of the site. Implement that accepted system in the Next.js frontend for both languages. Keep article and institutional content intact, with the approved homepage copy adapted into English. Deployment settings, backend data and unresolved privacy decisions remain outside this design task. Matias retains merge authority.

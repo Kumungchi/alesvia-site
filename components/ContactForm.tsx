@@ -92,14 +92,14 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
       : 'Your email client should open with a pre-filled draft.';
 
   return (
-    <div className="bg-alesvia-white rounded-md p-8 md:p-12 border border-alesvia-text/15">
+    <div className="site-form">
       
       <h3 className="font-serif text-3xl font-bold text-alesvia-text mb-8 relative z-10">{dict.form_label}</h3>
 
       {status === 'success' || status === 'fallback' ? (
         <div className="text-center py-16 fade-in" aria-live="polite">
           <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-green-600 animate-[pulse_2s_ease-in-out_infinite]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-10 h-10 text-green-600 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
             </svg>
           </div>

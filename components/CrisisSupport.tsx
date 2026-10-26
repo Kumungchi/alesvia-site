@@ -4,7 +4,7 @@ type CrisisSupportDictionary = Awaited<ReturnType<typeof getDictionary>>['crisis
 
 export default function CrisisSupport({ dict }: { dict: CrisisSupportDictionary }) {
   return (
-    <section aria-labelledby="human-support-title" className="my-12 max-w-3xl border-y border-alesvia-muted/20 py-8">
+    <section aria-labelledby="human-support-title" className="crisis-support">
       <h2 id="human-support-title" className="font-serif text-2xl font-bold text-alesvia-text">{dict.title}</h2>
       <p className="mt-3 leading-relaxed">{dict.intro}</p>
       <ul className="mt-6 space-y-5">

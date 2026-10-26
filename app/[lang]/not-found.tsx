@@ -49,13 +49,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={getPublicPath(lang, 'home')}
-            className="bg-alesvia-primary text-alesvia-bg px-8 py-4 rounded-md font-medium hover:bg-alesvia-trust transition-colors text-center"
+            className="button button-primary"
           >
             {t.home}
           </Link>
           <Link
             href={getPublicPath(lang, 'initiativeUnplugged')}
-            className="border border-alesvia-text/20 px-8 py-4 rounded-md font-medium text-alesvia-text hover:border-alesvia-primary transition-colors text-center"
+            className="button button-secondary"
           >
             {t.unplugged}
           </Link>

@@ -25,7 +25,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
   const d = dict.practitioners;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title}>
         <div className="flex items-center gap-4 mt-4">
           <span className="text-xs font-semibold uppercase tracking-widest text-alesvia-primary">{d.status}</span>
@@ -35,7 +35,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
       </PageHeader>
 
       <div className="space-y-20 pb-24">
-          <section>
+          <section className="content-section">
             <SectionLabel>{d.problem_label}</SectionLabel>
             <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.problem_text}</p>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed">
@@ -51,7 +51,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
             ))}
           </section>
 
-          <section className="border-t border-alesvia-muted/10 pt-16">
+          <section className="content-section border-t border-alesvia-muted/10 pt-16">
             <SectionLabel>{d.programs_label}</SectionLabel>
             <ul className="space-y-4 mt-6 max-w-3xl">
               {d.programs_items.map((item: string, i: number) => (
@@ -63,7 +63,7 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
             </ul>
           </section>
 
-          <section className="border-t border-alesvia-muted/10 pt-16">
+          <section className="content-section border-t border-alesvia-muted/10 pt-16">
             <SectionLabel>{d.audiences_label}</SectionLabel>
             <ul className="space-y-4 mt-6 max-w-3xl">
               {d.audiences_items.map((item: string, i: number) => (
@@ -75,11 +75,11 @@ export default async function PractitionersPage({ params }: { params: Promise<{ 
             </ul>
           </section>
 
-          <section className="border-t border-alesvia-muted/10 pt-16">
+          <section className="content-section border-t border-alesvia-muted/10 pt-16">
             <div className="on-dark bg-alesvia-primary text-alesvia-bg rounded-md px-8 py-12 md:px-16">
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-bg/80 text-lg leading-relaxed max-w-2xl mb-8">{d.cta_text}</p>
-              <Link href={getPublicPath(lang, 'contact')} className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-md inline-block hover:bg-alesvia-primary hover:text-alesvia-bg transition-colors">
+              <Link href={getPublicPath(lang, 'contact')} className="button button-gold">
                 {d.cta_label}
               </Link>
             </div>

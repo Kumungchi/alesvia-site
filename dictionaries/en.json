@@ -5,20 +5,23 @@
   },
   "nav": {
     "brand": "Alesvia.",
-    "about": "About",
-    "initiatives": "Initiatives",
+    "about": "About Alesvia",
+    "initiatives": "Our directions",
     "funding": "Funding",
     "research": "Research & Insights",
     "contact": "Contact",
-    "partner": "Partner With Us"
+    "partner": "Get in touch",
+    "collaboration": "Collaborate",
+    "menu": "Menu",
+    "close": "Close"
   },
   "hero": {
     "title": "Human autonomy is the baseline.",
     "title_lead": "Human autonomy",
     "title_accent": "is the baseline.",
-    "description": "Alesvia builds research, policy, education, and practical frameworks that help people and institutions stay in control as AI becomes part of daily life.",
-    "primary_link": "Read the Thesis",
-    "secondary_link": "See Our Work"
+    "description": "Alesvia is taking shape around the questions technology and artificial intelligence raise about human thinking, relationships and decisions. We want people and institutions to retain their own judgement.",
+    "primary_link": "For institutions and partners",
+    "secondary_link": "Explore our directions"
   },
   "ecosystem": {
     "label": "The Ecosystem",
@@ -27,7 +30,11 @@
     "status_incubating": "In Preparation",
     "unplugged_title": "Unplugged",
     "unplugged_desc": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.",
-    "unplugged_points": ["Clarity without moralizing", "AI is a tool, not a relationship", "Healthy boundaries"],
+    "unplugged_points": [
+      "Clarity without moralizing",
+      "AI is a tool, not a relationship",
+      "Healthy boundaries"
+    ],
     "unplugged_link": "Visit unplugged.cz →",
     "academy_title": "Academy",
     "academy_desc": "AI literacy and humanly sustainable AI deployment for companies, schools, and public administration (including the AI literacy obligation under Article 4 of the EU AI Act). Revenue from these services funds our public-benefit programs.",
@@ -388,27 +395,47 @@
     "items": [
       {
         "question": "What is Alesvia?",
-        "answer": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence. Through Unplugged it helps people set healthy boundaries with conversational AI; it is preparing AI literacy training for organizations and programs for therapists. Alesvia is being established as a registered institute (z.ú.); we are preparing for registration. Its active program is Unplugged."
+        "answer": "Alesvia is an emerging Czech institute at the intersection of psychology and technology. It explores how technology and artificial intelligence change human thinking, relationships and decisions. Unplugged is its active project."
       },
       {
-        "question": "What does Alesvia do?",
-        "answer": "Alesvia builds its work on four pillars: Unplugged (healthy boundaries with conversational AI — active), Academy (AI literacy and humanly sustainable AI deployment for companies, schools, and public administration — in preparation), Practitioners (training psychologists and therapists for the AI era — in preparation), and Policy Lab (translating ethical frameworks into legislation and guidelines — in preparation)."
+        "question": "Who is Alesvia for?",
+        "answer": "For institutions adopting technology and AI, professionals working with their effects on people, and the public, whom we currently reach through Unplugged."
       },
       {
-        "question": "What is the human baseline?",
-        "answer": "The human baseline is Alesvia's core concept — the non-negotiable set of rights, capacities, and boundaries that must be preserved as automation reshapes society. It represents the minimum standard of human autonomy that technology should not be allowed to erode."
+        "question": "Is Alesvia against artificial intelligence?",
+        "answer": "No. Using AI is fine. We want technology to serve people while preserving their own judgement and their relationships with other people."
+      },
+      {
+        "question": "What stage is Alesvia at?",
+        "answer": "We are preparing the institute’s registration. Unplugged is an active public project; the other three pillars are in preparation. The topics presented are not a list of services already provided."
+      },
+      {
+        "question": "What is the human standard?",
+        "answer": "The human standard is a core concept of Alesvia: a set of rights, capabilities and boundaries that must be preserved as automation reshapes society. It represents a minimum level of human autonomy that technology should not undermine."
       },
       {
         "question": "Where is Alesvia based?",
-        "answer": "Alesvia is being established as a registered institute (z.ú.) with a planned seat in Ostrava, Czech Republic; we are preparing for registration. This legal structure is designed for mission-driven organizations that prioritize public benefit over profit."
+        "answer": "Alesvia is being prepared as a Czech registered institute (z.ú.) with a planned seat in Ostrava. We are preparing its registration. This legal form is intended for mission-driven organizations that put public benefit before profit."
       },
       {
-        "question": "How is Alesvia funded?",
-        "answer": "Alesvia is working toward a model whose primary engine is earned revenue from Academy and Practitioners services — AI literacy and training for companies, schools, and public administration. Revenue from these services funds our public-benefit programs. The model is complemented by grants, philanthropic partnerships, and infrastructure support. The organization will not accept funding that compromises its mission or creates conflicts of interest."
+        "question": "How will Alesvia be funded?",
+        "answer": "We are working towards a model primarily funded by education and services, complemented by grants and philanthropic partnerships. We will not accept funding that compromises our mission or creates a conflict of interest."
       },
       {
-        "question": "What is Unplugged?",
-        "answer": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship. It is Alesvia's flagship and currently active program."
+        "question": "Do you offer workshops?",
+        "answer": "Unplugged offers pilot workshops. We are preparing Academy programs for organizations and professional education through Practitioners."
+      },
+      {
+        "question": "How can I collaborate with Alesvia?",
+        "answer": "Institutions and partners can get in touch about a shared topic or educational need. The public can find active content on Unplugged. Supporters can explore the planned funding model and independence rules."
+      },
+      {
+        "question": "Do you accept support from companies, including technology companies?",
+        "answer": "Yes, under clear conditions and transparently. Major donors and partners are disclosed, and their contributions have no influence on our outputs, positions or recommendations. We do not accept support from makers of AI companion applications because we openly critique their design. Our independence rules are on the Funding page."
+      },
+      {
+        "question": "What if I need personal mental health support?",
+        "answer": "Alesvia does not provide crisis support. Contacts for professional help are listed below."
       }
     ]
   },
@@ -507,5 +534,72 @@
     "step3_desc": "Creating concrete policy templates, model legislation, and SME compliance guidelines.",
     "step4_title": "4. Institutional Implementation",
     "step4_desc": "Providing direct advisory and toolkits to public bodies and educational institutions."
+  },
+  "homepage": {
+    "motto_lines": [
+      "Human",
+      "autonomy",
+      "is the baseline."
+    ],
+    "description": "Alesvia is taking shape around the questions technology and artificial intelligence raise about human thinking, relationships and decisions. We want people and institutions to retain their own judgement.",
+    "primary": "For institutions and partners",
+    "secondary": "Explore our directions",
+    "continue": "Continue",
+    "themes_title": "The digital world has a human side.",
+    "themes": [
+      {
+        "label": "Identity",
+        "title": "Room to be ourselves.",
+        "text": "How does digitalization change how we see ourselves and who we are together? Personal and collective identity are part of Alesvia’s wider scope."
+      },
+      {
+        "label": "The pace of life",
+        "title": "Faster is not the only direction.",
+        "text": "What do we gain from the pressure for speed and optimization, and what do we lose? Alesvia also aims to open up questions about the pace of everyday life."
+      },
+      {
+        "label": "Practice",
+        "title": "Understand, decide, apply.",
+        "text": "Education and responsible use of technology connect understanding with everyday practice. We label specific programs according to their actual stage of preparation."
+      },
+      {
+        "label": "Rules",
+        "title": "A shared world, a shared responsibility.",
+        "text": "Digitalization is more than an individual choice. It also involves social consequences, rules and the opportunity to help shape them."
+      }
+    ],
+    "projects_title": "From questions to concrete work.",
+    "projects_intro": "What exists today and what we are preparing.",
+    "unplugged_claim": "AI is a tool. Not a relationship.",
+    "unplugged_description": "A newsletter, public education and an offer of pilot workshops about AI that imitates human closeness.",
+    "unplugged_link": "Explore Unplugged",
+    "preview_caption": "A real project. A voice of its own.",
+    "planned": [
+      "A planned direction focused on AI literacy and implementation for businesses and public administration. We are still preparing the offer.",
+      "A plan for clinical education for therapists and psychologists. Development depends on securing a clinical supervisor.",
+      "We are preparing research and positions on AI regulation."
+    ],
+    "writing_title": "Essays and analysis.",
+    "collaboration_title": "Good questions deserve shared work.",
+    "collaboration_intro": "Looking to collaborate, find your bearings or support the creation of Alesvia?",
+    "paths_label": "Choose your path",
+    "paths": [
+      {
+        "label": "Institutions and partners",
+        "text": "Let’s discuss a shared topic, an educational need or a way to help prepare the organization.",
+        "action": "Get in touch"
+      },
+      {
+        "label": "The public",
+        "text": "Start with our active project Unplugged: a newsletter and public education about using conversational AI.",
+        "action": "Visit Unplugged"
+      },
+      {
+        "label": "Supporters",
+        "text": "Explore the planned funding model and independence rules of the emerging organization.",
+        "action": "Explore funding"
+      }
+    ],
+    "faq_title": "Frequently asked questions"
   }
 }

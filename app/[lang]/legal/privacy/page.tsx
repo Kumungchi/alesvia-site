@@ -20,7 +20,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
   const d = dict.privacy;
 
   return (
-    <div className="max-w-3xl mx-auto px-6 md:px-12 py-20">
+    <div className="site-page legal-page">
       <h1 className="font-serif text-4xl font-bold text-alesvia-primary mb-2">{d.title}</h1>
       <p className="text-sm text-alesvia-muted mb-12">{d.last_updated}</p>
       <p className="text-lg text-alesvia-text leading-relaxed mb-12">{d.intro}</p>

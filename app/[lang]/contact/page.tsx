@@ -22,7 +22,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   const d = dict.contact;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24">
