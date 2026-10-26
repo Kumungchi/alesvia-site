@@ -54,14 +54,20 @@ a{color:inherit}
 .meta .live b{color:var(--gold-ink)}
 
 /* Hero — the motto is the image */
-.hero{padding:clamp(56px,9vw,128px) 0 clamp(48px,7vw,96px)}
-.hero h1{font:700 clamp(54px,11.2vw,184px)/.92 var(--fh);letter-spacing:-.045em;color:var(--ink)}
+.hero{min-height:calc(100svh - 134px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(20px,3vh,48px) 0 clamp(96px,13vh,128px);position:relative}
+.hero h1{font:700 clamp(46px,min(10vw,13.6vh),164px)/.92 var(--fh);letter-spacing:-.045em;color:var(--ink)}
 .hero h1 .row{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.1em}
 .hero h1 .row span{display:block}
 .hero h1 .accent{color:var(--navy)}
-.hero-below{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);margin-top:clamp(36px,5vw,64px)}
-.hero-below .lead{grid-column:6 / span 6;font-size:clamp(20px,1.7vw,24px);line-height:1.5}
-.hero-below .actions{grid-column:6 / span 7;display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.hero-below{display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:clamp(24px,4vh,44px)}
+.hero-below .lead{max-width:36ch;font-size:clamp(19px,1.6vw,23px);line-height:1.5;color:var(--ink)}
+.hero-below .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.cue{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font:600 12px var(--fh);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.cue i{width:2px;height:36px;background:linear-gradient(var(--gold),var(--gold)) top/100% 40% no-repeat,var(--hair)}
+.cue:hover{color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){.cue i{animation:cue 1.8s ease-in-out infinite}}
+@media (max-height:780px){.cue{display:none}.hero{padding-bottom:40px}}
+@keyframes cue{0%{background-position:0 0,0 0}100%{background-position:0 160%,0 0}}
 
 /* Section scaffolding: label column + content, divided by a heavy rule */
 .sec{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);border-top:2px solid var(--rule);padding:clamp(48px,6vw,88px) 0}
@@ -167,7 +173,7 @@ dialog nav a{display:block;padding:14px 0;border-bottom:1px solid var(--hair);te
   :root{--margin:28px}
   .line{left:12px;width:2px}.line i{width:2px}
   .mast-nav{display:none}.menu-btn{display:inline-block}
-  .hero-below .lead,.hero-below .actions{grid-column:1 / -1}
+  .hero{min-height:calc(100svh - 184px)}.cue{display:none}
   .sec>.k,.sec>.c,.band .k,.band .c{grid-column:1 / -1}
   .topics{grid-template-columns:1fr}
   .unplugged{grid-template-columns:1fr}.unplugged .copy,.shot{grid-column:1 / -1}
@@ -221,6 +227,7 @@ dialog nav a{display:block;padding:14px 0;border-bottom:1px solid var(--hair);te
           <a class="btn btn-secondary" href="#projects">Poznat naše směry</a>
         </div>
       </div>
+      <a class="cue" href="#about">Pokračovat<i aria-hidden="true"></i></a>
     </section>
 
     <section class="sec" id="about" aria-labelledby="about-h">
