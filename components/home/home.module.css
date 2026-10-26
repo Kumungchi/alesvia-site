@@ -60,10 +60,13 @@
 .faq details[open] summary svg { transform: rotate(45deg); }
 .faq details p { padding-bottom: 24px; max-width: 58ch; color: var(--color-alesvia-muted); }
 @media (prefers-reduced-motion: no-preference) {
+ .heroCopy { animation: accompany .65s cubic-bezier(.16,1,.3,1) .3s both; }
+ .pathContent { animation: accompany .3s cubic-bezier(.16,1,.3,1); }
  .hero h1 > span > span { animation: reveal .8s cubic-bezier(.16,1,.3,1) both; }
  .hero h1 > span:nth-child(2) > span { animation-delay: .08s; }
  .hero h1 > span:nth-child(3) > span { animation-delay: .16s; }
 }
+@keyframes accompany { from { opacity: .6; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes reveal { from { transform: translateY(105%); } to { transform: translateY(0); } }
 @media (max-width: 63.99rem) { .planned li { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px 24px; } .planned p { grid-column: 1/-1; } .planned .status { text-align: right; } }
 @media (max-width: 47.99rem) { .themes, .feature, .posts { grid-template-columns: minmax(0,1fr); } .feature { gap: 32px; } .paths { gap: 12px 20px; } .heroCopy > p { font-size: 19px; } .preview figcaption { flex-wrap: wrap; } }

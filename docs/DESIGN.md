@@ -44,7 +44,11 @@ Běžný text má kontrast alespoň 4,5 : 1. Na modrém se používá bílá neb
 
 ## Pohyb
 
-Homepage má jednu úvodní animaci řádků motta (800 ms, exponenciální ease-out). Ostatní obsah a ovládání jsou dostupné nezávisle. Zlaté spojnice na podstránkách jsou statické. Tlačítka mění barvu 200 ms ease-out, bez zvedání a pružení. Systémové omezení pohybu vypíná animace, přechody i plynulé posouvání.
+Matias 26. 10. výslovně požádal o navrácení animací, které při plošném sjednocení chyběly. Homepage zachovává nástup řádků motta (800 ms); doprovodný text naváže za 300 ms. Zlaté spojnice se při příchodu sekce vykreslí za 900 ms a obsah jemně naváže (600 ms, posun 12 px). Záhlaví podstránek a článků má nástup 650 ms; tělo článku se při čtení nepohybuje. Každá sekce se spustí jen jednou při návštěvě stránky.
+
+Navigace kreslí zlaté podtržení, menu a dialog se otevřou za 240–300 ms, změna cesty spolupráce má přechod 300 ms. Tlačítka drží své barvy a šipka se posune o 3 px, bez zvedání celého tlačítka. Vše používá exponenciální ease-out, bez pružení a nekonečných smyček.
+
+Obsah je v serverovém HTML viditelný; JavaScript přidává pohyb, nikoli podmínku zobrazení. Systémové omezení pohybu vypíná animace i přechody, včetně již běžících Web Animations. Výchozí stav a tisk jsou plně čitelné. Implementace: společný `components/SiteMotion.tsx`, jeden IntersectionObserver a cleanup při navigaci; bez nové knihovny a bez scroll listeneru na každé sekci.
 
 ## Sdílené komponenty
 

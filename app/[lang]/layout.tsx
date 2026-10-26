@@ -4,6 +4,7 @@ import { getDictionary, hasLocale, Locale } from "../../dictionaries";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import JsonLd from "../../components/JsonLd";
+import SiteMotion from "../../components/SiteMotion";
 import { getAbsoluteUrl, getSiteOrigin } from "../../lib/site";
 import { getPublicPath } from "../../lib/routes";
 import { ConvexClientProvider } from "../../components/ConvexClientProvider";
@@ -131,6 +132,7 @@ export default async function RootLayout({
             <main id="main-content" className="flex-1" role="main">
               {children}
             </main>
+            <SiteMotion />
             <Footer dict={dict.footer} lang={lang} />
           </div>
         </ConvexClientProvider>
