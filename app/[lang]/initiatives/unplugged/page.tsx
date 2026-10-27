@@ -50,15 +50,15 @@ export default async function UnpluggedPage({ params }: { params: Promise<{ lang
           <SectionLabel>{d.principles_label}</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div className="border-t border-alesvia-text/15 pt-6">
-              <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_friction_title}</h4>
+              <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_friction_title}</h3>
               <p className="text-alesvia-muted text-sm leading-relaxed">{d.principle_friction_desc}</p>
             </div>
             <div className="border-t border-alesvia-text/15 pt-6">
-              <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_detox_title}</h4>
+              <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_detox_title}</h3>
               <p className="text-alesvia-muted text-sm leading-relaxed">{d.principle_detox_desc}</p>
             </div>
             <div className="border-t border-alesvia-text/15 pt-6">
-              <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_boundaries_title}</h4>
+              <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.principle_boundaries_title}</h3>
               <p className="text-alesvia-muted text-sm leading-relaxed">{d.principle_boundaries_desc}</p>
             </div>
           </div>

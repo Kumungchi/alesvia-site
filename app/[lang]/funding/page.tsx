@@ -45,7 +45,7 @@ export default async function FundingPage({ params }: { params: Promise<{ lang: 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             {sources.map((source) => (
               <div key={source.title} className="border-t border-alesvia-text/15 pt-6">
-                <h4 className="font-serif text-xl font-bold text-alesvia-text mb-3">{source.title}</h4>
+                <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{source.title}</h3>
                 <p className="text-alesvia-muted text-sm leading-relaxed">{source.desc}</p>
               </div>
             ))}

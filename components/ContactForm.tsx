@@ -2,9 +2,10 @@
 import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { getPublicPath } from '../lib/routes';
-import { contactRecipientDefaults, type ContactSubject } from '../lib/contact';
+import type { ContactSubject } from '../lib/contact';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
+import { submitInquiry } from "../lib/submit-inquiry";
 
 interface ContactFormDict {
   form_label: string;
@@ -25,7 +26,7 @@ interface ContactFormDict {
 }
 
 export default function ContactForm({ dict, lang, formType = 'contact' }: { dict: ContactFormDict; lang: string; formType?: string }) {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'fallback' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const sendMessage = useMutation(api.messages.send);
 
@@ -37,7 +38,6 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
     { value: 'other', label: dict.form_subject_other },
   ];
 
-  const emailMap = contactRecipientDefaults;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -51,34 +51,15 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
     const email = data.get('email') as string;
     const message = data.get('message') as string;
 
-    const fallbackToMailClient = () => {
-      const to = emailMap[subject] || emailMap.general;
-      const subjectLine = `[${subjects.find((s) => s.value === subject)?.label}] Message from ${name}`;
-      const body = `From: ${name} (${email})\n\n${message}`;
-      const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoUrl;
-      setStatus('fallback');
-      form.reset();
-    };
 
     try {
-      // 1. Save to Convex Database
-      await sendMessage({ formType, name, email, subject, message });
-      
-      // 2. Send Email Notification
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, subject, message }),
-      });
+      await submitInquiry(() => sendMessage({ formType, name, email, subject, message }), { name, email, subject, message });
 
       setStatus('success');
       form.reset();
     } catch (error) {
-      console.error("Failed to save message to database:", error);
-      fallbackToMailClient();
+      console.error("Inquiry submission failed:", error);
+      setStatus('error');
     }
   }
 
@@ -86,24 +67,19 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
   const inputClass = "peer w-full bg-alesvia-white border border-alesvia-text/20 rounded-md px-4 pt-6 pb-2 text-alesvia-text placeholder-transparent focus:outline-none focus:border-alesvia-accent/60 focus:bg-alesvia-bg/80 focus:ring-4 focus:ring-alesvia-accent/10 transition-all duration-300";
   const labelClass = "absolute left-4 top-2 text-xs font-semibold text-alesvia-muted transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-xs peer-focus:font-semibold peer-focus:text-alesvia-accent-ink pointer-events-none";
 
-  const fallbackMessage =
-    lang === 'cs'
-      ? 'Váš e-mailový klient by se měl otevřít s předvyplněnou zprávou.'
-      : 'Your email client should open with a pre-filled draft.';
-
   return (
     <div className="site-form">
       
       <h3 className="font-serif text-3xl font-bold text-alesvia-text mb-8 relative z-10">{dict.form_label}</h3>
 
-      {status === 'success' || status === 'fallback' ? (
+      {status === 'success' ? (
         <div className="text-center py-16 fade-in" aria-live="polite">
           <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg className="w-10 h-10 text-green-600 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <p className="text-xl text-alesvia-text font-medium">{status === 'success' ? dict.form_success : fallbackMessage}</p>
+          <p className="text-xl text-alesvia-text font-medium">{dict.form_success}</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
@@ -172,7 +148,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
           </div>
 
           {status === 'error' && (
-            <p className="text-sm text-red-500 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in" aria-live="polite">
+            <p className="text-sm text-red-700 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in" aria-live="polite">
               {errorMessage || dict.form_error}
             </p>
           )}

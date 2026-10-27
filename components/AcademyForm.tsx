@@ -2,6 +2,7 @@
 import { useState, type FormEvent } from 'react';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
+import { submitInquiry } from "../lib/submit-inquiry";
 
 interface AcademyFormDict {
   title: string;
@@ -51,23 +52,7 @@ export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
     const formattedMessage = `Organization: ${organization}\nOrganization type: ${orgType}\nProgram: ${program}\n\nDetails:\n${rawMessage}`;
 
     try {
-      // Save to Convex
-      await sendMessage({
-        formType: 'academy_pilot',
-        name,
-        email,
-        subject: 'partnership',
-        message: formattedMessage
-      });
-
-      // Email Notification
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, subject: 'partnership', message: formattedMessage }),
-      });
+      await submitInquiry(() => sendMessage({ formType: 'academy_pilot', name, email, subject: 'partnership', message: formattedMessage }), { name, email, subject: 'partnership', message: formattedMessage });
 
       setStatus('success');
       form.reset();
@@ -146,7 +131,7 @@ export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
           </div>
 
           {status === 'error' && (
-            <p className="text-sm text-red-500 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in">
+            <p role="alert" className="text-sm text-red-700 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in">
               {errorMessage || dict.error}
             </p>
           )}

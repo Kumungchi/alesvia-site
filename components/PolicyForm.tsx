@@ -2,6 +2,7 @@
 import { useState, type FormEvent } from 'react';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
+import { submitInquiry } from "../lib/submit-inquiry";
 
 interface PolicyFormDict {
   title: string;
@@ -42,23 +43,7 @@ export default function PolicyForm({ dict }: { dict: PolicyFormDict }) {
     const formattedMessage = `Organization: ${organization}\nAffiliation: ${affiliation}\n\nInquiry Details:\n${rawMessage}`;
 
     try {
-      // Save to Convex
-      await sendMessage({ 
-        formType: 'policy_lab', 
-        name, 
-        email, 
-        subject: 'partnership', 
-        message: formattedMessage 
-      });
-      
-      // Email Notification
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, subject: 'partnership', message: formattedMessage }),
-      });
+      await submitInquiry(() => sendMessage({ formType: 'policy_lab', name, email, subject: 'partnership', message: formattedMessage }), { name, email, subject: 'partnership', message: formattedMessage });
 
       setStatus('success');
       form.reset();
@@ -123,7 +108,7 @@ export default function PolicyForm({ dict }: { dict: PolicyFormDict }) {
           </div>
 
           {status === 'error' && (
-            <p className="text-sm text-red-500 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in">
+            <p role="alert" className="text-sm text-red-700 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in">
               {errorMessage || dict.error}
             </p>
           )}

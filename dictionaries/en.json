@@ -289,7 +289,7 @@
     "form_submit": "Send Message",
     "form_sending": "Sending...",
     "form_success": "Message sent. We'll get back to you shortly.",
-    "form_error": "Something went wrong. Please try emailing us directly.",
+    "form_error": "Email delivery could not be confirmed. Your details remain in the form. Try again or contact us directly by email.",
     "form_privacy": "By submitting this form, you agree to our"
   },
   "crisis_support": {
@@ -491,7 +491,7 @@
     "submit": "Submit Interest",
     "sending": "Submitting...",
     "success": "Thank you. We will reach out as soon as we open the pilot programs.",
-    "error": "Something went wrong. Please try emailing us directly."
+    "error": "Email delivery could not be confirmed. Your details remain in the form. Try again or contact us directly by email."
   },
   "policy_form": {
     "title": "Engage with Policy Lab",
@@ -508,7 +508,7 @@
     "submit": "Submit Inquiry",
     "sending": "Submitting...",
     "success": "Inquiry received. We will be in touch shortly.",
-    "error": "Something went wrong. Please try emailing us directly."
+    "error": "Email delivery could not be confirmed. Your details remain in the form. Try again or contact us directly by email."
   },
   "article_pilot": {
     "preview_label": "Article typography preview",

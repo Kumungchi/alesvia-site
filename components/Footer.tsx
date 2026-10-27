@@ -33,7 +33,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_initiatives}</h4>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_initiatives}</h2>
             <ul className="space-y-2 text-sm text-alesvia-muted">
               <li><Link href={getPublicPath(lang, 'initiativeUnplugged')} className="hover:text-alesvia-text transition-colors">{dict.unplugged}</Link></li>
               <li><Link href={getPublicPath(lang, 'initiativeAcademy')} className="hover:text-alesvia-text transition-colors">{dict.academy}</Link></li>
@@ -43,7 +43,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_organization}</h4>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_organization}</h2>
             <ul className="space-y-2 text-sm text-alesvia-muted">
               <li><Link href={getPublicPath(lang, 'thesis')} className="hover:text-alesvia-text transition-colors">{dict.thesis}</Link></li>
               <li><Link href={getPublicPath(lang, 'about')} className="hover:text-alesvia-text transition-colors">{dict.about}</Link></li>
@@ -55,7 +55,7 @@ export default function Footer({ dict, lang }: { dict: FooterDict; lang: Locale 
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_legal}</h4>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-alesvia-text mb-4">{dict.col_legal}</h2>
             <ul className="space-y-2 text-sm text-alesvia-muted">
               <li><Link href={getPublicPath(lang, 'legalPrivacy')} className="hover:text-alesvia-text transition-colors">{dict.privacy}</Link></li>
               <li><Link href={getPublicPath(lang, 'legalTerms')} className="hover:text-alesvia-text transition-colors">{dict.terms}</Link></li>

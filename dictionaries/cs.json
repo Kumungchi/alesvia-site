@@ -289,7 +289,7 @@
     "form_submit": "Odeslat zprávu",
     "form_sending": "Odesílání...",
     "form_success": "Zpráva odeslána. Ozveme se vám co nejdříve.",
-    "form_error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem.",
+    "form_error": "Nepodařilo se potvrdit doručení e-mailu. Údaje zůstaly ve formuláři. Zkuste to znovu nebo nám napište přímo e-mailem.",
     "form_privacy": "Odesláním formuláře souhlasíte s našimi"
   },
   "crisis_support": {
@@ -491,7 +491,7 @@
     "submit": "Odeslat zájem",
     "sending": "Odesílání...",
     "success": "Děkujeme. Ozveme se vám, jakmile budeme pilotní programy otevírat.",
-    "error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem."
+    "error": "Nepodařilo se potvrdit doručení e-mailu. Údaje zůstaly ve formuláři. Zkuste to znovu nebo nám napište přímo e-mailem."
   },
   "policy_form": {
     "title": "Spolupracujte s Policy Lab",
@@ -508,7 +508,7 @@
     "submit": "Odeslat dotaz",
     "sending": "Odesílání...",
     "success": "Dotaz přijat. Brzy se vám ozveme.",
-    "error": "Něco se pokazilo. Zkuste nám napsat přímo e-mailem."
+    "error": "Nepodařilo se potvrdit doručení e-mailu. Údaje zůstaly ve formuláři. Zkuste to znovu nebo nám napište přímo e-mailem."
   },
   "article_pilot": {
     "preview_label": "Ukázka sazby článku",

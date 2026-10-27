@@ -63,9 +63,9 @@ export default function PillarList({ lang, dict, unpluggedExternal = false }: { 
       {pillars.map((pillar) => (
         <li key={pillar.title} className="grid gap-4 md:grid-cols-12 md:gap-8 py-10 border-t border-alesvia-text/15">
           <div className="md:col-span-4">
-            <h4 className={`font-serif font-bold text-alesvia-text ${pillar.active ? 'text-3xl' : 'text-2xl'}`}>
+            <h2 className={`font-serif font-bold text-alesvia-text ${pillar.active ? 'text-3xl' : 'text-2xl'}`}>
               {pillar.title}
-            </h4>
+            </h2>
             <p className={`mt-2 text-xs font-semibold uppercase tracking-widest ${pillar.active ? 'text-alesvia-primary' : 'text-alesvia-muted'}`}>
               {pillar.active && <span aria-hidden="true" className="inline-block w-1.5 h-1.5 mr-2 align-middle rounded-full bg-alesvia-accent" />}
               {pillar.status}

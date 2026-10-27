@@ -82,8 +82,8 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next, images, favicon, etc)
-    '/((?!_next|.*\\..*).*)',
+    // API endpoints and generated icons have no locale prefix.
+    '/((?!api(?:/|$)|_next|icon(?:/|$)|apple-icon(?:/|$)|.*\\..*).*)',
     // Optional: only run on root (/) URL
     // '/'
   ],

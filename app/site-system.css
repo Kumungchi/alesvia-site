@@ -99,7 +99,7 @@ input, textarea, select { caret-color: var(--color-alesvia-primary); }
 .crisis-support ul a[href^=tel] { font: 600 19px/1.4 var(--font-heading); }
 .site-footer { max-width: 1552px; width: 100%; padding: 40px var(--site-gutter); margin: 40px auto 0; font: 400 14px/1.6 var(--font-heading); }
 .footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 32px; padding-top: 36px; border-top: 1px solid var(--site-hairline); }
-.site-footer h4 { font-weight: 600; color: var(--color-alesvia-text); margin-block: 0 12px; }
+.site-footer h2 { font-weight: 600; color: var(--color-alesvia-text); margin-block: 0 12px; }
 .site-footer li a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; color: var(--color-alesvia-muted); }
 .site-footer li a:hover { color: var(--color-alesvia-text); text-decoration: underline; }
 .footer-rights { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--site-hairline); color: var(--color-alesvia-muted); font-size: 13px; }
