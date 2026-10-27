@@ -320,12 +320,12 @@
     "metadata_title": "Ochrana osobních údajů | Alesvia",
     "metadata_description": "Zásady ochrany osobních údajů Alesvia – jak shromažďujeme, používáme a chráníme vaše osobní údaje v souladu s GDPR.",
     "title": "Zásady ochrany osobních údajů",
-    "last_updated": "Poslední aktualizace: duben 2026",
+    "last_updated": "Poslední aktualizace: 27. října 2026",
     "intro": "Alesvia respektuje vaše soukromí. Tyto zásady vysvětlují, jaké údaje shromažďujeme, proč a jak s nimi nakládáme.",
     "sections": [
       {
         "heading": "Správce údajů",
-        "content": "Alesvia, vznikající zapsaný ústav (z.ú.) v České republice; registraci připravujeme. Kontakt: privacy@alesvia.org"
+        "content": "Správcem osobních údajů pro projekt Alesvia je do registrace ústavu Matias Bunnik. Registraci zapsaného ústavu připravujeme. Kontakt pro žádosti týkající se osobních údajů: privacy@alesvia.org."
       },
       {
         "heading": "Jaké údaje shromažďujeme",
@@ -345,7 +345,7 @@
       },
       {
         "heading": "Třetí strany",
-        "content": "Vaše osobní údaje neprodáváme, nepronajímáme ani nesdílíme s třetími stranami pro marketingové účely. Můžeme využívat poskytovatele služeb (hosting, e-mail), kteří zpracovávají údaje naším jménem na základě přísných smluv o zpracování údajů."
+        "content": "Pro hosting a webovou analytiku využíváme Vercel, pro ukládání zpráv ze všech tří formulářů Convex a pro e-mail Seznam Email Profi. Osobní údaje neprodáváme ani nepronajímáme."
       },
       {
         "heading": "Změny těchto zásad",

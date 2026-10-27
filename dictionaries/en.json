@@ -320,12 +320,12 @@
     "metadata_title": "Privacy Policy | Alesvia",
     "metadata_description": "Alesvia's privacy policy — how we collect, use, and protect your personal data in compliance with GDPR.",
     "title": "Privacy Policy",
-    "last_updated": "Last updated: April 2026",
+    "last_updated": "Last updated: 27 October 2026",
     "intro": "Alesvia respects your privacy. This policy explains what data we collect, why, and how we handle it.",
     "sections": [
       {
         "heading": "Data Controller",
-        "content": "Alesvia, an institute (z.ú.) being established in the Czech Republic; we are preparing for registration. Contact: privacy@alesvia.org"
+        "content": "Until the institute is registered, Matias Bunnik is the data controller for the Alesvia project. We are preparing to register the institute. Contact for personal data requests: privacy@alesvia.org."
       },
       {
         "heading": "What Data We Collect",
@@ -345,7 +345,7 @@
       },
       {
         "heading": "Third Parties",
-        "content": "We do not sell, rent, or share your personal data with third parties for marketing purposes. We may use service providers (hosting, email) who process data on our behalf under strict data processing agreements."
+        "content": "We use Vercel for hosting and web analytics, Convex to store submissions from all three forms, and Seznam Email Profi for email. We do not sell or rent personal data."
       },
       {
         "heading": "Changes to This Policy",
