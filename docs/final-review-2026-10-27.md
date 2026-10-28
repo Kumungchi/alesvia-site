@@ -48,12 +48,12 @@ For the five technical audit dimensions: accessibility 3/4 (strong automated/key
 
 ## Release checklist — do not mark these complete from code inspection
 
-- [ ] A-04: identify the actual pre-registration data controller, an existing rights-request mailbox, SMTP provider, retention rules and account-level DPA/transfer arrangements. Matias previously said these were not determined; `privacy@alesvia.org` does not exist. The current public privacy text is not ready.
+- [ ] A-04: Matias subsequently confirmed the interim controller (Matias Bunnik), rights-request contact privacy@alesvia.org, Seznam Email Profi, and retention of ordinary inquiries for up to 12 months after closure with monthly manual checks. CS/EN candidate text reflects these decisions. Account-level DPA applicability, transfers, analytics, legal bases and operation of the deletion procedure remain unverified. See `docs/privacy-operations.md` (28 October follow-up). The policy is not cleared for release.
 - [ ] Confirm existing public contact mailboxes and SMTP setup, then perform an approved end-to-end message delivery test. Only simulated delivery is verified here.
 - [ ] Obtain the required human psychologist review of the psychological content included in the stack. Design approval is not that review.
 - [ ] Finish A-13 homepage performance optimization and confirm ≥90 under repeatable mobile conditions. Recheck on the hosted preview when authenticated access is available.
 
-The first next action is resolving the controller and working contact mailbox; technical code cannot appoint the controller. Recommended follow-up for the measured technical issue is an Impeccable optimize pass on the homepage, then a polish pass after the remaining fixes. Merge remains with Matias.
+The next owner action is verifying the provider contracts/tariff and SMTP setup using `docs/privacy-operations.md`; the previously missing controller and contact have been confirmed. Recommended follow-up for the measured technical issue is an Impeccable optimize pass on the homepage, then a polish pass after the remaining fixes. Merge remains with Matias.
 
 ## Where the work is stored
 

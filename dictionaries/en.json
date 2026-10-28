@@ -318,9 +318,9 @@
   },
   "privacy": {
     "metadata_title": "Privacy Policy | Alesvia",
-    "metadata_description": "Alesvia's privacy policy — how we collect, use, and protect your personal data in compliance with GDPR.",
+    "metadata_description": "Information about the Alesvia project's data controller, inquiry forms, data recipients, retention and your rights.",
     "title": "Privacy Policy",
-    "last_updated": "Last updated: 27 October 2026",
+    "last_updated": "Last updated: 28 October 2026",
     "intro": "Alesvia respects your privacy. This policy explains what data we collect, why, and how we handle it.",
     "sections": [
       {
@@ -329,7 +329,7 @@
       },
       {
         "heading": "What Data We Collect",
-        "content": "We collect only what is necessary: contact form submissions (name, email, message), basic analytics (anonymized page views), and any data you voluntarily provide. We do not use tracking cookies, behavioral profiling, or third-party advertising scripts."
+        "content": "The contact form processes your name, email address, subject and message. The Academy form also collects your organization, its type and the selected program; the Policy Lab form also collects your organization and professional affiliation. Submissions from all three forms are stored in Convex and then emailed. A database record may remain even if email delivery fails. Providing this information is voluntary; we cannot reply without a contact address. The forms are not for crisis support or medical records."
       },
       {
         "heading": "Legal Basis (GDPR Art. 6)",
@@ -337,11 +337,12 @@
       },
       {
         "heading": "Data Retention",
-        "content": "Contact form submissions are retained for 12 months unless you request earlier deletion. Anonymized analytics data is retained for 24 months."
+        "content": "We retain ordinary inquiries while handling them and for no more than a further 12 months after the conversation is closed. We check this limit monthly and manually delete records from email and the database. This rule covers ordinary correspondence, not any contractual or accounting records subject to separate retention requirements."
       },
       {
         "heading": "Your Rights",
-        "content": "Under GDPR, you have the right to access, correct, delete, restrict processing of, and port your personal data. You may also withdraw consent at any time. To exercise these rights, contact privacy@alesvia.org."
+        "content": "Subject to GDPR conditions, you may request access, rectification, erasure, restriction of processing and portability of your data. You may object to processing based on legitimate interests. Where processing relies on consent, you may withdraw it without affecting the lawfulness of prior processing. Send requests to privacy@alesvia.org. You may lodge a complaint with the Czech Office for Personal Data Protection.",
+        "links": [{ "label": "Czech Office for Personal Data Protection", "href": "https://uoou.gov.cz/" }]
       },
       {
         "heading": "Third Parties",

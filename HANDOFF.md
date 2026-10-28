@@ -140,8 +140,8 @@ Před použitím každý odkaz otevři a zkontroluj, že číslo sedí.
 
 ## 8. Otevřené otázky pro Matiase (nerozhoduj sám)
 
-- O-1 Kdo je správcem osobních údajů do zápisu z.ú. a jaký kontaktní e-mail se uvádí (dnes privacy@alesvia.org).
-- O-2 Kdo je poskytovatel e-mailu / SMTP pro kontaktní formulář (kvůli zásadám). Mají Vercel, Convex a Clerk přijatou DPA?
+- O-1 Vyřešeno Matiasem 27. 10. 2026: do registrace je správcem Matias Bunnik, kontakt privacy@alesvia.org. Doručování kontaktu ověřit zvlášť.
+- O-2 Poskytovatel potvrzen: Seznam Email Profi. Otevřené zůstává smluvní uspořádání/DPA, tarif Vercelu, regiony a předávání u skutečných účtů. Clerk není v aplikaci zapojený.
 - O-3 Smí být Matias na stránce Tým jmenován s fotkou a krátkým medailonkem?
 - O-4 Iframe unplugged.cz na stránce pilíře Unplugged: ponechat, nebo nahradit screenshotem?
 - O-5 Formulace překryvu Akademie / Policy Lab s nabídkou na unplugged.cz (A-10).
@@ -258,3 +258,5 @@ Pokud Matias v T3 Code začne otevírat nové velké nápady (nové pilíře, Sa
 - [ ] Produkční nasazení: zůstává A-04 (správce, funkční kontakt, SMTP/DPA), skutečné ověření doručení, lidská kontrola psychologického obsahu a A-13. Lighthouse mobil: homepage 88–91 výkon, článek 95; přístupnost/SEO 100, best practices 96 kvůli lokálnímu Vercel analytics endpointu. Předchozí odsouhlasení vzhledu tyto body neuzavírá. Merge provádí Matias.
 
 - [x] Potvrzení správce a pošty (Matias, 27. 10. 2026): do registrace je správcem Matias Bunnik, kontakt privacy@alesvia.org, poskytovatel Seznam Email Profi. Doplněno do CS/EN zásad a pracovního návrhu. A-04 zůstává otevřené: DPA, právní tituly, retence, předávání a skutečné doručení nejsou ověřeny. Sesterský Unplugged tímto commitem nezměněn.
+
+- [x] Příprava provozního postupu A-04 (28. 10. 2026): Matias schválil pro běžné dotazy 12 měsíců po uzavření komunikace a měsíční ruční kontrolu pošty i Convexu. Doplněna CS/EN retence, skutečný rozsah formulářů a odkaz na ÚOOÚ. `docs/privacy-operations.md` obsahuje postup výmazu, ověřené oficiální podklady poskytovatelů a nastavení/test SMTP pro Matiase. Opraven chybný odkaz na DPA jiné společnosti (convex.com → convex.dev/legal/dpa). A-04 zůstává otevřené: právní titul dotazů je předložen k potvrzení, smlouvy/DPA a analytika vyžadují ověření. Žádné změny účtů, odeslané e-maily, mazání ani automatický retenční job.

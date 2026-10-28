@@ -318,9 +318,9 @@
   },
   "privacy": {
     "metadata_title": "Ochrana osobních údajů | Alesvia",
-    "metadata_description": "Zásady ochrany osobních údajů Alesvia – jak shromažďujeme, používáme a chráníme vaše osobní údaje v souladu s GDPR.",
+    "metadata_description": "Informace o správci údajů projektu Alesvia, kontaktních formulářích, příjemcích údajů, době uchování a vašich právech.",
     "title": "Zásady ochrany osobních údajů",
-    "last_updated": "Poslední aktualizace: 27. října 2026",
+    "last_updated": "Poslední aktualizace: 28. října 2026",
     "intro": "Alesvia respektuje vaše soukromí. Tyto zásady vysvětlují, jaké údaje shromažďujeme, proč a jak s nimi nakládáme.",
     "sections": [
       {
@@ -329,7 +329,7 @@
       },
       {
         "heading": "Jaké údaje shromažďujeme",
-        "content": "Shromažďujeme pouze to, co je nezbytné: odeslání kontaktního formuláře (jméno, e-mail, zpráva), základní analytika (anonymizované zobrazení stránek) a jakékoli údaje, které dobrovolně poskytnete. Nepoužíváme sledovací cookies, behaviorální profilování ani reklamní skripty třetích stran."
+        "content": "V kontaktním formuláři zpracováváme jméno, e-mail, předmět a zprávu. U Akademie navíc organizaci, její typ a vybraný program; u Policy Labu organizaci a profesní zařazení. Zprávy ze všech tří formulářů se ukládají do Convexu a poté odesílají e-mailem. Záznam v databázi může zůstat uložený i při selhání e-mailu. Údaje poskytujete dobrovolně; bez kontaktní adresy vám nemůžeme odpovědět. Formuláře nejsou určeny pro krizovou pomoc ani zasílání zdravotní dokumentace."
       },
       {
         "heading": "Právní základ (GDPR čl. 6)",
@@ -337,11 +337,12 @@
       },
       {
         "heading": "Uchovávání údajů",
-        "content": "Odeslání kontaktních formulářů uchováváme po dobu 12 měsíců, pokud nepožádáte o dřívější smazání. Anonymizovaná analytická data uchováváme po dobu 24 měsíců."
+        "content": "Běžné dotazy uchováváme po dobu jejich vyřízení a nejdéle dalších 12 měsíců po uzavření komunikace. Dodržování této lhůty kontrolujeme měsíčně; výmaz z pošty a databáze provádíme ručně. Toto pravidlo se vztahuje na běžnou komunikaci, nikoli na případné smluvní a účetní dokumenty s vlastními povinnostmi uchování."
       },
       {
         "heading": "Vaše práva",
-        "content": "Podle GDPR máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování a přenositelnost. Souhlas můžete kdykoli odvolat. Pro uplatnění těchto práv kontaktujte privacy@alesvia.org."
+        "content": "Za podmínek GDPR můžete žádat přístup ke svým údajům, jejich opravu, výmaz, omezení zpracování a přenositelnost. Proti zpracování na základě oprávněného zájmu můžete vznést námitku. Pokud se některé zpracování opírá o souhlas, můžete ho odvolat bez vlivu na předchozí zákonné zpracování. Žádosti posílejte na privacy@alesvia.org. Stížnost můžete podat Úřadu pro ochranu osobních údajů.",
+        "links": [{ "label": "Úřad pro ochranu osobních údajů", "href": "https://uoou.gov.cz/" }]
       },
       {
         "heading": "Třetí strany",
