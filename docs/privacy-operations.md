@@ -37,9 +37,11 @@ Oprava staršího podkladu: `convex.com/data-protection-addendum` patří jiném
 
 ## Analytika a právní posouzení
 
+**Stav k 30. 10. 2026: Vercel Web Analytics odstraněna z kódu (rozhodnutí Matiase), a to do vyřešení smlouvy s Vercelem.** Na živém webu platí až po sloučení do `master`. Níže uvedené podklady slouží pro případné budoucí zapnutí; to by vyžadovalo použitelnou DPA, právní titul a úpravu zásad.
+
 [Vercel popisuje](https://vercel.com/docs/analytics/privacy-policy) analytiku bez cookies třetích stran, denní identifikátor návštěvy vytvořený z požadavku a jeho zánik po 24 hodinách. To není retenční lhůta všech agregovaných statistik. Analytika může přenášet URL, referrer, filtrované parametry, čas, přibližnou polohu a údaje o zařízení/prohlížeči. V kódu je `<Analytics />` bez souhlasového kroku a bez vlastní redakce URL; právní režim a nastavení účtu zatím nejsou potvrzeny.
 
-Nedokládat soulad jen slovem „anonymizované“. Ověřit rozsah dat, query parametry, skutečnou dobu uchování a použitelný právní titul. Alternativou je analytiku do vyjasnění vypnout; tato změna zatím není provedena. Ve formulářích nebyly nalezeny vlastní marketingové odběry. Zájem o pilot neopravňuje automaticky přidat kontakt do newsletteru.
+Nedokládat soulad jen slovem „anonymizované“. Ověřit rozsah dat, query parametry, skutečnou dobu uchování a použitelný právní titul. Alternativa „do vyjasnění vypnout“ byla 30. 10. 2026 provedena. Ve formulářích nebyly nalezeny vlastní marketingové odběry. Zájem o pilot neopravňuje automaticky přidat kontakt do newsletteru.
 
 Rámec pro kontrolu: [ÚOOÚ — základní příručka](https://uoou.gov.cz/verejnost/zakladni-prirucka-k-ochrane-udaju) a [informování a cookies](https://uoou.gov.cz/verejnost/qa-otazky-a-odpovedi/cookies). Pro právní titul oprávněného zájmu zpracovat i jeho odůvodnění a posouzení dopadů, ne jen změnit text souhlasu.
 
@@ -83,7 +85,7 @@ Agent v tomto kroku nic neposílal, nemazal ani nenastavoval v účtech. Skuteč
 
 - [ ] Potvrdit tarif a smluvní uspořádání Vercelu, Convexu a Seznamu, včetně předávání a záloh. Vercel: tarif Hobby potvrzen, DPA se na něj nevztahuje (viz tabulka) — blokuje vydání do rozhodnutí.
 - [ ] Zahájit měsíční retenční kontrolu a soukromou evidenci uzavření; stanovit první termín.
-- [ ] Dokončit posouzení nezbytnosti a poměření zájmů pro schválený titul dotazů a samostatně právní režim analytiky. Samotná volba titulu ani změna textu není dokončené posouzení.
+- [ ] Dokončit posouzení nezbytnosti a poměření zájmů pro schválený titul dotazů (analytika je vypnutá, její právní režim se řeší až při případném zapnutí). Samotná volba titulu ani změna textu není dokončené posouzení.
 - [ ] Ověřit SMTP a doručení do skutečných schránek podle postupu výše.
 - [ ] Sjednotit správce a kontakt s Unplugged v sesterském repozitáři.
 - [ ] Doporučeno nechat ověřit právníkem (Frank Bold / ANNO MSK). Agent není právník.

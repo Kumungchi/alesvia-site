@@ -11,7 +11,7 @@ Doporučeno nechat ověřit právníkem (Frank Bold / ANNO MSK). Agent není pr�
 - `PolicyForm.tsx` → stejný tok jako Akademie. Navíc organizace a profesní zařazení, složené do zprávy.
 - Convex ukládá `formType`, `name`, `email`, `subject`, `message`, systémové ID a čas vytvoření. Automatický výmaz ani retenční úloha v repozitáři nejsou. Zápis do databáze a odeslání e-mailu nejsou jedna transakce.
 - Všechny tři formuláře kontrolují HTTP výsledek i explicitní potvrzení API. Oprava je součástí závěrečné kontroly; skutečné doručení příjemci stále vyžaduje test. Při selhání e-mailu záznam v Convexu zůstává.
-- Vercel Web Analytics se v layoutu načítá bez aplikačního kroku souhlasu. Přesné nastavení, retenční období a právní titul je nutné ověřit; označení „anonymizované“ samo právní posouzení nenahrazuje.
+- Vercel Web Analytics byla 30. 10. 2026 z kódu odstraněna. Pro případné opětovné zapnutí platí: dříve se v layoutu načítala bez aplikačního kroku souhlasu. Přesné nastavení, retenční období a právní titul je nutné ověřit; označení „anonymizované“ samo právní posouzení nenahrazuje.
 - Fonty jsou přes `next/font`; screenshot Unplugged je lokální soubor. V aplikaci nebyl nalezen Clerk SDK ani Clerk autentizace. Pokud ho používá interní služba mimo repo, doplnit skutečný rozsah; jinak ho do seznamu zpracovatelů tohoto webu nepřidávat.
 - `.env*`, produkční účty a produkční data nebyly čteny ani měněny. Dostupnost DPA, regiony, zálohy a subzpracovatelé nejsou zjištěním z kódu.
 
@@ -22,7 +22,7 @@ Doporučeno nechat ověřit právníkem (Frank Bold / ANNO MSK). Agent není pr�
 3. **Uchování běžných dotazů potvrzeno:** po dobu vyřízení a nejdéle dalších 12 měsíců po uzavření; měsíční ruční kontrola a výmaz v poště i Convexu. Nejde o automatickou funkci. Postup pro datum uzavření, duplicity, kopie a výmaz je v `privacy-operations.md`; skutečné provádění, zálohy a zvláštní evidence zájmu o pilot ještě vyžadují ověření. Nedoložená 24měsíční lhůta analytiky odstraněna z veřejného návrhu.
 4. **Příjemci:** Vercel (hosting/analytika), Convex (formuláře), konkrétní poskytovatel pošty, oprávnění interní příjemci. Potvrdit smluvní entity, přijaté DPA, regiony a subzpracovatele v účtech.
 5. **Předávání:** zjistit, zda a komu se předává mimo EHP, včetně podpory a záloh. U každého toku ověřit použitelný mechanismus (například aktuálně platné rozhodnutí o odpovídající ochraně pro příjemce, který splňuje jeho podmínky, nebo standardní smluvní doložky a potřebné doplňkové posouzení). Samotná veřejná DPA nedokazuje její přijetí ani použitelný mechanismus. Uvést, kde získat kopii záruk.
-6. **Analytika:** ověřit nastavení a právní titul, případně připravit souhlas nebo vypnutí. Bez rozhodnutí nelze tvrdit, že současná implementace splňuje všechny podmínky.
+6. **Analytika:** vypnuta 30. 10. 2026 (Matias). Před případným zapnutím ověřit nastavení a právní titul, případně připravit souhlas. Bez rozhodnutí nelze tvrdit, že současná implementace splňuje všechny podmínky.
 
 ## Návrh textu CS — doplnit a právně ověřit
 
@@ -32,7 +32,7 @@ Doporučeno nechat ověřit právníkem (Frank Bold / ANNO MSK). Agent není pr�
 
 **Uchování běžných dotazů — schválené pravidlo.** Běžné dotazy uchováváme po dobu vyřízení a nejdéle dalších 12 měsíců po uzavření komunikace. Dodržování lhůty kontrolujeme měsíčně a záznamy v poště a databázi mažeme ručně. Pravidlo není automatická funkce aplikace. Zálohy a případné odlišné zákonné lhůty: [OVĚŘIT SKUTEČNÝ ROZSAH].
 
-**Příjemci a uchování.** Zprávy se odesílají prostřednictvím Seznam Email Profi. Zprávy ze všech tří formulářů se před pokusem o odeslání e-mailu ukládají do Convexu. Hosting a analytiku zajišťuje Vercel. Rozsah analytiky, příjemce mimo EHP, záruky předávání a způsob získání jejich kopie: [OVĚŘIT]. Lhůty nebo kritéria uchování včetně pošty a záloh: [POTVRDIT A ZAJISTIT].
+**Příjemci a uchování.** Zprávy se odesílají prostřednictvím Seznam Email Profi. Zprávy ze všech tří formulářů se před pokusem o odeslání e-mailu ukládají do Convexu. Hosting zajišťuje Vercel; webovou analytiku nepoužíváme. Příjemce mimo EHP, záruky předávání a způsob získání jejich kopie: [OVĚŘIT]. Lhůty nebo kritéria uchování včetně pošty a záloh: [POTVRDIT A ZAJISTIT].
 
 **Práva.** Za podmínek GDPR můžete žádat přístup, opravu, výmaz, omezení či přenositelnost údajů a vznést námitku. Pokud se zpracování opírá o souhlas, lze jej odvolat bez vlivu na předchozí zákonné zpracování. Stížnost lze podat u [Úřadu pro ochranu osobních údajů](https://uoou.gov.cz/). Automatizované rozhodování s právními či obdobně významnými účinky: [POTVRDIT SKUTEČNÝ STAV].
 
@@ -44,7 +44,7 @@ Doporučeno nechat ověřit právníkem (Frank Bold / ANNO MSK). Agent není pr�
 
 **Ordinary inquiry retention — approved rule.** We retain ordinary inquiries while handling them and for no more than a further 12 months after the conversation is closed. We check this limit monthly and manually delete email and database records. This is not an automated application feature. Backups and any separate legal retention requirements: [VERIFY ACTUAL SCOPE].
 
-**Recipients and retention.** Messages are emailed through Seznam Email Profi. Submissions from all three forms are stored in Convex before email delivery is attempted. Vercel provides hosting and analytics. Analytics scope, recipients outside the EEA, transfer safeguards and how to obtain a copy: [VERIFY]. Retention periods or criteria, including email and backups: [CONFIRM AND IMPLEMENT].
+**Recipients and retention.** Messages are emailed through Seznam Email Profi. Submissions from all three forms are stored in Convex before email delivery is attempted. Vercel provides hosting; we do not use web analytics. Recipients outside the EEA, transfer safeguards and how to obtain a copy: [VERIFY]. Retention periods or criteria, including email and backups: [CONFIRM AND IMPLEMENT].
 
 **Rights.** Subject to GDPR conditions, you may request access, rectification, erasure, restriction or portability, and object to processing. Where consent applies, you may withdraw it without affecting prior lawful processing. You may complain to the [Czech Office for Personal Data Protection](https://uoou.gov.cz/). Automated decisions with legal or similarly significant effects: [CONFIRM ACTUAL PRACTICE].
 

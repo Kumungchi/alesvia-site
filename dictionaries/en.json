@@ -336,7 +336,7 @@
       },
       {
         "heading": "Legal Basis (GDPR Art. 6)",
-        "content": "We process ordinary incoming inquiries under Article 6(1)(f) GDPR, based on our legitimate interest in responding to your message and conducting proportionate follow-up correspondence. Sending an inquiry does not constitute consent to newsletters or marketing. You may object to this processing at privacy@alesvia.org. We assess the legal basis for web analytics separately; the inquiry basis stated here does not cover it."
+        "content": "We process ordinary incoming inquiries under Article 6(1)(f) GDPR, based on our legitimate interest in responding to your message and conducting proportionate follow-up correspondence. Sending an inquiry does not constitute consent to newsletters or marketing. You may object to this processing at privacy@alesvia.org."
       },
       {
         "heading": "Data Retention",
@@ -349,7 +349,7 @@
       },
       {
         "heading": "Third Parties",
-        "content": "We use Vercel for hosting and web analytics, Convex to store submissions from all three forms, and Seznam Email Profi for email. We do not sell or rent personal data."
+        "content": "We do not use web analytics. We use Vercel for hosting, Convex to store submissions from all three forms, and Seznam Email Profi for email. We do not sell or rent personal data."
       },
       {
         "heading": "Changes to This Policy",

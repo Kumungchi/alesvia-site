@@ -336,7 +336,7 @@
       },
       {
         "heading": "Právní základ (GDPR čl. 6)",
-        "content": "Běžné příchozí dotazy zpracováváme podle čl. 6 odst. 1 písm. f GDPR na základě oprávněného zájmu vyřídit vaši zprávu a vést přiměřenou navazující komunikaci. Odeslání dotazu není souhlasem s newsletterem ani marketingem. Proti tomuto zpracování můžete vznést námitku na privacy@alesvia.org. Právní režim webové analytiky posuzujeme samostatně; uvedený titul pro dotazy ji nepokrývá."
+        "content": "Běžné příchozí dotazy zpracováváme podle čl. 6 odst. 1 písm. f GDPR na základě oprávněného zájmu vyřídit vaši zprávu a vést přiměřenou navazující komunikaci. Odeslání dotazu není souhlasem s newsletterem ani marketingem. Proti tomuto zpracování můžete vznést námitku na privacy@alesvia.org."
       },
       {
         "heading": "Uchovávání údajů",
@@ -349,7 +349,7 @@
       },
       {
         "heading": "Třetí strany",
-        "content": "Pro hosting a webovou analytiku využíváme Vercel, pro ukládání zpráv ze všech tří formulářů Convex a pro e-mail Seznam Email Profi. Osobní údaje neprodáváme ani nepronajímáme."
+        "content": "Webovou analytiku nepoužíváme. Pro hosting využíváme Vercel, pro ukládání zpráv ze všech tří formulářů Convex a pro e-mail Seznam Email Profi. Osobní údaje neprodáváme ani nepronajímáme."
       },
       {
         "heading": "Změny těchto zásad",
