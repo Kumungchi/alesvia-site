@@ -28,7 +28,7 @@ V neveřejné evidenci smluv uložit poskytovatele, smluvní entitu, tarif, datu
 
 | Služba | Ověřený veřejný podklad | Co ještě musí potvrdit vlastník účtu |
 | --- | --- | --- |
-| Vercel | [DPA](https://vercel.com/legal/dpa), ověřeno 28. 10. 2026: úvod vymezuje použitelnost pro Pro a Enterprise; dokument obsahuje standardní smluvní doložky. [Podmínky](https://vercel.com/legal/terms) na DPA odkazují. | Tarif týmu, konkrétní použitelná smlouva a rozsah DPA. Pokud je účet Hobby, nevyvozovat použitelnost pouze z obecného odkazu v podmínkách; nejasnost ověřit u poskytovatele. Žádný upgrade se tímto neschvaluje. |
+| Vercel | [DPA](https://vercel.com/legal/dpa), ověřeno 28. 10. 2026: úvod vymezuje použitelnost pro Pro a Enterprise; dokument obsahuje standardní smluvní doložky. [Podmínky](https://vercel.com/legal/terms) na DPA odkazují. | **Tarif potvrzen: Hobby (Matias, 30. 10. 2026).** DPA (verze 17. 3. 2026, účinná od 31. 3. 2026) se podle svého znění vztahuje jen na zákazníky Pro a Enterprise, takže pro Hobby účet není doložena smlouva o zpracování dle čl. 28 GDPR pro hosting ani analytiku. [Podmínky](https://vercel.com/legal/terms) (19. 10. 2026, čl. 4) a [Fair Use Guidelines](https://vercel.com/docs/limits/fair-use-guidelines) (14. 9. 2026) omezují Hobby na osobní nekomerční užití; žádost o dary podle nich komerčním užitím není, inzerce prodeje produktu nebo služby ano. Web Analytics je na Hobby dostupná (50 000 událostí měsíčně). Řešení (Pro, jiný hosting, nebo vypnutí analytiky do vyřešení) rozhoduje Matias; žádný upgrade se tímto neschvaluje. |
 | Convex | [DPA správného poskytovatele](https://www.convex.dev/legal/dpa), ověřeno 28. 10. 2026 přes vložený dokument v prohlížeči: role správce/zpracovatele, SCC pro příslušná předávání a zálohy s vlastní retenční dobou. [Regiony](https://docs.convex.dev/production/regions) umožňují volbu místa deploymentu. | Přijetí příslušné smlouvy a skutečné regiony produkce i Preview, přístupy podpory a doba uchování záloh. Název dříve sdílené URL není ověřením všech účtů a prostředí. |
 | Seznam Email Profi | [Podmínky služby](https://o-seznam.cz/napoveda/email/profi/smluvni-podminky/), ověřeno 28. 10. 2026: poskytovatel Seznam.cz, a.s.; samy o sobě nedokládají konkrétní zpracovatelské uspořádání tohoto účtu. | Přijaté podmínky účtu, role při zpracování obsahu zpráv a použitelné smluvní uspořádání pro údaje třetích osob, kopie/přeposílání a mazání záloh. Při nejasnosti se obrátit na podporu Seznamu. |
 | Clerk | SDK ani autentizace Clerk nejsou v aplikaci nalezeny. | Nezařazovat do veřejného seznamu jen proto, že byl ve starém backlogu. Pokud se používá mimo tento web, určit konkrétní tok. |
@@ -81,7 +81,7 @@ Agent v tomto kroku nic neposílal, nemazal ani nenastavoval v účtech. Skuteč
 
 ## Před vydáním
 
-- [ ] Potvrdit tarif a smluvní uspořádání Vercelu, Convexu a Seznamu, včetně předávání a záloh.
+- [ ] Potvrdit tarif a smluvní uspořádání Vercelu, Convexu a Seznamu, včetně předávání a záloh. Vercel: tarif Hobby potvrzen, DPA se na něj nevztahuje (viz tabulka) — blokuje vydání do rozhodnutí.
 - [ ] Zahájit měsíční retenční kontrolu a soukromou evidenci uzavření; stanovit první termín.
 - [ ] Dokončit posouzení nezbytnosti a poměření zájmů pro schválený titul dotazů a samostatně právní režim analytiky. Samotná volba titulu ani změna textu není dokončené posouzení.
 - [ ] Ověřit SMTP a doručení do skutečných schránek podle postupu výše.
