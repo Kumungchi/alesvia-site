@@ -2,6 +2,7 @@ import 'server-only';
 
 export interface ResearchPost {
   slug: string;
+  draft?: boolean;
   date: string;
   initiative: string;
   tags: string[];
@@ -155,6 +156,8 @@ EU AI Act nám dal mandát. Nyní potřebujeme vybudovat infrastrukturu, abychom
   },
   {
     slug: 'mental-health-professionals-and-ai-chatbots',
+    // Keep offline until the duplicated APA/Brown/WHO claims receive a full review.
+    draft: true,
     date: '2026-03-25',
     initiative: 'practitioners',
     tags: ['mental-health', 'chatbots', 'ethics'],
@@ -237,6 +240,7 @@ Cílem není udělat z terapeutů experty na AI. Jde o to dát jim dostatek poro
   },
   {
     slug: 'czech-ai-ecosystem-mapping-2026',
+    draft: true,
     date: '2026-03-18',
     initiative: 'policy-lab',
     tags: ['czech-republic', 'ecosystem', 'mapping'],
@@ -640,13 +644,13 @@ Právě proto Alesvia pracuje s myšlenkou autonomy impact assessment jako prakt
 ];
 
 export function getAllPosts(): ResearchPost[] {
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts.filter((post) => !post.draft).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getPostBySlug(slug: string): ResearchPost | undefined {
-  return posts.find((p) => p.slug === slug);
+  return posts.find((p) => !p.draft && p.slug === slug);
 }
 
 export function getPostSlugs(): string[] {
-  return posts.map((p) => p.slug);
+  return getAllPosts().map((p) => p.slug);
 }

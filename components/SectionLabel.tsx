@@ -1,6 +1,6 @@
 export default function SectionLabel({ children }: { children: string }) {
   return (
-    <h2 className="font-sans text-xs font-bold uppercase tracking-widest text-alesvia-accent mb-4">
+    <h2 className="section-heading">
       {children}
     </h2>
   );

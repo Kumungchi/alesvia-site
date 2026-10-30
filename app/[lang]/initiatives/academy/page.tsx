@@ -23,7 +23,7 @@ export default async function AcademyPage({ params }: { params: Promise<{ lang: 
   const d = dict.academy;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title}>
         <div className="flex items-center gap-4 mt-4">
           <span className="text-xs font-medium text-alesvia-muted border border-alesvia-muted/20 px-3 py-1.5 rounded">{d.status}</span>
@@ -33,12 +33,12 @@ export default async function AcademyPage({ params }: { params: Promise<{ lang: 
       </PageHeader>
 
       <div className="space-y-20 pb-24">
-        <section>
+        <section className="content-section">
           <SectionLabel>{d.vision_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.vision_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.programs_label}</SectionLabel>
           <ul className="space-y-4 mt-6 max-w-3xl">
             {d.programs_items.map((item: string, i: number) => (
@@ -50,12 +50,12 @@ export default async function AcademyPage({ params }: { params: Promise<{ lang: 
           </ul>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.future_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.future_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.audiences_label}</SectionLabel>
           <ul className="space-y-4 mt-6 max-w-3xl">
             {d.audiences_items.map((item: string, i: number) => (
@@ -67,13 +67,13 @@ export default async function AcademyPage({ params }: { params: Promise<{ lang: 
           </ul>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <div className="max-w-4xl">
             <div className="mb-10">
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mt-4">{d.cta_text}</p>
             </div>
-            <AcademyForm dict={dict.academy_form} />
+            <AcademyForm dict={dict.academy_form} privacy={dict.contact.form_privacy} lang={lang} />
           </div>
         </section>
       </div>

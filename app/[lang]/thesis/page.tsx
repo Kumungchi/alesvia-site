@@ -24,11 +24,11 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
   const content = getThesisContent(lang);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={content.label} title={content.title} description={content.intro}>
-        <div className="mt-10 glass rounded-2xl p-8 md:p-10 border border-alesvia-accent/15 max-w-3xl">
+        <div className="mt-12 max-w-3xl">
           <SectionLabel>{content.principleLabel}</SectionLabel>
-          <p className="text-xl md:text-2xl font-light leading-relaxed text-alesvia-text">
+          <p className="font-serif text-2xl md:text-3xl leading-snug text-alesvia-primary">
             {content.principleText}
           </p>
         </div>
@@ -36,7 +36,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
 
       <div className="space-y-20 pb-24">
         {content.sections.map((section) => (
-          <section key={section.heading} className="border-t border-alesvia-muted/10 pt-16 max-w-4xl">
+          <section key={section.heading} className="content-section max-w-4xl">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-alesvia-text mb-8">
               {section.heading}
             </h2>
@@ -60,9 +60,8 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
           </section>
         ))}
 
-        <section className="pt-8">
-          <div className="bg-[#0F2C59] text-alesvia-bg rounded-2xl p-10 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-72 h-72 bg-alesvia-accent/10 rounded-full blur-3xl -mr-12 -mt-12 pointer-events-none" />
+        <section className="content-section pt-8">
+          <div className="on-dark bg-alesvia-trust text-alesvia-bg rounded-md px-8 py-12 md:px-16">
             <div className="relative z-10 max-w-3xl">
               <SectionLabel>{content.closingLabel}</SectionLabel>
               <p className="text-alesvia-bg/85 text-lg md:text-xl leading-relaxed mb-8">
@@ -71,7 +70,7 @@ export default async function ThesisPage({ params }: { params: Promise<{ lang: L
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={getPublicPath(lang, 'initiatives')}
-                  className="bg-alesvia-accent text-alesvia-text font-semibold px-8 py-4 rounded-lg text-center"
+                  className="button button-gold"
                 >
                   {content.primaryCta}
                 </Link>

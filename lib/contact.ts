@@ -2,6 +2,10 @@ export const contactSubjects = ['general', 'partnership', 'media', 'research', '
 
 export type ContactSubject = (typeof contactSubjects)[number];
 
+export function escapeContactHtml(value: string): string {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 export const contactRecipientDefaults: Record<ContactSubject, string> = {
   general: 'info@alesvia.org',
   partnership: 'partners@alesvia.org',

@@ -2,6 +2,8 @@
 import { useState, type FormEvent } from 'react';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
+import { submitInquiry } from "../lib/submit-inquiry";
+import FormPrivacyNotice, { type FormPrivacyCopy } from './FormPrivacyNotice';
 
 interface AcademyFormDict {
   title: string;
@@ -29,7 +31,7 @@ interface AcademyFormDict {
   error: string;
 }
 
-export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
+export default function AcademyForm({ dict, privacy, lang }: { dict: AcademyFormDict; privacy: FormPrivacyCopy; lang: string }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const sendMessage = useMutation(api.messages.send);
@@ -51,23 +53,7 @@ export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
     const formattedMessage = `Organization: ${organization}\nOrganization type: ${orgType}\nProgram: ${program}\n\nDetails:\n${rawMessage}`;
 
     try {
-      // Save to Convex
-      await sendMessage({
-        formType: 'academy_pilot',
-        name,
-        email,
-        subject: 'partnership',
-        message: formattedMessage
-      });
-
-      // Email Notification
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, subject: 'partnership', message: formattedMessage }),
-      });
+      await submitInquiry(() => sendMessage({ formType: 'academy_pilot', name, email, subject: 'partnership', message: formattedMessage }), { name, email, subject: 'partnership', message: formattedMessage });
 
       setStatus('success');
       form.reset();
@@ -79,11 +65,10 @@ export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
 
   const inputGroupClass = "relative flex flex-col gap-2";
   const labelClass = "text-xs font-semibold text-alesvia-muted tracking-wide uppercase";
-  const inputClass = "w-full bg-alesvia-bg/50 backdrop-blur-sm border border-alesvia-muted/30 rounded-lg px-4 py-3 text-sm text-alesvia-text focus:outline-none focus:border-alesvia-accent focus:ring-1 focus:ring-alesvia-accent transition-colors";
+  const inputClass = "w-full bg-alesvia-white border border-alesvia-text/20 rounded-md px-4 py-3 text-sm text-alesvia-text focus:outline-none focus:border-alesvia-accent focus:ring-1 focus:ring-alesvia-accent transition-colors";
 
   return (
-    <div className="bg-alesvia-surface/95 backdrop-blur-md rounded-2xl p-8 md:p-10 border border-alesvia-muted/20 shadow-2xl relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-alesvia-accent to-alesvia-primary" />
+    <div className="site-form">
 
       <h3 className="font-serif text-2xl font-bold text-alesvia-text mb-8">{dict.title}</h3>
 
@@ -147,16 +132,17 @@ export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
           </div>
 
           {status === 'error' && (
-            <p className="text-sm text-red-500 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in">
+            <p role="alert" className="text-sm text-red-700 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in">
               {errorMessage || dict.error}
             </p>
           )}
 
-          <div className="pt-4 flex justify-end">
+          <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <FormPrivacyNotice copy={privacy} lang={lang} />
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="bg-alesvia-text text-alesvia-bg hover:bg-alesvia-text/90 font-medium px-8 py-3 rounded-lg disabled:opacity-70 disabled:cursor-not-allowed transition-colors min-w-[160px] flex items-center justify-center shadow-sm"
+              className="bg-alesvia-text text-alesvia-bg hover:bg-alesvia-text/90 font-medium px-8 py-3 rounded-md disabled:opacity-70 disabled:cursor-not-allowed transition-colors min-w-[160px] flex items-center justify-center shadow-sm"
             >
               {status === 'sending' ? (
                 <div className="flex items-center gap-2">

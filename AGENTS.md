@@ -1,3 +1,5 @@
+> Před začátkem práce si přečti HANDOFF.md — aktuální stav, pravidla a backlog.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 

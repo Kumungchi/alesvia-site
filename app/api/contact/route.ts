@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { isContactSubject, getContactRecipient, type ContactSubject } from '../../../lib/contact';
+import { isContactSubject, getContactRecipient, escapeContactHtml, type ContactSubject } from '../../../lib/contact';
 
 export const runtime = 'nodejs';
 
@@ -81,17 +81,13 @@ function buildTextBody(payload: ContactPayload): string {
 }
 
 function buildHtmlBody(payload: ContactPayload): string {
-  const escapedMessage = payload.message
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/\n/g, '<br />');
+  const escapedMessage = escapeContactHtml(payload.message).replace(/\n/g, '<br />');
 
   return `
     <div style="font-family: Arial, sans-serif; color: #221E22; line-height: 1.6;">
       <h2 style="margin-bottom: 16px;">New Alesvia contact form submission</h2>
-      <p><strong>Name:</strong> ${payload.name}</p>
-      <p><strong>Email:</strong> ${payload.email}</p>
+      <p><strong>Name:</strong> ${escapeContactHtml(payload.name)}</p>
+      <p><strong>Email:</strong> ${escapeContactHtml(payload.email)}</p>
       <p><strong>Subject:</strong> ${getSubjectLabel(payload.subject)}</p>
       <p><strong>Message:</strong></p>
       <p>${escapedMessage}</p>

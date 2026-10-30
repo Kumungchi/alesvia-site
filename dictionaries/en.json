@@ -1,22 +1,27 @@
 {
   "metadata": {
     "title": "Alesvia | The Human Baseline",
-    "description": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics."
+    "description": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence. Through Unplugged it helps people set healthy boundaries with conversational AI; it is preparing AI literacy training for organizations and programs for therapists."
   },
   "nav": {
     "brand": "Alesvia.",
-    "about": "About",
-    "initiatives": "Initiatives",
+    "about": "About Alesvia",
+    "initiatives": "Our directions",
     "funding": "Funding",
     "research": "Research & Insights",
     "contact": "Contact",
-    "partner": "Partner With Us"
+    "partner": "Get in touch",
+    "collaboration": "Collaborate",
+    "menu": "Menu",
+    "close": "Close"
   },
   "hero": {
     "title": "Human autonomy is the baseline.",
-    "description": "Alesvia builds research, policy, education, and practical frameworks that help people and institutions stay in control as AI becomes part of daily life.",
-    "primary_link": "Read the Thesis",
-    "secondary_link": "See Our Work"
+    "title_lead": "Human autonomy",
+    "title_accent": "is the baseline.",
+    "description": "Alesvia is taking shape around the questions technology and artificial intelligence raise about human thinking, relationships and decisions. We want people and institutions to retain their own judgement.",
+    "primary_link": "For institutions and partners",
+    "secondary_link": "Explore our directions"
   },
   "ecosystem": {
     "label": "The Ecosystem",
@@ -25,7 +30,11 @@
     "status_incubating": "In Preparation",
     "unplugged_title": "Unplugged",
     "unplugged_desc": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.",
-    "unplugged_points": ["Clarity without moralizing", "AI is a tool, not a relationship", "Healthy boundaries"],
+    "unplugged_points": [
+      "Clarity without moralizing",
+      "AI is a tool, not a relationship",
+      "Healthy boundaries"
+    ],
     "unplugged_link": "Visit unplugged.cz →",
     "academy_title": "Academy",
     "academy_desc": "AI literacy and humanly sustainable AI deployment for companies, schools, and public administration (including the AI literacy obligation under Article 4 of the EU AI Act). Revenue from these services funds our public-benefit programs.",
@@ -73,18 +82,25 @@
     "philosophy_label": "Philosophy",
     "philosophy_text": "We believe that the most dangerous technologies are not the ones that fail, but the ones that succeed too well — systems so persuasive, so convenient, and so seamlessly integrated that opting out becomes socially or practically impossible. Alesvia exists to ensure that opting out remains a viable choice.",
     "origin_label": "Origin",
-    "origin_text": "Alesvia is being established in the Czech Republic as a registered institute (z.ú.) — a legal structure designed for mission-driven organizations that prioritize public benefit over profit; registration is in progress. This structure will ensure that our work remains aligned with our principles, not with shareholder expectations.",
+    "origin_text": "Alesvia is being established in the Czech Republic as a registered institute (z.ú.) — a legal structure designed for mission-driven organizations that prioritize public benefit over profit; we are preparing for registration. This structure will ensure that our work remains aligned with our principles, not with shareholder expectations.",
     "structure_label": "Legal Structure",
-    "structure_text": "A registered institute (z.ú.) under Czech law operates with a statutory board, transparent governance, and a mandate to serve the public interest. Alesvia is currently being established in this form — registration is in progress. This is not a startup. It is an institution built to outlast trends and resist capture."
+    "structure_text": "A registered institute (z.ú.) under Czech law operates with a statutory board, transparent governance, and a mandate to serve the public interest. Alesvia is currently being established in this form — we are preparing for registration. This is not a startup. It is an institution built to outlast trends and resist capture."
   },
   "team": {
     "metadata_title": "Team & Governance | Alesvia",
     "metadata_description": "Meet the people behind Alesvia and learn about our governance structure.",
     "label": "People",
     "title": "Governance & Team",
-    "intro": "Alesvia is being established; we will publish the team's composition during the registration process.",
+    "intro": "Alesvia is a project in preparation. Today it is led by its founder; we will introduce other people once they confirm their involvement.",
     "board_label": "Board",
-    "board_text": "The board will be appointed as part of the ongoing registration; we will publish its composition once the institute is entered in the register."
+    "board_text": "We are assembling the board; no members have been appointed yet.",
+    "founder_label": "Founder",
+    "founder_name": "Matias Bunnik",
+    "founder_role": "Leads the organization’s preparation",
+    "founder_bio": [
+      "Matias founded Alesvia so that human autonomy remains the measure of how AI enters everyday life. The role covers setting the organization’s vision and direction, preparing its founding, and representing it publicly.",
+      "Matias holds a bachelor’s degree in psychology and is currently studying for a master’s degree in psychology as well as computer science, connecting an understanding of how people experience relationships and trust with how conversational AI works technically."
+    ]
   },
   "initiatives_index": {
     "metadata_title": "Initiatives | Alesvia",
@@ -100,9 +116,13 @@
     "status": "Active",
     "title": "Unplugged",
     "subtitle": "Healthy Boundaries with Conversational AI",
+    "preview_label": "Active project: Unplugged",
+    "preview_alt": "Unplugged homepage — visit the website",
+    "preview_caption": "Preview of the Czech homepage, captured on October 25, 2026. Visit Unplugged for the latest content.",
+    "preview_link": "Visit www.unplugged.cz →",
     "intro": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship.",
     "problem_label": "The Problem",
-    "problem_text": "Modern conversational AI systems are optimized for engagement, not well-being. They learn what keeps you talking, what makes you trust them, and what makes you come back. Without consciously set boundaries, the default trajectory is dependency.",
+    "problem_text": "AI can feel personal, but it is not a person. Fluent conversation is not the same as a relationship, and an empathetic tone is not evidence of consciousness or understanding. Using AI is okay. Unplugged helps people recognize when AI imitates a friend, partner, or therapist.",
     "approach_label": "Our Approach",
     "approach_text": "Unplugged develops practical frameworks for individuals, institutions, and policymakers to establish and maintain healthy boundaries with conversational AI systems.",
     "principles_label": "Core Principles",
@@ -169,14 +189,28 @@
   },
   "practitioners": {
     "metadata_title": "Practitioners | Alesvia",
-    "metadata_description": "The Practitioners pillar equips psychologists, psychiatrists, and therapists to navigate the AI era ethically and confidently.",
+    "metadata_description": "We are preparing training for psychologists, psychiatrists, and therapists on responsible AI use and its limitations.",
     "label": "Pillar",
     "status": "In Preparation",
     "title": "Practitioners",
     "subtitle": "AI & Mental Health Professional Support",
-    "intro": "Mental health professionals are on the front lines of AI's impact on human wellbeing — yet most received zero training on the topic. The Practitioners pillar equips psychologists, psychiatrists, and therapists to navigate the AI era ethically and confidently.",
+    "intro": "We are preparing training for psychologists, psychiatrists, and therapists on responsible AI use and its limitations. Launching the Practitioners pillar depends on securing a clinical lead.",
     "problem_label": "The Challenge",
-    "problem_text": "Patients are arriving in therapy already using AI chatbots for emotional support. A Brown University study found AI chatbots systematically violate mental health ethics standards. The WHO convened experts in March 2026 specifically on responsible AI for mental health. Yet 71% of psychologists have never used AI tools, and most training programs don't cover AI literacy.",
+    "problem_text": "In the 2025 APA Practitioner Pulse Survey, 56% of responding US psychologists reported using AI at work in the past year; 44% reported never using it at work. The online survey was completed by 1,742 licensed psychologists with doctoral degrees who were actively treating patients. These are self-reported findings from a US sample, not data on Czech therapists or evidence that AI is effective in therapy.",
+    "problem_source_label": "Source: APA and APA Services, Practitioner Pulse Survey (2025), n = 1,742, practicing US psychologists",
+    "problem_source_url": "https://www.apa.org/pubs/reports/practitioner/2025",
+    "evidence_items": [
+      {
+        "text": "A qualitative study led by Brown University researchers identified ethical risks in the chatbot conversations they evaluated, including inappropriate crisis responses. The analysis covered 137 conversations (110 self-counseling and 27 simulated), seven trained peer counselors, and three licensed clinical psychologists. It was not a clinical efficacy trial or an estimate of how often these risks occur across all users.",
+        "source_label": "Source: Iftikhar et al., AIES (2025), qualitative analysis of 137 conversations",
+        "source_url": "https://ojs.aaai.org/index.php/AIES/article/view/36632"
+      },
+      {
+        "text": "The Delft Digital Ethics Centre at TU Delft held an online workshop on responsible AI for mental health with WHO support on January 29, 2026. WHO reported on it on March 20, 2026. This was an expert discussion with AI governance recommendations, not clinical evidence.",
+        "source_label": "Source: WHO, March 20, 2026 report on the TU Delft workshop",
+        "source_url": "https://www.who.int/news/item/20-03-2026-towards-responsible-ai-for-mental-health-and-well-being--experts-chart-a-way-forward"
+      }
+    ],
     "programs_label": "What We're Preparing",
     "programs_items": [
       "Continuing education programs for mental health professionals on AI literacy",
@@ -255,39 +289,67 @@
     "form_submit": "Send Message",
     "form_sending": "Sending...",
     "form_success": "Message sent. We'll get back to you shortly.",
-    "form_error": "Something went wrong. Please try emailing us directly.",
-    "form_privacy": "By submitting this form, you agree to our"
+    "form_error": "Email delivery could not be confirmed. Your details remain in the form. Try again or contact us directly by email.",
+    "form_privacy": {
+      "text": "We use your details to respond to your message. Read more here:",
+      "link_label": "Privacy policy"
+    }
+  },
+  "crisis_support": {
+    "title": "When it feels like too much, talk to a person.",
+    "intro": "If you are in the Czech Republic, you can contact the services below. Alesvia does not provide crisis support; its forms are not intended for this purpose.",
+    "lines": [
+      {
+        "name": "Linka první psychické pomoci",
+        "phone": "116 123",
+        "phone_href": "tel:116123",
+        "description": "For adults and their loved ones. Free, 24/7, with an on-call service at night. Callers need to speak Czech or Slovak.",
+        "source_label": "Service details: Linka první psychické pomoci",
+        "source_url": "https://www.linkapsychickepomoci.cz/"
+      },
+      {
+        "name": "Linka bezpečí",
+        "phone": "116 111",
+        "phone_href": "tel:116111",
+        "description": "For children and students under 26. Free telephone support, 24/7. See the service website for language availability.",
+        "source_label": "Service details: Linka bezpečí",
+        "source_url": "https://www.linkabezpeci.cz/pomoc"
+      }
+    ],
+    "emergency": "If someone's life is in immediate danger in the Czech Republic, call",
+    "verified": "Telephone hours and eligibility checked on October 25, 2026."
   },
   "privacy": {
     "metadata_title": "Privacy Policy | Alesvia",
-    "metadata_description": "Alesvia's privacy policy — how we collect, use, and protect your personal data in compliance with GDPR.",
+    "metadata_description": "Information about the Alesvia project's data controller, inquiry forms, data recipients, retention and your rights.",
     "title": "Privacy Policy",
-    "last_updated": "Last updated: April 2026",
+    "last_updated": "Last updated: 30 October 2026",
     "intro": "Alesvia respects your privacy. This policy explains what data we collect, why, and how we handle it.",
     "sections": [
       {
         "heading": "Data Controller",
-        "content": "Alesvia, an institute (z.ú.) being established in the Czech Republic; registration is in progress. Contact: privacy@alesvia.org"
+        "content": "Until the institute is registered, Matias Bunnik is the data controller for the Alesvia project. We are preparing to register the institute. Contact for personal data requests: privacy@alesvia.org."
       },
       {
         "heading": "What Data We Collect",
-        "content": "We collect only what is necessary: contact form submissions (name, email, message), basic analytics (anonymized page views), and any data you voluntarily provide. We do not use tracking cookies, behavioral profiling, or third-party advertising scripts."
+        "content": "The contact form processes your name, email address, subject and message. The Academy form also collects your organization, its type and the selected program; the Policy Lab form also collects your organization and professional affiliation. Submissions from all three forms are stored in Convex and then emailed. A database record may remain even if email delivery fails. Providing this information is voluntary; we cannot reply without a contact address. The forms are not for crisis support or medical records."
       },
       {
         "heading": "Legal Basis (GDPR Art. 6)",
-        "content": "We process data based on: (a) your consent, when you submit a contact form; (b) our legitimate interest in understanding how our site is used, via anonymized analytics; (c) legal obligations, where applicable."
+        "content": "We process ordinary incoming inquiries under Article 6(1)(f) GDPR, based on our legitimate interest in responding to your message and conducting proportionate follow-up correspondence. Sending an inquiry does not constitute consent to newsletters or marketing. You may object to this processing at privacy@alesvia.org."
       },
       {
         "heading": "Data Retention",
-        "content": "Contact form submissions are retained for 12 months unless you request earlier deletion. Anonymized analytics data is retained for 24 months."
+        "content": "We retain ordinary inquiries while handling them and for no more than a further 12 months after the conversation is closed. We check this limit monthly and manually delete records from email and the database. This rule covers ordinary correspondence, not any contractual or accounting records subject to separate retention requirements."
       },
       {
         "heading": "Your Rights",
-        "content": "Under GDPR, you have the right to access, correct, delete, restrict processing of, and port your personal data. You may also withdraw consent at any time. To exercise these rights, contact privacy@alesvia.org."
+        "content": "Subject to GDPR conditions, you may request access, rectification, erasure, restriction of processing and portability of your data. You may object to processing based on legitimate interests. Where processing relies on consent, you may withdraw it without affecting the lawfulness of prior processing. Send requests to privacy@alesvia.org. You may lodge a complaint with the Czech Office for Personal Data Protection.",
+        "links": [{ "label": "Czech Office for Personal Data Protection", "href": "https://uoou.gov.cz/" }]
       },
       {
         "heading": "Third Parties",
-        "content": "We do not sell, rent, or share your personal data with third parties for marketing purposes. We may use service providers (hosting, email) who process data on our behalf under strict data processing agreements."
+        "content": "We do not use web analytics. We use Vercel for hosting, Convex to store submissions from all three forms, and Seznam Email Profi for email. We do not sell or rent personal data."
       },
       {
         "heading": "Changes to This Policy",
@@ -304,7 +366,7 @@
     "sections": [
       {
         "heading": "Operator",
-        "content": "This website is operated by Alesvia, an institute (z.ú.) being established under Czech law; registration is in progress."
+        "content": "This website is operated by Alesvia, an institute (z.ú.) being established under Czech law; we are preparing for registration."
       },
       {
         "heading": "Use of Content",
@@ -337,37 +399,57 @@
     "items": [
       {
         "question": "What is Alesvia?",
-        "answer": "Alesvia is an emerging Czech institute for the psychological side of artificial intelligence — educating the public, training organizations under the EU AI Act, and preparing therapists for new clinical topics. Alesvia is being established as a registered institute (z.ú.); registration is in progress. Its active program is Unplugged."
+        "answer": "Alesvia is an emerging Czech institute at the intersection of psychology and technology. It explores how technology and artificial intelligence change human thinking, relationships and decisions. Unplugged is its active project."
       },
       {
-        "question": "What does Alesvia do?",
-        "answer": "Alesvia builds its work on four pillars: Unplugged (healthy boundaries with conversational AI — active), Academy (AI literacy and humanly sustainable AI deployment for companies, schools, and public administration — in preparation), Practitioners (training psychologists and therapists for the AI era — in preparation), and Policy Lab (translating ethical frameworks into legislation and guidelines — in preparation)."
+        "question": "Who is Alesvia for?",
+        "answer": "For institutions adopting technology and AI, professionals working with their effects on people, and the public, whom we currently reach through Unplugged."
       },
       {
-        "question": "What is the human baseline?",
-        "answer": "The human baseline is Alesvia's core concept — the non-negotiable set of rights, capacities, and boundaries that must be preserved as automation reshapes society. It represents the minimum standard of human autonomy that technology should not be allowed to erode."
+        "question": "Is Alesvia against artificial intelligence?",
+        "answer": "No. Using AI is fine. We want technology to serve people while preserving their own judgement and their relationships with other people."
+      },
+      {
+        "question": "What stage is Alesvia at?",
+        "answer": "We are preparing the institute’s registration. Unplugged is an active public project; the other three pillars are in preparation. The topics presented are not a list of services already provided."
+      },
+      {
+        "question": "What is the human standard?",
+        "answer": "The human standard is a core concept of Alesvia: a set of rights, capabilities and boundaries that must be preserved as automation reshapes society. It represents a minimum level of human autonomy that technology should not undermine."
       },
       {
         "question": "Where is Alesvia based?",
-        "answer": "Alesvia is being established as a registered institute (z.ú.) based in Ostrava, Czech Republic; registration is in progress. This legal structure is designed for mission-driven organizations that prioritize public benefit over profit."
+        "answer": "Alesvia is being prepared as a Czech registered institute (z.ú.) with a planned seat in Ostrava. We are preparing its registration. This legal form is intended for mission-driven organizations that put public benefit before profit."
       },
       {
-        "question": "How is Alesvia funded?",
-        "answer": "Alesvia is working toward a model whose primary engine is earned revenue from Academy and Practitioners services — AI literacy and training for companies, schools, and public administration. Revenue from these services funds our public-benefit programs. The model is complemented by grants, philanthropic partnerships, and infrastructure support. The organization will not accept funding that compromises its mission or creates conflicts of interest."
+        "question": "How will Alesvia be funded?",
+        "answer": "We are working towards a model primarily funded by education and services, complemented by grants and philanthropic partnerships. We will not accept funding that compromises our mission or creates a conflict of interest."
       },
       {
-        "question": "What is Unplugged?",
-        "answer": "Unplugged helps people set healthy boundaries with conversational AI — clearly and without moralizing. AI is a tool, not a relationship. It is Alesvia's flagship and currently active program."
+        "question": "Do you offer workshops?",
+        "answer": "Unplugged offers pilot workshops. We are preparing Academy programs for organizations and professional education through Practitioners."
+      },
+      {
+        "question": "How can I collaborate with Alesvia?",
+        "answer": "Institutions and partners can get in touch about a shared topic or educational need. The public can find active content on Unplugged. Supporters can explore the planned funding model and independence rules."
+      },
+      {
+        "question": "Do you accept support from companies, including technology companies?",
+        "answer": "Yes, under clear conditions and transparently. Major donors and partners are disclosed, and their contributions have no influence on our outputs, positions or recommendations. We do not accept support from makers of AI companion applications because we openly critique their design. Our independence rules are on the Funding page."
+      },
+      {
+        "question": "What if I need personal mental health support?",
+        "answer": "Alesvia does not provide crisis support. Contacts for professional help are listed below."
       }
     ]
   },
   "imprint": {
     "metadata_title": "Legal Imprint | Alesvia",
-    "metadata_description": "Legal details for Alesvia — an emerging Czech registered institute (z.ú.); registration is in progress.",
+    "metadata_description": "Legal details for Alesvia — an emerging Czech registered institute (z.ú.); we are preparing for registration.",
     "title": "Legal Imprint",
     "org_name": "Alesvia",
     "registration_label": "Registration",
-    "registration_text": "Alesvia is being established as a registered institute (z.ú.); registration in the Register of Institutes is in progress.",
+    "registration_text": "Alesvia is being established as a registered institute (z.ú.); we are preparing the application to the Register of Institutes; it has not yet been filed.",
     "ico_label": "IČO",
     "ico_text": "To be assigned upon registration.",
     "address_label": "Registered Address",
@@ -413,7 +495,7 @@
     "submit": "Submit Interest",
     "sending": "Submitting...",
     "success": "Thank you. We will reach out as soon as we open the pilot programs.",
-    "error": "Something went wrong. Please try emailing us directly."
+    "error": "Email delivery could not be confirmed. Your details remain in the form. Try again or contact us directly by email."
   },
   "policy_form": {
     "title": "Engage with Policy Lab",
@@ -430,7 +512,21 @@
     "submit": "Submit Inquiry",
     "sending": "Submitting...",
     "success": "Inquiry received. We will be in touch shortly.",
-    "error": "Something went wrong. Please try emailing us directly."
+    "error": "Email delivery could not be confirmed. Your details remain in the form. Try again or contact us directly by email."
+  },
+  "article_pilot": {
+    "preview_label": "Article typography preview",
+    "typeface_label": "Article typeface",
+    "current_typeface": "Playfair + Inter",
+    "newsreader_typeface": "Newsreader",
+    "print": "Print / save PDF",
+    "source_link": "Original article",
+    "article_kind": "Essay",
+    "note_reference": "Note 1: related Alesvia thesis",
+    "note_title": "1. Further reading",
+    "note_text": "This essay develops Alesvia's thesis on human autonomy. It does not report original research.",
+    "thesis_link": "Read the thesis",
+    "note_back": "Back to the text"
   },
   "policy_funnel": {
     "title": "The Policy Translation Funnel",
@@ -442,5 +538,72 @@
     "step3_desc": "Creating concrete policy templates, model legislation, and SME compliance guidelines.",
     "step4_title": "4. Institutional Implementation",
     "step4_desc": "Providing direct advisory and toolkits to public bodies and educational institutions."
+  },
+  "homepage": {
+    "motto_lines": [
+      "Human",
+      "autonomy",
+      "is the baseline."
+    ],
+    "description": "Alesvia is taking shape around the questions technology and artificial intelligence raise about human thinking, relationships and decisions. We want people and institutions to retain their own judgement.",
+    "primary": "For institutions and partners",
+    "secondary": "Explore our directions",
+    "continue": "Continue",
+    "themes_title": "The digital world has a human side.",
+    "themes": [
+      {
+        "label": "Identity",
+        "title": "Room to be ourselves.",
+        "text": "How does digitalization change how we see ourselves and who we are together? Personal and collective identity are part of Alesvia’s wider scope."
+      },
+      {
+        "label": "The pace of life",
+        "title": "Faster is not the only direction.",
+        "text": "What do we gain from the pressure for speed and optimization, and what do we lose? Alesvia also aims to open up questions about the pace of everyday life."
+      },
+      {
+        "label": "Practice",
+        "title": "Understand, decide, apply.",
+        "text": "Education and responsible use of technology connect understanding with everyday practice. We label specific programs according to their actual stage of preparation."
+      },
+      {
+        "label": "Rules",
+        "title": "A shared world, a shared responsibility.",
+        "text": "Digitalization is more than an individual choice. It also involves social consequences, rules and the opportunity to help shape them."
+      }
+    ],
+    "projects_title": "From questions to concrete work.",
+    "projects_intro": "What exists today and what we are preparing.",
+    "unplugged_claim": "AI is a tool. Not a relationship.",
+    "unplugged_description": "A newsletter, public education and an offer of pilot workshops about AI that imitates human closeness.",
+    "unplugged_link": "Explore Unplugged",
+    "preview_caption": "A real project. A voice of its own.",
+    "planned": [
+      "A planned direction focused on AI literacy and implementation for businesses and public administration. We are still preparing the offer.",
+      "A plan for clinical education for therapists and psychologists. Development depends on securing a clinical supervisor.",
+      "We are preparing research and positions on AI regulation."
+    ],
+    "writing_title": "Essays and analysis.",
+    "collaboration_title": "Good questions deserve shared work.",
+    "collaboration_intro": "Looking to collaborate, find your bearings or support the creation of Alesvia?",
+    "paths_label": "Choose your path",
+    "paths": [
+      {
+        "label": "Institutions and partners",
+        "text": "Let’s discuss a shared topic, an educational need or a way to help prepare the organization.",
+        "action": "Get in touch"
+      },
+      {
+        "label": "The public",
+        "text": "Start with our active project Unplugged: a newsletter and public education about using conversational AI.",
+        "action": "Visit Unplugged"
+      },
+      {
+        "label": "Supporters",
+        "text": "Explore the planned funding model and independence rules of the emerging organization.",
+        "action": "Explore funding"
+      }
+    ],
+    "faq_title": "Frequently asked questions"
   }
 }

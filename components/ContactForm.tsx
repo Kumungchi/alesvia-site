@@ -1,10 +1,10 @@
 'use client';
 import { useState, type FormEvent } from 'react';
-import Link from 'next/link';
-import { getPublicPath } from '../lib/routes';
-import { contactRecipientDefaults, type ContactSubject } from '../lib/contact';
+import FormPrivacyNotice, { type FormPrivacyCopy } from './FormPrivacyNotice';
+import type { ContactSubject } from '../lib/contact';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
+import { submitInquiry } from "../lib/submit-inquiry";
 
 interface ContactFormDict {
   form_label: string;
@@ -21,11 +21,11 @@ interface ContactFormDict {
   form_sending: string;
   form_success: string;
   form_error: string;
-  form_privacy: string;
+  form_privacy: FormPrivacyCopy;
 }
 
 export default function ContactForm({ dict, lang, formType = 'contact' }: { dict: ContactFormDict; lang: string; formType?: string }) {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'fallback' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const sendMessage = useMutation(api.messages.send);
 
@@ -37,7 +37,6 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
     { value: 'other', label: dict.form_subject_other },
   ];
 
-  const emailMap = contactRecipientDefaults;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -51,61 +50,35 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
     const email = data.get('email') as string;
     const message = data.get('message') as string;
 
-    const fallbackToMailClient = () => {
-      const to = emailMap[subject] || emailMap.general;
-      const subjectLine = `[${subjects.find((s) => s.value === subject)?.label}] Message from ${name}`;
-      const body = `From: ${name} (${email})\n\n${message}`;
-      const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoUrl;
-      setStatus('fallback');
-      form.reset();
-    };
 
     try {
-      // 1. Save to Convex Database
-      await sendMessage({ formType, name, email, subject, message });
-      
-      // 2. Send Email Notification
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, subject, message }),
-      });
+      await submitInquiry(() => sendMessage({ formType, name, email, subject, message }), { name, email, subject, message });
 
       setStatus('success');
       form.reset();
     } catch (error) {
-      console.error("Failed to save message to database:", error);
-      fallbackToMailClient();
+      console.error("Inquiry submission failed:", error);
+      setStatus('error');
     }
   }
 
   const inputGroupClass = "relative group";
-  const inputClass = "peer w-full bg-alesvia-bg/40 backdrop-blur-sm border-2 border-alesvia-muted/20 rounded-xl px-4 pt-6 pb-2 text-alesvia-text placeholder-transparent focus:outline-none focus:border-alesvia-accent/60 focus:bg-alesvia-bg/80 focus:ring-4 focus:ring-alesvia-accent/10 transition-all duration-300";
-  const labelClass = "absolute left-4 top-2 text-xs font-semibold text-alesvia-muted/80 transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-xs peer-focus:font-semibold peer-focus:text-alesvia-accent pointer-events-none";
-
-  const fallbackMessage =
-    lang === 'cs'
-      ? 'Váš e-mailový klient by se měl otevřít s předvyplněnou zprávou.'
-      : 'Your email client should open with a pre-filled draft.';
+  const inputClass = "peer w-full bg-alesvia-white border border-alesvia-text/20 rounded-md px-4 pt-6 pb-2 text-alesvia-text placeholder-transparent focus:outline-none focus:border-alesvia-accent/60 focus:bg-alesvia-bg/80 focus:ring-4 focus:ring-alesvia-accent/10 transition-all duration-300";
+  const labelClass = "absolute left-4 top-2 text-xs font-semibold text-alesvia-muted transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-xs peer-focus:font-semibold peer-focus:text-alesvia-accent-ink pointer-events-none";
 
   return (
-    <div className="glass rounded-3xl p-8 md:p-12 border border-alesvia-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden">
-      {/* Decorative gradient orb */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-alesvia-accent/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="site-form">
       
       <h3 className="font-serif text-3xl font-bold text-alesvia-text mb-8 relative z-10">{dict.form_label}</h3>
 
-      {status === 'success' || status === 'fallback' ? (
+      {status === 'success' ? (
         <div className="text-center py-16 fade-in" aria-live="polite">
-          <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6 transform hover:scale-110 transition-transform duration-500">
-            <svg className="w-10 h-10 text-green-600 animate-[pulse_2s_ease-in-out_infinite]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-10 h-10 text-green-600 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <p className="text-xl text-alesvia-text font-medium">{status === 'success' ? dict.form_success : fallbackMessage}</p>
+          <p className="text-xl text-alesvia-text font-medium">{dict.form_success}</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
@@ -120,7 +93,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
                 placeholder={dict.form_name}
               />
               <label htmlFor="contact-name" className={labelClass}>
-                {dict.form_name} <span className="text-alesvia-accent">*</span>
+                {dict.form_name} <span className="text-alesvia-accent-ink">*</span>
               </label>
             </div>
             <div className={inputGroupClass}>
@@ -133,7 +106,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
                 placeholder={dict.form_email}
               />
               <label htmlFor="contact-email" className={labelClass}>
-                {dict.form_email} <span className="text-alesvia-accent">*</span>
+                {dict.form_email} <span className="text-alesvia-accent-ink">*</span>
               </label>
             </div>
           </div>
@@ -151,8 +124,8 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
                 <option key={s.value} value={s.value}>{s.label}</option>
               ))}
             </select>
-            <label htmlFor="contact-subject" className={`absolute left-4 top-2 text-xs font-semibold text-alesvia-muted/80 transition-all duration-300 pointer-events-none`}>
-              {dict.form_subject} <span className="text-alesvia-accent">*</span>
+            <label htmlFor="contact-subject" className={`absolute left-4 top-2 text-xs font-semibold text-alesvia-muted transition-all duration-300 pointer-events-none`}>
+              {dict.form_subject} <span className="text-alesvia-accent-ink">*</span>
             </label>
             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-alesvia-muted">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -169,27 +142,22 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
               placeholder={dict.form_message}
             />
             <label htmlFor="contact-message" className={labelClass}>
-              {dict.form_message} <span className="text-alesvia-accent">*</span>
+              {dict.form_message} <span className="text-alesvia-accent-ink">*</span>
             </label>
           </div>
 
           {status === 'error' && (
-            <p className="text-sm text-red-500 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in" aria-live="polite">
+            <p className="text-sm text-red-700 bg-red-50/50 border border-red-100 rounded-lg p-3 fade-in" aria-live="polite">
               {errorMessage || dict.form_error}
             </p>
           )}
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-2">
-            <p className="text-xs text-alesvia-muted/80 leading-relaxed max-w-[280px]">
-              {dict.form_privacy}{' '}
-              <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent hover:text-alesvia-primary transition-colors font-medium link-animated">
-                {lang === 'cs' ? 'zásadami ochrany osobních údajů' : 'privacy policy'}
-              </Link>.
-            </p>
+            <FormPrivacyNotice copy={dict.form_privacy} lang={lang} />
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="group relative btn-primary bg-alesvia-primary text-alesvia-bg font-semibold px-8 py-4 rounded-xl disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap overflow-hidden min-w-[160px] flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-alesvia-primary text-alesvia-bg font-semibold px-8 py-4 rounded-md hover:bg-alesvia-trust disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap min-w-[160px] flex items-center justify-center transition-colors"
             >
               {status === 'sending' ? (
                 <div className="flex items-center gap-2">

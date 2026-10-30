@@ -1,55 +1,40 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { BrandLogo } from './BrandMark';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenuToggle from './MobileMenuToggle';
 import NavbarShell from './NavbarShell';
-import type { Locale } from '../dictionaries';
+import ProjectNavigation from './ProjectNavigation';
+import type { getDictionary, Locale } from '../dictionaries';
 import { getPublicPath } from '../lib/routes';
 
-interface NavDict {
-  brand: string;
-  about: string;
-  initiatives: string;
-  funding: string;
-  research: string;
-  contact: string;
-  partner: string;
-}
-
-export default function Navbar({ dict, lang }: { dict: NavDict; lang: Locale }) {
-  const links = [
-    { href: getPublicPath(lang, 'about'), label: dict.about },
-    { href: getPublicPath(lang, 'initiatives'), label: dict.initiatives },
-    { href: getPublicPath(lang, 'funding'), label: dict.funding },
-    { href: getPublicPath(lang, 'research'), label: dict.research },
-    { href: getPublicPath(lang, 'contact'), label: dict.contact },
+type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
+export default function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
+  const nav = dict.nav;
+  const projects = [
+    { href: getPublicPath(lang, 'initiativeUnplugged'), label: dict.ecosystem.unplugged_title, status: dict.ecosystem.status_active },
+    { href: getPublicPath(lang, 'initiativeAcademy'), label: dict.ecosystem.academy_title, status: dict.ecosystem.status_incubating },
+    { href: getPublicPath(lang, 'initiativePractitioners'), label: dict.ecosystem.practitioners_title, status: dict.ecosystem.status_incubating },
+    { href: getPublicPath(lang, 'initiativePolicyLab'), label: dict.ecosystem.policy_title, status: dict.ecosystem.status_incubating },
   ];
-
-  return (
-    <NavbarShell>
-      <Link href={getPublicPath(lang, 'home')} aria-label={dict.brand}>
-        <BrandLogo
-          className="inline-flex items-center gap-3"
-          markClassName="w-8 h-8 shrink-0"
-          textClassName="font-serif text-2xl font-bold tracking-tight"
-          title={dict.brand}
-        />
-      </Link>
-      <div className="hidden md:flex space-x-8 text-sm font-medium text-alesvia-muted items-center">
-        {links.map((link) => (
-          <Link key={link.href} href={link.href} className="link-animated hover:text-alesvia-text transition-colors">
-            {link.label}
-          </Link>
-        ))}
-        <LanguageSwitcher currentLang={lang} />
-      </div>
-      <Link
-        href={getPublicPath(lang, 'contact')}
-        className="hidden md:block text-sm font-semibold bg-alesvia-primary text-alesvia-bg px-5 py-2.5 rounded-lg btn-primary"
-      >
-        {dict.partner}
-      </Link>
-      <MobileMenuToggle lang={lang} links={links} partnerLabel={dict.partner} />
-    </NavbarShell>
-  );
+  const links = [
+    { href: getPublicPath(lang, 'about'), label: nav.about },
+    { href: getPublicPath(lang, 'initiatives'), label: nav.initiatives },
+    ...projects,
+    { href: getPublicPath(lang, 'research'), label: nav.research },
+    { href: getPublicPath(lang, 'funding'), label: nav.funding },
+    { href: getPublicPath(lang, 'contact'), label: nav.collaboration },
+  ];
+  return <NavbarShell>
+    <Link className="brand-link" href={getPublicPath(lang, 'home')} aria-label={nav.brand}>
+      <Image src="/brand/alesvia-lockup-horizontal.svg" width={560} height={148} priority alt="Alesvia" />
+    </Link>
+    <nav className="desktop-navigation" aria-label={nav.menu}>
+      <Link href={getPublicPath(lang, 'about')}>{nav.about}</Link>
+      <ProjectNavigation label={nav.initiatives} links={projects} />
+      <Link href={getPublicPath(lang, 'contact')}>{nav.collaboration}</Link>
+      <LanguageSwitcher currentLang={lang} />
+      <Link href={getPublicPath(lang, 'contact')} className="button button-primary">{nav.partner}</Link>
+    </nav>
+    <MobileMenuToggle lang={lang} links={links} partnerLabel={nav.partner} contactHref={getPublicPath(lang, 'contact')} menuLabel={nav.menu} closeLabel={nav.close} />
+  </NavbarShell>;
 }

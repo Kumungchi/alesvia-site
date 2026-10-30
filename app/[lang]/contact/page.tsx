@@ -22,30 +22,30 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   const d = dict.contact;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24">
-        <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
-          <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.general_label}</h3>
+        <div className="border-t border-alesvia-text/15 pt-6">
+          <h2 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.general_label}</h2>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.general_text}</p>
-          <a href="mailto:info@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
+          <a href="mailto:info@alesvia.org" className="text-alesvia-accent-ink font-medium text-sm hover:text-alesvia-primary transition-colors">
             info@alesvia.org
           </a>
         </div>
 
-        <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
-          <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.institutional_label}</h3>
+        <div className="border-t border-alesvia-text/15 pt-6">
+          <h2 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.institutional_label}</h2>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.institutional_text}</p>
-          <a href="mailto:partners@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
+          <a href="mailto:partners@alesvia.org" className="text-alesvia-accent-ink font-medium text-sm hover:text-alesvia-primary transition-colors">
             partners@alesvia.org
           </a>
         </div>
 
-        <div className="bg-alesvia-surface/50 rounded-xl p-8 border border-alesvia-muted/10">
-          <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.media_label}</h3>
+        <div className="border-t border-alesvia-text/15 pt-6">
+          <h2 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.media_label}</h2>
           <p className="text-alesvia-muted text-sm leading-relaxed mb-4">{d.media_text}</p>
-          <a href="mailto:press@alesvia.org" className="text-alesvia-accent font-medium text-sm hover:text-alesvia-primary transition-colors">
+          <a href="mailto:press@alesvia.org" className="text-alesvia-accent-ink font-medium text-sm hover:text-alesvia-primary transition-colors">
             press@alesvia.org
           </a>
         </div>
@@ -56,7 +56,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       </div>
 
       <div className="pb-24">
-        <h3 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.address_label}</h3>
+        <h2 className="font-serif text-xl font-bold text-alesvia-text mb-3">{d.address_label}</h2>
         <p className="text-alesvia-muted">{d.address_placeholder}</p>
       </div>
     </div>

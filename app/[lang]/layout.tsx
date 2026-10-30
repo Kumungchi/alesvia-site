@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Figtree, Literata } from "next/font/google";
 import { getDictionary, hasLocale, Locale } from "../../dictionaries";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import JsonLd from "../../components/JsonLd";
-import ScrollProgress from "../../components/ScrollProgress";
+import SiteMotion from "../../components/SiteMotion";
+import ReadingProgress from "../../components/ReadingProgress";
 import { getAbsoluteUrl, getSiteOrigin } from "../../lib/site";
 import { getPublicPath } from "../../lib/routes";
 import { ConvexClientProvider } from "../../components/ConvexClientProvider";
-import { Analytics } from '@vercel/analytics/react';
 import "../globals.css";
+import "../site-system.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700", "900"], variable: "--font-playfair" });
+// Design system (docs/DESIGN.md): Figtree for headings and UI, Literata for running text.
+const figtree = Figtree({ subsets: ["latin", "latin-ext"], weight: ["400", "600", "700"], display: "swap", variable: "--font-figtree" });
+const literata = Literata({ subsets: ["latin", "latin-ext"], weight: ["400", "600"], style: ["normal", "italic"], display: "swap", variable: "--font-literata" });
 
 const fallbackLocale: Locale = "cs";
 
@@ -83,7 +85,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className={`${inter.variable} ${playfair.variable} font-sans bg-alesvia-bg text-alesvia-text antialiased`}>
+      <body className={`${figtree.variable} ${literata.variable} font-body bg-alesvia-bg text-alesvia-text antialiased`}>
         <ConvexClientProvider>
           <JsonLd data={{
             '@context': 'https://schema.org',
@@ -96,7 +98,12 @@ export default async function RootLayout({
               '@type': 'Place',
               name: 'Ostrava, CZ',
             },
-            sameAs: ['https://unplugged.cz'],
+            founder: {
+              '@type': 'Person',
+              name: 'Matias Bunnik',
+              url: getAbsoluteUrl(getPublicPath(lang, 'team')),
+            },
+            sameAs: ['https://www.unplugged.cz'],
             knowsAbout: [
               'Human autonomy',
               'AI ethics',
@@ -114,22 +121,22 @@ export default async function RootLayout({
             url: siteOrigin,
             inLanguage: [lang === 'cs' ? 'cs-CZ' : 'en-US'],
           }} />
-          <ScrollProgress />
-          <div className="min-h-screen flex flex-col noise-overlay">
+          <div className="min-h-screen flex flex-col">
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-alesvia-primary focus:text-alesvia-bg focus:px-6 focus:py-3 focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"
             >
               {lang === 'cs' ? 'Přeskočit na obsah' : 'Skip to content'}
             </a>
-            <Navbar dict={dict.nav} lang={lang} />
+            <Navbar dict={dict} lang={lang} />
             <main id="main-content" className="flex-1" role="main">
               {children}
             </main>
+            <SiteMotion />
+            <ReadingProgress />
             <Footer dict={dict.footer} lang={lang} />
           </div>
         </ConvexClientProvider>
-        <Analytics />
       </body>
     </html>
   );

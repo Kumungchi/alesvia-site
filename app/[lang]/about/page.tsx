@@ -22,26 +22,26 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: Lo
   const d = dict.about;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="site-page">
       <PageHeader label={d.label} title={d.title} description={d.intro} />
 
       <div className="space-y-20 pb-24">
-        <section>
+        <section className="content-section">
           <SectionLabel>{d.mission_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.mission_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.philosophy_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.philosophy_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.origin_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.origin_text}</p>
         </section>
 
-        <section className="border-t border-alesvia-muted/10 pt-16">
+        <section className="content-section border-t border-alesvia-muted/10 pt-16">
           <SectionLabel>{d.structure_label}</SectionLabel>
           <p className="text-lg text-alesvia-text leading-relaxed max-w-3xl">{d.structure_text}</p>
         </section>

@@ -20,16 +20,21 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
   const d = dict.privacy;
 
   return (
-    <div className="max-w-3xl mx-auto px-6 md:px-12 py-20">
+    <div className="site-page legal-page">
       <h1 className="font-serif text-4xl font-bold text-alesvia-primary mb-2">{d.title}</h1>
       <p className="text-sm text-alesvia-muted mb-12">{d.last_updated}</p>
       <p className="text-lg text-alesvia-text leading-relaxed mb-12">{d.intro}</p>
 
       <div className="space-y-10">
-        {d.sections.map((section: { heading: string; content: string }, i: number) => (
+        {d.sections.map((section: { heading: string; content: string; links?: { label: string; href: string }[] }, i: number) => (
           <section key={i}>
             <h2 className="font-serif text-xl font-bold text-alesvia-text mb-3">{section.heading}</h2>
             <p className="text-alesvia-muted leading-relaxed">{section.content}</p>
+            {section.links?.map((link) => (
+              <p key={link.href} className="mt-3">
+                <a href={link.href} className="text-alesvia-accent-ink underline underline-offset-4 hover:text-alesvia-primary transition-colors">{link.label}</a>
+              </p>
+            ))}
           </section>
         ))}
       </div>
