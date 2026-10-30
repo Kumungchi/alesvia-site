@@ -66,7 +66,7 @@ Ve Vercelu otevřít projekt → Settings → Environment Variables. Pro test vy
 | `CONTACT_FORM_OTHER_EMAIL` | Příjemce ostatních dotazů. |
 | `CONTACT_FORM_BCC_EMAIL` | Volitelná další kopie; ponechat nenastavené, pokud není potřeba. |
 
-Při absenci příjemců má kód výchozí info@alesvia.org / partners@alesvia.org / press@alesvia.org. Jejich existenci nemáme potvrzenou. Pro Preview přesměrovat **všech pět** příjemců do jedné ověřené vlastní testovací schránky. Hodnoty neposílat do chatu spolu s hesly. Po změně proměnných vytvořit nový Preview deployment. Nespouštět `convex deploy` jako součást tohoto testu.
+Při absenci příjemců má kód výchozí info@alesvia.org / partners@alesvia.org / press@alesvia.org. Matias 30. 10. 2026 potvrdil, že všechny tyto schránky jsou v Email Profi založené; příjem ještě není otestovaný. V produkci proto proměnné příjemců nejsou nutné, pokud mají platit tyto výchozí adresy. Pro Preview přesměrovat **všech pět** příjemců do jedné ověřené vlastní testovací schránky. Hodnoty neposílat do chatu spolu s hesly. Po změně proměnných vytvořit nový Preview deployment. Nespouštět `convex deploy` jako součást tohoto testu.
 
 ## Zkouška doručení — zatím neprovedena
 
