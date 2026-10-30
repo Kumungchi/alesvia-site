@@ -73,7 +73,7 @@ export default async function AcademyPage({ params }: { params: Promise<{ lang: 
               <SectionLabel>{d.cta_label}</SectionLabel>
               <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mt-4">{d.cta_text}</p>
             </div>
-            <AcademyForm dict={dict.academy_form} />
+            <AcademyForm dict={dict.academy_form} privacy={dict.contact.form_privacy} lang={lang} />
           </div>
         </section>
       </div>

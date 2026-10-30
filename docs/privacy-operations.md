@@ -7,6 +7,7 @@ Stav: 28. 10. 2026. Vlastník postupu: Matias Bunnik. Toto je interní postup, n
 - Do registrace ústavu je správcem Matias Bunnik, kontakt pro žádosti je privacy@alesvia.org.
 - Poskytovatelem pošty je Seznam Email Profi.
 - Běžné dotazy: po dobu vyřízení, nejdéle dalších 12 měsíců po uzavření komunikace; měsíční ruční kontrola pošty i Convexu (schváleno Matiasem 28. 10. 2026).
+- Právní titul pro běžné dotazy: oprávněný zájem na vyřízení komunikace (schváleno Matiasem 30. 10. 2026); newsletter a marketing tím nejsou pokryty. U všech tří formulářů je věcné upozornění s odkazem na zásady, nikoli „souhlas odesláním“.
 - Toto není automatický výmaz. Aplikace nemá stav uzavření dotazu ani plánovanou retenční úlohu. Schválení pravidla není důkaz jeho vykonávání.
 
 ## Měsíční kontrola a výmaz
@@ -82,7 +83,7 @@ Agent v tomto kroku nic neposílal, nemazal ani nenastavoval v účtech. Skuteč
 
 - [ ] Potvrdit tarif a smluvní uspořádání Vercelu, Convexu a Seznamu, včetně předávání a záloh.
 - [ ] Zahájit měsíční retenční kontrolu a soukromou evidenci uzavření; stanovit první termín.
-- [ ] Dokončit právní titul dotazů a posouzení analytiky; promítnout skutečný stav do zásad.
+- [ ] Dokončit posouzení nezbytnosti a poměření zájmů pro schválený titul dotazů a samostatně právní režim analytiky. Samotná volba titulu ani změna textu není dokončené posouzení.
 - [ ] Ověřit SMTP a doručení do skutečných schránek podle postupu výše.
 - [ ] Sjednotit správce a kontakt s Unplugged v sesterském repozitáři.
 - [ ] Doporučeno nechat ověřit právníkem (Frank Bold / ANNO MSK). Agent není právník.
@@ -90,5 +91,7 @@ Agent v tomto kroku nic neposílal, nemazal ani nenastavoval v účtech. Skuteč
 A-04 zůstává otevřené; merge ani produkční nasazení tento dokument neschvaluje.
 
 ## Ověření této úpravy
+
+30. 10. 2026: změna titulu a společného upozornění prošla plným buildem (53 rout, TypeScript), cíleným ESLintem na všech změněných TSX souborech a Impeccable detektorem bez nálezů. Všech šest formulářových stránek CS/EN má upozornění v prerenderu, odkaz ve správném jazyce a cílovou stránku HTTP 200. Vizuálně ověřen kontakt na desktopu a anglická Akademie na 390 px bez přetečení. Formuláře nebyly odeslány; jejich datový tok se neměnil.
 
 28. 10. 2026: plný `npm run build` prošel (53 rout, TypeScript), `npm run lint` má 0 chyb a 4 původní varování v generovaných souborech Convexu. V prerenderu obou jazyků jsou potvrzený kontakt, 12měsíční lhůta a odkaz na ÚOOÚ. Česká i anglická stránka zkontrolována v T3 prohlížeči na 390 a 1280 CSS px bez horizontálního přetečení; jeden hlavní nadpis a správný jazyk. Cílený Impeccable detector na změněné stránce nemá nálezy. Nejde o nové měření Lighthouse ani ověření kompletního webu. Změny nezahrnují nové e-mailové nebo databázové testovací zápisy.

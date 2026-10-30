@@ -3,6 +3,7 @@ import { useState, type FormEvent } from 'react';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
 import { submitInquiry } from "../lib/submit-inquiry";
+import FormPrivacyNotice, { type FormPrivacyCopy } from './FormPrivacyNotice';
 
 interface AcademyFormDict {
   title: string;
@@ -30,7 +31,7 @@ interface AcademyFormDict {
   error: string;
 }
 
-export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
+export default function AcademyForm({ dict, privacy, lang }: { dict: AcademyFormDict; privacy: FormPrivacyCopy; lang: string }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const sendMessage = useMutation(api.messages.send);
@@ -136,7 +137,8 @@ export default function AcademyForm({ dict }: { dict: AcademyFormDict }) {
             </p>
           )}
 
-          <div className="pt-4 flex justify-end">
+          <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <FormPrivacyNotice copy={privacy} lang={lang} />
             <button
               type="submit"
               disabled={status === 'sending'}

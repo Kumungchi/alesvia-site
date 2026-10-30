@@ -290,7 +290,10 @@
     "form_sending": "Odesílání...",
     "form_success": "Zpráva odeslána. Ozveme se vám co nejdříve.",
     "form_error": "Nepodařilo se potvrdit doručení e-mailu. Údaje zůstaly ve formuláři. Zkuste to znovu nebo nám napište přímo e-mailem.",
-    "form_privacy": "Odesláním formuláře souhlasíte s našimi"
+    "form_privacy": {
+      "text": "Údaje použijeme k vyřízení vaší zprávy. Podrobnosti najdete zde:",
+      "link_label": "Zásady ochrany osobních údajů"
+    }
   },
   "crisis_support": {
     "title": "Když je toho moc, mluv s člověkem.",
@@ -320,7 +323,7 @@
     "metadata_title": "Ochrana osobních údajů | Alesvia",
     "metadata_description": "Informace o správci údajů projektu Alesvia, kontaktních formulářích, příjemcích údajů, době uchování a vašich právech.",
     "title": "Zásady ochrany osobních údajů",
-    "last_updated": "Poslední aktualizace: 28. října 2026",
+    "last_updated": "Poslední aktualizace: 30. října 2026",
     "intro": "Alesvia respektuje vaše soukromí. Tyto zásady vysvětlují, jaké údaje shromažďujeme, proč a jak s nimi nakládáme.",
     "sections": [
       {
@@ -333,7 +336,7 @@
       },
       {
         "heading": "Právní základ (GDPR čl. 6)",
-        "content": "Údaje zpracováváme na základě: (a) vašeho souhlasu při odeslání kontaktního formuláře; (b) našeho oprávněného zájmu porozumět, jak je náš web používán, prostřednictvím anonymizované analytiky; (c) zákonných povinností, kde je to relevantní."
+        "content": "Běžné příchozí dotazy zpracováváme podle čl. 6 odst. 1 písm. f GDPR na základě oprávněného zájmu vyřídit vaši zprávu a vést přiměřenou navazující komunikaci. Odeslání dotazu není souhlasem s newsletterem ani marketingem. Proti tomuto zpracování můžete vznést námitku na privacy@alesvia.org. Právní režim webové analytiky posuzujeme samostatně; uvedený titul pro dotazy ji nepokrývá."
       },
       {
         "heading": "Uchovávání údajů",

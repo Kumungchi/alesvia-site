@@ -1,7 +1,6 @@
 'use client';
 import { useState, type FormEvent } from 'react';
-import Link from 'next/link';
-import { getPublicPath } from '../lib/routes';
+import FormPrivacyNotice, { type FormPrivacyCopy } from './FormPrivacyNotice';
 import type { ContactSubject } from '../lib/contact';
 import { useMutation } from "convex/react";
 import { api } from "../convex/_generated/api";
@@ -22,7 +21,7 @@ interface ContactFormDict {
   form_sending: string;
   form_success: string;
   form_error: string;
-  form_privacy: string;
+  form_privacy: FormPrivacyCopy;
 }
 
 export default function ContactForm({ dict, lang, formType = 'contact' }: { dict: ContactFormDict; lang: string; formType?: string }) {
@@ -154,12 +153,7 @@ export default function ContactForm({ dict, lang, formType = 'contact' }: { dict
           )}
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-2">
-            <p className="text-xs text-alesvia-muted leading-relaxed max-w-[280px]">
-              {dict.form_privacy}{' '}
-              <Link href={getPublicPath(lang === 'cs' ? 'cs' : 'en', 'legalPrivacy')} className="text-alesvia-accent-ink hover:text-alesvia-primary transition-colors font-medium underline underline-offset-4">
-                {lang === 'cs' ? 'zásadami ochrany osobních údajů' : 'privacy policy'}
-              </Link>.
-            </p>
+            <FormPrivacyNotice copy={dict.form_privacy} lang={lang} />
             <button
               type="submit"
               disabled={status === 'sending'}

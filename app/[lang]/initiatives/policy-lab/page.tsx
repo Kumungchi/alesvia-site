@@ -66,7 +66,7 @@ export default async function PolicyLabPage({ params }: { params: Promise<{ lang
                 <SectionLabel>{d.cta_label}</SectionLabel>
                 <p className="text-alesvia-muted text-lg leading-relaxed max-w-2xl mt-4">{d.cta_text}</p>
               </div>
-              <PolicyForm dict={dict.policy_form} />
+              <PolicyForm dict={dict.policy_form} privacy={dict.contact.form_privacy} lang={lang} />
             </div>
           </section>
       </div>
